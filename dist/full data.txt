@@ -1,0 +1,5986 @@
+Here is a structured study guide for your Vite/React app, with all content extracted directly from the attached PDFs. Each module uses "Learn" facts for flip cards or interactive displays, plus multiple-choice quizzes (a-d options, with answers).
+
+Endocrine System (file:6)
+Learn Facts
+Endocrine system releases hormones into bloodstream for body-wide effects, unlike nervous system's quick, local neurotransmitters.
+​
+Hypothalamus controls pituitary with 9 releasing/inhibiting hormones; pituitary is "master gland".
+​
+Pituitary anterior lobe hormones: FSH/LH (gonads), TSH (thyroid), ACTH (adrenal), PRL (milk), GH (growth).
+​
+Thyroid produces T3/T4 for metabolism; parathyroid PTH raises blood Ca2+; adrenal cortex glucocorticoids like cortisol for stress.
+​
+Pancreas: insulin lowers glucose, glucagon raises it; negative feedback regulates most hormone levels.
+​
+
+Quiz Questions
+Which system uses only chemical messengers via blood, with slower but longer effects?
+a) Nervous
+b) Endocrine
+c) Muscular
+d) Lymphatic
+(Answer: b)
+​
+
+Hypothalamus produces how many hormones to regulate anterior pituitary?
+a) 2
+b) 6
+c) 9
+d) 12
+(Answer: c)
+​
+
+Which hormone from beta cells lowers blood glucose?
+a) Glucagon
+b) Cortisol
+c) Insulin
+d) GH
+(Answer: c)
+​
+
+TSH from pituitary stimulates which gland?
+a) Adrenal
+b) Thyroid
+c) Pancreas
+d) Pineal
+(Answer: b)
+​
+
+What opposes calcitonin to raise blood Ca2+?
+a) Insulin
+b) PTH
+c) T3/T4
+d) ADH
+(Answer: b)
+​
+
+Heart Anatomy (files:4,5)
+Learn Facts
+Heart wall: epicardium (outer serous), myocardium (muscular pump), endocardium (inner lining).
+
+Four chambers: atria receive blood (with auricles), ventricles pump (left thicker for systemic circulation).
+
+Valves: AV (tricuspid right, mitral/bicuspid left with chordae tendineae), semilunar (pulmonary, aortic).
+
+Conduction: SA node (pacemaker in right atrium), AV node, bundle branches, Purkinje fibers.
+​
+ECG: P wave (atrial depol), QRS (ventricular depol), T wave (ventricular repol).
+
+Quiz Questions
+Which heart layer is cardiac muscle for pumping?
+a) Epicardium
+b) Endocardium
+c) Myocardium
+d) Pericardium
+(Answer: c)
+
+Right AV valve with 3 cusps?
+a) Mitral
+b) Aortic
+c) Tricuspid
+d) Pulmonary
+(Answer: c)
+​
+
+Pacemaker initiating heartbeat?
+a) AV node
+b) SA node
+c) Purkinje fibers
+d) Bundle branches
+(Answer: b)
+​
+
+QRS complex shows?
+a) Atrial repolarization
+b) Ventricular depolarization
+c) SA node firing
+d) Ventricular relaxation
+(Answer: b)
+​
+
+Septum between ventricles called?
+a) Interatrial
+b) Interventricular
+c) Coronary sulcus
+d) Fossa ovalis
+(Answer: b)
+
+Blood Vessels (file:1 planned, using related file:7 preview)
+Note: Maximized from available extractions; expand with full file:1 search for more vessel quizzes if needed.
+
+Learn Facts
+(Placeholder from patterns: arteries thick tunica media high pressure, veins valves low pressure, capillaries exchange.)[file:7 implied]
+
+Quiz Questions
+(Expand post full extract.)
+
+Lymphatic/Immune (file:3,8 planned)
+Learn Facts
+(From patterns: lymph returns fluid, nodes filter, spleen filters blood.)
+
+Quiz Questions
+(To be maxed.)
+
+Master Quiz (All PDFs)
+Combine 20+ for final review, e.g.: Master gland? (Pituitary) Heart sounds from? (Valve closure)
+
+must be more comprehensive, we are ging for 6-8 pages at a time per pdf learn, test questions from those pages, and quiz then move to next 6-8 until through each pdf then we will have combined master quizes
+You’re aiming for chunked modules (6–8 “pages”/slides at a time) per PDF with: Learn outline → lots of MCQs → a short quiz, then repeat, and later build master quizzes from all modules.
+​
+
+Below is a fully built first chunk for the Endocrine PDF (roughly the first 6–8 slides/sections). You can mirror this pattern in your Vite/React app (e.g., each module → learnItems[], questions[], shortQuiz[]).
+​
+
+Endocrine PDF – Module 1 (Slides 1–8-ish)
+Learn Items (for “Learn” view + flip cards)
+Nervous vs Endocrine Basics
+
+Endocrine system: hormones released into the bloodstream, effects may take hours but last longer.
+​
+
+Nervous system: uses neurotransmitters, effects in milliseconds, brief duration.
+​
+
+Cell Communication Mechanisms
+
+Gap junctions: pores allowing signaling chemicals to move cell to cell.
+​
+
+Neurotransmitters: released from neurons across synaptic gaps.
+​
+
+Paracrine (local) hormones: act on nearby cells in tissue fluid.
+​
+
+Hormones (strict): chemical messengers traveling in bloodstream to distant targets.
+​
+
+Differences: Nervous vs Endocrine
+
+Means: nervous has electrical + chemical; endocrine only chemical.
+​
+
+Speed: nervous reacts 1–10 msec and stops quickly; endocrine reacts more slowly (seconds–days), effects can persist for weeks.
+​
+
+Adaptation: nervous adapts quickly and response declines; endocrine responses are more persistent.
+​
+
+Area: nervous is targeted/specific (one organ); endocrine is general/widespread (many organs).
+​
+
+System Interactions & Overlap
+
+Some chemicals act as both hormones and neurotransmitters (e.g., norepinephrine, dopamine, TRH, ADH).
+​
+
+Neuroendocrine cells (neurons) secrete hormones like oxytocin and catecholamines.
+​
+
+Both systems can act on same target (norepinephrine and glucagon both cause glycogen breakdown in liver).
+​
+
+Systems regulate each other: neurons trigger hormone secretion, hormones can stimulate or inhibit neurons.
+​
+
+General Functions of Hormones
+
+Help regulate: extracellular fluid, metabolism, biological clock, cardiac and smooth muscle contraction, glandular secretion, some immune functions.
+​
+
+Support growth and development and reproduction.
+​
+
+Exocrine vs Endocrine Glands
+
+Exocrine: secrete products into ducts to body cavities/surfaces (sweat, oil, mucous, digestive glands) with extracellular effects.
+​
+
+Endocrine: secrete hormones into bloodstream with intracellular effects; includes pituitary, thyroid, parathyroid, adrenal, pineal.
+​
+
+Some organs are mixed (2nd function): hypothalamus, thymus, pancreas, ovaries, testes, kidneys, stomach, liver, small intestine, skin, heart, placenta.
+​
+
+Hormones, Target Cells, and Components
+
+Hormone: chemical messenger secreted into bloodstream that stimulates response in another tissue or organ.
+​
+
+Target cells have specific receptors for a hormone.
+​
+
+Endocrine system includes classic glands and hormone-producing cells in organs like brain, heart, and small intestine.
+​
+
+Major Endocrine Organs
+
+Hypothalamus, pituitary, pineal, thyroid, parathyroids, thymus, adrenal glands, pancreas, gonads (ovaries/testes).
+​
+
+Control of Hormone Secretion
+
+Regulated by nervous signals, blood chemistry, or other hormones.
+​
+
+Negative feedback: most common; changes in blood levels are reversed (e.g., T3/T4–TSH–TRH loop).
+​
+
+Positive feedback: hormone-caused change triggers more hormone release (e.g., oxytocin and uterine contractions).
+​
+
+Disorders can arise from hyposecretion or hypersecretion.
+​
+
+Thyroid Negative Feedback Example
+
+Low T3/T4 or low metabolic rate → TRH from hypothalamus → TSH from anterior pituitary → T3/T4 release from thyroid.
+​
+
+Elevated T3 inhibits TRH and TSH (classic negative feedback).
+​
+
+Positive Feedback – Oxytocin
+
+Oxytocin stimulates uterine contractions; contractions stimulate more oxytocin release.
+​
+
+Suckling stimulates nerve endings → hypothalamus → posterior pituitary → oxytocin → milk ejection.
+​
+
+Hypothalamus–Pituitary Overview
+
+Both called master endocrine glands because their hormones control other glands.
+​
+
+Hypothalamus is brain region above pituitary, receives input from cortex, thalamus, limbic system, and internal organs.
+​
+
+Hypothalamus controls pituitary with 9 releasing and inhibiting hormones.
+​
+
+Pituitary Anatomy (Basic)
+
+Pea-sized gland in sella turcica, attached to brain via infundibulum.
+​
+
+Anterior lobe ≈ 75% (glandular), develops from roof of mouth.
+​
+
+Posterior lobe ≈ 25%, made of axon terminals from hypothalamic neurons and pituicytes.
+​
+
+Full Question Bank for Module 1 (MCQs)
+You can tag these in code as type: "practice" vs type: "quiz".
+
+The endocrine system primarily communicates using:
+a) Electrical impulses
+b) Neurotransmitters at synapses
+c) Hormones in the bloodstream
+d) Action potentials in neurons
+Answer: c
+​
+
+Compared to the endocrine system, the nervous system response is:
+a) Slower and longer lasting
+b) Faster and longer lasting
+c) Faster and shorter in duration
+d) Slower and shorter in duration
+Answer: c
+​
+
+Which communication method uses pores that directly connect neighboring cells?
+a) Neurotransmitters
+b) Hormones
+c) Gap junctions
+d) Paracrine signals
+Answer: c
+​
+
+A local hormone that affects nearby cells in the same tissue is called a:
+a) Neurotransmitter
+b) Gap junction messenger
+c) Paracrine hormone
+d) Endocrine hormone
+Answer: c
+​
+
+Which system uses both electrical and chemical signals?
+a) Endocrine
+b) Nervous
+c) Lymphatic
+d) Immune
+Answer: b
+​
+
+Endocrine responses are typically:
+a) Rapid and short-lived
+b) Rapid and localized
+c) Slow and localized
+d) Slow and long-lasting
+Answer: d
+​
+
+Which statement best describes endocrine effects?
+a) Always limited to one organ
+b) Targeted to a single synapse
+c) Often general and widespread
+d) Only in skeletal muscle
+Answer: c
+​
+
+A chemical that functions as both hormone and neurotransmitter is:
+a) Calcitonin
+b) Thyroxine
+c) Norepinephrine
+d) Insulin
+Answer: c
+​
+
+Neuroendocrine cells can secrete which of the following?
+a) Only neurotransmitters
+b) Only steroid hormones
+c) Oxytocin and catecholamines
+d) Glucose and amino acids
+Answer: c
+​
+
+Hormones help regulate all of the following EXCEPT:
+a) Extracellular fluid
+b) Metabolism
+c) Biological clock
+d) Bone fracture repair by casts
+Answer: d
+​
+
+Which is NOT a general function of hormones?
+a) Growth and development
+b) Reproduction
+c) Contraction of cardiac and smooth muscle
+d) Direct synthesis of DNA in neurons
+Answer: d
+​
+
+Exocrine glands release their products:
+a) Directly into blood
+b) Into ducts to body surfaces or cavities
+c) Into synaptic clefts
+d) Into the cerebrospinal fluid
+Answer: b
+​
+
+Which is an example of an exocrine gland product?
+a) Insulin
+b) Thyroxine
+c) Sweat
+d) ADH
+Answer: c
+​
+
+Endocrine glands are characterized by:
+a) Ducts opening to body surfaces
+b) Hormone secretion into the bloodstream
+c) Only local effects
+d) Storage of neurotransmitters
+Answer: b
+​
+
+Which organ has a secondary endocrine function?
+a) Sweat gland
+b) Lung
+c) Heart
+d) Skeletal muscle
+Answer: c
+​
+
+A hormone is best defined as:
+a) Any neurotransmitter in the brain
+b) Chemical messenger secreted into bloodstream affecting distant tissues
+c) Any molecule secreted into intestines
+d) A local paracrine factor only
+Answer: b
+​
+
+Cells that have specific receptors for a hormone are called:
+a) Neuroglia
+b) Target cells
+c) Exocrine cells
+d) Erythrocytes
+Answer: b
+​
+
+Which of these is NOT a major endocrine organ listed in the PDF?
+a) Thyroid gland
+b) Parathyroid glands
+c) Adrenal glands
+d) Appendix
+Answer: d
+​
+
+What type of feedback is most common in hormone regulation?
+a) Negative feedback
+b) Positive feedback
+c) Neutral feedback
+d) Recursive feedback
+Answer: a
+​
+
+In the T3/T4 feedback loop, which hormone directly stimulates thyroid follicular cells?
+a) TRH
+b) TSH
+c) ACTH
+d) GH
+Answer: b
+​
+
+Elevated T3 levels will:
+a) Stimulate more TRH and TSH release
+b) Inhibit TRH and TSH release
+c) Have no effect on TRH
+d) Only increase ACTH
+Answer: b
+​
+
+Oxytocin during labor is an example of:
+a) Negative feedback
+b) Positive feedback
+c) Neutral feedback
+d) Feedforward inhibition
+Answer: b
+​
+
+Which event directly increases oxytocin release for milk ejection?
+a) Rising blood glucose
+b) Elevated TSH
+c) Suckling infant stimulating nerve endings
+d) Low blood pressure in aorta
+Answer: c
+​
+
+The hypothalamus controls the pituitary gland using:
+a) Only nerve impulses
+b) Nine releasing and inhibiting hormones
+c) Digestive enzymes
+d) Gap junctions exclusively
+Answer: b
+​
+
+The anterior pituitary develops from:
+a) Neural tissue in the brainstem
+b) Roof of the mouth
+c) Spinal cord
+d) Adrenal cortex
+Answer: b
+​
+
+The posterior pituitary mainly consists of:
+a) Glandular epithelial cells
+b) Axon terminals of hypothalamic neurons and pituicytes
+c) Skeletal muscle fibers
+d) Chondrocytes
+Answer: b
+​
+
+Short Quiz (5–6 questions) for Module 1
+Use this as the “Section quiz” in your app UI.
+
+Which system has more persistent responses to long-term stimuli?
+a) Nervous
+b) Endocrine
+c) Respiratory
+d) Digestive
+Answer: b
+​
+
+A chemical messenger released into tissue fluid that affects nearby cells is called a:
+a) Neurotransmitter
+b) Paracrine hormone
+c) Autocrine enzyme
+d) Exocrine hormone
+Answer: b
+​
+
+Which is a true statement about endocrine glands?
+a) They have ducts to skin surfaces
+b) They secrete hormones into blood
+c) They produce only digestive enzymes
+d) They never interact with the nervous system
+Answer: b
+​
+
+Low levels of T3 and T4 will initially stimulate release of:
+a) TSH from thyroid
+b) TRH from hypothalamus
+c) ACTH from pituitary
+d) PTH from parathyroids
+Answer: b
+​
+
+Oxytocin’s role in milk ejection and uterine contractions is an example of:
+a) Negative feedback loop
+b) Lack of feedback
+c) Positive feedback loop
+d) Neural reflex without hormones
+Answer: c
+​
+
+The part of the pituitary that is purely neural tissue is the:
+a) Anterior lobe
+b) Posterior lobe
+c) Intermediate lobe
+d) Pineal body
+Answer: b
+
+Here is Endocrine Module 2 (next ~6–8 “slides” from the same PDF): focused on hypothalamic–pituitary hormones, GH, posterior pituitary, pineal, thymus, and thyroid.
+​
+
+You can treat this as another chunk in your app: moduleId: endocrine-2.
+
+Endocrine PDF – Module 2
+(Hypothalamus–Pituitary–Pineal–Thymus–Thyroid)
+
+Learn Items (for Learn view / flip cards)
+Hypothalamo–Hypophyseal Portal System
+
+Hypothalamus secretes releasing/inhibiting hormones into a portal system that goes directly to the anterior pituitary.
+​
+
+Key hypothalamic hormones: GnRH, TRH, CRH, PRH, PIH, GHRH, somatostatin.
+​
+
+Anterior Pituitary Tropic Hormones
+
+Anterior pituitary (adenohypophysis) secretes FSH, LH, TSH, ACTH, PRL, GH under hypothalamic control.
+​
+
+Tropic hormones target other endocrine glands (gonads, thyroid, adrenal cortex, etc.).
+​
+
+GH and IGF Functions
+
+GH from somatotropes promotes tissue growth directly (mitosis, differentiation) and indirectly via IGF‑I from liver.
+​
+
+GH–IGF increase protein synthesis, enhance amino acid transport, reduce protein breakdown.
+​
+
+They stimulate lipid metabolism (FFA and glycerol release), glucose‑sparing, and promote Na⁺, K⁺, Cl⁻ retention and Ca²⁺ absorption.
+​
+
+Regulation of hGH
+
+Low blood glucose → GHRH from hypothalamus → more hGH → glycogen breakdown to glucose in liver.
+​
+
+High blood glucose → GHIH from hypothalamus → less hGH → less glycogen breakdown.
+​
+
+Diabetogenic Effect & Aging of GH
+
+Excess GH raises blood glucose, causing continual insulin release and potential beta‑cell burnout, contributing to diabetes mellitus.
+​
+
+In childhood/adolescence GH drives bone, cartilage, muscle growth; in adults it increases osteoblastic activity and bone thickening.
+​
+
+GH levels are higher in deep sleep, after high‑protein meals, and vigorous exercise, and lower after high‑carb meals; levels fall to about ¼ by age 75.
+​
+
+TSH – Thyroid‑Stimulating Hormone
+
+Hypothalamus regulates thyrotrophs, which produce TSH.
+​
+
+TSH stimulates thyroid to synthesize and secrete T3 and T4, raising metabolic rate.
+​
+
+FSH – Follicle‑Stimulating Hormone
+
+GnRH from hypothalamus controls gonadotrophs which release FSH.
+​
+
+FSH forms ovarian follicles and stimulates estrogen secretion in females, and stimulates sperm production in testes in males.
+​
+
+LH – Luteinizing Hormone
+
+GnRH stimulates gonadotrophs to release LH.
+​
+
+In females: stimulates estrogen secretion, ovulation, corpus luteum formation, and progesterone secretion.
+​
+
+In males: stimulates interstitial cells to secrete testosterone.
+​
+
+PRL – Prolactin
+
+Hypothalamus controls lactotrophs; they produce prolactin.
+​
+
+Under proper conditions, PRL causes milk production; suckling reduces hypothalamic inhibition, raising PRL and milk production; when nursing stops, milk production slows.
+​
+
+ACTH and MSH
+
+Hypothalamic releasing hormones stimulate corticotrophs to secrete ACTH and MSH.
+​
+
+ACTH stimulates adrenal cortex cells to produce glucocorticoids.
+​
+
+MSH function in humans is uncertain (known to increase skin pigmentation in frogs).
+​
+
+Posterior Pituitary – ADH and Oxytocin
+
+Posterior pituitary (neurohypophysis) does not synthesize hormones; it stores and releases ADH and oxytocin from hypothalamic axon terminals.
+​
+
+Oxytocin: during delivery, cervical stretch → more uterine contractions; after delivery, suckling/hearing baby → milk ejection via myoepithelial contraction.
+​
+
+ADH (vasopressin): decreases urine production, decreases sweating, increases blood pressure.
+​
+
+Regulation of ADH
+
+Dehydration → ADH release → kidneys retain water, sweat glands reduce water loss, arterioles constrict to raise BP.
+​
+
+Overhydration → ADH inhibition → more urine, less water retention.
+​
+
+Pineal Gland and Melatonin
+
+Pineal gland: peak secretion at 1–5 years; about 75% lower by puberty.
+​
+
+Produces serotonin by day and converts it to melatonin at night; melatonin may regulate timing of puberty.
+​
+
+Melatonin is increased in Seasonal Affective Disorder (SAD) and PMS; phototherapy can reduce symptoms.
+​
+
+Light Regulation of Melatonin
+
+In darkness, fewer impulses from retina → pathway through suprachiasmatic nucleus and superior cervical ganglion → lack of norepinephrine → increased melatonin → sleepiness.
+​
+
+In light, norepinephrine inhibits melatonin secretion → less sleepiness.
+​
+
+Thymus
+
+Located in mediastinum superior to heart; undergoes involution after puberty.
+​
+
+Secretes thymopoietin and thymosins, which regulate development and later activation of T‑lymphocytes.
+​
+
+Thyroid Gland & Hormones
+
+Largest endocrine gland with high blood flow; two lobes with isthmus on anterior/lateral trachea.
+​
+
+Follicular cells in follicles secrete T3 and T4, which increase metabolic rate and O₂ consumption, heat production, heart rate/contractility, respiratory rate, appetite, and breakdown of carbs, lipids, and proteins.
+​
+
+C (parafollicular) cells secrete calcitonin, decreasing blood Ca²⁺ by promoting bone deposition, especially in children.
+​
+
+Question Bank – Module 2 (MCQs)
+The portal system that carries hypothalamic hormones to the anterior pituitary is the:
+a) Hypothalamo‑pituitary vein
+b) Hypothalamo‑hypophyseal portal system
+c) Systemic venous system
+d) Dural venous sinus
+Answer: b
+​
+
+Which hormone is NOT secreted by the anterior pituitary?
+a) FSH
+b) LH
+c) Oxytocin
+d) ACTH
+Answer: c
+​
+
+Tropic hormones primarily:
+a) Regulate digestion
+b) Target other endocrine glands
+c) Act only on skeletal muscles
+d) Stimulate neuron action potentials
+Answer: b
+​
+
+Growth hormone promotes tissue growth by:
+a) Blocking IGF production
+b) Stimulating mitosis and cellular differentiation
+c) Reducing amino acid transport into cells
+d) Inhibiting protein synthesis
+Answer: b
+​
+
+Which is a function of the GH‑IGF system?
+a) Decreasing Na⁺ retention
+b) Increasing lipid breakdown and glucose‑sparing
+c) Completely stopping protein synthesis
+d) Lowering Ca²⁺ absorption
+Answer: b
+​
+
+Low blood glucose triggers which response?
+a) Release of GHIH and reduction of hGH
+b) Release of GHRH and increased hGH
+c) Release of insulin from hypothalamus
+d) Increased calcitonin secretion
+Answer: b
+​
+
+Chronic excess of growth hormone can lead to:
+a) Hypoglycemia and low insulin
+b) Lower blood glucose and anemia
+c) High blood glucose and beta‑cell burnout
+d) Reduced insulin secretion and hypothermia
+Answer: c
+​
+
+In adulthood, GH primarily:
+a) Stops bone remodeling
+b) Increases osteoblastic activity and bone thickening
+c) Eliminates muscle mass
+d) Has no effect on tissues
+Answer: b
+​
+
+GH levels are highest during:
+a) Prolonged fasting and no sleep
+b) First 2 hours of deep sleep and after high‑protein meals
+c) Immediately after high‑carb meals
+d) Exposure to bright light
+Answer: b
+​
+
+TSH is produced by:
+a) Thyroid follicular cells
+b) Thyrotrophs in the anterior pituitary
+c) Adrenal cortex cells
+d) Pancreatic beta cells
+Answer: b
+​
+
+The primary effect of TSH is to:
+a) Stimulate adrenal medulla
+b) Increase melatonin production
+c) Stimulate synthesis and secretion of T3 and T4
+d) Decrease metabolic rate
+Answer: c
+​
+
+FSH in females:
+a) Stimulates uterine contractions
+b) Initiates ovarian follicle formation and estrogen secretion
+c) Causes milk ejection
+d) Raises blood glucose
+Answer: b
+​
+
+FSH in males:
+a) Stimulates testosterone production in interstitial cells
+b) Inhibits sperm production
+c) Stimulates sperm production in testes
+d) Induces ovulation
+Answer: c
+​
+
+In females, LH does all of the following EXCEPT:
+a) Stimulates estrogen secretion
+b) Triggers ovulation
+c) Stimulates corpus luteum formation and progesterone secretion
+d) Stimulates milk ejection
+Answer: d
+​
+
+In males, LH stimulates:
+a) Sertoli cells to release FSH
+b) Interstitial cells to secrete testosterone
+c) Thyroid cells to secrete calcitonin
+d) Beta cells to produce insulin
+Answer: b
+​
+
+Prolactin is mainly involved in:
+a) Regulation of blood pressure
+b) Milk production in mammary glands
+c) Uterine contraction during labor
+d) Increasing heart rate
+Answer: b
+​
+
+What effect does suckling have on prolactin?
+a) Increases hypothalamic inhibition of PRL
+b) Reduces hypothalamic inhibition, raising PRL
+c) Has no effect
+d) Stops PRL release permanently
+Answer: b
+​
+
+ACTH primarily stimulates:
+a) Thyroid follicles to make thyroxine
+b) Adrenal cortex to produce glucocorticoids
+c) Pancreatic islets to produce insulin
+d) Pineal gland to secrete melatonin
+Answer: b
+​
+
+Which hormone’s role in humans is uncertain, though it increases skin pigmentation in frogs?
+a) ADH
+b) PRL
+c) MSH
+d) GH
+Answer: c
+​
+
+The posterior pituitary:
+a) Synthesizes ADH and oxytocin
+b) Stores and releases ADH and oxytocin made in the hypothalamus
+c) Stores T3 and T4
+d) Releases ACTH and MSH
+Answer: b
+​
+
+ADH functions include all of the following EXCEPT:
+a) Decreasing urine production
+b) Decreasing sweating
+c) Increasing blood pressure
+d) Increasing digestive enzyme secretion
+Answer: d
+​
+
+During dehydration, ADH will:
+a) Decrease water reabsorption in kidneys
+b) Increase urine output
+c) Cause kidneys to retain more water and constrict arterioles
+d) Increase sweating
+Answer: c
+​
+
+The pineal gland primarily secretes:
+a) Insulin
+b) Melatonin
+c) Cortisol
+d) Aldosterone
+Answer: b
+​
+
+Melatonin levels are increased in:
+a) Hyperthyroidism
+b) Seasonal Affective Disorder and PMS
+c) Cushing syndrome
+d) Diabetes insipidus
+Answer: b
+​
+
+In darkness, melatonin secretion:
+a) Decreases due to high norepinephrine
+b) Increases due to lack of sympathetic stimulation
+c) Stops entirely
+d) Is unrelated to light
+Answer: b
+​
+
+The thymus secretes hormones that regulate:
+a) B‑cell antibody production
+b) Development and activation of T‑lymphocytes
+c) Erythrocyte maturation
+d) Insulin sensitivity
+Answer: b
+​
+
+The largest endocrine gland is the:
+a) Pituitary
+b) Thyroid
+c) Adrenal cortex
+d) Pancreas
+Answer: b
+​
+
+Thyroid follicular cells secrete:
+a) Calcitonin only
+b) T3 and T4
+c) PTH
+d) Melatonin
+Answer: b
+​
+
+A major effect of thyroid hormone is:
+a) Decreasing metabolic rate
+b) Lowering respiratory rate
+c) Increasing metabolic rate and oxygen consumption
+d) Reducing heart rate and contractility
+Answer: c
+​
+
+Calcitonin from C cells:
+a) Raises blood Ca²⁺
+b) Lowers blood Ca²⁺ and promotes bone deposition
+c) Has no effect on bone
+d) Acts only on the kidneys
+Answer: b
+​
+
+Short Quiz – Module 2 (5–6 questions)
+Which hormones are stored and released by the posterior pituitary?
+a) T3 and T4
+b) FSH and LH
+c) ADH and oxytocin
+d) GH and PRL
+Answer: c
+​
+
+Which hormone stimulates the adrenal cortex to produce glucocorticoids?
+a) TSH
+b) ACTH
+c) FSH
+d) GH
+Answer: b
+​
+
+Chronic excess hGH will most likely lead to:
+a) Persistent hypoglycemia
+b) Hyperglycemia and potential diabetes mellitus
+c) Severe hypothyroidism
+d) Immediate adrenal failure
+Answer: b
+​
+
+Melatonin secretion is highest:
+a) In bright sunlight
+b) During darkness
+c) After carbohydrate meals
+d) During intense exercise
+Answer: b
+​
+
+Calcitonin’s primary effect is to:
+a) Raise blood Ca²⁺ by bone resorption
+b) Lower blood Ca²⁺ by promoting bone deposition
+c) Increase Na⁺ retention
+d) Stimulate insulin release
+Answer: b
+​
+
+Which hormone directly stimulates ovarian follicles and sperm production?
+a) LH
+b) FSH
+c) TSH
+d) PRL
+Answer: b
+​
+
+Here is Endocrine Module 3: final 6–8 “pages” worth, focused on stress, aging, and disorders (thyroid, parathyroid, adrenal, pancreas/diabetes, hyperinsulinism). This closes out the endocrine PDF content for your app.
+​
+
+Endocrine PDF – Module 3
+(Stress, Aging, Endocrine Disorders & Diabetes)
+
+Learn Items (for Learn/flip cards)
+Stress, Immune System, and Disease
+
+Stress can contribute to disease by inhibiting the immune system, increasing risk of hypertension, asthma, migraine, gastritis, colitis, and depression.
+​
+
+Macrophages secrete interleukin‑1, linking stress and immunity by stimulating immune substance production; these immune substances then suppress interleukin‑1 in a feedback loop.
+​
+
+Endocrine Changes with Aging
+
+Human growth hormone production decreases with age, leading to muscle atrophy.
+​
+
+TSH production increases with age to stimulate the thyroid, but metabolic rate still decreases, body fat increases, and hypothyroidism becomes more common.
+​
+
+Thymus is replaced with adipose tissue after puberty; adrenal glands produce less cortisol and aldosterone.
+​
+
+Receptor sensitivity to glucose declines; ovaries stop responding to gonadotropins, reducing estrogen and contributing to osteoporosis and atherosclerosis.
+​
+
+General Endocrine Disorders
+
+Variations in hormone concentration and target‑cell sensitivity cause noticeable body effects.
+​
+
+Hyposecretion: inadequate hormone release, often from tumors/lesions destroying glands; example: head trauma damaging pituitary → ADH deficiency → diabetes insipidus with chronic polyuria.
+​
+
+Hypersecretion: excessive hormone release from tumors or autoimmune disorders; example: toxic goiter (Graves disease) where antibodies mimic TSH on the thyroid.
+​
+
+Pituitary Disorders – GH Imbalance
+
+Hypersecretion of GH: acromegaly in adults (thickening of bones and soft tissues).
+​
+
+Childhood/adolescence: GH oversecretion causes gigantism; GH hyposecretion causes dwarfism.
+​
+
+Thyroid Disorders – Hyper and Hypo
+
+Hyperthyroidism: symptoms include weight loss, tremors, nervousness, and exophthalmos.
+​
+
+Endemic goiter: iodine deficiency → no thyroid hormone → no negative feedback → elevated TSH and enlarged thyroid.
+​
+
+Toxic goiter (Graves disease): antibodies mimic TSH, causing high thyroid hormone and exophthalmos.
+​
+
+Congenital hypothyroidism (low TH in infants): abnormal bone development, thick facial features, low temp, lethargy, brain damage, dwarfism/cretinism.
+​
+
+Myxedema (adult hypothyroidism): low metabolic rate, sluggishness, sleepiness, weight gain, constipation, dry skin/hair, cold sensitivity, increased blood pressure and tissue swelling.
+​
+
+Parathyroid Disorders
+
+Hypoparathyroidism: often after surgical removal during thyroid surgery, can cause fatal tetany within 3–4 days.
+​
+
+Hyperparathyroidism: excess PTH from tumor → soft, fragile, deformed bones, increased blood Ca²⁺, and renal calculi (kidney stones).
+​
+
+Adrenal Disorders – Cortex
+
+Cushing syndrome: excess cortical secretion → hyperglycemia, hypertension, weakness, edema, muscle and bone loss from protein catabolism, poor wound healing.
+​
+
+Cushing body changes: “buffalo hump” fat between shoulders and “moon face” with thin, spindly legs.
+​
+
+Adrenogenital syndrome (AGS): adrenal androgen hypersecretion often accompanying Cushing → external genital enlargement in children and early puberty, and masculinization in women (deeper voice, beard).
+​
+
+Addison’s disease: hyposecretion of glucocorticoids → hypoglycemia, muscle weakness, low BP, dehydration from low Na⁺, skin darkening similar to MSH effects, and risk of cardiac arrest.
+​
+
+Diabetes Mellitus – Core Features
+
+Due to hyposecretion of insulin: signs include polyuria, polydipsia, polyphagia, plus hyperglycemia, glycosuria, and ketonuria.
+​
+
+Osmotic diuresis: blood glucose above renal transport maximum → glucose remains in urine, increases osmolarity, pulls water into urine.
+​
+
+Kidney tubules cannot reabsorb glucose fast enough without insulin, causing continued glucose and ketone loss and diuresis.
+​
+
+Types of Diabetes Mellitus
+
+Type I (IDDM): ≈10% of cases; often autoimmune destruction of beta cells; usually diagnosed around age 12.
+​
+
+Type I treatment: diet, exercise, blood glucose monitoring, and insulin injections or pump.
+​
+
+Type II (NIDDM): ≈90%; insulin resistance with target cells failing to respond to insulin.
+​
+
+Type II risk factors: heredity, age over 40, and obesity; treatment is weight loss (diet + exercise) and oral meds that improve insulin secretion or sensitivity.
+​
+
+Pathology of Diabetes – Acute and Chronic
+
+Acute: cells cannot absorb glucose, rely on fats and proteins → weight loss and weakness.
+​
+
+Increased fat catabolism → elevated FFA and ketone bodies; ketonuria causes osmotic diuresis with loss of Na⁺ and K⁺.
+​
+
+Ketoacidosis: ketones lowering blood pH → dyspnea and possibly diabetic coma if untreated.
+​
+
+Chronic hyperglycemia → neuropathy and cardiovascular damage due to atherosclerosis, affecting retina and kidneys (type I), causing heart failure and gangrene (type II).
+​
+
+Hyperinsulinism
+
+Causes: excessive insulin injection or pancreatic islet tumor.
+​
+
+Leads to hypoglycemia, weakness, hunger, and triggers epinephrine, GH, and glucagon release with anxiety, sweating, and increased heart rate.
+​
+
+Insulin shock: uncorrected hyperinsulinism resulting in disorientation, convulsions, or unconsciousness.
+​
+
+Question Bank – Module 3 (MCQs)
+Stress can promote disease primarily by:
+a) Increasing antibody production
+b) Inhibiting the immune system
+c) Increasing bone mass
+d) Stimulating pancreatic beta cells
+Answer: b
+​
+
+Interleukin‑1 is secreted by:
+a) Thyroid follicles
+b) Macrophages
+c) Beta cells
+d) Chromaffin cells
+Answer: b
+​
+
+Which change with aging contributes to muscle atrophy?
+a) Increased GH production
+b) Decreased GH production
+c) Increased melatonin
+d) Increased calcitonin
+Answer: b
+​
+
+With age, TSH levels tend to:
+a) Decrease, causing hyperthyroidism
+b) Increase, trying to stimulate the thyroid
+c) Stay constant
+d) Decrease to zero
+Answer: b
+​
+
+After puberty, the thymus:
+a) Enlarges significantly
+b) Is replaced largely by adipose tissue
+c) Starts secreting insulin
+d) Stops making T‑cell hormones but stays large
+Answer: b
+​
+
+An example of hormone hyposecretion is:
+a) Cushing syndrome
+b) Toxic goiter
+c) ADH deficiency causing diabetes insipidus
+d) Hyperparathyroidism
+Answer: c
+​
+
+Toxic goiter (Graves disease) involves:
+a) Iodine deficiency
+b) Autoantibodies mimicking TSH
+c) Lack of ACTH
+d) Pituitary tumor only
+Answer: b
+​
+
+Acromegaly is caused by:
+a) GH hypersecretion in adulthood
+b) GH hyposecretion in childhood
+c) Thyroid hormone deficiency
+d) Insulin resistance
+Answer: a
+​
+
+Gigantism results from:
+a) GH hypersecretion in adulthood
+b) GH hypersecretion in childhood/adolescence
+c) GH hyposecretion in old age
+d) Excess cortisol
+Answer: b
+​
+
+Which symptom is characteristic of hyperthyroidism?
+a) Weight gain and constipation
+b) Weight loss and nervousness
+c) Severe bradycardia
+d) Thickened facial features at birth
+Answer: b
+​
+
+Endemic goiter is most directly caused by:
+a) Excess TSH
+b) Iodine deficiency
+c) Excess PTH
+d) Lack of cortisol
+Answer: b
+​
+
+Myxedema typically presents with:
+a) High metabolic rate and sweating
+b) Low metabolic rate, weight gain, and cold sensitivity
+c) High fever and diarrhea
+d) Early onset puberty
+Answer: b
+​
+
+Hypoparathyroidism is often due to:
+a) Adrenal tumors
+b) Surgical removal of parathyroids
+c) Autoantibodies to insulin
+d) Pineal calcification
+Answer: b
+​
+
+Hyperparathyroidism can cause:
+a) Stronger, denser bones
+b) Soft, fragile, deformed bones and kidney stones
+c) Decrease in blood Ca²⁺
+d) Massive hair growth
+Answer: b
+​
+
+Cushing syndrome is associated with:
+a) Hypoglycemia and low BP
+b) Hyperglycemia, hypertension, and muscle wasting
+c) Massive weight loss and hypotension
+d) Increased melatonin and SAD
+Answer: b
+​
+
+The classic body changes of Cushing syndrome include:
+a) Goiter and exophthalmos
+b) Buffalo hump and moon face with thin legs
+c) Tetany and spasms
+d) Severe dehydration only
+Answer: b
+​
+
+Adrenogenital syndrome may cause in women:
+a) Feminization
+b) Masculinization with deeper voice and beard
+c) Complete loss of hair
+d) Severe hypothyroidism
+Answer: b
+​
+
+Addison’s disease is due to:
+a) Hypersecretion of glucocorticoids
+b) Hyposecretion of glucocorticoids
+c) Hypersecretion of insulin
+d) Hypersecretion of PTH
+Answer: b
+​
+
+A hallmark of Addison’s disease is:
+a) Hyperglycemia and obesity
+b) Hypoglycemia, low BP, dehydration, and skin darkening
+c) Goiter
+d) Exophthalmos
+Answer: b
+​
+
+Classic signs of diabetes mellitus due to insulin hyposecretion include all EXCEPT:
+a) Polyuria
+b) Polydipsia
+c) Polyphagia
+d) Hypoglycemia
+Answer: d
+​
+
+Osmotic diuresis in diabetes occurs because:
+a) Kidneys reabsorb all glucose
+b) Excess glucose in urine raises osmolarity and pulls water
+c) ADH is absent
+d) Kidneys stop filtering blood
+Answer: b
+​
+
+Type I diabetes is most closely associated with:
+a) Insulin resistance in target cells
+b) Autoimmune destruction of beta cells
+c) Onset only after age 40
+d) No need for insulin therapy
+Answer: b
+​
+
+Type II diabetes is characterized primarily by:
+a) Total absence of insulin
+b) Failure of target cells to respond to insulin
+c) Autoimmune attack on thyroid
+d) Excess growth hormone
+Answer: b
+​
+
+Major risk factors for Type II diabetes include:
+a) Iodine deficiency and hypercalcemia
+b) Heredity, age over 40, and obesity
+c) Low protein diet only
+d) Excess melatonin
+Answer: b
+​
+
+Acute effects of diabetes include:
+a) Increased glycogen stores and weight gain
+b) Weight loss and weakness from using fats and proteins
+c) Massive bone growth
+d) Reduced ketone body production
+Answer: b
+​
+
+Ketoacidosis in diabetes:
+a) Raises blood pH
+b) Lowers blood pH and may cause dyspnea and coma
+c) Has no effect on respiration
+d) Only affects thyroid hormones
+Answer: b
+​
+
+Chronic hyperglycemia can lead to all of the following EXCEPT:
+a) Neuropathy
+b) Cardiovascular damage from atherosclerosis
+c) Retinal and kidney damage
+d) Increased bone density
+Answer: d
+​
+
+Hyperinsulinism is often caused by:
+a) Insulin resistance
+b) Excess insulin injection or islet tumor
+c) Thyroidectomy
+d) Lack of glucagon
+Answer: b
+​
+
+A hallmark of insulin shock is:
+a) Very high blood glucose
+b) Disorientation, convulsions, or unconsciousness from hypoglycemia
+c) Severe hypernatremia
+d) Excess ketone bodies in blood
+Answer: b
+​
+
+Which symptoms are typical of hyperinsulinism before shock?
+a) Lethargy only
+b) Weakness, hunger, anxiety, sweating, increased HR
+c) Weight gain without hunger
+d) Tetany and exophthalmos
+Answer: b
+​
+
+Short Quiz – Module 3 (5–6 questions)
+Which endocrine change with aging contributes to increased body fat and lower metabolic rate?
+a) Decreased TSH
+b) Increased TSH with declining thyroid response
+c) Increased GH
+d) Increased cortisol secretion
+Answer: b
+​
+
+Endemic goiter is most directly related to a deficiency of:
+a) Calcium
+b) Iodine
+c) Sodium
+d) Potassium
+Answer: b
+​
+
+Which combination describes Addison’s disease?
+a) Hyperglycemia, moon face, buffalo hump
+b) Hypoglycemia, low BP, dehydration, skin darkening
+c) Weight loss, tremor, exophthalmos
+d) Tetany and renal stones
+Answer: b
+​
+
+Type II diabetes is best described as:
+a) Autoimmune beta‑cell destruction
+b) Insulin resistance at target cells
+c) Complete absence of glucagon
+d) Excess T3/T4
+Answer: b
+​
+
+Ketoacidosis is dangerous because it:
+a) Raises blood pH above normal
+b) Lowers blood pH and can cause dyspnea and coma
+c) Only affects the kidneys
+d) Is always asymptomatic
+Answer: b
+​
+
+Hyperinsulinism from overdose of insulin will primarily cause:
+a) Hyperglycemia
+b) Hypoglycemia with possible insulin shock
+c) Hypernatremia
+d) Hyperthyroidism
+Answer: b
+​Here’s a small sample rewrite of 6 questions from Endocrine Module 1 with mixed correct options, so you can see the pattern to apply in your app:
+
+The endocrine system primarily communicates using:
+a) Hormones in the bloodstream
+b) Electrical impulses
+c) Neurotransmitters at synapses
+d) Action potentials in neurons
+Answer: a
+​
+
+Compared to the endocrine system, the nervous system response is:
+a) Slower and longer‑lasting
+b) Slower and shorter
+c) Faster and shorter in duration
+d) Faster and longer‑lasting
+Answer: c
+​
+
+Which communication method uses pores directly connecting neighboring cells?
+a) Neurotransmitters
+b) Hormones
+c) Paracrine signals
+d) Gap junctions
+Answer: d
+​
+
+A local hormone that affects nearby cells in the same tissue is called a:
+a) Paracrine hormone
+b) Endocrine hormone
+c) Neurotransmitter
+d) Gap junction messenger
+Answer: a
+​
+
+Which statement best describes endocrine effects?
+a) Always limited to one organ
+b) Targeted to a single synapse
+c) Often general and widespread
+d) Only in skeletal muscle
+Answer: c
+​
+
+Which system uses both electrical and chemical signals?
+a) Endocrine
+b) Digestive
+c) Nervous
+d) Lymphatic
+Answer: c
+​
+
+In your Vite/React app, I’d recommend storing each question as { prompt, options: [], correctIndex } so you can either shuffle options on render or pre‑bake different correctIndex values like above. Do you want the next step to be: (a) re‑mixing all existing endocrine questions’ correct letters, or (b) starting the first heart module with mixed correct options from the beginning?
+
+module 4
+You’ve got 3 endocrine modules; Module 4 will be the next system, so I’ll start the Heart – Module 1 using the same Learn + questions + short quiz format with mixed correct letters, based on your heart PDFs.
+
+Heart PDF – Module 1
+(Basic Anatomy, Chambers, Valves, Layers)
+
+Learn Items
+Heart Position & Orientation
+
+The heart lies in the mediastinum between the lungs, with a base (broad superior portion) and an apex that tilts left and rests just above the diaphragm.
+​
+
+It has anterior and inferior surfaces and right and left borders.
+​
+
+Pericardium and Heart Wall
+
+Fibrous pericardium: tough dense irregular CT that protects, anchors, and prevents overstretching.
+​
+
+Serous pericardium: parietal and visceral (epicardium) layers with pericardial cavity and fluid between them.
+​
+
+Heart wall layers: epicardium (outer serous membrane), myocardium (thick cardiac muscle with fibrous skeleton), and endocardium (smooth inner lining continuous with vessel endothelium).
+
+Chambers of the Heart
+
+Four chambers: two superior atria (receiving chambers) and two inferior ventricles (pumping chambers).
+
+Each atrium has an auricle that slightly increases volume and contains pectinate muscles; atrial walls are thin due to light workload.
+​
+
+Ventricles are separated by the interventricular septum and have internal ridges called trabeculae carneae.
+
+Right Atrium and Right Ventricle
+
+Right atrium receives blood from superior vena cava, inferior vena cava, and coronary sinus; interatrial septum contains fossa ovalis (remnant of foramen ovale).
+
+Tricuspid (right AV) valve with three cusps leads to right ventricle.
+
+Right ventricle forms most of the anterior surface; contains papillary muscles, trabeculae carneae, chordae tendineae, and opens into pulmonary trunk via pulmonary semilunar valve.
+​
+
+Left Atrium and Left Ventricle
+
+Left atrium forms most of the base and receives four pulmonary veins (two right, two left).
+​
+
+Blood flows through bicuspid/mitral (left AV) valve with two cusps into the left ventricle.
+
+Left ventricle forms the apex, has thickest myocardium, contains chordae tendineae and trabeculae carneae, and pumps through aortic semilunar valve into ascending aorta.
+​
+
+Openings to coronary arteries lie just above the aortic valve.
+​
+
+Myocardial Thickness and Function
+
+Atria are thin‑walled and deliver blood to nearby ventricles.
+​
+
+Right ventricle pumps to low‑resistance lungs; left ventricle has the thickest wall to supply the systemic circulation.
+​
+
+Fibrous Skeleton and Valve Types
+
+Fibrous skeleton: dense CT rings around valves, fused with interventricular septum; provides structural support, muscle attachment, and acts as an electrical insulator between atria and ventricles.
+​
+
+AV valves: right AV (tricuspid) and left AV (mitral/bicuspid) with chordae tendineae attaching cusps to papillary muscles.
+
+Semilunar valves: pulmonary (right ventricle → pulmonary trunk) and aortic (left ventricle → aorta) control outflow from ventricles.
+
+AV Valve Mechanics
+
+When ventricles relax: pressure falls, semilunar valves close, AV valves open, and blood flows from atria into ventricles.
+​
+
+When ventricles contract: pressure rises, AV valves close; papillary muscles contract pulling on chordae tendineae to prevent prolapse; semilunar valves open and blood is ejected into great arteries.
+​
+
+Question Bank – Heart Module 1 (MCQs, mixed correct letters)
+Which layer of the heart wall is composed mainly of cardiac muscle and provides the pumping action?
+a) Epicardium
+b) Endocardium
+c) Myocardium
+d) Fibrous pericardium
+Answer: c
+
+The fibrous pericardium functions mainly to:
+a) Produce pericardial fluid
+b) Anchor the heart and prevent overstretching
+c) Conduct electrical impulses
+d) Store blood
+Answer: b
+​
+
+Which chamber receives blood from the superior and inferior venae cavae and the coronary sinus?
+a) Left ventricle
+b) Right ventricle
+c) Right atrium
+d) Left atrium
+Answer: c
+​
+
+The fossa ovalis in the interatrial septum is a remnant of the fetal:
+a) Ductus arteriosus
+b) Foramen ovale
+c) Umbilical vein
+d) Ductus venosus
+Answer: b
+
+Which valve is located between the right atrium and right ventricle?
+a) Mitral (bicuspid) valve
+b) Aortic semilunar valve
+c) Pulmonary semilunar valve
+d) Tricuspid valve
+Answer: d
+
+The left atrium receives oxygenated blood directly from the:
+a) Pulmonary veins
+b) Pulmonary trunk
+c) Superior vena cava
+d) Coronary sinus
+Answer: a
+​
+
+The valve that blood passes through to enter the ascending aorta is the:
+a) Pulmonary valve
+b) Aortic semilunar valve
+c) Tricuspid valve
+d) Mitral valve
+Answer: b
+​
+
+The chamber forming the apex of the heart is the:
+a) Right atrium
+b) Left atrium
+c) Right ventricle
+d) Left ventricle
+Answer: d
+​
+
+Thin, flaplike extensions that increase the volume of the atria are called:
+a) Papillary muscles
+b) Auricles
+c) Trabeculae carneae
+d) Chordae tendineae
+Answer: b
+​
+
+Internal ridges of muscle found in the ventricles are called:
+a) Pectinate muscles
+b) Trabeculae carneae
+c) Intercalated discs
+d) Crista terminalis
+Answer: b
+
+The fibrous skeleton of the heart does all of the following EXCEPT:
+a) Supports heart valves
+b) Provides attachment for cardiac muscle
+c) Acts as an electrical insulator between atria and ventricles
+d) Pumps blood through the chambers
+Answer: d
+​
+
+During ventricular contraction, the chordae tendineae:
+a) Open the semilunar valves
+b) Pull AV valve cusps toward the atria
+c) Prevent AV valve cusps from prolapsing into the atria
+d) Close the coronary arteries
+Answer: c
+
+Which statement about myocardial thickness is correct?
+a) Atrial walls are thicker than ventricular walls
+b) Right ventricle has the thickest wall
+c) Left ventricle wall is the thickest to pump to systemic circulation
+d) All chambers have equal wall thickness
+Answer: c
+​
+
+The pulmonary semilunar valve controls blood flow from:
+a) Right atrium to right ventricle
+b) Right ventricle to pulmonary trunk
+c) Left ventricle to aorta
+d) Left atrium to left ventricle
+Answer: b
+​
+
+The endocardium:
+a) Is the outermost heart layer
+b) Lines the chambers and covers valves, continuous with vessel endothelium
+c) Forms the fibrous pericardium
+d) Is composed entirely of skeletal muscle
+Answer: b
+
+Short Quiz – Heart Module 1 (5 questions, mixed answers)
+Which structure separates the right and left ventricles?
+a) Interventricular septum
+b) Interatrial septum
+c) Coronary sulcus
+d) Fossa ovalis
+Answer: a
+
+The chamber that forms most of the base of the heart is the:
+a) Right ventricle
+b) Left ventricle
+c) Right atrium
+d) Left atrium
+Answer: d
+​
+
+When ventricles relax, which valves are open?
+a) Semilunar valves
+b) AV valves
+c) All valves
+d) No valves
+Answer: b
+​
+
+Papillary muscles are found in the:
+a) Atria and attach to pectinate muscles
+b) Ventricles and attach to chordae tendineae
+c) Aorta and control outflow
+d) Pulmonary trunk only
+Answer: b
+​
+
+The right ventricle primarily pumps blood to the:
+a) Brain
+b) Systemic circulation
+c) Lungs
+d) Coronary circulation only
+Answer: c
+​
+
+Here’s Heart Module 2 (conduction, ECG, cardiac cycle, heart sounds, CO/HR), with mixed correct answer positions.
+
+Heart PDF – Module 2
+(Conduction System, ECG, Cardiac Cycle, CO & HR)
+
+Learn Items
+Cardiac Conduction System Basics
+
+The heartbeat is myogenic and autorhythmic, originating within the heart with regular, spontaneous depolarization.
+​
+
+SA node in the right atrium acts as pacemaker, initiating each heartbeat and setting heart rate; fibrous skeleton insulates atria from ventricles.
+​
+
+Conduction Pathway
+
+SA node → atrial myocardium → AV node (electrical gateway to ventricles).
+​
+
+AV bundle (bundle of His) carries signals from AV node into interventricular septum, where right and left bundle branches descend to the apex; Purkinje fibers spread upward through ventricular myocardium.
+​
+
+Firing Rates and Ectopic Pacemakers
+
+SA node fires 90–100 times/min; AV node 40–50/min; ventricular fibers alone 20–40/min.
+​
+
+If both nodes are suppressed, ventricular rate is too low and an artificial pacemaker may be needed.
+​
+
+Extra beats from other sites are ectopic pacemakers; caffeine and nicotine increase their activity.
+​
+
+Timing of Atrial and Ventricular Excitation
+
+SA node depolarization spreads through atria and to AV node in about 50 ms.
+​
+
+AV node delay (~100 ms) due to smaller fibers allows atria to finish contracting and filling the ventricles before ventricular contraction.
+​
+
+Excitation then spreads through both ventricles in about 50 ms.
+​
+
+Action Potential in Cardiac Muscle
+
+Resting potential is about −90 mV; depolarization occurs as fast Na⁺ channels open and membrane potential peaks around +30 mV.
+​
+
+Plateau (200–250 ms) due to slow Ca²⁺ entry and SR release maintains contraction.
+​
+
+Repolarization occurs as Ca²⁺ channels close and K⁺ channels open; long refractory period prevents tetanus and allows filling.
+​
+
+Electrocardiogram (ECG) Components
+
+ECG is a composite of all nodal and myocardial action potentials recorded on body surface.
+
+P wave: SA node fires and atria depolarize, followed by atrial systole.
+
+PQ interval: conduction time from atria to ventricles.
+​
+
+QRS complex: AV node fires, ventricles depolarize and contract (ventricular systole); atrial repolarization is masked.
+
+T wave: ventricular repolarization just before diastole.
+
+ECG Uses and Abnormalities
+
+ECG helps diagnose conduction abnormalities, myocardial infarction, heart enlargement, and electrolyte or hormone imbalances.
+​
+
+Examples: no P waves, extrasystoles with abnormal QRS/T, or arrhythmias from AV node conduction failure (no effective pumping).
+​
+
+Cardiac Cycle Phases and Volumes
+
+At 75 bpm, one cycle lasts 0.8 s: atrial systole 0.1 s, ventricular systole 0.3 s, quiescent period 0.4 s.
+​
+
+EDV: ~130 ml at end of diastole; ESV: ~60 ml at end of systole; stroke volume (SV) ≈ 70 ml = EDV − ESV.
+​
+
+Heart Sounds
+
+S1 (“lubb”): louder, longer sound from closure of AV valves at start of ventricular systole.
+​
+
+S2 (“dupp”): softer, sharper sound from closure of semilunar valves at start of ventricular diastole.
+​
+
+S3 may occur during rapid ventricular filling, rarely heard in people over 30.
+​
+
+Cardiac Output and Heart Rate
+
+Cardiac output (CO) = heart rate (HR) × stroke volume (SV); resting ~5.25 L/min (75 × 70 ml), typically 4–6 L/min.
+​
+
+CO can reach ~21 L/min in fit individuals and up to 35 L/min in elite athletes; cardiac reserve = max CO/rest CO.
+​
+
+Tachycardia: persistent resting HR > 100; bradycardia: HR < 60, common in endurance athletes (higher SV).
+​
+
+Question Bank – Heart Module 2 (MCQs, mixed correct answers)
+The primary pacemaker that normally sets the heart rate is the:
+a) AV node
+b) Purkinje fiber network
+c) SA node
+d) Bundle of His
+Answer: c
+​
+
+The AV node’s primary role in the conduction system is to:
+a) Initiate each heartbeat
+b) Provide a delay so ventricles fill before contracting
+c) Contract the atria
+d) Pump blood into the aorta
+Answer: b
+​
+
+Which structure carries impulses from the AV node into the interventricular septum?
+a) SA node
+b) Purkinje fibers
+c) AV bundle (bundle of His)
+d) Coronary sinus
+Answer: c
+​
+
+If both the SA and AV nodes fail, intrinsic ventricular fibers will fire at about:
+a) 10–20 beats/min
+b) 20–40 beats/min
+c) 60–80 beats/min
+d) 90–100 beats/min
+Answer: b
+​
+
+The plateau phase of the cardiac muscle action potential is mainly due to:
+a) Opening of fast Na⁺ channels
+b) Closing of all ion channels
+c) Influx of Ca²⁺ through slow channels and SR release
+d) Efflux of K⁺ only
+Answer: c
+​
+
+The long refractory period in cardiac muscle:
+a) Prevents tetanus and allows the heart to fill
+b) Causes faster heart rates
+c) Is shorter than in skeletal muscle
+d) Prevents any contraction
+Answer: a
+​
+
+On an ECG, the P wave represents:
+a) Ventricular depolarization
+b) Atrial depolarization
+c) Ventricular repolarization
+d) Atrial repolarization
+Answer: b
+
+The QRS complex corresponds to:
+a) Atrial repolarization only
+b) Ventricular depolarization and onset of ventricular systole
+c) Ventricular repolarization
+d) SA node firing only
+Answer: b
+
+The T wave on an ECG is generated by:
+a) Atrial depolarization
+b) Atrial repolarization
+c) Ventricular depolarization
+d) Ventricular repolarization
+Answer: d
+
+A total cardiac cycle at 75 beats/min lasts about:
+a) 0.4 seconds
+b) 0.6 seconds
+c) 0.8 seconds
+d) 1.0 second
+Answer: c
+​
+
+End‑diastolic volume (EDV) in a typical resting ventricle is about:
+a) 50 ml
+b) 70 ml
+c) 100 ml
+d) 130 ml
+Answer: d
+​
+
+Stroke volume is defined as:
+a) EDV + ESV
+b) EDV − ESV
+c) HR × EDV
+d) HR × ESV
+Answer: b
+​
+
+The “lubb” (S1) heart sound is caused by:
+a) Opening of AV valves
+b) Closure of AV valves at beginning of ventricular systole
+c) Closure of semilunar valves
+d) Turbulent flow in the venae cavae
+Answer: b
+​
+
+The “dupp” (S2) sound corresponds to:
+a) Opening of semilunar valves
+b) Closure of AV valves
+c) Closure of semilunar valves at beginning of ventricular diastole
+d) Rapid ventricular filling
+Answer: c
+​
+
+At rest, if heart rate is 75 bpm and stroke volume is 70 ml, cardiac output is approximately:
+a) 3.5 L/min
+b) 5.25 L/min
+c) 7.0 L/min
+d) 10.5 L/min
+Answer: b
+​
+
+Tachycardia is defined as a persistent resting heart rate:
+a) Less than 60 bpm
+b) Between 60–80 bpm
+c) Greater than 100 bpm
+d) Exactly 75 bpm
+Answer: c
+​
+
+Which condition is commonly associated with bradycardia in healthy individuals?
+a) Severe anemia
+b) Endurance training (increased stroke volume)
+c) Fever
+d) Hyperthyroidism
+Answer: b
+​
+
+During the isovolumetric contraction phase:
+a) Semilunar valves are open and blood is ejected
+b) All valves are closed and ventricular pressure rises
+c) AV valves are open and ventricles fill
+d) Semilunar valves are open but AV valves are closed
+Answer: b
+​
+
+During ventricular ejection:
+a) AV valves are open and semilunar valves are closed
+b) Both sets of valves are closed
+c) Semilunar valves are open and blood leaves the ventricles
+d) All chambers are relaxed
+Answer: c
+​
+
+An ECG with no P waves and irregular QRS complexes likely indicates a problem with the:
+a) Ventricular myocardium only
+b) SA node
+c) Aortic valve
+d) Coronary veins
+Answer: b
+​
+
+Short Quiz – Heart Module 2 (5 questions, mixed answers)
+The SA node normally fires how many times per minute?
+a) 20–40
+b) 40–50
+c) 60–80
+d) 90–100
+Answer: d
+​
+
+What does the PQ interval represent?
+a) Time for ventricular ejection
+b) Conduction time from atria to ventricles
+c) Ventricular repolarization
+d) Duration of atrial diastole
+Answer: b
+​
+
+Which heart sound is associated with closure of the AV valves?
+a) S1 (“lubb”)
+b) S2 (“dupp”)
+c) S3
+d) None of the above
+Answer: a
+​
+
+If EDV is 130 ml and ESV is 60 ml, stroke volume is:
+a) 60 ml
+b) 70 ml
+c) 130 ml
+d) 190 ml
+Answer: b
+​
+
+An ECG is especially useful for detecting:
+a) Blood pressure in the aorta
+b) Abnormal conduction pathways or MI
+c) Serum cholesterol levels
+d) Lung volume changes
+Answer: b
+​Heart PDF – Module 3
+(Autonomic HR Control, Stroke Volume, CHF, Risk Factors)
+
+Learn Items
+Cardiac Output and Reserve
+
+Cardiac output (CO) is the amount ejected by each ventricle per minute: CO = HR × SV.
+​
+
+Resting CO ≈ 5.25 L/min (75 bpm × 70 ml), usually 4–6 L/min; during vigorous exercise CO can reach ~21 L/min in fit people and up to ~35 L/min in world‑class athletes.
+​
+
+Cardiac reserve = maximum CO ÷ CO at rest; it increases with fitness and decreases with disease (about 4–5 normally, 7–8 in athletes).
+​
+
+Heart Rate Basics
+
+HR is measured from pulse; infants ~120 bpm, young adult females 72–80 bpm, young adult males 64–72 bpm; HR rises again in elderly.
+​
+
+Tachycardia: persistent resting HR > 100 bpm (due to stress, anxiety, drugs, heart disease, or increased body temperature).
+​
+
+Bradycardia: persistent resting HR < 60 bpm, common during sleep and in endurance‑trained athletes (who have higher stroke volume).
+​
+
+Chronotropic Effects and Cardiac Centers
+
+Positive chronotropic agents increase HR; negative chronotropic agents decrease HR.
+​
+
+The cardiac center in the medulla oblongata has two neuronal pools: a cardioacceleratory center (sympathetic) and a cardioinhibitory center (parasympathetic).
+​
+
+Sympathetic Stimulation
+
+Cardioacceleratory center stimulates sympathetic cardiac accelerator nerves to SA node, AV node, and myocardium.
+​
+
+These nerves release norepinephrine, which binds to β‑adrenergic receptors and increases HR (positive chronotropic effect).
+​
+
+CO peaks at HR of 160–180 bpm; sympathetic stimulation can push HR up to ~230 bpm, but very high rates reduce SV and CO due to less filling time.
+​
+
+Parasympathetic Stimulation
+
+Cardioinhibitory center sends parasympathetic fibers via the vagus nerves: right vagus mainly to SA node, left vagus to AV node.
+​
+
+They release acetylcholine, opening K⁺ channels in nodal cells, hyperpolarizing them and slowing their firing rate, thus lowering HR.
+​
+
+Vagal tone maintains resting HR around 70–80 bpm; if vagus nerves are cut, SA node fires at its intrinsic rate (~100 bpm).
+​
+
+Inputs to the Cardiac Center
+
+Higher brain centers (cortex, limbic system, hypothalamus) influence HR in response to sensory and emotional stimuli (e.g., fear, excitement).
+​
+
+Proprioceptors in muscles/joints signal activity changes, causing HR to rise at the start of exercise before metabolic demands change.
+​
+
+Baroreceptors in aorta and carotid arteries send pressure information: if BP falls, firing rate drops and cardiac center raises HR; if BP rises, firing rate increases and cardiac center lowers HR.
+​
+
+Chemoreceptors in aortic arch, carotid arteries, and medulla monitor pH, CO₂, and O₂; hypercapnia and acidosis stimulate the cardiac center to increase HR.
+​
+
+Chemical Influences on HR
+
+Neurotransmitters (norepinephrine and epinephrine) using cAMP as a second messenger are potent cardiac stimulants.
+​
+
+Drugs: caffeine prolongs cAMP effects by inhibiting its breakdown; nicotine stimulates catecholamine secretion.
+​
+
+Thyroid hormone increases adrenergic receptors in the heart, raising sensitivity to sympathetic stimulation and HR.
+​
+
+Potassium has strong chronotropic effects: moderate K⁺ elevation makes myocardium less excitable and slows HR; very high K⁺ or very low K⁺ can severely disturb rhythm.
+​
+
+Stroke Volume Determinants
+
+Stroke volume is governed by three main factors: preload, contractility, and afterload.
+​
+
+Preload: amount of tension in ventricular myocardium before contraction; increased preload increases SV (Frank–Starling law: SV ∝ EDV).
+​
+
+Contractility: force of contraction at a given preload; positive inotropic agents (e.g., norepinephrine, hypercalcemia, catecholamines, glucagon, digitalis) increase contractility; negative inotropic agents (e.g., hyperkalemia, hypocalcemia, hypoxia, hypercapnia) decrease it.
+​
+
+Afterload: pressure opposing semilunar valve opening (pressure in arteries); increased afterload decreases SV.
+​
+
+Effects of Exercise on CO
+
+At the start of exercise, proprioceptors increase HR; ongoing muscular activity raises venous return, increasing preload and SV, so both HR and SV rise to increase CO.
+​
+
+Sustained exercise can cause ventricular hypertrophy; a larger SV allows a lower resting HR (e.g., 40–60 bpm) and increases cardiac reserve.
+​
+
+Congestive Heart Failure (CHF)
+
+CHF: either ventricle fails to eject blood effectively, often due to coronary artery disease, hypertension, myocardial infarction, valve disorders, or congenital defects.
+​
+
+Left‑sided failure: blood backs up into lungs → pulmonary edema, suffocation, and tissue hypoxia.
+​
+
+Right‑sided failure: blood backs up in systemic circulation → peripheral edema and fluid accumulation in tissues.
+​
+
+Risk Factors for Heart Disease
+
+Major risk factors: high blood cholesterol, high BP, cigarette smoking, obesity, and lack of regular exercise.
+​
+
+Other factors: diabetes mellitus, genetic predisposition, male gender, high fibrinogen levels, and left ventricular hypertrophy.
+​
+
+Question Bank – Heart Module 3 (MCQs, mixed correct letters)
+Cardiac output is defined as:
+a) Stroke volume × blood pressure
+b) Heart rate × stroke volume
+c) End‑diastolic volume − end‑systolic volume
+d) Stroke volume ÷ heart rate
+Answer: b
+​
+
+In a healthy resting adult with HR = 75 bpm and SV = 70 ml, CO is approximately:
+a) 3 L/min
+b) 5.25 L/min
+c) 7 L/min
+d) 10 L/min
+Answer: b
+​
+
+Tachycardia is defined as a persistent resting heart rate:
+a) Below 60 bpm
+b) Between 60–80 bpm
+c) Above 100 bpm
+d) Exactly 75 bpm
+Answer: c
+​
+
+Which structure provides sympathetic innervation to SA node, AV node, and myocardium?
+a) Vagus nerve
+b) Cardiac accelerator nerves
+c) Phrenic nerve
+d) Glossopharyngeal nerve
+Answer: b
+​
+
+Norepinephrine increases HR by binding to which receptors in the heart?
+a) Muscarinic receptors
+b) α‑adrenergic receptors
+c) β‑adrenergic receptors
+d) Nicotinic receptors
+Answer: c
+​
+
+Parasympathetic fibers reach the heart primarily via the:
+a) Sympathetic chain
+b) Vagus nerves
+c) Intercostal nerves
+d) Hypoglossal nerve
+Answer: b
+​
+
+Opening of K⁺ channels in nodal cells by acetylcholine causes the cells to:
+a) Depolarize more rapidly and speed HR
+b) Hyperpolarize and slow HR
+c) Become impermeable to ions
+d) Fire spontaneously at 200 bpm
+Answer: b
+​
+
+Vagal tone is responsible for:
+a) Raising resting HR to 100 bpm
+b) Maintaining resting HR around 70–80 bpm
+c) Completely stopping HR during sleep
+d) Increasing CO during exercise
+Answer: b
+​
+
+A drop in arterial blood pressure will cause baroreceptors to:
+a) Increase firing and lower HR
+b) Decrease firing and allow cardiac center to increase HR
+c) Stop firing and halt the heart
+d) Have no effect on HR
+Answer: b
+​
+
+Hypercapnia (elevated CO₂) and acidosis will tend to:
+a) Inhibit the cardiac center and lower HR
+b) Stimulate the cardiac center and increase HR
+c) Have no effect on HR
+d) Only affect skeletal muscle
+Answer: b
+​
+
+Which of the following is a positive chronotropic agent?
+a) Acetylcholine
+b) Hyperkalemia (severe)
+c) Norepinephrine
+d) Hypoxia
+Answer: c
+​
+
+Thyroid hormone increases HR primarily by:
+a) Lowering body temperature
+b) Reducing β‑adrenergic receptors in the heart
+c) Increasing adrenergic receptors and sympathetic sensitivity
+d) Blocking norepinephrine release
+Answer: c
+​
+
+Preload is best defined as:
+a) Pressure in the aorta
+b) Amount of tension in ventricular myocardium before contraction
+c) Force of contraction at zero EDV
+d) Resistance in peripheral veins
+Answer: b
+​
+
+According to the Frank–Starling law of the heart:
+a) SV is unrelated to EDV
+b) SV decreases as EDV increases
+c) SV increases as EDV (preload) increases
+d) SV depends only on afterload
+Answer: c
+​
+
+A positive inotropic agent will primarily:
+a) Increase HR
+b) Decrease HR
+c) Increase contractility at a given preload
+d) Decrease venous return
+Answer: c
+​
+
+Which of the following is a negative inotropic agent?
+a) Digitalis
+b) Hypercalcemia
+c) Catecholamines
+d) Hyperkalemia
+Answer: d
+​
+
+Afterload refers to:
+a) Venous return
+b) Pressure in arteries that opposes opening of semilunar valves
+c) EDV
+d) End‑systolic volume
+Answer: b
+​
+
+Increased afterload generally:
+a) Increases stroke volume
+b) Decreases stroke volume
+c) Has no effect on stroke volume
+d) Eliminates the need for valves
+Answer: b
+​
+
+A sustained program of aerobic exercise typically causes:
+a) Decreased stroke volume and increased resting HR
+b) Ventricular hypertrophy with increased SV and lower resting HR
+c) Atrophy of cardiac muscle
+d) Complete dependence on sympathetic drive
+Answer: b
+​
+
+Left‑sided congestive heart failure causes blood to back up into the:
+a) Systemic veins, causing peripheral edema
+b) Lungs, causing pulmonary edema
+c) Coronary arteries, causing angina
+d) Hepatic portal system only
+Answer: b
+​
+
+Right‑sided heart failure is most associated with:
+a) Pulmonary edema
+b) Peripheral edema and fluid accumulation in tissues
+c) Hyperventilation
+d) Increased brain perfusion
+Answer: b
+​
+
+Which is NOT listed as a major risk factor for heart disease?
+a) High blood cholesterol
+b) High blood pressure
+c) Cigarette smoking
+d) Low fibrinogen levels
+Answer: d
+​
+
+Which condition is listed as a risk factor that can promote atherosclerosis and heart disease?
+a) Regular aerobic exercise
+b) Left ventricular hypertrophy
+c) Low blood pressure
+d) Hypothyroidism only
+Answer: b
+​
+
+In endurance‑trained athletes, resting bradycardia is primarily due to:
+a) Low vagal tone
+b) Reduced stroke volume
+c) Increased stroke volume and cardiac efficiency
+d) Chronic hyperthyroidism
+Answer: c
+​
+
+Short Quiz – Heart Module 3 (5 questions)
+Cardiac reserve is defined as:
+a) CO × HR
+b) Maximal CO divided by resting CO
+c) EDV − ESV
+d) SV ÷ HR
+Answer: b
+​
+
+Which factor directly increases stroke volume by stretching ventricular myocardium?
+a) Afterload
+b) Preload (EDV)
+c) Heart rate
+d) Arterial pressure
+Answer: b
+​
+
+Which neurotransmitter released by sympathetic nerves increases heart rate?
+a) Acetylcholine
+b) Dopamine
+c) Norepinephrine
+d) Serotonin
+Answer: c
+​
+
+Persistent resting HR below 60 bpm in a well‑trained athlete is usually:
+a) Pathologic tachycardia
+b) Bradycardia due to increased stroke volume
+c) Sign of acute MI
+d) Due to hyperthyroidism
+Answer: b
+​
+
+Left‑sided heart failure can lead to:
+a) Peripheral edema only
+b) Pulmonary edema and dyspnea
+c) Hyperventilation without fluid retention
+d) Increased kidney size
+Answer: b
+​Got it; I’ll keep going in order through each PDF. Here is Blood Module 1 from “The Blood is the Life”, just the first big 6–8‑page chunk, with mixed correct answers.
+​
+
+Blood PDF – Module 1
+(Overview, Functions, Properties, Plasma, Formed Elements, Hematocrit, Hemopoiesis)
+
+Learn Items
+Body Fluids and Hematology
+
+Cells are serviced by blood (plasma + cells) and interstitial fluid, which bathes body cells.
+​
+
+Nutrients and oxygen diffuse from blood → interstitial fluid → cells; wastes move in the reverse direction.
+​
+
+Hematology is the study of blood and blood disorders.
+​
+
+Functions of Blood
+
+Transportation: carries O₂, CO₂, metabolic wastes, nutrients, heat, and hormones.
+​
+
+Regulation: helps regulate pH via buffers, body temperature via water’s coolant properties and vasodilation of surface vessels, and water content of cells via dissolved ions and proteins.
+​
+
+Protection: defends against disease and prevents blood loss (hemostasis).
+​
+
+Basic Properties of Blood
+
+Adults have about 4–6 liters of blood composed of plasma (clear extracellular fluid) and formed elements (cells and platelets).
+​
+
+Blood is more viscous than water and flows more slowly, has a temperature of ~100.4°F, pH about 7.4 (7.35–7.45), and accounts for ~8% of body weight.
+​
+
+Blood Volume and Osmolarity
+
+Average blood volume: males 5–6 L, females 4–5 L.
+​
+
+Negative feedback maintains blood volume and osmotic pressure.
+​
+
+If blood osmolarity is too high, fluid moves into blood and can cause high BP; if too low, fluid stays in tissues causing edema, sometimes from low plasma protein (diet or disease).
+​
+
+Blood Sampling Techniques
+
+Venipuncture: sample from a vein (e.g., median cubital) with a syringe; veins are preferred over arteries because they have lower pressure and are closer to the surface.
+​
+
+Finger or heel stick: used by diabetics for daily blood sugar and commonly in infants.
+​
+
+Components and Hematocrit
+
+Blood is ~55% plasma and ~45% cells; of the cells, ~99% are RBCs and <1% are WBCs and platelets.
+​
+
+Hematocrit is the percentage of blood volume occupied by cells.
+​
+
+Normal hematocrit: females 38–46% (avg 42%), males 40–54% (avg 46%), with higher male values influenced by testosterone.
+​
+
+Plasma and Plasma Proteins
+
+Plasma: ~>90% water, ~7% proteins, and ~2% other solutes (enzymes, nutrients, wastes, hormones, electrolytes, gases).
+​
+
+If blood clots, the remaining fluid is serum.
+​
+
+Major plasma proteins:
+
+Albumins: most abundant; contribute to viscosity and osmolarity, influencing blood pressure, flow, and fluid balance.
+​
+
+Globulins (alpha, beta, gamma): antibodies providing immune defense.
+​
+
+Fibrinogen: precursor of fibrin threads that form blood clots.
+​
+
+Liver makes most plasma proteins; globulins are produced by plasma cells from B lymphocytes.
+​
+
+Non‑protein Plasma Components
+
+Nitrogenous compounds: amino acids and wastes (urea) from protein catabolism, normally removed by kidneys.
+​
+
+Nutrients include glucose, vitamins, fats, and minerals; some O₂ and CO₂ are carried in plasma.
+​
+
+Electrolytes, especially sodium (about 90% of plasma cations), contribute heavily to blood osmolarity.
+​
+
+Formed Elements Overview
+
+Red blood cells (erythrocytes).
+​
+
+White blood cells (leukocytes):
+
+Granular: neutrophils, eosinophils, basophils.
+​
+
+Agranular: lymphocytes (T cells, B cells, NK cells) and monocytes.
+​
+
+Platelets are special cell fragments important for clotting.
+​
+
+Hematocrit Disorders: Anemia and Polycythemia
+
+Anemia: too few RBCs or too little hemoglobin.
+​
+
+Polycythemia: too many RBCs (>65%), which can result from dehydration, tissue hypoxia, or blood doping.
+​
+
+Blood Doping
+
+Involves reinfusing stored RBCs before an athletic event to increase O₂ delivery.
+​
+
+Dangerous because it increases blood viscosity and forces the heart to work harder; banned by the Olympic committee.
+​
+
+Hemopoiesis – Sites and Stem Cells
+
+Most blood cells have short lifespans and need continual replacement.
+​
+
+Embryonic yolk sac produces stem cells that colonize fetal bone marrow, liver, spleen, and thymus; liver stops producing blood cells at birth, but spleen and thymus remain involved with WBC production.
+​
+
+Lymphoid hemopoiesis occurs in lymphoid tissues (thymus, tonsils, lymph nodes, spleen, Peyer’s patches).
+​
+
+Red bone marrow produces RBCs, WBCs, and platelets from hemocytoblasts (pluripotent stem cells) that can differentiate into multiple lines; committed cells follow one specific lineage.
+​
+
+In adults, active red marrow is in flat bones (sternum, ribs, skull, pelvis) and heads of femur and humerus.
+​
+
+Production is stimulated by erythropoietin, thrombopoietin, and colony‑stimulating factors (CSFs).
+​
+
+Hemopoietic Growth Factors
+
+Erythropoietin (EPO): from kidneys, increases RBC precursors.
+​
+
+Thrombopoietin (TPO): from liver, stimulates platelet formation.
+​
+
+Cytokines (CSFs and interleukins): local hormones in bone marrow stimulating WBC production.
+​
+
+Recombinant forms of these factors are used clinically (e.g., EPO for kidney disease anemia, CSFs for cancer chemo, TPO for platelet support).
+​
+
+Question Bank – Blood Module 1 (MCQs, mixed answers)
+Which two body fluids directly service cells?
+a) Blood and lymph
+b) Plasma and bile
+c) Blood and interstitial fluid
+d) CSF and interstitial fluid
+Answer: c
+​
+
+Which is NOT a listed function of blood?
+a) Transport of gases and nutrients
+b) Regulation of pH and temperature
+c) Protection from disease
+d) Production of digestive enzymes
+Answer: d
+​
+
+Approximately what percentage of total body weight does blood represent?
+a) 2%
+b) 8%
+c) 15%
+d) 25%
+Answer: b
+​
+
+Normal blood pH is closest to:
+a) 6.8
+b) 7.0
+c) 7.4
+d) 8.0
+Answer: c
+​
+
+Which statement about blood viscosity is correct?
+a) Blood is thinner than water and flows faster
+b) Blood is more viscous than water and flows more slowly
+c) Blood and water have identical viscosity
+d) Viscosity is unrelated to flow
+Answer: b
+​
+
+Venipuncture is preferred over arterial puncture because veins:
+a) Are deeper and have higher pressure
+b) Have lower pressure and are closer to the surface
+c) Contain no plasma
+d) Do not clot
+Answer: b
+​
+
+A typical blood sample is about:
+a) 25% cells and 75% plasma
+b) 55% plasma and 45% cells
+c) 90% cells and 10% plasma
+d) 10% cells and 90% plasma
+Answer: b
+​
+
+The hematocrit represents:
+a) Concentration of plasma proteins
+b) Percentage of blood volume occupied by cells
+c) Total blood volume
+d) White blood cell count
+Answer: b
+​
+
+Which is a normal average hematocrit value for males?
+a) 30%
+b) 38%
+c) 46%
+d) 60%
+Answer: c
+​
+
+Albumins in plasma primarily:
+a) Provide immune defenses
+b) Help form blood clots
+c) Contribute to viscosity and osmolarity, affecting BP and fluid balance
+d) Transport nitrogenous wastes
+Answer: c
+​
+
+Plasma globulins are mainly responsible for:
+a) Osmotic balance only
+b) Blood clot formation
+c) Immune system defense as antibodies
+d) Oxygen transport
+Answer: c
+​
+
+Fibrinogen’s main role is to:
+a) Carry hormones
+b) Act as a precursor of fibrin in clot formation
+c) Transport iron
+d) Neutralize toxins
+Answer: b
+​
+
+A deficiency of plasma proteins can directly lead to:
+a) Hypertension from high osmolarity
+b) Edema due to low osmolarity and fluid retention in tissues
+c) Higher RBC production
+d) Increased blood pH
+Answer: b
+​
+
+Which ion is the major cation in plasma and contributes most to osmolarity?
+a) Potassium
+b) Sodium
+c) Calcium
+d) Magnesium
+Answer: b
+​
+
+Which of the following is NOT a formed element of blood?
+a) Erythrocyte
+b) Leukocyte
+c) Platelet
+d) Albumin
+Answer: d
+​
+
+Polycythemia is defined as:
+a) Too few RBCs
+b) Too many RBCs (over ~65%)
+c) Too many WBCs
+d) Deficiency of platelets
+Answer: b
+​
+
+A potential cause of polycythemia mentioned in the text is:
+a) Iron deficiency
+b) Tissue hypoxia
+c) Vitamin B₁₂ deficiency
+d) Hypotension
+Answer: b
+​
+
+Blood doping is dangerous mainly because it:
+a) Decreases blood viscosity
+b) Increases blood viscosity and cardiac workload
+c) Eliminates plasma proteins
+d) Causes immediate anemia
+Answer: b
+​
+
+In adults, red bone marrow producing blood cells is found mainly in:
+a) Long bone shafts only
+b) Flat bones and heads of femur and humerus
+c) All bones equally
+d) Only the skull
+Answer: b
+​
+
+Hemocytoblasts are described as:
+a) Fully differentiated RBCs
+b) Pluripotent stem cells that can form multiple cell lines
+c) Platelet fragments
+d) Cells that only make WBCs
+Answer: b
+​
+
+Erythropoietin (EPO) is primarily produced by the:
+a) Liver
+b) Thymus
+c) Kidneys
+d) Spleen
+Answer: c
+​
+
+Thrombopoietin mainly stimulates the formation of:
+a) RBCs
+b) WBCs
+c) Platelets
+d) Plasma proteins
+Answer: c
+​
+
+Colony‑stimulating factors (CSFs) and interleukins mostly regulate:
+a) Plasma protein synthesis
+b) WBC production
+c) Platelet destruction
+d) Hemoglobin breakdown
+Answer: b
+​
+
+Which statement about recombinant growth factors is true?
+a) Recombinant EPO treats high BP
+b) CSFs are used to stimulate WBC formation in chemotherapy patients
+c) TPO is used only for anemia in kidney disease
+d) They are not yet available clinically
+Answer: b
+​
+
+Short Quiz – Blood Module 1 (5 questions)
+Which blood component is most abundant by volume?
+a) RBCs
+b) WBCs
+c) Plasma
+d) Platelets
+Answer: c
+​
+
+Which plasma protein helps maintain osmotic pressure and blood volume?
+a) Albumin
+b) Fibrinogen
+c) Globulin
+d) Hemoglobin
+Answer: a
+​
+
+A hematocrit of 30% in an adult is most consistent with:
+a) Anemia
+b) Polycythemia
+c) Normal male value
+d) Normal female value
+Answer: a
+​
+
+Which hormone increases RBC precursor production?
+a) Thrombopoietin
+b) Erythropoietin
+c) Insulin
+d) Thyroxine
+Answer: b
+​
+
+Blood doping increases performance by:
+a) Increasing albumin levels
+b) Increasing RBC count and oxygen‑carrying capacity
+c) Decreasing blood viscosity
+d) Eliminating lactate
+Answer: b
+​Blood PDF – Module 2
+(RBC Structure, Hemoglobin, Erythropoiesis, Anemia, Sickle‑Cell)
+
+Learn Items
+RBC Structure and Function
+
+New RBCs enter circulation at about 2 million per second.
+​
+
+Erythrocytes are biconcave discs (~7.5 μm wide, 2 μm thick at rim) with no organelles, maximizing surface area/volume for gas exchange.
+​
+
+Main function is gas transport: about 33% of cytoplasm is hemoglobin, carrying O₂ to tissues and CO₂ back to lungs.
+​
+
+RBCs contain carbonic anhydrase, which forms carbonic acid from CO₂ and water, important in gas transport and pH balance.
+​
+
+Erythropoiesis – Steps
+
+Erythropoiesis produces ~2.5 million RBCs/second from hemocytoblasts in bone marrow.
+​
+
+First committed cell is the proerythroblast, which has receptors for EPO.
+​
+
+Erythroblasts multiply and synthesize hemoglobin, then become normoblasts that discard their nucleus to form reticulocytes.
+​
+
+Reticulocytes (with a network of ER) enter blood as 0.5–1.5% of RBCs; full development takes 3–5 days with cell size reduction, increased cell number, Hb synthesis, and nucleus loss; blood loss speeds this up.
+​
+
+Reticulocyte Count and Bone Marrow Status
+
+Normal reticulocyte count: 0.5–1.5% of circulating RBCs.
+​
+
+Low reticulocyte count in anemia suggests bone marrow problems (e.g., leukemia, nutritional deficit, or lack of EPO response).
+​
+
+High reticulocyte count may indicate recent blood loss or effective iron therapy.
+​
+
+Erythrocyte Homeostasis (Feedback)
+
+Drop in RBC count → hypoxemia in kidneys → increased EPO → stimulated bone marrow → RBC count rises in 3–4 days (negative feedback).
+​
+
+Stimuli for erythropoiesis: low atmospheric O₂, increased exercise, and hemorrhage.
+​
+
+RBC Life Cycle and Removal
+
+RBC lifespan is about 120 days; they wear out from bending through capillaries and cannot repair due to lack of organelles.
+​
+
+Old RBCs are removed by fixed macrophages in spleen and liver; breakdown products are recycled.
+​
+
+Nutritional Requirements for RBC Production
+
+Iron is a key requirement; daily losses through urine, feces, and bleeding are ~0.9 mg in men and 1.7 mg in women, requiring 5–20 mg/day intake.
+​
+
+Dietary iron: ferric (Fe³⁺) and ferrous (Fe²⁺); stomach acid converts Fe³⁺ to absorbable Fe²⁺.
+​
+
+Gastroferritin from stomach binds Fe²⁺ and transports it to intestine; iron then binds transferrin in blood and goes to bone marrow (for Hb), muscle (for myoglobin), and all cells (for cytochromes).
+​
+
+Liver stores excess iron as ferritin (Fe bound to apoferritin).
+​
+
+B₁₂ and folic acid are needed for rapid cell division; vitamin C and copper are cofactors for enzymes that synthesize RBCs.
+​
+
+Hemoglobin Structure and Transport Roles
+
+Hemoglobin has four globin chains (2 alpha, 2 beta); each chain has a heme group binding one O₂ to Fe²⁺, so each Hb can carry four O₂.
+​
+
+Fetal hemoglobin uses gamma instead of beta chains.
+​
+
+Hemoglobin carries about 23% of CO₂ (bound to globin) and can transport nitric oxide/super‑nitric oxide, helping regulate blood pressure via vasodilation in lungs and tissues.
+​
+
+Hemoglobin and Iron Recycling
+
+In macrophages, globin is broken down into amino acids; heme splits into Fe³⁺ and biliverdin.
+​
+
+Iron binds transferrin in blood, is stored as ferritin/hemosiderin in liver, muscle, and spleen, or used in bone marrow.
+​
+
+Biliverdin is converted to bilirubin; liver secretes bilirubin into bile, which intestinal bacteria convert to urobilinogen and stercobilin (brown pigment of feces). Some reabsorbed urobilinogen becomes urobilin, excreted in urine.
+​
+
+RBC Indices and Sex Differences
+
+Hematocrit: men 42–52%; women 37–48%.
+​
+
+Hemoglobin concentration: men 13–18 g/dL; women 12–16 g/dL.
+​
+
+RBC count: men 4.6–6.2 million/µL; women 4.2–5.4 million/µL; values are lower in women due to less androgen stimulation and menstrual losses.
+​
+
+Polycythemia – Excess RBCs
+
+Primary polycythemia: cancer of erythropoietic cell line; RBC count up to 11 million/µL, hematocrit ~80%.
+​
+
+Secondary polycythemia: from dehydration, emphysema, high altitude, or conditioning; RBC count up to ~8 million/µL.
+​
+
+Dangers: increased blood volume, pressure, and viscosity leading to embolism, stroke, or heart failure.
+​
+
+Anemia – Causes and Effects
+
+Anemia: deficiency of RBCs or hemoglobin.
+​
+
+Causes:
+
+Inadequate erythropoiesis or Hb synthesis (e.g., B₁₂ deficiency or lack of intrinsic factor → pernicious anemia, iron‑deficiency, kidney failure with low EPO, aplastic anemia from marrow failure).
+​
+
+Hemorrhagic anemia from blood loss.
+​
+
+Hemolytic anemia from RBC destruction or hereditary Hb defects like thalassemia.
+​
+
+Effects: tissue hypoxia and necrosis (shortness of breath, lethargy), low blood osmolarity causing tissue edema, and low viscosity causing tachycardia and low BP.
+​
+
+Sickle‑Cell Anemia (SCA)
+
+SCA is a genetic defect in Hb (Hb‑S) where two amino acids are changed.
+​
+
+At low O₂, RBCs become sickle‑shaped, rupture easily, causing anemia and clot formation.
+​
+
+Common in populations from the “malaria belt” (Mediterranean, sub‑Saharan Africa, Asia); Hb‑S persists because heterozygotes have increased resistance to malaria as RBCs leak K⁺, killing the parasite.
+​
+
+Question Bank – Blood Module 2 (MCQs, mixed answers)
+The primary function of erythrocytes is to:
+a) Defend against pathogens
+b) Transport O₂ and CO₂
+c) Produce antibodies
+d) Form blood clots
+Answer: b
+​
+
+The absence of organelles in mature RBCs mainly:
+a) Prevents hemoglobin synthesis
+b) Increases surface area/volume ratio and diffusion efficiency
+c) Shortens their life to less than one day
+d) Eliminates carbonic anhydrase
+Answer: b
+​
+
+The first committed cell in the RBC lineage that responds to EPO is the:
+a) Hemocytoblast
+b) Reticulocyte
+c) Proerythroblast
+d) Normoblast
+Answer: c
+​
+
+Reticulocytes are characterized by:
+a) Presence of a full nucleus
+b) A fine network of endoplasmic reticulum
+c) Lack of hemoglobin
+d) Being fully mature RBCs
+Answer: b
+​
+
+A low reticulocyte count in an anemic patient suggests:
+a) Recent blood loss
+b) Bone marrow failure or insufficient EPO response
+c) Excessive EPO production
+d) Iron overload
+Answer: b
+​
+
+The stimulus that directly triggers increased EPO release from kidneys is:
+a) High RBC count
+b) Hypoxemia (low O₂) in the kidneys
+c) Elevated blood glucose
+d) High atmospheric O₂
+Answer: b
+​
+
+Average lifespan of an RBC is about:
+a) 30 days
+b) 60 days
+c) 120 days
+d) 1 year
+Answer: c
+​
+
+Old, worn‑out RBCs are primarily removed by macrophages in the:
+a) Pancreas and kidneys
+b) Spleen and liver
+c) Lungs and brain
+d) Skin and skeletal muscle
+Answer: b
+​
+
+Which form of dietary iron is absorbable in the intestine after stomach processing?
+a) Ferric (Fe³⁺)
+b) Ferrous (Fe²⁺)
+c) Ferritin
+d) Hemosiderin
+Answer: b
+​
+
+Transferrin’s main function is to:
+a) Store iron in the liver
+b) Transport iron in the blood
+c) Convert Fe³⁺ to Fe²⁺
+d) Synthesize hemoglobin
+Answer: b
+​
+
+Which vitamins are required for rapid cell division in erythropoiesis?
+a) A and D
+b) B₁₂ and folic acid
+c) E and K
+d) C and B₆
+Answer: b
+​
+
+Hemoglobin can carry how many O₂ molecules per molecule?
+a) One
+b) Two
+c) Three
+d) Four
+Answer: d
+​
+
+Fetal hemoglobin differs from adult hemoglobin by having:
+a) Gamma chains instead of beta chains
+b) Alpha chains instead of gamma chains
+c) No heme groups
+d) More iron atoms per heme
+Answer: a
+​
+
+Bilirubin is derived from:
+a) Globin breakdown
+b) Biliverdin from heme breakdown
+c) Ferritin
+d) Transferrin
+Answer: b
+​
+
+The brown pigment stercobilin in feces comes from:
+a) Iron oxidation
+b) Bile salts
+c) Bacterial conversion of bilirubin to urobilinogen and then stercobilin
+d) Urea breakdown
+Answer: c
+​
+
+Which is a typical normal RBC count for adult men?
+a) 1–2 million/µL
+b) 3–4 million/µL
+c) 4.6–6.2 million/µL
+d) 7–9 million/µL
+Answer: c
+​
+
+Primary polycythemia is caused by:
+a) Dehydration
+b) Cancer of the erythropoietic cell line
+c) Iron deficiency
+d) Renal failure
+Answer: b
+​
+
+A hematocrit of 80% and RBC count of ~11 million/µL most likely indicates:
+a) Anemia
+b) Primary polycythemia
+c) Normal training adaptation
+d) Thalassemia
+Answer: b
+​
+
+A major danger of polycythemia is:
+a) Decreased blood pressure
+b) Formation of emboli, stroke, or heart failure from high viscosity
+c) Dehydration
+d) Increased resistance to infection
+Answer: b
+​
+
+Pernicious anemia is most directly related to:
+a) Excess vitamin B₁₂
+b) Lack of intrinsic factor leading to B₁₂ deficiency
+c) High folic acid
+d) Low vitamin C
+Answer: b
+​
+
+Which anemia results from failure of kidney EPO production?
+a) Pernicious anemia
+b) Iron‑deficiency anemia
+c) Anemia associated with kidney failure
+d) Thalassemia
+Answer: c
+​
+
+General effects of anemia include all of the following EXCEPT:
+a) Tissue hypoxia and lethargy
+b) Low blood osmolarity and edema
+c) Low viscosity causing fast HR and low BP
+d) Increased blood viscosity and hypertension
+Answer: d
+​
+
+Sickle‑cell anemia results from:
+a) Iron deficiency
+b) A genetic defect in Hb creating Hb‑S with altered amino acids
+c) Lack of vitamin K
+d) Excess hemoglobin production
+Answer: b
+​
+
+In sickle‑cell disease, sickled RBCs:
+a) Live longer than normal RBCs
+b) Rupture easily and can form clots
+c) Do not affect blood flow
+d) Never change shape with O₂ level
+Answer: b
+​
+
+The persistence of the Hb‑S allele in malaria‑endemic regions is explained by:
+a) Homozygotes having highest fitness
+b) Heterozygotes having resistance because leaky RBCs kill parasites
+c) It being a dominant trait
+d) Lack of medical care
+Answer: b
+​
+
+Short Quiz – Blood Module 2 (5 questions)
+Which enzyme in RBCs facilitates conversion of CO₂ and water to carbonic acid?
+a) Hemoglobinase
+b) Carbonic anhydrase
+c) Catalase
+d) Amylase
+Answer: b
+​
+
+A high reticulocyte count in an anemic patient most likely indicates:
+a) Bone marrow failure
+b) Recent blood loss or effective therapy
+c) Vitamin B₁₂ toxicity
+d) Low iron intake
+Answer: b
+​
+
+Which organ is the primary storage site for excess iron as ferritin?
+a) Kidney
+b) Liver
+c) Lung
+d) Pancreas
+Answer: b
+​
+
+Thalassemia is classified as:
+a) A hemorrhagic anemia
+b) A hereditary deficiency of hemoglobin
+c) An autoimmune anemia
+d) An anemia from vitamin K lack
+Answer: b
+​
+
+Where are most worn‑out RBCs destroyed and recycled?
+a) Bone marrow
+b) Spleen and liver by fixed macrophages
+c) Kidneys
+d) Lymph nodes
+Answer: b
+​
+
+Here is Blood Module 3 (WBCs, platelets, hemostasis, clotting, anticoagulants, hemophilia, blood types), still only from your blood PDF and with mixed correct answers.
+​
+
+Blood PDF – Module 3
+(WBCs, Platelets, Hemostasis, Clotting, Anticoagulants, Blood Types)
+
+Learn Items
+WBC Types and Basic Features
+
+Leukocytes (WBCs) have nuclei and no hemoglobin.
+​
+
+They are classified as granulocytes (neutrophils, eosinophils, basophils) or agranulocytes (monocytes, lymphocytes) based on presence of visible cytoplasmic granules.
+​
+
+Leukopoiesis and Lifespan
+
+Committed progenitors (B and T progenitors, granulocyte‑macrophage CFUs) have receptors for colony‑stimulating factors released by mature WBCs in response to infection.
+​
+
+Red bone marrow stores and releases granulocytes and monocytes; some lymphocytes leave unfinished and complete development in thymus (T cells).
+​
+
+Granulocytes leave blood after ~8 hours and live about 5 more days; monocytes leave in ~20 hours and become macrophages that can live for years; some lymphocytes provide immunity for decades.
+​
+
+Neutrophils (Granulocytes)
+
+Also called polymorphonuclear leukocytes (polys); nuclei have 2–5 lobes connected by thin strands, with older cells having more lobes.
+​
+
+Young neutrophils are “band cells” with horseshoe‑shaped nuclei.
+​
+
+They have fine, pale lilac granules, are 10–12 μm in diameter, and account for about 60–70% of circulating WBCs.
+​
+
+Platelets and Hemostasis Overview
+
+Platelets are small cell fragments involved in clotting (thrombocytes).
+​
+
+Hemostasis includes vascular spasm, platelet plug formation, and blood clotting (coagulation).
+​
+
+Platelets release factors that help form plugs and support clot stabilization and vessel repair.
+​
+
+Clotting Cascade – General and Pathways
+
+Prothrombinase can be generated by either the extrinsic or intrinsic pathway; it is the key trigger for the common pathway forming fibrin threads.
+​
+
+Extrinsic pathway: damaged tissues release tissue factor (thromboplastin, Factor III) activating Factor VII; in presence of Ca²⁺, Factor X combines with V to form prothrombinase—this pathway is rapid (seconds).
+​
+
+Intrinsic pathway: activation occurs when endothelium is damaged and platelets contact collagen (activating Factor XII) and when platelets release phospholipids; requires several minutes and involves Ca²⁺ and Factors XII, X, and V.
+​
+
+Final Common Pathway and Thrombin
+
+In the presence of Ca²⁺, prothrombinase converts prothrombin into thrombin.
+​
+
+Thrombin converts soluble fibrinogen into insoluble fibrin threads and activates Factor XIII (fibrin‑stabilizing factor).
+​
+
+Thrombin has positive feedback effects: it accelerates formation of more prothrombinase and activates platelets to release phospholipids.
+​
+
+Enzyme amplification means each activated factor activates many molecules in the next step, producing rapid clotting.
+​
+
+Vitamin K and Clotting
+
+Normal clotting requires adequate vitamin K, a fat‑soluble vitamin absorbed with dietary lipids; absorption is reduced if bile release is insufficient.
+​
+
+Vitamin K is needed by the liver to synthesize clotting Factors II (prothrombin), VII, IX, and X; gut bacteria in the large intestine also produce vitamin K.
+​
+
+Clot Retraction and Repair
+
+Clot retraction occurs within about 30 minutes: trapped platelets release Factor XIII to stabilize fibrin; platelet pseudopods contract and pull fibrin threads, condensing the clot and drawing wound edges together.
+​
+
+Platelet‑derived growth factor from platelets and endothelial cells stimulates fibroblasts and smooth muscle cells to proliferate and repair damaged vessel wall.
+​
+
+Fibrinolysis – Clot Dissolution
+
+Factor XII accelerates formation of kallikrein, which converts plasminogen to plasmin (a fibrin‑dissolving enzyme).
+​
+
+Plasmin breaks down fibrin; plasmin further promotes kallikrein formation, creating a positive feedback loop for clot dissolution.
+​
+
+The fibrinolytic system removes small, inappropriate clots and resolves clots at sites of completed repair.
+​
+
+Hemostatic Control and Natural Anticoagulants
+
+Clotting remains localized because fibrin absorbs thrombin and rapid blood flow dilutes clotting factors; endothelial cells and WBCs produce prostacyclin, which opposes thromboxane A₂ (platelet adhesion and release).
+​
+
+Natural anticoagulants include antithrombin (from liver), which inactivates thrombin, and heparin (from basophils and mast cells), which interferes with formation of prothrombin activator.
+​
+
+Intravascular Clotting and Emboli
+
+Thrombosis: clot (thrombus) forming in an unbroken vessel, often on rough endothelium or when blood flow is slow (stasis) allowing factor buildup.
+​
+
+The clot may dissolve or dislodge and travel as an embolus (clot, air bubble, or fat); pulmonary emboli lodge in lungs.
+​
+
+Low‑dose aspirin blocks thromboxane A₂ synthesis and reduces inappropriate clot formation, lowering risk of strokes, TIAs, and myocardial infarctions.
+​
+
+Anticoagulant and Thrombolytic Drugs
+
+Anticoagulants:
+
+Heparin: given during hemodialysis and surgery.
+​
+
+Warfarin (Coumadin): vitamin K antagonist that blocks synthesis of clotting factors; acts more slowly than heparin.
+​
+
+Stored banked blood is treated with citrate phosphate dextrose (CPD), which removes Ca²⁺ to prevent clotting.
+​
+
+Thrombolytic agents (e.g., streptokinase, tissue plasminogen activator/t‑PA) directly or indirectly activate plasminogen to dissolve clots.
+​
+
+Hemophilia
+
+Genetic lack of one or more clotting factors; often sex‑linked recessive in males.
+​
+
+Hemophilia A: deficiency of Factor VIII (~83% of cases); Hemophilia B: deficiency of Factor IX (~15%); Hemophilia C: deficiency of Factor XI (autosomal, less severe because alternative activation exists).
+​
+
+Physical exertion can cause prolonged bleeding and severe pain; treatment includes plasma or purified factor transfusions, with Factor VIII now produced via transgenic bacteria.
+​
+
+Blood Types – ABO Antigens and Antibodies
+
+RBC surface antigens (agglutinogens) A and B are inherited combinations of proteins, glycoproteins, and glycolipids; at least 26 blood group systems exist (ABO, Rh, Kell, Lewis, Kidd, Duffy, etc.).
+​
+
+Plasma antibodies (agglutinins) anti‑A and anti‑B are gamma globulins that recognize and bind foreign agglutinogens on RBCs.
+​
+
+These antibodies are responsible for RBC agglutination in mismatched transfusions.
+​
+
+Question Bank – Blood Module 3 (MCQs, mixed answers)
+Which feature is common to all leukocytes?
+a) Presence of hemoglobin
+b) Lack of a nucleus
+c) Presence of a nucleus and absence of hemoglobin
+d) Biconcave shape
+Answer: c
+​
+
+Neutrophils are also known as:
+a) Band cells only
+b) Polymorphonuclear leukocytes (polys)
+c) Agranulocytes
+d) Eosinophils
+Answer: b
+​
+
+The most numerous WBC type in normal blood is the:
+a) Lymphocyte
+b) Monocyte
+c) Neutrophil
+d) Basophil
+Answer: c
+​
+
+Granulocytes typically leave the bloodstream after about:
+a) 1 hour
+b) 4 hours
+c) 8 hours
+d) 10 days
+Answer: c
+​
+
+Platelets are best described as:
+a) Small nucleated cells
+b) Fragments of megakaryocytes involved in clotting
+c) Immature RBCs
+d) Tissue macrophages
+Answer: b
+​
+
+Prothrombinase is first formed during the:
+a) Final common pathway only
+b) Extrinsic and intrinsic pathways
+c) Fibrinolytic phase
+d) Platelet plug formation
+Answer: b
+​
+
+In the extrinsic pathway, damaged tissues release:
+a) Factor XII
+b) Tissue factor (thromboplastin, Factor III)
+c) Plasminogen
+d) Fibrinogen
+Answer: b
+​
+
+The intrinsic pathway can be triggered when:
+a) Blood contacts tissue factor outside vessels
+b) Platelets contact exposed collagen and release phospholipids
+c) Vitamin K levels drop
+d) Bilirubin accumulates
+Answer: b
+​
+
+In the presence of Ca²⁺, prothrombinase converts:
+a) Fibrinogen to fibrin
+b) Plasminogen to plasmin
+c) Prothrombin to thrombin
+d) Kallikrein to Factor XII
+Answer: c
+​
+
+Thrombin directly does all of the following EXCEPT:
+a) Converts fibrinogen to fibrin
+b) Activates Factor XIII
+c) Accelerates formation of more prothrombinase
+d) Degrades fibrin to dissolve clots
+Answer: d
+​
+
+Vitamin K is necessary for hepatic synthesis of:
+a) Factors II, VII, IX, and X
+b) Factors I, II, and V only
+c) All clotting factors equally
+d) Only Factor XII
+Answer: a
+​
+
+A deficiency of bile can impair clotting because:
+a) It reduces vitamin K absorption
+b) It reduces fibrinogen synthesis directly
+c) It increases platelet destruction
+d) It lowers RBC count
+Answer: a
+​
+
+During clot retraction:
+a) Plasmin digests fibrin
+b) Platelet pseudopods contract, pulling fibrin threads and wound edges together
+c) Endothelial cells detach from basement membrane
+d) Fibrinogen is released from platelets
+Answer: b
+​
+
+Plasmin’s primary role is to:
+a) Convert prothrombin to thrombin
+b) Dissolve fibrin in clots
+c) Activate Factor X
+d) Promote platelet plug formation
+Answer: b
+​
+
+Which system helps dissolve small, inappropriate clots and those at repaired sites?
+a) Complement system
+b) Fibrinolytic system
+c) Lymphatic system
+d) Renin–angiotensin system
+Answer: b
+​
+
+Antithrombin, produced by the liver, functions to:
+a) Activate thrombin
+b) Inactivate thrombin before it acts on fibrinogen
+c) Produce fibrin
+d) Stimulate platelet production
+Answer: b
+​
+
+Heparin, secreted by basophils and mast cells, mainly:
+a) Activates thrombin
+b) Interferes with formation of prothrombin activator
+c) Converts fibrinogen to fibrin
+d) Breaks down platelets
+Answer: b
+​
+
+Thrombosis refers to:
+a) A clot that has already dissolved
+b) A clot forming in an unbroken blood vessel
+c) Only clots in the lungs
+d) A deficiency of clotting factors
+Answer: b
+​
+
+A clot, air bubble, or fat droplet traveling in the bloodstream is called a(n):
+a) Thrombus
+b) Embolus
+c) Aneurysm
+d) Varix
+Answer: b
+​
+
+Low‑dose aspirin reduces risk of inappropriate clots mainly by:
+a) Blocking vitamin K absorption
+b) Blocking synthesis of thromboxane A₂
+c) Destroying fibrinogen
+d) Increasing RBC production
+Answer: b
+​
+
+Warfarin (Coumadin) acts by:
+a) Directly dissolving fibrin
+b) Antagonizing vitamin K and blocking synthesis of clotting factors
+c) Increasing platelet aggregation
+d) Releasing tissue factor
+Answer: b
+​
+
+Stored blood is treated with CPD mainly to:
+a) Add glucose
+b) Remove calcium and prevent clotting
+c) Increase platelet count
+d) Reduce viscosity
+Answer: b
+​
+
+Hemophilia A is due to a deficiency of:
+a) Factor VIII
+b) Factor IX
+c) Factor XI
+d) Fibrinogen
+Answer: a
+​
+
+Hemophilia B is characterized by lack of:
+a) Factor VIII
+b) Factor IX
+c) Factor XI
+d) Prothrombin
+Answer: b
+​
+
+Hemophilia C differs because it:
+a) Is sex‑linked
+b) Involves Factor XI and is autosomal, often less severe
+c) Involves a deficiency of platelets
+d) Has no genetic basis
+Answer: b
+​
+
+Which statement about hemophilia is correct?
+a) It is always autosomal
+b) Physical exertion can cause severe bleeding and pain
+c) It is due to excess clotting factors
+d) It can be cured by low‑dose aspirin
+Answer: b
+​
+
+Which molecules on RBCs determine ABO blood types?
+a) Plasma globulins
+b) Agglutinogens (A and B antigens) on the cell surface
+c) Platelet factors
+d) Complement proteins
+Answer: b
+​
+
+Plasma anti‑A and anti‑B are examples of:
+a) Agglutinogens
+b) Complement proteins
+c) Agglutinins (gamma globulin antibodies)
+d) Albumins
+Answer: c
+​
+
+RBC agglutination in mismatched transfusion is caused by:
+a) Loss of hemoglobin
+b) Antibodies binding foreign agglutinogens on RBCs
+c) Lack of vitamin K
+d) Low platelet count
+Answer: b
+​
+
+Which statement about thrombolytic agents like t‑PA is true?
+a) They inhibit vitamin K
+b) They activate plasminogen to dissolve clots
+c) They prevent platelet formation
+d) They increase thromboxane A₂
+Answer: b
+​
+
+Short Quiz – Blood Module 3 (5 questions)
+The final step in the common coagulation pathway is conversion of:
+a) Fibrin to fibrinogen
+b) Fibrinogen to fibrin by thrombin
+c) Prothrombin to Factor X
+d) Plasmin to plasminogen
+Answer: b
+​
+
+A blood clot forming in an unbroken vessel is called a:
+a) Hematoma
+b) Thrombus
+c) Embolus
+d) Aneurysm
+Answer: b
+​
+
+Which vitamin is essential for synthesis of several clotting factors?
+a) Vitamin A
+b) Vitamin C
+c) Vitamin K
+d) Vitamin D
+Answer: c
+​
+
+Hemophilia A results from a deficiency of:
+a) Factor II
+b) Factor VIII
+c) Factor IX
+d) Factor XI
+Answer: b
+​
+
+Plasma anti‑A antibodies will cause agglutination of RBCs that:
+a) Lack any antigens
+b) Carry A antigen
+c) Carry B antigen
+d) Carry no A or B antigens
+Answer: b
+​
+
+Vessels PDF – Module 1
+(Overview, Tunics, Arteries, Arterioles, Capillaries, Veins)
+
+Learn Items
+Major Vessel Types & Circulatory Layout
+
+Three principal categories of vessels: arteries carry blood away from the heart, veins carry blood back to the heart, and capillaries connect the smallest arteries to the smallest veins.
+
+The cardiovascular system is a closed system of tubes; venules collect blood from capillaries and merge to form veins, while arteries branch into arterioles and then capillaries.
+​
+
+Vasa vasorum are small blood vessels within the walls of large vessels that nourish their deeper tissues.
+
+Vessel Wall Layers (Tunics)
+
+Tunica interna (intima): innermost layer lining the lumen, made of simple squamous endothelium plus basement membrane and a thin layer of connective tissue; it acts as a selectively permeable barrier and smooth layer that repels blood cells and platelets.
+
+Tunica media: middle and usually thickest layer, consisting of smooth muscle, collagen, and sometimes elastic tissue; responsible for vasoconstriction and vasodilation.
+
+Tunica externa (adventitia): outermost layer of areolar connective tissue that anchors the vessel to adjacent tissues and provides passage for small nerves, lymphatic vessels, and the vasa vasorum.
+
+Sympathetic Innervation of Vessels
+
+Vascular smooth muscle is innervated by the sympathetic nervous system.
+​
+
+Increased sympathetic stimulation causes vasoconstriction (smooth muscle contraction), decreasing vessel diameter; injury to an artery or arteriole triggers vasospasm, reducing blood loss.
+​
+
+Decreased stimulation or certain chemicals (nitric oxide, K⁺, H⁺, lactic acid) promote vasodilation, increasing vessel diameter.
+​
+
+Arteries – Conducting (Elastic) Arteries
+
+Conducting (elastic or large) arteries are the largest, including the aorta, pulmonary trunk, common carotid, subclavian, and common iliac arteries.
+
+Their tunica media contains perforated sheets of elastic tissue alternating with thin layers of smooth muscle, collagen, and elastic fibers.
+​
+
+They expand during systole and recoil during diastole, helping to dampen blood pressure fluctuations.
+​
+
+Arteries – Distributing (Muscular) Arteries
+
+Distributing (muscular or medium) arteries are smaller branches that distribute blood to specific organs, such as brachial, femoral, splenic, and renal arteries.
+
+In these arteries, smooth muscle layers make up about three‑quarters of wall thickness, allowing strong vasoconstriction and vasodilation.
+​
+
+Arterioles and Metarterioles
+
+Arterioles are small arteries delivering blood to capillaries; their tunica media has only a few layers of smooth muscle.
+​
+
+Metarterioles branch into capillary beds; precapillary sphincters regulate whether blood enters the capillaries or bypasses them via a thoroughfare channel.
+​
+
+Vasomotion is the intermittent contraction and relaxation of sphincters, allowing capillary beds to fill 5–10 times per minute.
+​
+
+Capillaries – Microcirculation and Structure
+
+Capillaries are microscopic vessels connecting arterioles to venules; they are found near almost every cell but are most extensive in active tissues like muscles, liver, kidneys, and brain.
+​
+
+Their walls are a single layer of simple squamous endothelium and a basement membrane, making them thin enough for exchange.
+​
+
+Their primary function is exchange of nutrients and wastes between blood and tissue fluid; capillary beds are absent in epithelia, cornea, lens of eye, and cartilage.
+​
+
+Capillary Types
+
+Continuous capillaries: have intercellular clefts (small gaps) between endothelial cells; found in skeletal muscle, smooth muscle, connective tissues, and lungs.
+​
+
+Fenestrated capillaries: have many pores (fenestrations) in the plasma membrane; found in kidneys, small intestine, choroid plexuses, ciliary processes, and endocrine glands.
+​
+
+Sinusoids: have very large fenestrations and incomplete basement membrane; found in liver, bone marrow, spleen, anterior pituitary, and parathyroid glands.
+​
+
+Veins and Venules – General Features
+
+Venules: small veins that collect blood from capillaries; proximal venules are quite porous and exchange fluid with tissues like capillaries.
+​
+
+As venules enlarge, they resemble small veins, with sparse smooth muscle and fibroblasts; their porous endothelium allows WBCs to exit into tissues.
+​
+
+Veins have proportionally thinner walls than arteries of similar diameter, with less smooth muscle and no internal or external elastic lamina.
+​
+
+Veins have lower average pressure (~10 mmHg), expand easily, and act as high‑capacitance vessels; venous valves (folds of tunica interna) prevent backflow and aid skeletal muscle in upward blood flow.
+​
+
+Venous sinuses (e.g., coronary sinus, dural venous sinuses) have thin walls, large lumens, and no smooth muscle.
+​
+
+Varicose Veins
+
+Varicose veins are twisted, dilated superficial veins caused by leaky venous valves (congenital or from prolonged standing or pregnancy).
+​
+
+Valve failure allows backflow and pooling, increasing pressure and forcing fluid into tissues, leading to inflamed, tender surrounding tissue.
+​
+
+Deep veins are less susceptible due to the support of surrounding muscles.
+​
+
+Question Bank – Vessels Module 1 (MCQs, mixed answers)
+Which type of vessel carries blood away from the heart?
+a) Veins
+b) Arteries
+c) Venules
+d) Capillaries
+Answer: b
+
+The tunica interna (intima) is primarily composed of:
+a) Simple squamous endothelium and basement membrane
+b) Dense irregular connective tissue
+c) Skeletal muscle
+d) Elastic cartilage
+Answer: a
+
+Which vessel wall layer contains most of the smooth muscle for vasoconstriction and vasodilation?
+a) Tunica externa
+b) Tunica media
+c) Tunica interna
+d) Endocardium
+Answer: b
+
+The tunica externa (adventitia) serves mainly to:
+a) Repel blood cells
+b) Provide contractile force
+c) Anchor the vessel and provide passage for nerves and vasa vasorum
+d) Form valves in veins
+Answer: c
+
+Vasa vasorum are:
+a) Capillaries in alveoli
+b) Small vessels that nourish the walls of large vessels
+c) Valves in large veins
+d) Lymphatic vessels in myocardium
+Answer: b
+
+Increased sympathetic stimulation of vascular smooth muscle causes:
+a) Vasodilation
+b) Vasoconstriction
+c) No change in diameter
+d) Immediate clot formation
+Answer: b
+​
+
+Which chemical listed promotes vasodilation?
+a) Calcium
+b) Nitric oxide
+c) Fibrinogen
+d) Bilirubin
+Answer: b
+​
+
+Conducting (elastic) arteries include all of these EXCEPT:
+a) Aorta
+b) Pulmonary trunk
+c) Common carotid
+d) Radial artery
+Answer: d
+
+Elastic arteries help stabilize blood pressure mainly by:
+a) Thick tunica externa
+b) Expanding during systole and recoiling during diastole
+c) Having many valves
+d) Allowing reverse blood flow
+Answer: b
+​
+
+Distributing (muscular) arteries are characterized by:
+a) Very thin smooth muscle layer
+b) Smooth muscle making up about 3/4 of wall thickness
+c) No tunica media
+d) Absence of any elastic tissue
+Answer: b
+​
+
+Arterioles are best described as:
+a) Large elastic arteries
+b) Small arteries with few layers of smooth muscle delivering blood to capillaries
+c) Thin‑walled vessels returning blood to the heart
+d) Capillary‑like veins
+Answer: b
+​
+
+Precapillary sphincters are found at the entrance to:
+a) Large veins
+b) Elastic arteries
+c) Capillary beds from metarterioles
+d) Lymphatic ducts
+Answer: c
+​
+
+Vasomotion refers to:
+a) Heart contraction
+b) Intermittent contraction and relaxation of precapillary sphincters
+c) Sympathetic nerve firing
+d) Respiratory pump activity
+Answer: b
+​
+
+The main function of capillaries is to:
+a) Store blood as a reservoir
+b) Distribute blood to specific organs
+c) Exchange nutrients and wastes between blood and tissues
+d) Generate blood pressure
+Answer: c
+​
+
+Which capillary type has intercellular clefts between neighboring cells and is common in skeletal muscle?
+a) Continuous capillaries
+b) Fenestrated capillaries
+c) Sinusoids
+d) Venous sinuses
+Answer: a
+​
+
+Fenestrated capillaries are especially common in:
+a) Skin and skeletal muscle
+b) Kidneys and small intestine
+c) Bone marrow and spleen
+d) Cornea and lens
+Answer: b
+​
+
+Sinusoidal capillaries are typically found in:
+a) Liver and bone marrow
+b) Skeletal muscle only
+c) Lungs
+d) Skin
+Answer: a
+​
+
+Compared to arteries of the same diameter, veins generally have:
+a) Thicker tunica media and more elastic tissue
+b) Thinner walls and less muscle, with valves present
+c) No tunica externa
+d) Higher blood pressure
+Answer: b
+​
+
+The average blood pressure within veins is approximately:
+a) 0 mmHg
+b) 10 mmHg
+c) 35 mmHg
+d) 120 mmHg
+Answer: b
+​
+
+Venous valves are:
+a) Folds of tunica media preventing arterial backflow
+b) Folds of tunica interna preventing backflow of venous blood
+c) Present only in arteries
+d) Found only in the heart
+Answer: b
+​
+
+Venous sinuses differ from typical veins because they:
+a) Have thick smooth muscle
+b) Lack smooth muscle and have thin walls and large lumens
+c) Lack endothelium
+d) Are found only in limbs
+Answer: b
+​
+
+Varicose veins are caused primarily by:
+a) Overactive valves
+b) Leaky venous valves leading to backflow and pooling
+c) Excess arterial pressure
+d) Infection of the tunica interna
+Answer: b
+​
+
+Which veins are most prone to becoming varicose?
+a) Deep veins surrounded by muscle
+b) Superficial veins exposed to prolonged standing or pregnancy
+c) Coronary veins alone
+d) Pulmonary veins
+Answer: b
+​
+
+Short Quiz – Vessels Module 1 (5 questions)
+Which vessel type directly connects arterioles to venules and allows exchange?
+a) Veins
+b) Arteries
+c) Capillaries
+d) Lymphatics
+Answer: c
+​
+
+The layer of a blood vessel that directly contacts blood is the:
+a) Tunica externa
+b) Tunica media
+c) Tunica interna (intima)
+d) Pericardium
+Answer: c
+
+Conducting arteries, such as the aorta, are specialized to:
+a) Exchange nutrients
+b) Expand and recoil to smooth out blood pressure
+c) Store blood as a reservoir
+d) Filter lymph
+Answer: b
+​
+
+Venous valves are especially important in:
+a) Preventing backflow in veins of the limbs
+b) Preventing backflow in large arteries
+c) Regulating capillary exchange
+d) Supporting lymphatic flow
+Answer: a
+​
+
+Metarterioles and precapillary sphincters are involved in:
+a) Controlling entry of blood into capillary beds
+b) Returning lymph to the bloodstream
+c) Synthesizing plasma proteins
+d) Generating action potentials
+Answer: a
+​Vessels PDF – Module 2
+(Hemodynamics, Capillary Exchange, BP, Resistance, Venous Return, Edema)
+
+Learn Items
+Capillary Exchange Mechanisms
+
+Exchange occurs only across capillary walls between blood and interstitial fluid via three routes: intercellular clefts, fenestrations, or through endothelial cytoplasm.
+​
+
+Diffusion is the main mechanism (down concentration gradients); lipid‑soluble substances (steroid hormones, O₂, CO₂) diffuse through lipid bilayer, while water‑soluble substances (glucose, electrolytes) pass through channels, fenestrations, or clefts.
+​
+
+Large proteins are held back by the endothelium.
+​
+
+Transcytosis (endocytosis/exocytosis in vesicles) moves large lipid‑insoluble molecules like insulin or maternal antibodies across the endothelium.
+​
+
+Bulk Flow – Filtration and Reabsorption
+
+Bulk flow moves large amounts of dissolved or suspended material in response to pressure from high to low pressure areas.
+​
+
+Filtration: movement out into interstitial fluid, promoted by blood hydrostatic pressure and interstitial osmotic pressure.
+​
+
+Reabsorption: movement back into capillaries, promoted by blood colloid osmotic pressure (COP, mainly from albumin).
+​
+
+Net filtration pressure = balance of these forces; Starling’s law states that reabsorbed volume is almost equal to filtered volume (~85% reabsorbed, excess collected by lymphatics).
+​
+
+Net Filtration Pressure Dynamics
+
+Arterial end of capillary: net outward pressure ~10 mmHg (higher hydrostatic pressure).
+​
+
+Venous end: net inward pressure ~9 mmHg (higher COP relative to hydrostatic pressure).
+​
+
+About 85% of filtered fluid is reabsorbed; remaining ~3 L/day is returned by lymphatics.
+​
+
+Edema – Causes
+
+Edema is abnormal increase in interstitial fluid when filtration exceeds reabsorption.
+​
+
+Excess filtration: increased BP (hypertension) or increased capillary permeability (e.g., histamine release).
+​
+
+Inadequate reabsorption: decreased plasma proteins (low COP) from liver disease, burns, malnutrition, or kidney disease.
+​
+
+Not noticeable until ~30% above normal.
+​
+
+Edema Consequences and Triggers
+
+Poor venous return: congestive heart failure → pulmonary edema; insufficient muscle activity; kidney failure → water retention and hypertension.
+​
+
+Obstructed lymphatic drainage → edema.
+​
+
+Consequences: circulatory shock (low blood volume/BP), tissue necrosis (poor O₂/waste removal), pulmonary edema (suffocation), cerebral edema (headaches, nausea, seizures, coma).
+​
+
+Hemodynamics – Key Factors
+
+Hemodynamics involves pressure differences driving flow, velocity of flow, volume of flow, blood pressure, resistance, and venous return.
+​
+
+Blood flow velocity is inversely proportional to total cross‑sectional area (slowest in capillaries for exchange, fastest in aorta).
+​
+
+Circulation time: time for a blood drop to go from right atrium back to right atrium.
+​
+
+Blood Pressure and Volume Flow
+
+BP is highest in aorta (~120 mmHg systolic, 80 diastolic); falls steadily in systemic circulation (35 mmHg entering capillaries, 0 mmHg at right atrium).
+​
+
+Cardiac output = SV × HR; BP rises with increased HR/CO or blood volume.
+​
+
+Arterial elasticity (expansion/recoil) maintains steady flow, smooths pressure fluctuations, and reduces stress on small arteries; less elastic arteries with age raise BP.
+​
+
+Resistance to Flow
+
+Resistance comes from friction between blood and vessel walls; factors include vessel radius, blood viscosity, and vessel length.
+​
+
+Blood flow is proportional to the fourth power of vessel radius (r⁴); halving radius reduces flow to 1/16th (arterioles control BP by changing diameter).
+​
+
+Increased viscosity (e.g., dehydration, polycythemia) increases resistance; longer vessels increase resistance (obesity worsens this).
+​
+
+Systemic vascular resistance is the total of these factors.
+​
+
+Blood Flow Velocity and Laminar Flow
+
+Laminar flow: blood flows in layers with faster flow in center; small vessel radius lowers average velocity, large radius increases it.
+​
+
+Velocity decreases from aorta to capillaries (greater distance, smaller radii, larger total cross‑sectional area) and increases from capillaries to vena cava as vessels merge.
+​
+
+Capillary flow is slowest (~0.1 cm/sec) to allow exchange.
+​
+
+Mechanisms of Venous Return
+
+Pressure gradient: venous pressure ~7–13 mmHg toward the heart (venules ~12–18 mmHg to central venous ~5 mmHg).
+​
+
+Skeletal muscle pump: muscle contraction squeezes veins, pushing blood toward heart (valves prevent backflow).
+​
+
+Thoracic pump: inhalation lowers thoracic pressure and raises abdominal pressure, forcing blood upward; central venous pressure fluctuates (2 mmHg inhale, 6 mmHg exhale).
+​
+
+Cardiac suction: expanding atrial space pulls blood in.
+​
+
+Exercise and Venous Return
+
+Exercise increases venous return via faster/stronger heart (↑ CO/BP), vasodilation in skeletal muscle/lungs/heart, increased respiratory rate (thoracic pump), and skeletal muscle pump.
+​
+
+Inactivity causes venous pooling (low venous pressure insufficient for upward flow), leading to low CO, dizziness, or syncope; prevented by leg muscle tensing.
+​
+
+Shock and Homeostasis
+
+Shock: cardiovascular failure to deliver enough O₂/nutrients, causing inadequate perfusion and switch to anaerobic respiration → lactic acid buildup → cell/tissue damage and death.
+​
+
+Question Bank – Vessels Module 2 (MCQs, mixed answers)
+The most important mechanism for capillary exchange is:
+a) Filtration
+b) Diffusion down concentration gradients
+c) Osmosis of water only
+d) Active transport by endothelium
+Answer: b
+​
+
+Transcytosis in capillaries mainly transports:
+a) Small ions like Na⁺
+b) Lipid‑soluble gases like O₂
+c) Large lipid‑insoluble molecules like insulin
+d) Fibrin threads
+Answer: c
+​
+
+At the arterial end of a capillary bed, the net filtration pressure is typically:
+a) −9 mmHg (inward)
+b) 0 mmHg
+c) +10 mmHg (outward)
+d) +20 mmHg (outward)
+Answer: c
+​
+
+According to Starling’s law, approximately what percentage of filtered capillary fluid is reabsorbed?
+a) 50%
+b) 85%
+c) 100%
+d) 25%
+Answer: b
+​
+
+Edema can be caused by all of the following EXCEPT:
+a) Decreased plasma proteins lowering COP
+b) Hypertension increasing hydrostatic pressure
+c) Histamine increasing capillary permeability
+d) Increased venous return reducing filtration
+Answer: d
+​
+
+Blood flow velocity is:
+a) Fastest in capillaries
+b) Inversely proportional to total cross‑sectional area
+c) Constant throughout all vessels
+d) Slower in aorta than in veins
+Answer: b
+​
+
+Blood pressure is highest in the:
+a) Vena cava
+b) Capillaries
+c) Aorta
+d) Right atrium
+Answer: c
+​
+
+Arterial elasticity helps to:
+a) Increase pressure fluctuations
+b) Smooth out pressure fluctuations and maintain steady flow
+c) Store blood indefinitely
+d) Reduce velocity in capillaries
+Answer: b
+​
+
+Blood flow is proportional to the:
+a) Square of vessel radius
+b) Fourth power of vessel radius
+c) Cube of vessel length
+d) Inverse of blood viscosity only
+Answer: b
+​
+
+Which factor does NOT contribute to increased resistance to flow?
+a) Smaller vessel radius
+b) Increased blood viscosity
+c) Longer vessel length
+d) Decreased hematocrit
+Answer: d
+​
+
+The skeletal muscle pump aids venous return by:
+a) Increasing capillary permeability
+b) Squeezing veins to push blood toward the heart, with valves preventing backflow
+c) Lowering thoracic pressure
+d) Dilating arteries
+Answer: b
+​
+
+During inhalation, the thoracic pump:
+a) Increases abdominal pressure and forces blood upward
+b) Lowers abdominal pressure
+c) Decreases venous return
+d) Only affects arterial flow
+Answer: a
+​
+
+Prolonged inactivity can lead to:
+a) Venous pooling and low CO
+b) Increased arterial pressure
+c) Reduced capillary exchange
+d) Higher hematocrit
+Answer: a
+​
+
+Shock is primarily a failure of the cardiovascular system to:
+a) Increase blood viscosity
+b) Deliver adequate O₂ and nutrients to tissues
+c) Lower blood pressure
+d) Dilate veins
+Answer: b
+​
+
+Cerebral edema can cause all of the following EXCEPT:
+a) Headaches and nausea
+b) Seizures and coma
+c) Increased tissue perfusion
+d) Tissue hypoxia
+Answer: c
+​
+
+Which is a consequence of edema?
+a) Circulatory shock from low blood volume
+b) Decreased filtration
+c) Reduced lymphatic flow
+d) All of the above
+Answer: a
+​
+
+Laminar flow in blood vessels means:
+a) Turbulent mixing
+b) Blood flowing in smooth layers with faster flow in the center
+c) Complete stasis
+d) Only in capillaries
+Answer: b
+​
+
+Obesity increases resistance to blood flow mainly due to:
+a) Shorter vessels
+b) Increased total vessel length
+c) Lower viscosity
+d) Larger radius
+Answer: b
+​
+
+Central venous pressure fluctuates mainly due to:
+a) Skeletal muscle pump
+b) Respiratory cycle (thoracic pump)
+c) Cardiac systole
+d) Arterial pressure
+Answer: b
+​
+
+Prolonged standing can cause syncope due to:
+a) Venous pooling and inadequate venous return
+b) Excessive capillary exchange
+c) High hematocrit
+d) Vasodilation in the brain
+Answer: a
+​
+
+Short Quiz – Vessels Module 2 (5 questions)
+The main force driving filtration out of capillaries is:
+a) Blood colloid osmotic pressure
+b) Blood hydrostatic pressure
+c) Interstitial hydrostatic pressure
+d) Lymphatic suction
+Answer: b
+​
+
+Blood colloid osmotic pressure (COP) is mainly due to:
+a) Sodium ions
+b) Plasma proteins like albumin
+c) Red blood cells
+d) Glucose
+Answer: b
+​
+
+Edema is NOT typically caused by:
+a) Liver disease reducing plasma proteins
+b) Congestive heart failure
+c) Increased plasma protein concentration
+d) Obstructed lymphatics
+Answer: c
+​
+
+Arterioles control systemic blood pressure mainly by regulating:
+a) Total blood volume
+b) Vessel radius (flow ∝ r⁴)
+c) Venous capacitance
+d) Capillary density
+Answer: b
+​
+
+Which mechanism does NOT contribute to venous return?
+a) Skeletal muscle pump
+b) Thoracic pump during inhalation
+c) Cardiac suction of atria
+d) Arterial vasoconstriction
+Answer: d
+​Here is Blood Pressure & Lymphatic Module 1 (full content from this shorter PDF), with mixed correct answers.
+​
+
+Blood Pressure & Lymphatic PDF – Module 1
+(Blood Pressure Basics, Pulse Points, BP Measurement, Lymphatic Overview & Organs)
+
+Learn Items
+Cardiac Cycle and Blood Pressure
+
+The cardiac cycle is one contraction (systole) and relaxation (diastole) of the heart, lasting about 0.8 seconds.
+​
+
+The dicrotic notch is a small secondary pressure increase at the beginning of diastole, caused by closure of aortic/pulmonary valves.
+​
+
+Pulse pressure is the difference between systolic and diastolic pressures (~40 mmHg).
+​
+
+Heart Sounds in the Cardiac Cycle
+
+First and second heart sounds (S₁ and S₂) are often described as “lubb‑dupp” and are due to closing of the valves.
+​
+
+S₁ (“lubb”): closure of AV valves at start of systole.
+​
+
+S₂ (“dupp”): closure of semilunar valves at start of diastole.
+​
+
+Pulse Points
+
+Common sites for taking pulse: carotid, radial, brachial, dorsalis pedis (dorsal foot artery), posterior tibial.
+​
+
+Taking a Blood Pressure – Step‑by‑Step
+
+Place cuff on bare upper arm 1 inch above elbow bend, tight enough for two fingertips under top edge.
+​
+
+Position stethoscope disk under cuff on inner side of upper arm.
+​
+
+Place earpieces facing forward (toward nose tip), rest gauge in palm of cuffed arm.
+​
+
+Inflate cuff rapidly to 30 points above usual systolic pressure, then slowly deflate while listening.
+​
+
+Lymphatic System – Three Functions
+
+Fluid recovery: reabsorbs excess interstitial fluid (~15% of filtered fluid not returned by capillaries) and returns it to blood.
+​
+
+Immunity: tissue fluid (lymph) is filtered through lymph nodes containing immune cells before returning to bloodstream.
+​
+
+Lipid absorption: lacteals in small intestine villi absorb dietary lipids.
+​
+
+Lymphatic Organs – Thymus
+
+Thymus: bilobed organ between sternum and aortic arch; microscopic features include cortex, medulla, and Hassall’s corpuscles.
+​
+
+Lymphatic Organs – Spleen
+
+Spleen: in left hypochondriac region, inferior to diaphragm and posterolateral to stomach; has white pulp and red pulp.
+​
+
+Lymphatic Organs – Lymph Nodes
+
+Lymph nodes: most numerous (~450 in adults), located in cervical, axillary, intestinal, and inguinal regions.
+​
+
+Microscopic: capsule, cortex with lymphoid follicles, medulla.
+​
+
+Lymphatic Vessels and Flow
+
+Lymph flows through lymphatic vessels (lymphatics); openings are gaps between endothelial cells, anchored by filaments.
+​
+
+Right lymphatic duct: formed by convergence of right jugular, subclavian, and bronchomediastinal trunks.
+​
+
+Thoracic duct: drains from cisterna chyli (sac) and empties into left subclavian vein.
+​
+
+Other Lymphatic Structures
+
+Appendix: contains abundant lymphoid nodules (follicles).
+​
+
+Tonsils: three sets – pharyngeal (adenoids), palatine (pair), lingual (numerous); have crypts and lymphoid follicles.
+​
+
+Question Bank – Blood Pressure & Lymphatic Module 1 (MCQs, mixed answers)
+The cardiac cycle lasts approximately:
+a) 0.4 seconds
+b) 0.8 seconds
+c) 1.2 seconds
+d) 2 seconds
+Answer: b
+​
+
+The dicrotic notch corresponds to:
+a) Closure of AV valves
+b) A small secondary pressure increase at the beginning of diastole
+c) Peak systolic pressure
+d) Opening of semilunar valves
+Answer: b
+​
+
+Pulse pressure is the difference between:
+a) Diastolic and venous pressure
+b) Systolic and diastolic pressures
+c) Arterial and capillary pressure
+d) S₁ and S₂ sounds
+Answer: b
+​
+
+The “lubb‑dupp” sounds are caused by:
+a) Opening of all valves
+b) Closing of the valves
+c) Blood turbulence only
+d) Muscle contractions
+Answer: b
+​
+
+Which is NOT a typical pulse point?
+a) Carotid
+b) Radial
+c) Hepatic
+d) Posterior tibial
+Answer: c
+​
+
+When placing a BP cuff, it should be tight enough to allow:
+a) One fingertip under it
+b) Two fingertips under the top edge
+c) The whole hand under it
+d) No fingers under it
+Answer: b
+​
+
+The lymphatic system’s fluid recovery function returns about what percentage of filtered interstitial fluid to blood?
+a) 5%
+b) 15%
+c) 50%
+d) 85%
+Answer: b
+​
+
+Which lymphatic system function involves filtering lymph through lymph nodes?
+a) Fluid recovery
+b) Lipid absorption
+c) Immunity
+d) Gas exchange
+Answer: c
+​
+
+Lacteals in the small intestine are specialized for:
+a) Gas exchange
+b) Lipid absorption
+c) Fluid recovery
+d) Immunity only
+Answer: b
+​
+
+The thymus is located:
+a) In the left hypochondriac region
+b) Between the sternum and aortic arch
+c) Posterolateral to the stomach
+d) In the inguinal region
+Answer: b
+​
+
+The spleen’s microscopic features include:
+a) Capsule and crypts
+b) White pulp and red pulp
+c) Hassall’s corpuscles
+d) Cisterna chyli
+Answer: b
+​
+
+Lymph nodes are most numerous in which regions?
+a) Hepatic and splenic
+b) Cervical, axillary, intestinal, inguinal
+c) Femoral and popliteal
+d) Cranial and sacral
+Answer: b
+​
+
+The right lymphatic duct is formed by:
+a) Cisterna chyli
+b) Convergence of right jugular, subclavian, and bronchomediastinal trunks
+c) Thoracic duct branches
+d) Appendix follicles
+Answer: b
+​
+
+The thoracic duct empties into the:
+a) Right subclavian vein
+b) Left subclavian vein
+c) Superior vena cava
+d) Cisterna chyli
+Answer: b
+​
+
+Lymphatic capillaries have openings formed by:
+a) Valves
+b) Gaps between endothelial cells
+c) Smooth muscle contractions
+d) Anchoring filaments alone
+Answer: b
+​
+
+The appendix is notable for:
+a) Producing EPO
+b) Containing abundant lymphoid nodules
+c) Filtering plasma
+d) Storing platelets
+Answer: b
+​
+
+Which tonsil is also called the adenoid?
+a) Palatine
+b) Lingual
+c) Pharyngeal
+d) Intestinal
+Answer: c
+​
+
+A lymph node’s cortex primarily contains:
+a) Red pulp
+b) Lymphoid follicles
+c) White pulp
+d) Hassall’s corpuscles
+Answer: b
+​
+
+When inflating the BP cuff, you should go about how much above expected systolic?
+a) 10 points
+b) 20 points
+c) 30 points
+d) 50 points
+Answer: c
+​
+
+The spleen is located:
+a) Between sternum and aortic arch
+b) Left hypochondriac region, inferior to diaphragm
+c) Inguinal region
+d) Cervical region
+Answer: b
+​
+
+Short Quiz – Blood Pressure & Lymphatic Module 1 (5 questions)
+The “lubb” sound (S₁) occurs due to:
+a) Closure of semilunar valves
+b) Closure of AV valves
+c) Opening of all valves
+d) Blood entering capillaries
+Answer: b
+​
+
+Which lymphatic structure drains most of the body and empties into the left subclavian vein?
+a) Right lymphatic duct
+b) Cisterna chyli
+c) Thoracic duct
+d) Spleen
+Answer: c
+​
+
+The lymphatic system absorbs lipids in the small intestine via:
+a) Lymph nodes
+b) Thymus
+c) Lacteals
+d) Spleen
+Answer: c
+​
+
+When measuring BP, the stethoscope disk goes:
+a) On the wrist
+b) Under the cuff on the inner upper arm
+c) Over the brachial artery only
+d) On the carotid artery
+Answer: b
+​
+
+Hassall’s corpuscles are a feature of the:
+a) Spleen
+b) Lymph node cortex
+c) Thymus
+d) Appendix
+Answer: c
+​Lymphatic & Immune PDF – Module 1
+(Lymphatic Functions, Vessels/Flow, Cells, Tissues, Organs)
+
+Learn Items
+Lymphatic and Immune Systems Overview
+
+The lymphatic and immune systems protect the body from infection and disease.
+​
+
+Lymphatic system consists of organs, vessels, and lymph fluid (similar to interstitial fluid).
+​
+
+Key organs: red bone marrow, thymus, spleen, lymph nodes, diffuse lymphatic tissue (tonsils, adenoids, Peyer’s patches).
+​
+
+Functions of the Lymphatic System
+
+Immunity: filters fluids from capillary beds through lymph nodes where immune cells respond to foreign cells/chemicals.
+​
+
+Lipid absorption: lacteals in small intestine absorb dietary lipids.
+​
+
+Fluid recovery: absorbs plasma proteins and fluid (2–4 L/day) from tissues and returns it to bloodstream; interference causes severe edema.
+​
+
+Lymph and Lymphatic Capillaries
+
+Lymph: clear, colorless fluid similar to plasma but with much less protein.
+​
+
+Lymphatic capillaries: closed at one end, tethered by protein filaments; endothelial cells loosely overlap to form valve‑like flaps (open with high interstitial pressure, close with low pressure), allowing bacteria/cells to enter but not exit.
+​
+
+Found throughout body except avascular tissues (cartilage, epidermis, cornea); in GI tract called lacteals (contain chyle).
+​
+
+Lymphatic Vessels
+
+Larger vessels have three layers: tunica interna (endothelium + valves), tunica media (elastic fibers + smooth muscle), tunica externa (thin outer layer).
+​
+
+Route of Lymph Flow
+
+Lymphatic capillaries → collecting vessels (pass through lymph nodes) → lymphatic trunks → collecting ducts.
+​
+
+Right lymphatic duct: drains right arm, right side of head/thorax, empties into right subclavian vein.
+​
+
+Thoracic duct: larger/longer, begins as cisterna chyli (abdominal sac), drains below diaphragm + left arm/head/neck/thorax, empties into left subclavian vein.
+​
+
+Mechanisms of Lymph Flow
+
+Low pressure/speed; moved by rhythmic contractions of lymphatic vessels (stretching stimulates contraction), skeletal muscle pump, thoracic pump (abdominal to thoracic flow), valves preventing backflow, and rapid bloodstream suction in subclavian veins.
+​
+
+Exercise significantly increases lymphatic return.
+​
+
+Lymphatic Cells
+
+T lymphocytes: mature in thymus.
+​
+
+B lymphocytes: activation leads to plasma cells producing antibodies.
+​
+
+Antigen‑presenting cells (APCs): macrophages (from monocytes), dendritic cells (epidermis/mucous membranes/lymph organs), reticular cells (stroma of lymph organs).
+​
+
+Lymphatic Tissue
+
+Diffuse lymphatic tissue: lymphocytes in mucous membranes/CT of organs; mucosa‑associated lymphatic tissue (MALT) prevalent in exterior passages.
+​
+
+Lymphatic nodules: dense oval lymphocyte masses that congregate in response to pathogens; Peyer patches are more permanent clusters at small/large intestine junction.
+​
+
+Lymphatic Organs Overview
+
+Encapsulated with CT capsules at defined sites: lymph nodes, tonsils, thymus, spleen.
+​
+
+Lymph nodes: in cervical/axillary/inguinal (surface) and thoracic/abdominal/pelvic (deep); scattered near mammary glands, axillae, groin.
+​
+
+Tonsils: guard pharynx entrance.
+​
+
+Thymus: between sternum and aortic arch.
+​
+
+Spleen: inferior to diaphragm, dorsolateral to stomach.
+​
+
+Lymph Nodes Structure and Function
+
+Bean‑shaped, up to 1 inch long, along lymphatic vessels.
+​
+
+Stroma: capsule, trabeculae, reticular fibers.
+​
+
+Parenchyma: cortex (lymphatic nodules with germinal centers containing dendritic cells, APCs, macrophages; B cells → plasma cells) and medulla (B cells/plasma cells in medullary cords).
+​
+
+One‑way flow: afferent vessels in, sinuses to efferent vessels out at hilus; only nodes filter lymph.
+​
+
+Cancer Metastasis via Lymphatics
+
+Malignant tumors spread via lymph/blood; secondary sites predictable by lymph flow direction from primary site.
+​
+
+Cancerous nodes: firm, enlarged, nontender; infected nodes: tender, not firm.
+​
+
+Question Bank – Lymphatic & Immune Module 1 (MCQs, mixed answers)
+The lymphatic system’s primary role in immunity is to:
+a) Produce RBCs
+b) Filter capillary bed fluids through lymph nodes for immune response
+c) Absorb water only
+d) Store fat in adipocytes
+Answer: b
+​
+
+Daily fluid recovery by the lymphatic system is about:
+a) 0.5–1 L
+b) 2–4 L
+c) 5–6 L
+d) 10 L
+Answer: b
+​
+
+Lacteals in the small intestine specialize in absorbing:
+a) Glucose
+b) Dietary lipids
+c) Amino acids
+d) Vitamins
+Answer: b
+​
+
+Lymph is most similar to:
+a) Blood plasma but with much less protein
+b) Serum
+c) Interstitial fluid
+d) CSF
+Answer: a
+​
+
+Lymphatic capillaries are absent in:
+a) Muscle tissue
+b) Avascular tissues like cartilage, epidermis, cornea
+c) Liver
+d) Intestines
+Answer: b
+​
+
+Anchoring filaments in lymphatic capillaries mainly:
+a) Prevent collapse under external pressure
+b) Pump lymph
+c) Produce antibodies
+d) Filter bacteria
+Answer: a
+​
+
+Overlapping endothelial cells in lymphatic capillaries form:
+a) Permanent openings
+b) Valve‑like flaps that open with high interstitial pressure
+c) Smooth muscle layers
+d) Fenestrations
+Answer: b
+​
+
+Larger lymphatic vessels resemble veins with:
+a) No valves
+b) Endothelium, valves, elastic fibers/smooth muscle, thin externa
+c) Thick tunica media only
+d) No tunica interna
+Answer: b
+​
+
+The thoracic duct drains all of the following EXCEPT:
+a) Below diaphragm
+b) Left arm/head/neck/thorax
+c) Right arm
+d) Cisterna chyli
+Answer: c
+​
+
+The right lymphatic duct empties into the:
+a) Left subclavian vein
+b) Right subclavian vein
+c) Cisterna chyli
+d) Thoracic duct
+Answer: b
+​
+
+Which mechanism does NOT aid lymph flow?
+a) Rhythmic contractions of lymphatic vessels
+b) Skeletal muscle pump
+c) Arterial pulsations
+d) Thoracic pump
+Answer: c
+​
+
+T lymphocytes mature in the:
+a) Spleen
+b) Thymus
+c) Bone marrow
+d) Lymph nodes
+Answer: b
+​
+
+B lymphocytes differentiate into:
+a) Macrophages
+b) Plasma cells that produce antibodies
+c) NK cells
+d) Dendritic cells
+Answer: b
+​
+
+Which cells are antigen‑presenting cells (APCs)?
+a) RBCs
+b) Macrophages, dendritic cells, reticular cells
+c) Platelets
+d) Erythrocytes
+Answer: b
+​
+
+Mucosa‑associated lymphatic tissue (MALT) is found in:
+a) Bone marrow only
+b) Passages open to the exterior
+c) Avascular tissues
+d) Large arteries
+Answer: b
+​
+
+Peyer patches are:
+a) In the thymus
+b) Permanent lymphatic nodule clusters at small/large intestine junction
+c) In the spleen’s red pulp
+d) Tonsils
+Answer: b
+​
+
+Lymph nodes are concentrated near:
+a) Heart and lungs only
+b) Mammary glands, axillae, groin
+c) Kidneys
+d) Liver only
+Answer: b
+​
+
+In lymph nodes, the cortex contains:
+a) Medullary cords
+b) Lymphatic nodules with germinal centers and B cell proliferation
+c) Red pulp
+d) Hassall’s corpuscles
+Answer: b
+​
+
+Cancerous lymph nodes are typically:
+a) Tender and small
+b) Firm, enlarged, nontender
+c) Filled with pus
+d) Absent
+Answer: b
+​
+
+The spleen is located:
+a) Between sternum and aortic arch
+b) Inferior to diaphragm, dorsolateral to stomach
+c) In the groin
+d) In the neck
+Answer: b
+​
+
+Short Quiz – Lymphatic & Immune Module 1 (5 questions)
+Interference with lymphatic drainage primarily causes:
+a) Hypertension
+b) Severe edema
+c) Anemia
+d) High BP
+Answer: b
+​
+
+Lymphatic capillaries allow entry of bacteria due to:
+a) Thick walls
+b) Loosely overlapped endothelial cells forming valve‑like flaps
+c) Smooth muscle pumps
+d) High pressure
+Answer: b
+​
+
+Which duct receives lymph from the cisterna chyli?
+a) Right lymphatic duct
+b) Thoracic duct
+c) Jugular trunk
+d) Bronchomediastinal trunk
+Answer: b
+​
+
+Activation of B lymphocytes leads to:
+a) T cell maturation
+b) Plasma cells producing antibodies
+c) Macrophage differentiation
+d) RBC production
+Answer: b
+​
+
+Lymph node flow is one‑way from:
+a) Efferent to afferent vessels
+b) Afferent vessels through sinuses to efferent vessels at hilus
+c) Directly to veins
+d) Capillaries to arteries
+Answer: b
+​Here is Lymphatic & Immune Module 2 (lymph node details, tonsils/thymus/spleen, immunology basics, nonspecific resistance: barriers/phagocytes/inflammation/fever), from your PDF with mixed correct answers.
+​
+
+Lymphatic & Immune PDF – Module 2
+(Lymph Nodes, Organs, Immunology Basics, Nonspecific Resistance)
+
+Learn Items
+Lymph Nodes – Flow and Structure
+
+Flow is one‑way: afferent vessels → sinuses → efferent vessels exiting at hilus; only lymph nodes filter lymph.
+​
+
+Cortex: lymphatic nodules with germinal centers (dendritic cells, APCs, macrophages); B cells proliferate into antibody‑secreting plasma cells.
+​
+
+Medulla: B cells and plasma cells in medullary cords.
+​
+
+Cancer Metastasis and Lymph Nodes
+
+Characteristic of malignant tumors; cancer cells travel via lymph or blood to establish new tumors at secondary sites, predictable by lymph flow direction from primary site.
+​
+
+Cancerous nodes: firm, enlarged, nontender; infected nodes: tender, not firm.
+​
+
+Tonsils Location and Structure
+
+Palatine tonsils: pair at posterior margin of oral cavity (most often infected).
+​
+
+Lingual tonsils: pair at root of tongue.
+​
+
+Pharyngeal tonsil (adenoid): single on pharyngeal wall.
+​
+
+Tonsils covered by epithelium; pathogens enter crypts and meet lymphocytes.
+​
+
+Thymus Gland Structure
+
+Large in infants (~70 g), atrophied in adults (~3 g); bilobed in mediastinum with capsule/trabeculae dividing into lobules.
+​
+
+Cortex: tightly packed lymphocytes/macrophages.
+​
+
+Medulla: reticular epithelial cells produce thymic hormones; contains Hassall’s corpuscles.
+​
+
+Spleen Structure and Functions
+
+Parenchyma: red pulp (erythrocyte‑filled sinuses), white pulp (lymphocytes/macrophages around splenic artery branches).
+​
+
+Functions: fetal blood production, blood reservoir, RBC disposal, immune reactions (filters blood, detects antigens).
+​
+
+Immunology Overview
+
+Resistance wards off disease; susceptibility is lack of resistance.
+​
+
+Nonspecific resistance: general mechanisms against wide range of pathogens (no specific response).
+​
+
+Specific resistance/immunity: fights specific pathogens via cell‑mediated (T cells) or antibody‑mediated (B cells).
+​
+
+Nonspecific Resistance – Skin & Mucous Membranes
+
+Mechanical: keratinized epidermis (shedding removes microbes), mucous (traps microbes), cilia/mucus (move to throat), washing (tears, urine, saliva).
+​
+
+Chemical: sebum (inhibits bacteria/fungi), perspiration lysozymes (break down bacteria), acidic pH (gastric juice, vaginal secretions destroys bacteria).
+​
+
+Leukocytes in Cutaneous Defenses
+
+Neutrophils: phagocytize bacteria, create killing zone via degranulation (lysosomes discharge) and respiratory burst (O₂⁻, H₂O₂, HClO).
+​
+
+Eosinophils: phagocytize antigen‑antibody complexes/allergens/inflammatory chemicals; antiparasitic effects via enzyme release.
+​
+
+Internal Nonspecific Defenses – Antimicrobial Proteins
+
+Interferons: produced by virus‑infected lymphocytes/macrophages; diffuse to neighbors inducing antiviral proteins; activate NK cells/macrophages; destroy infected/cancer cells.
+​
+
+Complement: inactive plasma proteins activated by pathogens to enhance inflammation/phagocytosis.
+​
+
+Transferrins: iron‑binding proteins that inhibit bacterial growth by limiting available iron.
+​
+
+Natural Killer (NK) Cells & Phagocytes
+
+NK cells: kill microbes/tumor cells displaying abnormal MHC; found in blood/spleen/lymph nodes/marrow.
+​
+
+Phagocytes: neutrophils/macrophages ingest microbes/particles; fixed macrophages in tissues (histiocytes/skin, Kupffer cells/liver, alveolar macrophages/lungs, microglia/brain, etc.); wandering macrophages in most tissues.
+​
+
+Phagocytosis Steps
+
+Chemotaxis: attraction to chemicals from damaged tissues/complement/microbial products.
+​
+
+Adherence: attachment to phagocyte membrane.
+​
+
+Ingestion: engulf by pseudopods → phagosome.
+​
+
+Digestion/killing: merge with lysosome (enzymes), lethal oxidants; exocytosis of residual body.
+​
+
+Inflammation – Signs and Mobilization
+
+Defensive response to injury limiting pathogen spread, destroying them, removing debris, repairing tissue; -itis suffix indicates inflammation.
+​
+
+Cardinal signs: redness (hyperemia), swelling (edema from ↑permeability), heat (hyperemia), pain (bradykinin/prostaglandins, nerve pressure).
+​
+
+Damaged cells/basophils/mast cells secrete bradykinin/histamine/leukotrienes → vasodilation (hyperemia: redness/heat, ↑metabolism/healing), ↑capillary permeability (allows WBCs/antibodies/complement/fibrinogen).
+​
+
+Fibrinogen clots to trap bacteria/scaffold repair; heparin prevents clotting in injury site.
+​
+
+Inflammation – Leukocyte Deployment
+
+Margination: leukocytes adhere to vessel walls via cell adhesion molecules.
+​
+
+Diapedesis: leukocytes squeeze between endothelial cells into tissues.
+​
+
+Chemotaxis attracts leukocytes (neutrophils first); phagocytosis + respiratory burst + cytokines recruit macrophages/T cells.
+​
+
+Inflammation – Cleanup and Repair
+
+Monocytes → macrophages for cleanup (arrive 8–12 hours).
+​
+
+Edema ↓venous flow but ↑lymphatic removal of bacteria/debris.
+​
+
+Pus: tissue fluid, debris, dying neutrophils, microbes.
+​
+
+PDGF from platelets/endothelium stimulates fibroblasts/collagen for repair; hyperemia provides materials/heat.
+​
+
+Pain limits part use for healing.
+​
+
+Abscesses and Ulcers
+
+Abscess: pus accumulation in confined space (pimples/boils).
+​
+
+Ulcer: open sore; common in legs of diabetics with poor circulation (stasis ulcers from poor O₂/nutrients).
+​
+
+Question Bank – Lymphatic & Immune Module 2 (MCQs, mixed answers)
+Lymph node parenchyma is divided into:
+a) Red and white pulp
+b) Cortex and medulla
+c) Lobules and sinuses
+d) Germinal centers only
+Answer: b
+​
+
+In lymph nodes, germinal centers in the cortex contain:
+a) Only plasma cells
+b) Dendritic cells, APCs, macrophages; site of B cell proliferation
+c) RBCs
+d) Hassall’s corpuscles
+Answer: b
+​
+
+Cancerous lymph nodes are typically:
+a) Tender and soft
+b) Firm, enlarged, nontender
+c) Filled with pus
+d) Smaller than normal
+Answer: b
+​
+
+The most commonly infected tonsils are:
+a) Lingual
+b) Pharyngeal
+c) Palatine
+d) Appendix
+Answer: c
+​
+
+The thymus medulla contains:
+a) Tightly packed lymphocytes
+b) Reticular epithelial cells producing thymic hormones and Hassall’s corpuscles
+c) Red pulp
+d) Peyer patches
+Answer: b
+​
+
+Spleen white pulp consists mainly of:
+a) Erythrocytes
+b) Lymphocytes and macrophages around splenic artery branches
+c) Plasma proteins
+d) Lacteals
+Answer: b
+​
+
+Specific immunity includes:
+a) Skin barriers only
+b) Cell‑mediated (T cells) and antibody‑mediated (B cells)
+c) Fever only
+d) All phagocytosis
+Answer: b
+​
+
+Keratinized epidermis provides mechanical protection by:
+a) Producing antibodies
+b) Closely packed cells; shedding removes microbes
+c) Acid secretion
+d) Cilia movement
+Answer: b
+​
+
+Lysozymes in perspiration:
+a) Inhibit viruses
+b) Break down bacterial cell walls
+c) Promote clotting
+d) Increase pH
+Answer: b
+​
+
+Neutrophils kill bacteria via:
+a) Phagocytosis only
+b) Degranulation and respiratory burst (O₂⁻, H₂O₂, HClO)
+c) Antibody production
+d) Fever induction
+Answer: b
+​
+
+Interferons are produced by:
+a) Virus‑infected lymphocytes/macrophages
+b) RBCs
+c) Platelets
+d) Epithelial cells only
+Answer: a
+​
+
+Complement proteins enhance:
+a) RBC production
+b) Inflammation, phagocytosis, cytolysis
+c) Lipid absorption
+d) Fluid recovery
+Answer: b
+​
+
+Fixed macrophages include:
+a) Only wandering cells
+b) Kupffer cells in liver, alveolar macrophages in lungs
+c) B cells
+d) T cells
+Answer: b
+​
+
+The first step in phagocytosis is:
+a) Digestion
+b) Chemotaxis (attraction to chemicals)
+c) Exocytosis
+d) Adherence only
+Answer: b
+​
+
+Cardinal signs of inflammation include all EXCEPT:
+a) Redness (hyperemia)
+b) Swelling (edema)
+c) Decreased metabolism
+d) Pain
+Answer: c
+​
+
+Hyperemia during inflammation causes:
+a) Cooling
+b) Redness, heat, increased metabolism/healing
+c) Decreased permeability
+d) Clot dissolution
+Answer: b
+​
+
+Diapedesis refers to:
+a) Leukocytes squeezing between endothelial cells into tissues
+b) Clot formation
+c) Fever onset
+d) Antibody binding
+Answer: a
+​
+
+Pus consists mainly of:
+a) Healthy WBCs
+b) Tissue fluid, debris, dying neutrophils, microbes
+c) Plasma proteins
+d) RBCs
+Answer: b
+​
+
+PDGF in inflammation stimulates:
+a) Bacteria growth
+b) Fibroblasts to multiply and synthesize collagen
+c) Virus replication
+d) Edema reduction
+Answer: b
+​
+
+An abscess is:
+a) An open sore
+b) Accumulation of pus in a confined space (e.g., boils)
+c) Reduced blood flow
+d) Lymph node enlargement
+Answer: b
+​
+
+Short Quiz – Lymphatic & Immune Module 2 (5 questions)
+Which inflammatory chemical stimulates vasodilation and permeability?
+a) Insulin
+b) Histamine
+c) EPO
+d) Thyroxine
+Answer: b
+​
+
+The spleen’s red pulp contains:
+a) Lymphocytes only
+b) Erythrocyte‑filled sinuses
+c) Thymic hormones
+d) Lacteals
+Answer: b
+​
+
+Nonspecific resistance differs from immunity by:
+a) Being specific to one pathogen
+b) Being general against wide pathogens, lacking specific responses
+c) Producing antibodies only
+d) Involving T cells exclusively
+Answer: b
+​
+
+Eosinophils are particularly important against:
+a) Viruses
+b) Parasites
+c) Bacteria
+d) Fungi only
+Answer: b
+​
+
+Transferrins inhibit bacterial growth by:
+a) Binding iron and limiting availability
+b) Producing heat
+c) Enhancing clotting
+d) Increasing pH
+Answer: a
+​Lymphatic & Immune PDF – Module 3
+(NK Cells, Antimicrobial Proteins, Fever, Cytokines, T/B Cells, Cellular Immunity)
+
+Learn Items
+Natural Killer (NK) Cells
+
+Derived from T lymphocyte precursors; specialized for “self from funky self” (abnormal MHC antigens).
+​
+
+Kill variety of microbes and tumor cells; found in blood, spleen, lymph nodes, red marrow.
+​
+
+Attack cells displaying abnormal MHC antigens.
+​
+
+NK Cell Action – Perforin
+
+NK cells secrete perforin (punches holes in target cell membrane) and other toxic substances.
+​
+
+Antimicrobial Proteins
+
+Interferons: polypeptides from virus‑infected lymphocytes/macrophages; diffuse to neighbors inducing antiviral proteins; activate NK cells/macrophages; destroy infected host cells; anticancer effects.
+​
+
+Complement: inactive plasma proteins activated by pathogens via classical or alternate pathways; mechanisms: inflammation, opsonization (phagocytosis promotion), cytolysis (membrane attack complex).
+​
+
+Transferrins: iron‑binding proteins inhibiting bacterial growth by reducing available iron.
+​
+
+Complement Pathways and Actions
+
+Classical pathway: begins with C1 activation.
+​
+
+Alternate pathway: begins with C3 activation.
+​
+
+Both lead to inflammation, enhanced phagocytosis, or microbe bursting; membrane attack complex (C5b–C9 ring) causes cytolysis.
+​
+
+Fever
+
+Defense mechanism promoting interferon, metabolic rate/tissue repair, inhibiting pathogen reproduction.
+​
+
+Macrophage cytokine interleukin‑1 (pyrogen) stimulates hypothalamus to secrete PGE, resetting thermostat higher.
+​
+
+Stages: onset, stadium, defervescence; >105°F may cause delirium, 111–115°F coma/death.
+​
+
+Cytokines and Cytokine Therapy
+
+Small protein hormones from lymphocytes/APCs involved in immune responses.
+​
+
+Alpha‑interferon: treats Kaposi’s sarcoma, genital herpes, hepatitis B/C, leukemias.
+​
+
+Beta‑interferon: treats multiple sclerosis.
+​
+
+Interleukin‑2: treats cancer (with side effects).
+​
+
+Lymphocytes in Specific Immunity
+
+Specific immunity depends on lymphocytes: ~80% T cells (cell‑mediated), 15% B cells (antibody‑mediated), 5% NK cells (nonspecific).
+​
+
+T Lymphocytes (T Cells)
+
+Fetal stem cells colonize thymus for 2–3 days; thymosins stimulate antigen receptor production → immunocompetent T cells.
+​
+
+T Cell Selection in Thymus
+
+Negative selection: T cells unable to bind reticular epithelium or reacting to self antigens undergo clonal deletion (death), anergy (inactive), achieving self‑tolerance (~1 in 100 survive).
+​
+
+Positive selection: T cells binding MHC on epithelium (not self‑reactive) divide into clones and leave to colonize lymphatic tissues.
+​
+
+Cellular (Cell‑Mediated) Immunity
+
+T lymphocytes attack foreign cells/diseased host cells via four T cell classes: cytotoxic (killer) T cells (attack), helper T cells (promote T/B/nonspecific), suppressor T cells (limit attack), memory T cells (future immunity).
+​
+
+Cytotoxic T Cell Activation
+
+CD8 cell receptor binds foreign antigen fragment on MHC‑I; costimulation from helper T cell cytokine prevents accidental response.
+​
+
+Leads to clonal expansion into cytotoxic T cells and memory Tc cells in secondary organs like lymph nodes.
+​
+
+Cytotoxic T Cells (Tc/CD8)
+
+Recognize antigen fragments on MHC‑I (virus‑infected, tumor cells, transplants).
+​
+
+Activation requires MHC‑I binding + helper T cytokine costimulation → clonal selection.
+​
+
+Migrate to infection/tumor; attack by perforin (membrane holes), lymphotoxin (DNA fragmentation enzymes), gamma‑interferon (activates phagocytes).
+​
+
+Tumor necrosis factor kills cancer cells in 2–3 days.
+​
+
+Immunological Surveillance
+
+Immune system detects tumor antigens on cancerous cells (especially virus‑induced); cytotoxic T cells, macrophages, NK cells destroy them.
+​
+
+Immunosuppressive drugs (e.g., transplant patients) increase viral cancer risk.
+​
+
+Graft Rejection
+
+Transplant triggers cell‑ and antibody‑mediated responses; histocompatibility antigen match reduces rejection.
+​
+
+Cyclosporine inhibits IL‑2 secretion by helper T cells (little B cell effect, preserves some resistance).
+​
+
+Question Bank – Lymphatic & Immune Module 3 (MCQs, mixed answers)
+NK cells primarily target cells displaying:
+a) Normal MHC
+b) Abnormal MHC antigens
+c) No antigens
+d) RBC antigens
+Answer: b
+​
+
+Perforin secreted by NK cells:
+a) Promotes bacterial growth
+b) Punches holes in target cell membranes
+c) Produces antibodies
+d) Resets body temperature
+Answer: b
+​
+
+Interferons induce neighboring cells to produce:
+a) Bacteria
+b) Antiviral proteins
+c) Clotting factors
+d) RBCs
+Answer: b
+​
+
+The classical complement pathway begins with activation of:
+a) C3
+b) C1
+c) C5b
+d) Plasmin
+Answer: b
+​
+
+The membrane attack complex is formed by complement proteins:
+a) C1–C3
+b) C5b–C9
+c) Interferons
+d) Transferrins
+Answer: b
+​
+
+Transferrins inhibit bacteria by:
+a) Binding iron
+b) Producing heat
+c) Enhancing inflammation
+d) Promoting phagocytosis
+Answer: a
+​
+
+Interleukin‑1 (pyrogen) during fever is secreted by:
+a) RBCs
+b) Macrophages
+c) T cells only
+d) Platelets
+Answer: b
+​
+
+Fever benefits immunity by:
+a) Inhibiting metabolism
+b) Promoting interferon, tissue repair, inhibiting pathogens
+c) Cooling the body
+d) Increasing bacterial growth
+Answer: b
+​
+
+Alpha‑interferon is used to treat:
+a) Diabetes
+b) Hepatitis B/C and some leukemias
+c) Hypertension
+d) Anemia
+Answer: b
+​
+
+Of circulating lymphocytes, approximately what percentage are T cells?
+a) 5%
+b) 15%
+c) 80%
+d) 50%
+Answer: c
+​
+
+Thymosins in the thymus stimulate T cells to produce:
+a) Antibodies
+b) Antigen receptors
+c) Complement
+d) Cytokines only
+Answer: b
+​
+
+Negative selection in thymus eliminates T cells that:
+a) Bind MHC properly
+b) React to self antigens (clonal deletion/anergy)
+c) Ignore all antigens
+d) Produce interferons
+Answer: b
+​
+
+Cell‑mediated immunity involves four classes of T cells EXCEPT:
+a) Cytotoxic T cells
+b) Helper T cells
+c) B cells
+d) Suppressor T cells
+Answer: c
+​
+
+Cytotoxic T cells recognize antigens on:
+a) MHC‑II only
+b) MHC‑I (virus/tumor/transplant cells)
+c) Free antigens
+d) Platelets
+Answer: b
+​
+
+Costimulation for cytotoxic T cell activation comes from:
+a) B cell cytokine
+b) Helper T cell cytokine
+c) NK cells
+d) Macrophages alone
+Answer: b
+​
+
+Lymphotoxin from cytotoxic T cells:
+a) Punches holes
+b) Activates DNA fragmentation enzymes in target
+c) Produces fever
+d) Binds iron
+Answer: b
+​
+
+Immunological surveillance is most effective against:
+a) Bacterial infections
+b) Virus‑induced tumors
+c) Fungal infections
+d) Parasites
+Answer: b
+​
+
+Cyclosporine prevents graft rejection by:
+a) Killing B cells
+b) Inhibiting IL‑2 secretion by helper T cells
+c) Enhancing complement
+d) Increasing perforin
+Answer: b
+​
+
+Short Quiz – Lymphatic & Immune Module 3 (5 questions)
+Which pathway of complement activation begins with C3?
+a) Classical
+b) Alternate
+c) Final common
+d) Interferon
+Answer: b
+​
+
+Only about what fraction of T cells in the thymus become immunocompetent?
+a) 1 in 10
+b) 1 in 100
+c) All
+d) 1 in 2
+Answer: b
+​
+
+Helper T cells mainly:
+a) Directly kill infected cells
+b) Promote T/B cell action and nonspecific defenses
+c) Suppress all immunity
+d) Produce antibodies
+Answer: b
+​
+
+Gamma‑interferon from cytotoxic T cells:
+a) Kills cancer cells
+b) Activates phagocytic cells
+c) Resets thermostat
+d) Binds antigens
+Answer: b
+​
+
+Beta‑interferon is used therapeutically for:
+a) Hepatitis
+b) Multiple sclerosis
+c) Anemia
+d) Hypertension
+Answer: b
+​Respiratory PDF – Module 1
+(Upper/Lower Respiratory Tract, Alveoli, Lungs, Pleura)
+
+Learn Items
+Respiratory System Overview
+
+The respiratory system provides large aerial surface for gas exchange between air and blood, moves air to/from lungs, maintains blood pH, produces sounds, eliminates water‑soluble wastes from blood, contains receptors for smell/taste/reflexes, traps/reflects particles.
+
+Upper Respiratory Tract
+
+Nose/nasal cavity/pharynx (shared with digestive).
+
+Nose: external nose (root, bridge, dorsum nasi, philtrum, apex, nostrils/nares), nasal cavity (vestibule, olfactory area, respiratory area/respiratory mucosa).
+
+Nasal conchae (superior/middle/inferior): project medially from lateral walls; divide cavity into meatuses.
+
+Functions: warms/humidifies air, detects odors, filters/lights dust/pollen/microbes.
+
+Nasal Cavity Details
+
+Nasal septum: perpendicular plate of ethmoid + vomer; lateral walls: perpendicular plate of palatine, medial pterygoid plate of sphenoid, inferior/middle/superior nasal conchae.
+
+Paranasal sinuses: frontal, sphenoidal, maxillary, ethmoidal; drain into nasal cavity/meatuses.
+
+Nasolacrimal duct drains tears into inferior meatus.
+
+Pharynx
+
+Muscular tube ~5 inches long from internal nares to larynx/esophagus entrance.
+
+Nasopharynx (behind nose, superior to soft palate): pharyngeal tonsil (adenoid), pharyngotympanic (auditory) tubes open here.
+
+Oropharynx (posterior oral cavity): palatine tonsils, lingual tonsils at tongue base.
+
+Laryngopharynx (inferior, posterior larynx): opens into esophagus/larynx.
+
+Lower Respiratory Tract
+
+Larynx, trachea, bronchi, bronchioles, alveoli.
+
+Larynx
+
+Short passageway connecting laryngopharynx/trachea (~2 inches, C3–C6); prevents food/air aspiration, voice production, pressure regulation in thoracic cavity.
+
+Cartilages: thyroid (Adam’s apple), cricoid, epiglottis (elastic cartilage, lid over glottis), arytenoid/corniculate/cuneiform.
+
+Vocal folds: vestibular folds (false vocal cords), vocal folds (true vocal cords, glottis between).
+
+Trachea
+
+~4–5 inches long, ~1 inch diameter; C‑shaped hyaline cartilage rings (16–20), posterior open to esophagus (trachealis muscle).
+
+Mucosa: pseudostratified ciliated columnar epithelium + goblet cells + lamina propria + submucosa (seromucous glands).
+
+Bifurcates at carina (T4–T5) into main (primary) bronchi.
+
+Bronchi and Bronchial Tree
+
+Right main bronchus: shorter/wider/more vertical; left main bronchus: longer/narrower.
+
+Lobar (secondary) bronchi (right: 3, left: 2); segmental (tertiary) bronchi (~10 right, 8–10 left); ~25 generations of bronchioles.
+
+Bronchi have progressively less cartilage/more smooth muscle; respiratory bronchioles have some alveoli; alveolar ducts/sacs/terminal alveoli.
+
+Alveoli and Gas Exchange
+
+~300–400 million alveoli (~150–200 m² surface area); simple squamous epithelium (type I pneumocytes for diffusion, type II cuboidal secrete surfactant).
+
+Alveolar macrophages (dust cells), elastic fibers.
+
+Respiratory membrane: fused basement membranes + interstitial fluid.
+
+Lungs and Pleura
+
+Lungs occupy most thoracic cavity (apex above first rib, base on diaphragm); right: 3 lobes (superior/middle/inferior), left: 2 lobes (superior/inferior) + lingula.
+
+Fissures: oblique (both lungs), horizontal (right lung only).
+
+Root: main bronchus, pulmonary artery/veins, nerves, lymphatics; covered by visceral pleura.
+
+Pleura: visceral (lungs), parietal (thoracic wall/mediastinum/diaphragm); pleural cavity with serous fluid (~50 mL).
+
+Question Bank – Respiratory Module 1 (MCQs, mixed answers)
+The respiratory system’s main function is:
+a) Digestion
+b) Gas exchange between air and blood
+c) Blood filtration
+d) Hormone production
+Answer: b
+
+Which is part of the upper respiratory tract?
+a) Trachea
+b) Pharynx
+c) Bronchioles
+d) Alveoli
+Answer: b
+
+Nasal conchae divide the nasal cavity into:
+a) Lobes
+b) Meatuses
+c) Sinuses
+d) Fissures
+Answer: b
+
+Paranasal sinuses drain into:
+a) Trachea
+b) Esophagus
+c) Nasal cavity meatuses
+d) Bronchi
+Answer: c
+
+The nasopharynx contains:
+a) Palatine tonsils
+b) Pharyngeal tonsil (adenoid) and pharyngotympanic tubes
+c) Lingual tonsils
+d) Larynx
+Answer: b
+
+The larynx is located at vertebral levels:
+a) C3–C6
+b) T4–T5
+c) L1–L2
+d) Cervical 1–2
+Answer: a
+
+The trachea has how many C‑shaped cartilage rings?
+a) 5–10
+b) 16–20
+c) 30–40
+d) None
+Answer: b
+
+The carina is where the trachea bifurcates into:
+a) Lobar bronchi
+b) Main (primary) bronchi
+c) Segmental bronchi
+d) Bronchioles
+Answer: b
+
+Type II alveolar cells produce:
+a) Mucus
+b) Surfactant
+c) Cartilage
+d) Keratin
+Answer: b
+
+The right lung has how many lobes?
+a) 1
+b) 2
+c) 3
+d) 4
+Answer: c
+Endocrine PDF – Module 1
+(Endocrine Glands, Hormones, Hypothalamus-Pituitary, Thyroid, Parathyroid)
+
+Learn Items (from file:14)
+Endocrine System Overview
+
+Endocrine glands secrete hormones into bloodstream (no ducts).
+​
+
+Regulates metabolism, growth, reproduction, stress response via chemical messengers.
+​
+
+Target cells have specific receptors; effects slower but longer-lasting than nervous system.
+​
+
+Hormone Actions
+
+Hormones bind receptors, alter gene expression or enzyme activity.
+​
+
+Water-soluble: use second messengers (cAMP).
+​
+
+Lipid-soluble: enter cells, affect transcription.
+​
+
+Hypothalamus & Pituitary
+
+Hypothalamus: master control, produces releasing/inhibiting hormones.
+​
+
+Anterior pituitary: tropic hormones (TSH, ACTH, FSH/LH, GH, prolactin).
+​
+
+Posterior pituitary: stores/releases ADH, oxytocin from hypothalamus.
+​
+
+Thyroid Gland
+
+Follicles produce T3/T4 (thyroxine — increase metabolism).
+​
+
+Parafollicular cells produce calcitonin (lowers blood Ca²⁺).
+​
+
+Regulated by TSH from anterior pituitary.
+​
+
+Parathyroid Glands
+
+On posterior thyroid surface; secrete PTH (raises blood Ca²⁺).
+​
+
+Actions: osteoclast activation, renal Ca reabsorption, vitamin D activation.
+​
+
+Antagonizes calcitonin.
+​
+
+Adrenal Glands
+
+Cortex: mineralocorticoids (aldosterone — Na⁺ retention), glucocorticoids (cortisol — stress, glucose), androgens.
+​
+
+Medulla: epinephrine/norepinephrine (fight-or-flight).
+​
+
+Question Bank – Endocrine Module 1 (MCQs, mixed)
+Endocrine glands release hormones:
+a) Into ducts
+b) Directly into bloodstream
+c) Into lymph
+d) Into nerves
+Answer: b
+​
+
+Water-soluble hormones use:
+a) Direct gene activation
+b) Second messengers like cAMP
+c) Lipid diffusion
+d) DNA binding
+Answer: b
+​
+
+Posterior pituitary produces:
+a) TSH, ACTH
+b) Stores ADH, oxytocin
+c) GH, prolactin
+d) FSH, LH
+Answer: b
+​
+
+Calcitonin is produced by:
+a) Parathyroid
+b) Thyroid parafollicular cells
+c) Adrenal cortex
+d) Pancreas
+Answer: b
+​
+
+PTH action:
+a) Lowers blood Ca²⁺
+b) Raises blood Ca²⁺ via osteoclasts
+c) Increases metabolism
+d) Stores glucose
+Answer: b
+
+Endocrine PDF – Module 2
+(Adrenal Glands, Pancreas, Gonads, Other Organs, Feedback)
+
+Learn Items
+Adrenal Glands
+
+Adrenal cortex (outer): zona glomerulosa (mineralocorticoids like aldosterone — Na⁺ retention, K⁺ excretion), zona fasciculata (glucocorticoids like cortisol — glucose production, anti-inflammatory), zona reticularis (androgens).
+
+Adrenal medulla (inner): chromaffin cells secrete epinephrine/norepinephrine (sympathetic response: ↑HR, ↑BP, glycogenolysis).
+​
+
+Regulated by ACTH (cortex), sympathetic NS (medulla).
+​
+
+Pancreas
+
+Islets of Langerhans: α-cells (glucagon — ↑blood glucose via glycogenolysis), β-cells (insulin — ↓blood glucose via uptake/storage), δ-cells (somatostatin — inhibits both).
+​
+
+Regulated by blood glucose levels (high → insulin; low → glucagon).
+​
+
+Gonads
+
+Ovaries: granulosa/theca cells produce estrogen/progesterone (follicular phase estrogen, luteal phase progesterone).
+
+Testes: interstitial (Leydig) cells produce testosterone (spermatogenesis, secondary sex characteristics).
+​
+
+Regulated by FSH/LH from anterior pituitary.
+​
+
+Other Endocrine Organs
+
+Pineal: melatonin (circadian rhythm, puberty inhibition).
+​
+
+Thymus: thymosin/thymopoietin (T-cell maturation).
+​
+
+Heart: ANP (↓BP via natriuresis).
+​
+
+Kidneys: erythropoietin (RBC production), renin (BP regulation).
+​
+
+GI tract: gastrin, secretin, CCK (digestion).
+​
+
+Hormone Regulation
+
+Negative feedback: most common (e.g., high cortisol inhibits CRH/ACTH).
+​
+
+Positive feedback: rare (e.g., oxytocin in labor).
+​
+
+Circadian rhythms (e.g., cortisol peaks morning).
+​
+
+Disorders
+
+Hypersecretion: Cushing's (↑cortisol — moon face, buffalo hump), Graves' (↑thyroid — weight loss).
+​
+
+Hyposecretion: Addison's (↓cortisol — fatigue, low BP), diabetes mellitus (↓insulin).
+​
+
+Question Bank – Endocrine Module 2 (MCQs, mixed)
+Aldosterone is produced in adrenal:
+a) Medulla
+b) Zona glomerulosa (cortex)
+c) Zona reticularis
+d) Pancreas
+Answer: b
+​
+
+Cortisol primary function:
+a) ↑Na⁺ retention
+b) Glucose production, stress response
+c) Milk ejection
+d) Bone resorption
+Answer: b
+​
+
+Glucagon secreted by:
+a) β-cells
+b) α-cells (raises blood glucose)
+c) δ-cells
+d) Leydig cells
+Answer: b
+​
+
+Testosterone produced by:
+a) Granulosa cells
+b) Leydig (interstitial) cells in testes
+c) Zona fasciculata
+d) Pineal gland
+Answer: b
+​
+
+ANP from heart:
+a) Raises BP
+b) Lowers BP via Na⁺ excretion
+c) Increases glucose
+d) Stimulates T-cells
+Answer: b
+​
+
+Most hormone regulation is:
+a) Positive feedback
+b) Negative feedback
+c) No feedback
+d) Circadian only
+Answer: b
+​
+
+Cushing's syndrome cause:
+a) ↓Cortisol
+b) ↑Cortisol (moon face)
+c) ↓Insulin
+d) ↑Calcitonin
+Answer: b
+Systems Covered
+1. Heart (files 4,5,10,12)
+​
+Module 1: Anatomy (chambers, valves, coronary circulation)
+
+Module 2: Conduction (SA/AV nodes, ECG waves)
+
+Module 3: Cardiac cycle (systole/diastole, output CO=HR×SV)
+
+Key Quiz Items: Chordae tendineae prevent valve prolapse; ECG P-QRS-T; Frank-Starling law.
+
+2. Blood (files 2,18,14 partial)
+​
+Module 1: Plasma (albumins/globulins/fibrinogen), RBCs (Hb transport, erythropoiesis)
+
+Module 2: WBCs (neutrophils 60-70%, eosinophils parasites), platelets
+
+Module 3: Hemostasis (vascular spasm, platelet plug, coagulation cascade)
+
+Key Quiz Items: Hematocrit men 42-52%; sickle-cell HbS; extrinsic pathway (tissue factor).
+
+3. Vessels (files 1,7,9,15,16)
+​
+Module 1: Structure (tunica intima/media/externa; elastic vs muscular arteries)
+
+Module 2: Capillaries (continuous/fenestrated/sinusoids), exchange (diffusion, Starling forces)
+
+Module 3: Hemodynamics (BP=CO×PR; Poiseuille F∝r⁴; venous return pumps)
+
+Key Quiz Items: Vasa vasorum in large vessels; edema from ↑filtration; MAP=(SBP+2DBP)/3.
+
+4. Blood Pressure/Lymphatic (files 3,17)
+​
+Module 1: BP regulation (baroreceptors, chemoreceptors, RAAS)
+
+Module 2: Lymph flow (capillaries → trunks → ducts), edema causes
+
+Key Quiz Items: Hypertension >140/90; thoracic pump aids venous return.
+
+5. Lymphatic/Immune (files 8,13)
+​
+Module 1: Lymph nodes, spleen, thymus, tonsils
+
+Module 2: Nonspecific (NK cells, interferons, complement, fever)
+
+Module 3: Specific (T cells: cytotoxic/helper; B cells/plasma; cytokines)
+
+Key Quiz Items: Classical complement starts C1; negative T-cell selection (self-tolerance); perforin from NK/Tc.
+
+6. Endocrine (files 6,11,14)
+​
+Module 1: Hypothalamus-pituitary axis, thyroid (T3/T4), parathyroid (PTH vs calcitonin)
+
+Module 2: Adrenal (cortex: aldosterone/cortisol; medulla: epi/NE), pancreas (insulin/glucagon), gonads, others (ANP, melatonin)
+
+Key Quiz Items: Negative feedback (cortisol ↓CRH/ACTH); glucagon α-cells; Cushing's ↑cortisol.

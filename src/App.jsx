@@ -1,7 +1,7 @@
-﻿import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { courseData } from './courseData';
 
-const STORAGE_KEY = '4-tori-progress-v2';
+const STORAGE_KEY = '4-tori-progress-v3';
 
 function createFallback(modules) {
   const activeSectionByModule = {};
@@ -23,6 +23,7 @@ function loadProgress(modules) {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return fallback;
+
     const parsed = JSON.parse(raw);
     return {
       ...fallback,
@@ -120,8 +121,7 @@ function App() {
   }
 
   function stepSection(step) {
-    const nextIndex = safeSectionIndex + step;
-    setSectionIndex(activeModule.id, nextIndex);
+    setSectionIndex(activeModule.id, safeSectionIndex + step);
   }
 
   function setSectionAnswer(moduleId, sectionId, questionIndex, answer) {
@@ -202,6 +202,7 @@ function App() {
 
     const moduleIndex = courseData.modules.findIndex((module) => module.id === activeModule.id);
     const nextModule = courseData.modules[moduleIndex + 1];
+
     if (nextModule) {
       setProgress((current) => ({ ...current, activeModuleId: nextModule.id }));
       setSectionIndex(nextModule.id, 0);
@@ -304,9 +305,9 @@ function App() {
           <div className="tab-row">
             <TabButton active={tab === 'home'} onClick={() => setTab('home')}>Home</TabButton>
             <TabButton active={tab === 'learn'} onClick={() => setTab('learn')}>Learn</TabButton>
+            <TabButton active={tab === 'flashcards'} onClick={() => setTab('flashcards')}>Flip Cards</TabButton>
             <TabButton active={tab === 'sectionQuiz'} onClick={() => setTab('sectionQuiz')}>Section Quiz</TabButton>
             <TabButton active={tab === 'finalQuiz'} onClick={() => setTab('finalQuiz')}>Final Quiz</TabButton>
-            <TabButton active={tab === 'prompt'} onClick={() => setTab('prompt')}>Agent Prompt</TabButton>
           </div>
         </header>
 
@@ -321,8 +322,11 @@ function App() {
             onPrev={() => stepSection(-1)}
             onNext={() => stepSection(1)}
             onStartQuiz={() => setTab('sectionQuiz')}
+            onStartFlashcards={() => setTab('flashcards')}
           />
         )}
+
+        {tab === 'flashcards' && <FlashcardsView module={activeModule} section={activeSection} />}
 
         {tab === 'sectionQuiz' && (
           <SectionQuizView
@@ -345,8 +349,6 @@ function App() {
             onReset={resetMixedQuiz}
           />
         )}
-
-        {tab === 'prompt' && <PromptView prompt={courseData.agentPrompt} />}
       </main>
     </div>
   );
@@ -357,15 +359,14 @@ function HomeView({ onOpenModule, progress }) {
     <div className="content-grid home-grid">
       <section className="panel hero-panel span-2">
         <p className="eyebrow">Welcome</p>
-        <h3>4 Tori Study Dashboard</h3>
+        <h3>4 Tori Study Home</h3>
         <p>
-          Start from any module, move section-by-section in 6-8 page blocks, and finish with a larger mixed final
-          quiz across all uploaded subjects.
+          A fun offline study app: section-by-section lessons, flip cards, quick quizzes, and a big final mixed quiz.
         </p>
         <div className="chip-row">
+          <span className="chip">No API needed</span>
           <span className="chip">One question at a time</span>
-          <span className="chip">A/B/C only</span>
-          <span className="chip">All PDF modules included</span>
+          <span className="chip">A/B/C/D options</span>
         </div>
       </section>
 
@@ -391,7 +392,16 @@ function HomeView({ onOpenModule, progress }) {
   );
 }
 
-function LearnView({ module, section, sectionIndex, onSelectSection, onPrev, onNext, onStartQuiz }) {
+function LearnView({
+  module,
+  section,
+  sectionIndex,
+  onSelectSection,
+  onPrev,
+  onNext,
+  onStartQuiz,
+  onStartFlashcards
+}) {
   return (
     <div className="content-grid">
       <section className="panel hero-panel">
@@ -407,9 +417,8 @@ function LearnView({ module, section, sectionIndex, onSelectSection, onPrev, onN
           <button className="secondary-button" onClick={onNext} disabled={sectionIndex === module.sections.length - 1}>
             Next 6-8 pages
           </button>
-          <button className="primary-button" onClick={onStartQuiz}>
-            Start section quiz
-          </button>
+          <button className="secondary-button" onClick={onStartFlashcards}>Flip cards</button>
+          <button className="primary-button" onClick={onStartQuiz}>Section quiz</button>
         </div>
       </section>
 
@@ -427,6 +436,15 @@ function LearnView({ module, section, sectionIndex, onSelectSection, onPrev, onN
             </button>
           ))}
         </div>
+      </section>
+
+      <section className="panel span-2">
+        <h3>Learn something</h3>
+        <ul className="clean-list">
+          {(section.learn || []).map((line, index) => (
+            <li key={`${section.id}-learn-${index}`}>{line}</li>
+          ))}
+        </ul>
       </section>
 
       <section className="panel span-2">
@@ -480,6 +498,67 @@ function LearnView({ module, section, sectionIndex, onSelectSection, onPrev, onN
         </div>
       </section>
     </div>
+  );
+}
+
+function FlashcardsView({ module, section }) {
+  const [flipped, setFlipped] = useState({});
+
+  const cards = useMemo(() => {
+    if (section.flashcards?.length) {
+      return section.flashcards;
+    }
+
+    const topicCards = section.topics.map((topic, index) => ({
+      id: `topic-${index}`,
+      front: `Topic ${index + 1}`,
+      back: topic
+    }));
+
+    const termCards = section.keyTerms.map((term, index) => ({
+      id: `term-${index}`,
+      front: term,
+      back: `Key term from ${section.title}`
+    }));
+
+    const memoryCards = module.memoryAids.map((tip, index) => ({
+      id: `memory-${index}`,
+      front: 'Memory aid',
+      back: tip
+    }));
+
+    return [...topicCards, ...termCards, ...memoryCards].slice(0, 12);
+  }, [module.memoryAids, section.flashcards, section.keyTerms, section.title, section.topics]);
+
+  useEffect(() => {
+    setFlipped({});
+  }, [module.id, section.id]);
+
+  function toggleCard(cardId) {
+    setFlipped((current) => ({ ...current, [cardId]: !current[cardId] }));
+  }
+
+  return (
+    <section className="panel">
+      <p className="eyebrow">Flip cards</p>
+      <h3>{module.title} - {section.title}</h3>
+      <p>Tap a card to flip it.</p>
+
+      <div className="flashcard-grid">
+        {cards.map((card) => (
+          <button
+            key={card.id}
+            className={`flip-card ${flipped[card.id] ? 'flipped' : ''}`}
+            onClick={() => toggleCard(card.id)}
+          >
+            <div className="flip-card-inner">
+              <span className="flip-face front">{card.front}</span>
+              <span className="flip-face back">{card.back}</span>
+            </div>
+          </button>
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -644,30 +723,6 @@ function MixedQuizView({ questions, state, onAnswer, onNext, onReset }) {
   );
 }
 
-function PromptView({ prompt }) {
-  async function copyPrompt() {
-    try {
-      await navigator.clipboard.writeText(prompt);
-    } catch {
-      // clipboard permissions can fail silently in some browser contexts
-    }
-  }
-
-  return (
-    <section className="panel prompt-panel">
-      <p className="eyebrow">Agent prompt</p>
-      <h3>Full build prompt with outline and question bank</h3>
-      <p>
-        This includes the complete module topic outline and all quiz questions currently loaded from your study set.
-      </p>
-      <div className="button-row">
-        <button className="primary-button" onClick={copyPrompt}>Copy prompt</button>
-      </div>
-      <textarea className="prompt-area" value={prompt} readOnly />
-    </section>
-  );
-}
-
 function StatCard({ label, value }) {
   return (
     <div className="stat-card">
@@ -686,3 +741,4 @@ function TabButton({ active, children, onClick }) {
 }
 
 export default App;
+
