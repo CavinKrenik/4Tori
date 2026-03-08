@@ -474,16 +474,52 @@ const blood = {
           explanation: 'Neutrophils account for about 60–70% of all circulating white blood cells.'
         },
         {
+          question: 'Which WBC leaves the blood and becomes a mast cell in connective tissue?',
+          options: { A: 'Neutrophil', B: 'Eosinophil', C: 'Basophil', D: 'Monocyte' },
+          answer: 'C',
+          explanation: 'Basophils leave capillaries and enter connective tissue as mast cells, where they continue to release heparin, histamine, and serotonin — driving inflammatory and allergic reactions.'
+        },
+        {
+          question: 'The three steps of platelet plug formation in order are:',
+          options: { A: 'Aggregation, adhesion, release', B: 'Adhesion, release reaction, aggregation', C: 'Release, aggregation, adhesion', D: 'Spasm, adhesion, retraction' },
+          answer: 'B',
+          explanation: 'Platelet plug formation proceeds: 1) Adhesion to exposed collagen, 2) Release reaction (ADP, thromboxane A₂ activate other platelets), 3) Aggregation into a plug reinforced by fibrin.'
+        },
+        {
           question: 'In the clotting cascade, prothrombinase converts:',
           options: { A: 'Fibrinogen to fibrin', B: 'Plasminogen to plasmin', C: 'Prothrombin to thrombin', D: 'Kallikrein to Factor XII' },
           answer: 'C',
           explanation: 'Prothrombinase converts prothrombin into thrombin, which then converts fibrinogen into fibrin.'
         },
         {
+          question: 'Vitamin K is required for the liver to synthesize clotting factors:',
+          options: { A: 'I, III, V, and VIII', B: 'II, VII, IX, and X', C: 'XI, XII, and XIII', D: 'All clotting factors equally' },
+          answer: 'B',
+          explanation: 'Vitamin K is needed for hepatic synthesis of Factors II (prothrombin), VII, IX, and X. Remember "1972" — rearranged digits give you the factor numbers.'
+        },
+        {
+          question: 'Fibrinolysis dissolves clots using which enzyme?',
+          options: { A: 'Thrombin', B: 'Prothrombinase', C: 'Plasmin', D: 'Kallikrein' },
+          answer: 'C',
+          explanation: 'Plasmin is the "clot buster" — formed from plasminogen by kallikrein, it breaks down fibrin threads to dissolve clots that are no longer needed.'
+        },
+        {
           question: 'A patient with Type AB blood has which antibodies in their plasma?',
           options: { A: 'Anti-A only', B: 'Anti-B only', C: 'Both anti-A and anti-B', D: 'Neither anti-A nor anti-B' },
           answer: 'D',
           explanation: 'Type AB has both A and B antigens on RBCs and neither antibody in plasma, making them the universal recipient.'
+        },
+        {
+          question: 'RhoGAM prevents hemolytic disease of the newborn by:',
+          options: { A: 'Destroying maternal T cells', B: 'Binding fetal Rh antigens before the mother forms antibodies', C: 'Increasing fetal RBC production', D: 'Blocking the placental barrier' },
+          answer: 'B',
+          explanation: 'RhoGAM binds fetal Rh agglutinogens in maternal blood, removing them before the mother can mount an immune response and form anti-Rh antibodies that would attack future Rh⁺ babies.'
+        },
+        {
+          question: 'In DIC, the paradox is that a patient has:',
+          options: { A: 'Too many clotting factors and no bleeding', B: 'Widespread clotting AND bleeding at the same time', C: 'Only venous clotting', D: 'Only arterial bleeding' },
+          answer: 'B',
+          explanation: 'DIC consumes clotting factors through excessive widespread clot formation, leaving too few for normal hemostasis — so the patient paradoxically clots and bleeds simultaneously.'
         }
       ],
       quiz: [

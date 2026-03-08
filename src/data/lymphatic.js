@@ -450,6 +450,42 @@ const lymphatic = {
           options: { A: 'IgG', B: 'IgM', C: 'IgE', D: 'IgA' },
           answer: 'C',
           explanation: 'In Type I hypersensitivity, allergens cross-link IgE antibodies already bound to mast cells and basophils, triggering massive histamine release → vasodilation, bronchiolar constriction, edema. Severe cases (anaphylactic shock) require emergency epinephrine.'
+        },
+        {
+          question: 'Circulating lymphocytes consist of approximately 80% T cells, 15% B cells, and 5%:',
+          options: { A: 'Eosinophils', B: 'Basophils', C: 'Natural killer (NK) cells', D: 'Neutrophils' },
+          answer: 'C',
+          explanation: 'The circulating lymphocyte population is roughly 80% T cells (cell-mediated immunity), 15% B cells (antibody-mediated immunity), and 5% NK cells (nonspecific immunity). This breakdown reflects each cell type\'s role in defense.'
+        },
+        {
+          question: 'In the exogenous antigen pathway, an APC phagocytizes a foreign antigen, digests it, and displays fragments on:',
+          options: { A: 'MHC-I molecules for cytotoxic T cells', B: 'MHC-II molecules for helper T cells', C: 'IgG receptors for B cells', D: 'Complement proteins for NK cells' },
+          answer: 'B',
+          explanation: 'Exogenous antigens are phagocytized by APCs (macrophages, B cells, dendritic cells), digested, and fragments are bound to MHC-II molecules displayed on the cell surface. The APC then migrates to lymphatic tissue to find helper T cells (CD4), which can only "see" antigens presented on MHC-II.'
+        },
+        {
+          question: 'Cytotoxic T cells destroy target cells by secreting all of the following EXCEPT:',
+          options: { A: 'Perforin (punches holes in target cell)', B: 'Lymphotoxin (fragments target DNA)', C: 'Antibodies (neutralize toxins)', D: 'Tumor necrosis factor (kills cancer cells)' },
+          answer: 'C',
+          explanation: 'Cytotoxic T cells use perforin (holes in target cell), lymphotoxin (DNA fragmentation), gamma-interferon (activates phagocytes), and TNF (kills cancer cells in 2-3 days). Antibodies are produced by plasma cells from B cell lineage, not T cells.'
+        },
+        {
+          question: 'Helper T cells (CD4) are critical because they:',
+          options: { A: 'Directly kill cancer cells with perforin', B: 'Produce antibodies at 2000/sec', C: 'Costimulate ALL other lymphocytes by secreting interleukin-2', D: 'Form the membrane attack complex' },
+          answer: 'C',
+          explanation: 'Helper T cells secrete cytokines, especially IL-2, which costimulates T cells, B cells, and nonspecific defense mechanisms. IL-2 also has an autocrine function — it stimulates the helper T cell itself to proliferate and secrete more IL-2 (positive feedback), rapidly expanding the helper T cell population.'
+        },
+        {
+          question: 'Once activated by a helper T cell, B cells differentiate into plasma cells that produce antibodies at a rate of:',
+          options: { A: '~20 molecules/minute', B: '~2000 molecules/second', C: '~200 molecules/hour', D: '~20,000 molecules/day' },
+          answer: 'B',
+          explanation: 'Activated B cells differentiate into a clone of plasma cells, each producing approximately 2000 antibody molecules per second for 4-5 days. Each plasma cell secretes only one kind of antibody that enters circulation to attack the specific antigen.'
+        },
+        {
+          question: 'A fetus receiving antibodies from the mother through the placenta is an example of:',
+          options: { A: 'Natural active immunity', B: 'Artificial active immunity', C: 'Natural passive immunity', D: 'Artificial passive immunity' },
+          answer: 'C',
+          explanation: 'Natural passive immunity is temporary — the fetus acquires antibodies from the mother through the placenta and breast milk. No memory cells are formed, so protection is temporary. Active immunity (natural or artificial) involves producing your own antibodies and memory cells.'
         }
       ],
       quiz: [

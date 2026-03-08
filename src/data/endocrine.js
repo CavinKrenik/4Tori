@@ -179,6 +179,18 @@ const endocrine = {
           options: { A: 'Bind to thousands of receptors at once', B: 'Trigger breakdown of millions of product molecules', C: 'Enter the nucleus and activate genes directly', D: 'Permanently activate phosphodiesterase' },
           answer: 'B',
           explanation: 'The cascade (1 hormone → 100 G-proteins → 1000s cAMP → kinases → substrate molecules) means one epinephrine molecule can break down millions of glycogen molecules — explaining why tiny hormone amounts have huge effects.'
+        },
+        {
+          question: 'Lipid-soluble hormones (steroids, thyroid hormones) act by:',
+          options: { A: 'Binding membrane receptors and activating G-proteins', B: 'Using cAMP as a second messenger', C: 'Diffusing into the cell and directly activating or repressing genes', D: 'Activating phosphodiesterase in the cytosol' },
+          answer: 'C',
+          explanation: 'Lipid-soluble hormones diffuse through the phospholipid bilayer into the cell, bind to intracellular receptors, and directly turn on or off specific genes → new mRNA → new proteins → altered cell activity. This is a DIRECT mechanism — no second messenger needed.'
+        },
+        {
+          question: 'Thyroid hormone strengthening epinephrine\'s effect on lipolysis is an example of a _____ hormonal interaction.',
+          options: { A: 'Synergistic', B: 'Antagonistic', C: 'Permissive', D: 'Amplification' },
+          answer: 'C',
+          explanation: 'A permissive effect occurs when one hormone strengthens the effects of another. Thyroid hormone enhances epinephrine\'s lipolysis effect. Synergistic = two hormones together produce a greater effect (e.g., estrogen + LH for oocyte). Antagonistic = opposite effects (e.g., insulin vs glucagon).'
         }
       ],
       quiz: [
@@ -314,6 +326,24 @@ const endocrine = {
           options: { A: 'The only hormone that raises blood glucose', B: 'Produced by alpha cells of the pancreatic islets', C: 'The ONLY hormone that lowers blood glucose', D: 'A steroid hormone that crosses the plasma membrane' },
           answer: 'C',
           explanation: 'Insulin (from beta cells) is the ONLY hypoglycemic hormone. Multiple hormones raise blood glucose (glucagon, epinephrine, norepinephrine, cortisol), but insulin alone lowers it.'
+        },
+        {
+          question: 'The anterior pituitary hormones can be remembered with the mnemonic "FLAT PEG." These hormones are controlled by:',
+          options: { A: 'Direct neural stimulation from the cerebral cortex', B: 'Releasing and inhibiting hormones from the hypothalamus via a portal system', C: 'Feedback from the posterior pituitary only', D: 'Circulating calcium levels in the blood' },
+          answer: 'B',
+          explanation: 'The hypothalamus controls the anterior pituitary through releasing and inhibiting hormones that travel via the hypothalamo-hypophyseal portal system. FLAT PEG = FSH, LH, ACTH, TSH, PRL, Endorphins, GH — all tropic hormones targeting other endocrine glands.'
+        },
+        {
+          question: 'The three zones of the adrenal cortex from outer to inner produce:',
+          options: { A: 'Glucocorticoids, mineralocorticoids, epinephrine', B: 'Mineralocorticoids, glucocorticoids, androgens', C: 'Androgens, glucocorticoids, mineralocorticoids', D: 'Epinephrine, norepinephrine, cortisol' },
+          answer: 'B',
+          explanation: 'The adrenal cortex has three zones (outer to inner): zona Glomerulosa (mineralocorticoids/aldosterone), zona Fasciculata (glucocorticoids/cortisol), and zona Reticularis (androgens). Remember: "GFR" or "Salt, Sugar, Sex." The medulla (not cortex) produces epinephrine/norepinephrine.'
+        },
+        {
+          question: 'The thyroid is the LARGEST endocrine gland. Its follicular cells secrete T3 and T4, which primarily:',
+          options: { A: 'Lower blood calcium levels', B: 'Increase metabolic rate, oxygen consumption, and heat production', C: 'Stimulate milk production', D: 'Promote Na+ reabsorption by kidneys' },
+          answer: 'B',
+          explanation: 'Thyroid follicular cells secrete T3 and T4, which increase metabolic rate, O₂ consumption, heat production (calorigenic effect), heart rate/contractility, respiratory rate, and appetite. C (parafollicular) cells secrete calcitonin, which lowers blood Ca²⁺ — a different function entirely.'
         }
       ],
       quiz: [
@@ -436,6 +466,12 @@ const endocrine = {
           options: { A: 'Pain, pallor, pulselessness', B: 'Polyuria, polydipsia, polyphagia', C: 'Paresthesia, paralysis, paresis', D: 'Pyrexia, petechiae, purpura' },
           answer: 'B',
           explanation: 'The classic signs of diabetes mellitus are Polyuria (excessive urination from osmotic diuresis), Polydipsia (excessive thirst from fluid loss), and Polyphagia (excessive hunger because cells can\'t absorb glucose).'
+        },
+        {
+          question: 'Type I diabetes accounts for ~10% of cases and involves autoimmune destruction of beta cells, while Type II (~90%) is characterized by:',
+          options: { A: 'Autoimmune destruction of alpha cells', B: 'Insulin resistance at target cells', C: 'Complete absence of glucagon', D: 'Excess ADH secretion' },
+          answer: 'B',
+          explanation: 'Type I (IDDM, ~10%) involves autoimmune beta cell destruction, diagnosed ~age 12, requiring insulin. Type II (NIDDM, ~90%) is insulin resistance — target cells fail to respond properly. Risk factors include heredity, age >40, and obesity. Treatment: weight loss, diet, exercise, and oral medications.'
         }
       ],
       quiz: [

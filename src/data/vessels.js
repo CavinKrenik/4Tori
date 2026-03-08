@@ -293,6 +293,18 @@ const vessels = {
           options: { A: '2-fold', B: '4-fold', C: '8-fold', D: '16-fold' },
           answer: 'D',
           explanation: 'F ∝ r⁴: (1/2)⁴ = 1/16. Halving the radius causes a 16-fold decrease in flow! This is why small changes in arteriolar diameter have dramatic effects on blood pressure and tissue perfusion.'
+        },
+        {
+          question: 'According to Starling\'s law of the capillaries, approximately what percentage of filtered fluid is reabsorbed, with the remainder collected by lymphatics?',
+          options: { A: '50% reabsorbed, 50% to lymphatics', B: '85% reabsorbed, ~3 L/day to lymphatics', C: '99% reabsorbed, almost none to lymphatics', D: '70% reabsorbed, ~10 L/day to lymphatics' },
+          answer: 'B',
+          explanation: 'Starling\'s law states that the volume reabsorbed is almost as large as the volume filtered. About 85% of filtered fluid returns to capillaries; the remaining ~3 L/day of escaped fluid and plasma proteins is collected by lymphatic capillaries.'
+        },
+        {
+          question: 'A patient\'s BP is 120/80. Their mean arterial pressure (MAP) is:',
+          options: { A: '100 mmHg', B: '93 mmHg', C: '80 mmHg', D: '120 mmHg' },
+          answer: 'B',
+          explanation: 'MAP = (SBP + 2×DBP) / 3 = (120 + 2×80) / 3 = (120 + 160) / 3 = 280/3 ≈ 93 mmHg. MAP is a better indicator of tissue perfusion than BP alone. Low MAP (<60) = inadequate perfusion; high MAP (>100) = excessive resistance.'
         }
       ],
       quiz: [
@@ -432,6 +444,18 @@ const vessels = {
           options: { A: 'Renin', B: 'Aldosterone', C: 'Angiotensin II (a potent vasoconstrictor)', D: 'Angiotensinogen' },
           answer: 'C',
           explanation: 'ACE in the lungs converts angiotensin I to angiotensin II, which is a VERY potent vasoconstrictor that rapidly raises blood pressure. ACE inhibitors block this step to treat hypertension.'
+        },
+        {
+          question: 'When baroreceptors in the carotid sinus detect a RISE in blood pressure, they signal the brainstem to:',
+          options: { A: 'Increase sympathetic tone and vasoconstriction', B: 'Decrease sympathetic tone, causing vasodilation and lowering BP', C: 'Release renin from the kidneys', D: 'Increase heart rate and contractility' },
+          answer: 'B',
+          explanation: 'The baroreflex is a negative feedback system: rising BP → increased baroreceptor signal rate → inhibits vasomotor center → decreased sympathetic tone → vasodilation → BP falls back toward normal.'
+        },
+        {
+          question: 'Total brain perfusion must be kept constant because deprivation for just 4-5 minutes causes:',
+          options: { A: 'Temporary dizziness only', B: 'Reversible muscle weakness', C: 'Irreversible brain damage', D: 'Increased melatonin secretion' },
+          answer: 'C',
+          explanation: 'A few seconds without blood causes loss of consciousness; 4-5 minutes of deprivation causes irreversible brain damage. The brain autoregulates its blood flow — cerebral arteries dilate as BP falls and constrict as BP rises.'
         }
       ],
       quiz: [
