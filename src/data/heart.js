@@ -4,6 +4,72 @@ const heart = {
   source: '8. heartPDF.pdf',
   description: 'Comprehensive coverage of heart anatomy, chambers, valves, conduction system, ECG interpretation, cardiac cycle, heart sounds, cardiac output, autonomic regulation, stroke volume determinants, congestive heart failure, and cardiovascular risk factors.',
   icon: 'heart',
+
+  learningObjectives: [
+    'Describe the location, orientation, and surface anatomy of the heart.',
+    'Identify the layers of the pericardium and the three layers of the heart wall.',
+    'Compare the four chambers of the heart and their structural differences.',
+    'Describe the structure and function of the four heart valves and the fibrous skeleton.',
+    'Trace the path of blood through the heart and coronary circulation.',
+    'Explain the components of the cardiac conduction system and the sequence of impulse propagation.',
+    'Interpret a normal ECG tracing including P wave, QRS complex, and T wave.',
+    'Describe the phases of the cardiac cycle and their relationship to heart sounds.',
+    'Calculate cardiac output and explain the concepts of stroke volume, heart rate, and cardiac reserve.',
+    'Explain the autonomic regulation of heart rate including sympathetic and parasympathetic effects.',
+    'Describe the three determinants of stroke volume: preload, contractility, and afterload.',
+    'Explain the Frank-Starling law and its physiological significance.',
+    'Differentiate between left-sided and right-sided congestive heart failure.',
+    'Identify major cardiovascular risk factors and the effects of exercise on the heart.'
+  ],
+
+  clinicalCorrelations: [
+    {
+      title: 'Pericarditis',
+      detail: 'Inflammation of the pericardium, often caused by viral infection, bacterial infection, or autoimmune disease. Produces a pericardial friction rub (rough, scratchy sound heard with a stethoscope). Excess fluid accumulation in the pericardial cavity (pericardial effusion) can compress the heart and impair filling. Symptoms include sharp chest pain that worsens with inspiration and improves when leaning forward.'
+    },
+    {
+      title: 'Myocarditis',
+      detail: 'Inflammation of the myocardium, commonly caused by viral infections (Coxsackievirus B, adenovirus), bacterial infections, or toxins. Weakens the heart muscle and reduces contractility, potentially leading to dilated cardiomyopathy and heart failure. Symptoms range from mild (fatigue, chest pain) to severe (arrhythmias, sudden cardiac death in young athletes). Diagnosis involves elevated cardiac enzymes, ECG changes, and cardiac MRI.'
+    },
+    {
+      title: 'Cardiac Tamponade',
+      detail: 'Life-threatening compression of the heart caused by rapid fluid accumulation in the pericardial sac. The rigid fibrous pericardium cannot expand, so even 100-200 mL of rapid fluid collection compresses the chambers, preventing adequate filling. Beck\'s triad: hypotension, distended jugular veins, and muffled heart sounds. Emergency treatment is pericardiocentesis (needle drainage of fluid).'
+    },
+    {
+      title: 'Myocardial Infarction (MI)',
+      detail: 'Sudden death of heart tissue caused by interruption of blood flow from coronary artery narrowing or complete occlusion (usually by thrombus on ruptured atherosclerotic plaque). Dead tissue is replaced by noncontractile scar tissue. Severity depends on size and location of the infarct. Anastomoses between coronary arteries may provide some collateral flow. Treatment includes clot-dissolving drugs (streptokinase, t-PA), heparin, balloon angioplasty, coronary stents, and bypass grafting.'
+    },
+    {
+      title: 'Angina Pectoris',
+      detail: 'Heart pain resulting from ischemia (inadequate blood flow) of the cardiac muscle, typically due to coronary artery disease. Stable angina occurs with exertion and is relieved by rest or nitroglycerin. Unstable angina occurs at rest and signals imminent MI. Variant (Prinzmetal) angina is caused by coronary artery spasm. Nitroglycerin causes vasodilation, reducing cardiac workload and improving coronary flow.'
+    },
+    {
+      title: 'Endocarditis',
+      detail: 'Infection and inflammation of the endocardium, especially the heart valves. Often caused by bacteria (Streptococcus, Staphylococcus) entering the bloodstream from dental procedures, IV drug use, or indwelling catheters. Vegetations (clumps of bacteria and clots) form on valve surfaces, causing damage, regurgitation, and potential embolization to brain, kidneys, or lungs. Prevention: prophylactic antibiotics for high-risk patients before dental procedures.'
+    },
+    {
+      title: 'Congestive Heart Failure (CHF)',
+      detail: 'The heart fails to pump effectively, causing blood to back up. Left-sided failure: blood backs into pulmonary circulation → pulmonary edema, dyspnea, suffocation. Right-sided failure: blood backs into systemic veins → peripheral edema, jugular venous distension, hepatomegaly. Often one side fails first, then the other follows. Risk factors: coronary artery disease, hypertension, valvular disease, cardiomyopathy.'
+    },
+    {
+      title: 'Arrhythmias & Conduction Disorders',
+      detail: 'Abnormal heart rhythms resulting from conduction system dysfunction. Heart block: SA or AV node fails to conduct properly — first-degree (prolonged PR), second-degree (dropped beats), third-degree (complete dissociation of P waves and QRS). Atrial fibrillation: chaotic atrial activity with loss of coordinated contraction. Ventricular fibrillation: lethal arrhythmia with disorganized ventricular activity — no effective pumping, requires immediate defibrillation.'
+    }
+  ],
+
+  quickFacts: [
+    'The heart beats ~100,000 times per day and pumps ~7,200 liters of blood daily.',
+    'The left ventricle wall is 3× thicker than the right because it pumps to the entire systemic circulation.',
+    'The SA node fires at ~100 bpm intrinsically; vagal tone slows resting HR to 70-80 bpm.',
+    'Cardiac muscle is unique: autorhythmic, branching, intercalated discs with gap junctions, 1-2 nuclei per cell.',
+    'A normal ECG: P wave (atrial depolarization), QRS complex (ventricular depolarization), T wave (ventricular repolarization).',
+    'Cardiac output at rest: ~5.25 L/min (HR 75 × SV 70 mL). During exercise: up to 20-25 L/min.',
+    'The coronary arteries fill during DIASTOLE (when the heart relaxes), not systole.',
+    'The Frank-Starling law: greater stretch (preload) → stronger contraction → greater stroke volume.',
+    'S1 ("lubb") = AV valves close; S2 ("dupp") = semilunar valves close.',
+    'The cardiac conduction path: SA node → AV node → Bundle of His → bundle branches → Purkinje fibers.'
+  ],
+
   sections: [
     // ===== MODULE 1: Heart Anatomy, Chambers & Valves =====
     {
@@ -736,6 +802,106 @@ const heart = {
         { front: 'What are the major risk factors for heart disease?', back: 'High blood cholesterol, high blood pressure, cigarette smoking, obesity, and lack of regular exercise.' },
         { front: 'How does sustained exercise affect the heart?', back: 'It causes ventricular hypertrophy, increases stroke volume, lowers resting HR (40-60 bpm), and increases cardiac reserve.' }
       ]
+    }
+  ],
+
+  // ===== SCENARIO-BASED QUESTIONS =====
+  scenarioQuestions: [
+    {
+      scenario: 'A 55-year-old man presents with crushing substernal chest pain radiating to his left arm. His ECG shows ST-segment elevation in leads V1-V4.',
+      question: 'What is the most likely diagnosis, and which coronary artery is most likely occluded?',
+      options: {
+        A: 'Pericarditis; right coronary artery',
+        B: 'Anterior wall MI; left anterior descending (LAD) artery',
+        C: 'Angina pectoris; circumflex artery',
+        D: 'Aortic stenosis; right coronary artery'
+      },
+      answer: 'B',
+      explanation: 'ST elevation in V1-V4 indicates an anterior wall myocardial infarction. The LAD (left anterior descending) artery supplies the anterior wall and interventricular septum. Occlusion of the LAD is sometimes called the "widow maker" because of its large territory. The crushing pain, radiation, and ST elevation are classic MI findings.'
+    },
+    {
+      scenario: 'A patient\'s ECG shows a normal P wave followed by a progressively lengthening PR interval until a QRS complex is dropped.',
+      question: 'What type of heart block does this represent?',
+      options: {
+        A: 'First-degree AV block',
+        B: 'Second-degree AV block (Mobitz Type I / Wenckebach)',
+        C: 'Third-degree (complete) AV block',
+        D: 'Bundle branch block'
+      },
+      answer: 'B',
+      explanation: 'Progressive prolongation of the PR interval followed by a dropped QRS is the hallmark of Mobitz Type I (Wenckebach) second-degree AV block. The AV node has difficulty conducting each successive impulse until one is completely blocked. This is often benign and may occur in athletes with high vagal tone.'
+    },
+    {
+      scenario: 'An endurance athlete has a resting heart rate of 48 bpm but a cardiac output of 5.8 L/min at rest.',
+      question: 'How can the athlete maintain normal cardiac output with such a low heart rate?',
+      options: {
+        A: 'The athlete has higher blood viscosity that compensates',
+        B: 'Increased stroke volume from ventricular hypertrophy compensates for the lower rate (Frank-Starling mechanism)',
+        C: 'The athlete has abnormally high blood pressure',
+        D: 'Sympathetic tone is maximal at rest'
+      },
+      answer: 'B',
+      explanation: 'CO = HR × SV. The athlete\'s heart is enlarged (physiologic hypertrophy) with greater end-diastolic volume. By the Frank-Starling law, greater stretch → more forceful contraction → higher stroke volume (~121 mL vs normal 70 mL). So: 48 bpm × 121 mL ≈ 5.8 L/min. This is athletic bradycardia — a sign of excellent cardiac fitness, not disease.'
+    },
+    {
+      scenario: 'A patient with chronic hypertension develops shortness of breath when lying flat (orthopnea) and crackles in the lung bases on auscultation.',
+      question: 'Which type of heart failure is occurring and what is the pathophysiology?',
+      options: {
+        A: 'Right-sided failure; blood backs up in systemic veins causing hepatomegaly',
+        B: 'Left-sided failure; the left ventricle cannot pump effectively, blood backs up into the pulmonary circulation causing pulmonary edema',
+        C: 'Both sides failing equally with balanced symptoms',
+        D: 'Valvular disease causing excessive forward flow'
+      },
+      answer: 'B',
+      explanation: 'Left-sided heart failure causes blood to back up from the left ventricle → left atrium → pulmonary veins → pulmonary capillaries. The elevated pulmonary capillary pressure forces fluid into the alveoli (pulmonary edema), causing dyspnea and crackles. Orthopnea occurs because lying flat redistributes blood from legs to lungs, worsening edema. Chronic hypertension is the most common cause — the left ventricle eventually cannot overcome the high afterload.'
+    },
+    {
+      scenario: 'A patient is administered a drug that blocks beta-adrenergic receptors (beta-blocker).',
+      question: 'What effects would you expect on heart rate, contractility, and cardiac output?',
+      options: {
+        A: 'Increased HR, increased contractility, increased CO',
+        B: 'Decreased HR, decreased contractility, decreased CO',
+        C: 'No change — beta receptors are not involved in cardiac function',
+        D: 'Decreased HR but increased contractility'
+      },
+      answer: 'B',
+      explanation: 'Beta-blockers prevent norepinephrine from binding β₁ receptors on the SA node (decreasing HR — negative chronotropic) and myocardium (decreasing contractility — negative inotropic). Since CO = HR × SV, both components decrease, lowering CO. This is why beta-blockers are used to treat hypertension, angina, and post-MI — they reduce cardiac workload and oxygen demand.'
+    },
+    {
+      scenario: 'A patient presents with sharp chest pain that worsens with deep breathing and improves when leaning forward. A scratchy, rubbing sound is heard on auscultation.',
+      question: 'What is the most likely diagnosis?',
+      options: {
+        A: 'Myocardial infarction',
+        B: 'Pericarditis with pericardial friction rub',
+        C: 'Pleural effusion',
+        D: 'Mitral valve prolapse'
+      },
+      answer: 'B',
+      explanation: 'The classic triad of pericarditis: (1) sharp, pleuritic chest pain worse with inspiration, (2) pain relieved by sitting forward, and (3) pericardial friction rub (a scratchy sound from inflamed pericardial layers rubbing together). This is distinct from MI pain, which is crushing and unrelieved by position change. Pericarditis can progress to pericardial effusion and potentially cardiac tamponade.'
+    },
+    {
+      scenario: 'During a cardiac catheterization, a patient\'s end-diastolic volume (EDV) is 140 mL, end-systolic volume (ESV) is 60 mL, and heart rate is 72 bpm.',
+      question: 'Calculate the stroke volume, ejection fraction, and cardiac output.',
+      options: {
+        A: 'SV = 80 mL, EF = 57%, CO = 5.76 L/min',
+        B: 'SV = 60 mL, EF = 43%, CO = 4.32 L/min',
+        C: 'SV = 140 mL, EF = 100%, CO = 10.08 L/min',
+        D: 'SV = 80 mL, EF = 40%, CO = 5.76 L/min'
+      },
+      answer: 'A',
+      explanation: 'SV = EDV − ESV = 140 − 60 = 80 mL. Ejection fraction (EF) = SV/EDV × 100 = 80/140 × 100 ≈ 57% (normal is 55-70%). CO = HR × SV = 72 × 80 = 5,760 mL/min = 5.76 L/min. All values are within normal range, indicating healthy cardiac function.'
+    },
+    {
+      scenario: 'A patient with a mechanical heart valve develops sudden weakness on one side, slurred speech, and facial drooping.',
+      question: 'What is the most likely complication of the mechanical valve causing these neurological symptoms?',
+      options: {
+        A: 'Valve dehiscence causing hemorrhage',
+        B: 'Thromboembolism — clot formed on the valve broke off and traveled to a cerebral artery',
+        C: 'Endocarditis causing direct brain abscess',
+        D: 'Valve regurgitation causing low cardiac output'
+      },
+      answer: 'B',
+      explanation: 'Mechanical heart valves are thrombogenic — blood clots form on their surfaces. If a fragment breaks off (embolism), it travels through arterial circulation. A left-sided valve embolus enters the systemic circulation and can lodge in a cerebral artery, causing ischemic stroke with contralateral weakness, speech changes, and facial drooping. This is why patients with mechanical valves require lifelong anticoagulation (warfarin).'
     }
   ]
 };

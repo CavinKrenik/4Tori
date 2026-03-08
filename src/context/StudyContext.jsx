@@ -111,6 +111,10 @@ export function StudyProvider({ children, modules }) {
     update(prev => ({ ...prev, currentView: 'flashcards' }));
   }, [update]);
 
+  const goToScenarios = useCallback(() => {
+    update(prev => ({ ...prev, currentView: 'scenarios' }));
+  }, [update]);
+
   const goToMasterQuiz = useCallback(() => {
     update(prev => ({ ...prev, currentView: 'masterQuiz' }));
   }, [update]);
@@ -302,6 +306,7 @@ export function StudyProvider({ children, modules }) {
     goToSection,
     goToQuiz,
     goToFlashcards,
+    goToScenarios,
     goToMasterQuiz,
     markLearnComplete,
     answerInlineQuestion,

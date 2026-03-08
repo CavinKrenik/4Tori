@@ -16,6 +16,7 @@ import TopBar from './components/layout/TopBar';
 import HomeView from './components/home/HomeView';
 import LearnView from './components/learn/LearnView';
 import SectionQuiz from './components/quiz/SectionQuiz';
+import ScenarioQuiz from './components/quiz/ScenarioQuiz';
 import FlashcardDeck from './components/flashcards/FlashcardDeck';
 
 const ALL_MODULES = [endocrine, heart, blood, vessels, lymphatic];
@@ -49,6 +50,12 @@ function AppShell() {
       case 'flashcards':
         return currentModule ? (
           <FlashcardDeck module={currentModule} sectionIndex={progress.currentSectionIndex} />
+        ) : (
+          <HomeView modules={ALL_MODULES} />
+        );
+      case 'scenarios':
+        return currentModule ? (
+          <ScenarioQuiz module={currentModule} />
         ) : (
           <HomeView modules={ALL_MODULES} />
         );

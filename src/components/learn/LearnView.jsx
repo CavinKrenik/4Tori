@@ -11,6 +11,7 @@ export default function LearnView({ module, sectionIndex }) {
     goToSection,
     goToQuiz,
     goToFlashcards,
+    goToScenarios,
   } = useStudy();
 
   const section = module.sections[sectionIndex];
@@ -22,6 +23,7 @@ export default function LearnView({ module, sectionIndex }) {
     sectionProgress.learnComplete ? section.learnItems.length : 1
   );
   const [showQuizCTA, setShowQuizCTA] = useState(sectionProgress.learnComplete);
+  const [expandedClinical, setExpandedClinical] = useState({});
 
   // Reset when section changes
   useEffect(() => {
@@ -33,6 +35,7 @@ export default function LearnView({ module, sectionIndex }) {
       setRevealedCount(1);
       setShowQuizCTA(false);
     }
+    setExpandedClinical({});
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [module.id, section.id]);
 
@@ -235,6 +238,33 @@ export default function LearnView({ module, sectionIndex }) {
         </div>
       )}
 
+      {/* Clinical Significance */}
+      {showQuizCTA && module.clinicalCorrelations && module.clinicalCorrelations.length > 0 && (
+        <div className="clinical-section animate-fade-up">
+          <h4 className="clinical-section-title">
+            <span className="clinical-section-icon">🏥</span>
+            Clinical Significance
+          </h4>
+          <div className="clinical-cards">
+            {module.clinicalCorrelations.map((cc, i) => (
+              <div
+                key={i}
+                className={`clinical-card ${expandedClinical[i] ? 'expanded' : ''}`}
+                onClick={() => setExpandedClinical(prev => ({ ...prev, [i]: !prev[i] }))}
+              >
+                <div className="clinical-card-header">
+                  <span className="clinical-card-title">{cc.title}</span>
+                  <span className="clinical-card-toggle">{expandedClinical[i] ? '−' : '+'}</span>
+                </div>
+                {expandedClinical[i] && (
+                  <div className="clinical-card-body">{cc.detail}</div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Section Complete CTA */}
       {showQuizCTA && (
         <div className="section-complete animate-fade-up">
@@ -251,6 +281,11 @@ export default function LearnView({ module, sectionIndex }) {
             <button className="btn btn-secondary btn-lg" onClick={goToFlashcards}>
               Flashcards ({section.flashcards?.length || 0} cards)
             </button>
+            {module.scenarioQuestions && module.scenarioQuestions.length > 0 && (
+              <button className="btn btn-accent btn-lg" onClick={goToScenarios}>
+                🧠 Scenario Quiz ({module.scenarioQuestions.length} scenarios)
+              </button>
+            )}
           </div>
 
           {sectionProgress.quizScore !== null && (

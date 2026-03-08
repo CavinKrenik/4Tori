@@ -411,6 +411,130 @@ const vessels = {
     { id: 'v-q13', question: 'Which hormone promotes Na⁺ and water retention by the kidneys, increasing blood volume and pressure?', options: { A: 'Atrial natriuretic factor', B: 'Nitric oxide', C: 'Aldosterone', D: 'Melatonin' }, answer: 'C', explanation: 'Aldosterone from the adrenal cortex promotes Na⁺ reabsorption (water follows) by the kidneys, increasing blood volume and BP.' },
     { id: 'v-q14', question: 'Decompensated shock involves:', options: { A: 'Successful restoration of blood pressure', B: 'Life-threatening positive feedback loops', C: 'Activation of baroreflexes only', D: 'Mild reduction in cardiac output' }, answer: 'B', explanation: 'Decompensated shock involves positive feedback loops: decreased CO → ischemia → further CO drop; DIC → slower circulation; brainstem ischemia → vasodilation → worse ischemia.' },
     { id: 'v-q15', question: 'All of the following are aging-related cardiovascular changes EXCEPT:', options: { A: 'Decreased aortic compliance', B: 'Increased maximum heart rate', C: 'Increased systolic pressure', D: 'Increased total cholesterol' }, answer: 'B', explanation: 'Maximum heart rate DECREASES with age. Aortic compliance decreases, systolic pressure increases, and cholesterol/LDL increase.' }
+  ],
+
+  // ===== SCENARIO-BASED QUESTIONS =====
+  scenarioQuestions: [
+    {
+      scenario: 'A patient has an arteriole that constricts, reducing its radius by half.',
+      question: 'What happens to blood flow through this vessel?',
+      options: {
+        A: 'Flow decreases by half (2×)',
+        B: 'Flow decreases by 4×',
+        C: 'Flow decreases by 16× (to 1/16th)',
+        D: 'Flow remains the same because pressure compensates'
+      },
+      answer: 'C',
+      explanation: 'Blood flow is proportional to the fourth power of the radius (F ∝ r⁴). If the radius is halved: (1/2)⁴ = 1/16. Flow drops to just 1/16th of its original value — a 16-fold decrease! This is why small changes in vessel diameter have dramatic effects on flow.'
+    },
+    {
+      scenario: 'A trauma patient loses 1.5 liters of blood rapidly from a ruptured femoral artery.',
+      question: 'Which type of shock is this patient developing, and what compensatory mechanism activates first?',
+      options: {
+        A: 'Cardiogenic shock; myocardial depressant factor released',
+        B: 'Hypovolemic shock; baroreceptor reflex triggers sympathetic activation',
+        C: 'Neurogenic shock; loss of vasomotor tone',
+        D: 'Septic shock; bacterial toxins cause vasodilation'
+      },
+      answer: 'B',
+      explanation: 'Acute hemorrhage causes hypovolemic shock (the most common type). The drop in blood pressure is detected by baroreceptors in the carotid sinus and aortic arch, which decrease their firing rate. This triggers a sympathetic response: increased HR, vasoconstriction, and RAAS activation to restore pressure and volume.'
+    },
+    {
+      scenario: 'During a long lecture, a student stands up quickly and immediately feels dizzy and lightheaded.',
+      question: 'What is the most likely physiological explanation?',
+      options: {
+        A: 'Increased cardiac output overwhelms cerebral vessels',
+        B: 'Orthostatic hypotension — blood pools in lower extremities, reducing venous return and cerebral perfusion',
+        C: 'Hyperventilation causes cerebral vasoconstriction',
+        D: 'Baroreceptors over-correct, causing excessive vasoconstriction'
+      },
+      answer: 'B',
+      explanation: 'Orthostatic (postural) hypotension occurs when gravitational pooling of blood in the legs upon standing reduces venous return → decreased stroke volume → decreased cardiac output → transient cerebral ischemia. Normally the baroreflex compensates within seconds, but prolonged sitting or dehydration can delay this response.'
+    },
+    {
+      scenario: 'A patient with liver cirrhosis has severe abdominal swelling (ascites) and swollen ankles.',
+      question: 'What is the primary mechanism causing this edema?',
+      options: {
+        A: 'Increased blood pressure forcing excess filtration',
+        B: 'Decreased plasma protein production causing reduced blood colloid osmotic pressure',
+        C: 'Blocked lymphatic drainage from tumor compression',
+        D: 'Increased capillary permeability from histamine release'
+      },
+      answer: 'B',
+      explanation: 'The liver produces albumin, the major plasma protein maintaining blood colloid osmotic pressure (BCOP). Cirrhosis impairs albumin synthesis → decreased BCOP → less reabsorption at capillary venous end → net fluid shift into interstitial spaces. This is why liver disease patients develop generalized edema and ascites.'
+    },
+    {
+      scenario: 'A patient\'s BP is recorded as 150/90 mmHg.',
+      question: 'Calculate the MAP and classify this blood pressure.',
+      options: {
+        A: 'MAP = 120 mmHg; Normal',
+        B: 'MAP = 110 mmHg; Stage I Hypertension',
+        C: 'MAP = 100 mmHg; Prehypertension',
+        D: 'MAP = 130 mmHg; Stage II Hypertension'
+      },
+      answer: 'B',
+      explanation: 'MAP = (SBP + 2×DBP) / 3 = (150 + 180) / 3 = 330/3 = 110 mmHg. The systolic of 150 and diastolic of 90 place this in Stage I Hypertension (SBP 130-159 or DBP 90-99). The elevated MAP (>100) indicates excessive vascular resistance and increased cardiac workload.'
+    },
+    {
+      scenario: 'An elderly patient with a known abdominal aortic aneurysm suddenly develops severe tearing back pain and hypotension.',
+      question: 'What is the most likely complication and what type of shock may develop?',
+      options: {
+        A: 'Aneurysm rupture causing hypovolemic shock from massive internal hemorrhage',
+        B: 'Aortic dissection causing cardiogenic shock',
+        C: 'Vasovagal response causing neurogenic shock',
+        D: 'Pulmonary embolism causing obstructive shock'
+      },
+      answer: 'A',
+      explanation: 'Aortic aneurysm rupture causes catastrophic internal blood loss (hypovolemic shock). The tearing pain and sudden hypotension are classic signs. Without emergency surgery, mortality is extremely high. This demonstrates why chronic hypertension is dangerous — it weakens arterial walls, promoting aneurysm formation and rupture.'
+    },
+    {
+      scenario: 'A patient with a severe bee sting allergy is accidentally stung. Within minutes, their blood pressure drops to 60/40 and they develop widespread urticaria (hives).',
+      question: 'What type of shock is occurring and what is the primary mediator?',
+      options: {
+        A: 'Septic shock caused by bacterial endotoxins',
+        B: 'Neurogenic shock from autonomic failure',
+        C: 'Anaphylactic shock caused by massive histamine release',
+        D: 'Hypovolemic shock from fluid loss through the skin'
+      },
+      answer: 'C',
+      explanation: 'Anaphylactic shock is a severe immune reaction where mast cells release massive amounts of histamine, causing widespread vasodilation (dropping BP) and increased capillary permeability (urticaria, potential airway edema). Treatment: epinephrine (reverses vasodilation, reduces edema), antihistamines, and IV fluids.'
+    },
+    {
+      scenario: 'During a marathon, a runner\'s skeletal muscle blood flow increases from 1 L/min at rest to 20 L/min.',
+      question: 'What mechanisms allow this 20-fold increase in muscle perfusion?',
+      options: {
+        A: 'Parasympathetic vasodilation and decreased heart rate',
+        B: 'Arteriolar dilation from local metabolites (CO₂, lactic acid, K⁺) plus sympathetic-mediated precapillary sphincter relaxation',
+        C: 'Increased blood viscosity forces more blood through muscles',
+        D: 'Venous constriction redirects all blood to muscles'
+      },
+      answer: 'B',
+      explanation: 'During exercise, active muscles produce CO₂, lactic acid, K⁺, and H⁺ — these metabolites cause local arteriolar dilation (autoregulation). Epinephrine relaxes precapillary sphincters via β₂ receptors. Meanwhile, sympathetic vasoconstriction reduces flow to inactive organs (GI, kidneys), redirecting blood to working muscles. This is redistribution of cardiac output.'
+    },
+    {
+      scenario: 'A polycythemia patient has an abnormally high hematocrit of 65% (normal ~45%).',
+      question: 'How does this affect blood viscosity and vascular resistance?',
+      options: {
+        A: 'Viscosity decreases, resistance decreases, flow increases',
+        B: 'Viscosity increases, resistance increases, the heart must work harder',
+        C: 'No change — hematocrit does not affect viscosity',
+        D: 'Viscosity increases but resistance decreases due to more oxygen delivery'
+      },
+      answer: 'B',
+      explanation: 'Blood viscosity increases with hematocrit. Higher viscosity means greater resistance to flow (SVR increases). The heart must generate more force to push thicker blood through vessels, increasing cardiac workload and risk of clot formation. This is why polycythemia increases risk of stroke and MI.'
+    },
+    {
+      scenario: 'A pregnant woman in her third trimester develops swollen ankles and varicose veins in her legs.',
+      question: 'What is the primary mechanism causing these vascular changes?',
+      options: {
+        A: 'Increased blood viscosity from pregnancy hormones',
+        B: 'Uterine compression of pelvic veins increases venous pressure, causing valve incompetence and fluid accumulation',
+        C: 'Decreased cardiac output during pregnancy',
+        D: 'Arterial spasm from pregnancy-induced hypertension'
+      },
+      answer: 'B',
+      explanation: 'The enlarged uterus compresses pelvic and abdominal veins, increasing venous pressure in the lower extremities. Sustained high venous pressure stretches vein walls and causes valve incompetence (varicose veins). Poor venous return increases capillary hydrostatic pressure → excess filtration → dependent edema in ankles. This typically resolves after delivery.'
+    }
   ]
 };
 

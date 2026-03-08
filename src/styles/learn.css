@@ -296,3 +296,93 @@
 .animate-fade-up { animation: fadeInUp 0.4s ease; }
 .animate-slide-in { animation: slideInRight 0.4s ease; }
 .animate-celebrate { animation: celebrate 0.5s ease; }
+
+/* ============================================
+   Clinical Significance Section
+   ============================================ */
+
+.clinical-section {
+  margin: var(--space-xl) 0;
+}
+
+.clinical-section-title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.clinical-section-icon {
+  font-size: var(--text-lg);
+}
+
+.clinical-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.clinical-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--error);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  overflow: hidden;
+}
+
+.clinical-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-sm);
+}
+
+.clinical-card.expanded {
+  border-left-color: var(--error-dark);
+}
+
+.clinical-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md);
+}
+
+.clinical-card-title {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.clinical-card-toggle {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--text-muted);
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+
+.clinical-card-body {
+  padding: 0 var(--space-md) var(--space-md);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+  animation: fadeIn 0.2s ease;
+}
+
+/* Accent button style for scenario quiz CTA */
+.btn-accent {
+  background: linear-gradient(135deg, var(--accent), #8b5cf6);
+  color: white;
+  border: none;
+}
+.btn-accent:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--accent-hover), #7c3aed);
+  box-shadow: var(--shadow-sm);
+}
