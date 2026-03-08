@@ -283,6 +283,28 @@ body {
   color: var(--accent);
 }
 
+.topbar-reset-btn {
+  color: var(--warning, #e67e22) !important;
+  font-size: var(--text-xs) !important;
+  padding: var(--space-xs) var(--space-sm) !important;
+  margin-left: var(--space-xs);
+}
+
+.topbar-reset-btn:hover {
+  background: rgba(230, 126, 34, 0.12) !important;
+}
+
+.topbar-reset-yes {
+  color: var(--danger, #e74c3c) !important;
+}
+
+.topbar-reset-confirm {
+  display: flex;
+  align-items: center;
+  margin-left: var(--space-sm);
+  color: var(--text-secondary);
+}
+
 .mobile-menu-btn {
   display: none;
   padding: var(--space-sm);
