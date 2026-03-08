@@ -1,23 +1,23 @@
-# 4 Tori — Anatomy & Physiology Study Platform
+﻿# 4 Tori -- Anatomy & Physiology Study Platform
 
-A structured, section-by-section study web app for Anatomy & Physiology. Content is extracted from five university-level PDF slide decks and organized into digestible learning blocks with inline questions, section quizzes, flashcards, key terms, and memory aids.
+A structured, section-by-section study web app for Anatomy & Physiology. Content is extracted from nine university-level PDF slide decks and lab manuals, then organized into digestible learning blocks with inline review questions, section quizzes, flashcards, key terms, memory aids, clinical scenarios, a 48-structure circulatory diagram labeling exercise, and a cumulative final quiz.
 
-Built with React 18 + Vite. No backend required — runs entirely in the browser with progress saved to localStorage.
+Built with React 18 + Vite. No backend required -- runs entirely in the browser with progress saved to localStorage.
 
 ---
 
 ## Table of Contents
 
 - [How It Works](#how-it-works)
+- [Study Modes](#study-modes)
 - [Modules](#modules)
-  - [1. Endocrine System](#1-endocrine-system)
-  - [2. The Heart](#2-the-heart)
-  - [3. Blood](#3-blood)
-  - [4. Blood Vessels](#4-blood-vessels)
-  - [5. Lymphatic & Immune System](#5-lymphatic--immune-system)
+- [Diagram Labeling](#diagram-labeling)
+- [Final Quiz](#final-quiz)
 - [Content at a Glance](#content-at-a-glance)
+- [Source Material](#source-material)
 - [Getting Started](#getting-started)
 - [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
 
 ---
 
@@ -25,13 +25,28 @@ Built with React 18 + Vite. No backend required — runs entirely in the browser
 
 Each module is split into **3 sections** that follow a consistent study flow:
 
-1. **Learn** — Content is revealed progressively in short blocks (6–8 pages worth). Inline multiple-choice questions appear between blocks to check understanding as you read.
-2. **Quiz** — A section quiz tests everything covered in that section. Questions are presented one at a time with immediate feedback, explanations for missed items, and a score summary. 60% is required to pass.
-3. **Flashcards** — Flip cards for term review with keyboard navigation, shuffle, and progress tracking.
+1. **Learn** -- Content is revealed progressively in short blocks. Inline multiple-choice review questions appear between blocks to check understanding as you read (spaced ~every 3 items).
+2. **Quiz** -- A section quiz tests everything covered in that section. Questions are presented one at a time with try-again on first wrong answer, immediate feedback, explanations for missed items, and a score summary. 60% required to pass.
+3. **Flashcards** -- Flip cards for term review with keyboard navigation, shuffle, and progress tracking.
 
-After completing a section, advance to the next. Each module also provides **key terms** with definitions and **memory aids** to reinforce retention.
+After completing a section, advance to the next. Each module also provides **key terms** with definitions and **memory aids** to reinforce retention. Two modules (Heart, Blood Vessels) include **clinical scenario quizzes** that test applied reasoning.
 
-Progress is saved automatically to your browser — pick up where you left off at any time.
+Beyond individual modules, the app includes a **Diagram Labeling** exercise with 48 circulatory structures and a **Final Quiz** that pulls 20 random questions from across all modules.
+
+Progress is saved automatically to your browser -- pick up where you left off at any time. Dark mode is available via the sidebar toggle.
+
+---
+
+## Study Modes
+
+| Mode | Description | Available In |
+|------|-------------|--------------|
+| **Learn** | Progressive content blocks with inline review questions | All 5 modules (15 sections) |
+| **Section Quiz** | Per-section assessment with score tracking | All 5 modules (15 sections) |
+| **Flashcards** | Flip cards with shuffle & keyboard nav | Heart, Blood |
+| **Scenario Quiz** | Clinical case-based reasoning | Heart (8 scenarios), Blood Vessels (10 scenarios) |
+| **Diagram Labeling** | Interactive circulatory anatomy | Standalone (48 structures) |
+| **Final Quiz** | 20 random questions from all modules, reshufflable | Standalone |
 
 ---
 
@@ -39,94 +54,139 @@ Progress is saved automatically to your browser — pick up where you left off a
 
 ### 1. Endocrine System
 
-> Source: *6. Endocrine systemPDF.pdf*
+> Source: *6. Endocrine systemPDF.pdf* + *BI232 Exercise 13 - Endocrine & Blood*
 
-Comprehensive coverage of the endocrine system including nervous vs endocrine comparison, cell communication, the hypothalamus–pituitary axis, thyroid, pineal, thymus, adrenal and pancreatic hormones, stress responses, aging changes, and endocrine disorders including diabetes mellitus.
+| Section | Title | Learn Items | Inline Qs | Quiz Qs |
+|---------|-------|:-----------:|:---------:|:-------:|
+| 1 | Endocrine Basics, Hormone Chemistry & Mechanisms | 15 | 5 | 12 |
+| 2 | Glands & Hormones: Hypothalamus, Pituitary, Thyroid, Adrenals, Pancreas | 17 | 6 | 15 |
+| 3 | Stress (GAS), Aging & Endocrine Disorders | 14 | 4 | 15 |
 
-| Section | Title | Topics |
-|---------|-------|--------|
-| 1 | **Nervous vs Endocrine & Cell Communication** (pp. 1–8) | Nervous vs endocrine basics, cell communication mechanisms, system overlap, hormone functions, exocrine vs endocrine glands, hormone target cells, negative & positive feedback, hypothalamus–pituitary overview, pituitary anatomy |
-| 2 | **Hypothalamus–Pituitary–Pineal–Thymus–Thyroid** (pp. 9–16) | Hypothalamo-hypophyseal portal system, anterior pituitary tropic hormones (GH, TSH, FSH, LH, PRL, ACTH/MSH), posterior pituitary (ADH, oxytocin), pineal gland & melatonin, thymus, thyroid gland & hormones |
-| 3 | **Stress, Aging & Endocrine Disorders** (pp. 17–24) | Stress & immune response, aging changes, pituitary disorders (acromegaly), thyroid disorders (Graves disease, myxedema), parathyroid disorders, adrenal disorders (Cushing syndrome, Addison's disease), diabetes mellitus (types, pathology, ketoacidosis), hyperinsulinism |
-
-**95** quiz questions · **30** flashcards · **24** key terms · **9** inline questions
+**42** section quiz Qs -- **15** inline review Qs -- **37** key terms -- **19** memory aids
 
 ---
 
 ### 2. The Heart
 
-> Source: *8. heartPDF.pdf*
+> Source: *8. heartPDF.pdf* + *Exercise 14 - The Heart*
 
-Heart anatomy from pericardium to valves, the conduction system and ECG interpretation, cardiac cycle mechanics, heart sounds, cardiac output, autonomic regulation, stroke volume determinants, congestive heart failure, and cardiovascular risk factors.
+| Section | Title | Learn Items | Inline Qs | Quiz Qs |
+|---------|-------|:-----------:|:---------:|:-------:|
+| 1 | Heart Anatomy, Chambers & Valves | 9 | 3 | 17 |
+| 2 | Conduction System, ECG, Cardiac Cycle & Cardiac Output | 10 | 3 | 22 |
+| 3 | Autonomic HR Control, Stroke Volume, CHF & Risk Factors | 11 | 3 | 26 |
 
-| Section | Title | Topics |
-|---------|-------|--------|
-| 1 | **Heart Anatomy, Chambers & Valves** (pp. 1–8) | Heart position & orientation, pericardium, wall layers (epicardium, myocardium, endocardium), four chambers, right & left atrium/ventricle, myocardial thickness, fibrous skeleton, AV & semilunar valve mechanics, chordae tendineae |
-| 2 | **Conduction System, ECG & Cardiac Cycle** (pp. 9–16) | Autorhythmicity, SA node → AV node → Bundle of His → Purkinje fibers, ectopic pacemakers, cardiac action potential, ECG waves (P, QRS, T), PQ interval, cardiac cycle phases, EDV/ESV/stroke volume, heart sounds, cardiac output & heart rate |
-| 3 | **Autonomic HR Control, Stroke Volume & CHF** (pp. 17–24) | Cardiac output & reserve, chronotropic effects, sympathetic & parasympathetic stimulation, vagal tone, baroreceptors & chemoreceptors, preload (Frank-Starling law), contractility (inotropic effect), afterload, exercise effects, congestive heart failure, pulmonary edema, cardiovascular risk factors |
-
-**65** quiz questions · **50** flashcards · **47** key terms · **9** inline questions
+**65** section quiz Qs -- **9** inline review Qs -- **50** flashcards -- **47** key terms -- **15** memory aids -- **8** scenario questions
 
 ---
 
 ### 3. Blood
 
-> Source: *the blood is the lifePDF.pdf*
+> Source: *the blood is the lifePDF.pdf* + *BI232 Exercise 13 - Endocrine & Blood*
 
-Blood composition, plasma proteins, hematocrit, RBC structure and lifecycle, hemoglobin, erythropoiesis, anemia, sickle-cell disease, WBC types, platelets, hemostasis, the clotting cascade, anticoagulants, hemophilia, and ABO blood typing.
+| Section | Title | Learn Items | Inline Qs | Quiz Qs |
+|---------|-------|:-----------:|:---------:|:-------:|
+| 1 | Blood Overview, Plasma & Hemopoiesis | 12 | 3 | 10 |
+| 2 | RBCs, Hemoglobin & Anemia | 12 | 3 | 10 |
+| 3 | WBCs, Clotting & Blood Types | 29 | 9 | 20 |
 
-| Section | Title | Topics |
-|---------|-------|--------|
-| 1 | **Blood Overview, Plasma & Hemopoiesis** (pp. 1–8) | Body fluids & hematology, blood functions, basic properties, blood sampling, hematocrit, plasma & plasma proteins (albumin, fibrinogen), formed elements overview, anemia & polycythemia, hemopoiesis sites & stem cells, hemopoietic growth factors (EPO) |
-| 2 | **RBCs, Hemoglobin & Anemia** (pp. 9–16) | RBC structure & function, erythropoiesis steps, reticulocyte count, erythrocyte homeostasis feedback, RBC life cycle & removal, nutritional requirements, hemoglobin structure & transport, hemoglobin/iron recycling (transferrin, bilirubin), polycythemia, anemia causes & effects, sickle-cell anemia |
-| 3 | **WBCs, Clotting & Blood Types** (pp. 17–24) | WBC types & features, leukopoiesis, neutrophils, platelet & hemostasis overview, clotting cascade (extrinsic & intrinsic pathways), final common pathway & thrombin, vitamin K, clot retraction & fibrinolysis, natural anticoagulants, anticoagulant & thrombolytic drugs, hemophilia, ABO blood types & agglutinogens |
-
-**24** quiz questions · **30** flashcards · **24** key terms · **9** inline questions
+**40** section quiz Qs -- **15** inline review Qs -- **38** flashcards -- **45** key terms -- **17** memory aids
 
 ---
 
 ### 4. Blood Vessels
 
-> Source: *9. VesselsPDF.pdf*
+> Source: *9. VesselsPDF.pdf* + *Exercise 15 - Blood Vessels* + *Exercise 16 - Blood Pressure & Lymphatic*
 
-Structure and function of arteries, veins, and capillaries. Hemodynamics, capillary exchange, blood pressure regulation, vascular resistance, venous return mechanisms, and an introduction to pulse points and the lymphatic system.
+| Section | Title | Learn Items | Inline Qs | Quiz Qs |
+|---------|-------|:-----------:|:---------:|:-------:|
+| 1 | Vessel Anatomy, Types & Circulatory Routes | 12 | 3 | 12 |
+| 2 | Capillary Exchange, Hemodynamics & Blood Pressure | 15 | 5 | 12 |
+| 3 | Venous Return, Shock & Blood Pressure Regulation | 18 | 5 | 15 |
 
-| Section | Title | Topics |
-|---------|-------|--------|
-| 1 | **Vessel Types, Tunics & Microcirculation** (pp. 1–8) | Major vessel types, vessel wall layers (tunica interna/media/externa), vasa vasorum, sympathetic innervation, conducting (elastic) arteries, distributing (muscular) arteries, arterioles & metarterioles, capillary types (continuous, fenestrated, sinusoids), precapillary sphincters & vasomotion, veins/venules, varicose veins |
-| 2 | **Hemodynamics, Capillary Exchange & Venous Return** (pp. 9–16) | Diffusion & transcytosis, bulk flow (filtration & reabsorption), net filtration pressure, Starling's law of capillaries, edema causes & consequences, blood pressure & volume flow, vascular resistance, blood flow velocity & laminar flow, skeletal muscle pump, thoracic pump, exercise & venous return, shock |
-| 3 | **Blood Pressure, Pulse Points & Lymphatic Overview** (pp. 17–24) | Cardiac cycle & BP, heart sounds (S1/S2), dicrotic notch, pulse pressure, pulse points, blood pressure measurement, lymphatic system functions, lymphatic organs (thymus, spleen, lymph nodes), lacteals, lymphatic vessels & flow, tonsils |
-
-**69** quiz questions · **31** flashcards · **39** key terms · **9** inline questions
+**39** section quiz Qs -- **13** inline review Qs -- **42** key terms -- **16** memory aids -- **10** scenario questions
 
 ---
 
 ### 5. Lymphatic & Immune System
 
-> Source: *10 Lymphatic and Immune SystemsPDF.pdf*
+> Source: *10 Lymphatic and Immune SystemsPDF.pdf* + *Exercise 16 - Blood Pressure & Lymphatic*
 
-The lymphatic system's structure and functions, immune cell types and tissues, nonspecific resistance (barriers, phagocytes, inflammation, fever), and specific immunity with T and B lymphocytes, cellular immunity, and immunological surveillance.
+| Section | Title | Learn Items | Inline Qs | Quiz Qs |
+|---------|-------|:-----------:|:---------:|:-------:|
+| 1 | Lymphatic System: Vessels, Flow, Cells, Tissues & Organs | 13 | 3 | 10 |
+| 2 | Nonspecific Resistance: Barriers, Phagocytosis, Inflammation & Fever | 12 | 3 | 12 |
+| 3 | Specific Immunity: T Cells, B Cells, Antibodies & Disorders | 24 | 9 | 15 |
 
-| Section | Title | Topics |
-|---------|-------|--------|
-| 1 | **Lymphatic Functions, Vessels, Cells & Organs** (pp. 1–10) | Lymphatic & immune overview, lymph & lymphatic capillaries, lymphatic vessels, route & mechanisms of lymph flow, lymphatic cells (T cells, B cells, APCs), lymphatic tissue (MALT, Peyer patches), lymph node structure & function, cancer metastasis via lymphatics |
-| 2 | **Lymph Nodes, Organs & Nonspecific Resistance** (pp. 11–20) | Lymph node flow, cancer & nodes, tonsils (palatine, pharyngeal), thymus gland, spleen structure & functions, immunology overview, nonspecific resistance (skin, mucous membranes, leukocytes), antimicrobial proteins (interferons, complement, transferrins), NK cells, phagocytosis steps, inflammation (signs, mobilization, leukocyte deployment, cleanup), abscesses & ulcers |
-| 3 | **NK Cells, Antimicrobial Proteins, Fever & Cellular Immunity** (pp. 21–30) | NK cell action (perforin), complement pathways, fever, cytokines & cytokine therapy, T lymphocytes, T cell selection in thymus (positive & negative), cellular (cell-mediated) immunity, cytotoxic T cell activation, Tc/CD8 cells, immunological surveillance (lymphotoxin, TNF), graft rejection & cyclosporine, clonal selection |
+**37** section quiz Qs -- **15** inline review Qs -- **43** key terms -- **19** memory aids
 
-**64** quiz questions · **32** flashcards · **42** key terms · **9** inline questions
+---
+
+## Diagram Labeling
+
+An interactive circulatory system labeling exercise with **48 anatomical structures** across 5 body regions:
+
+| Region | Structures |
+|--------|:----------:|
+| Head & Neck | 8 |
+| Upper Limb | 10 |
+| Heart & Great Vessels | 6 |
+| Abdomen & Pelvis | 11 |
+| Lower Limb | 13 |
+
+Each structure card includes: function, origin, region supplied, branches, and clinical significance. Structures are classified as artery, vein, or both.
+
+---
+
+## Final Quiz
+
+A cumulative assessment that randomly selects **20 questions** from the combined quiz pools of all 5 modules (223 total questions). Features:
+
+- Questions are shuffled with a seeded PRNG for reproducibility
+- Each question shows which module and section it came from
+- Results screen groups missed questions by module for targeted review
+- **"New Random 20"** button reshuffles the entire pool for a fresh round
+- Progress is saved to localStorage so you can resume mid-quiz
+- 60% required to pass
 
 ---
 
 ## Content at a Glance
 
-| | Endocrine | Heart | Blood | Vessels | Lymphatic | **Total** |
-|---|---|---|---|---|---|---|
-| Sections | 3 | 3 | 3 | 3 | 3 | **15** |
-| Learn Items | 39 | 30 | 34 | 32 | 40 | **175** |
-| Key Terms | 24 | 47 | 24 | 39 | 42 | **176** |
-| Inline Questions | 9 | 9 | 9 | 9 | 9 | **45** |
-| Quiz Questions | 95 | 65 | 24 | 69 | 64 | **317** |
-| Flashcards | 30 | 50 | 30 | 31 | 32 | **173** |
+| Content Type | Count |
+|:-------------|------:|
+| Modules | 5 |
+| Sections | 15 |
+| Learn items | 223 |
+| Inline review questions | 67 |
+| Section quiz questions | 223 |
+| Flashcards | 88 |
+| Key terms | 214 |
+| Memory aids | 86 |
+| Scenario questions | 18 |
+| Labeling structures | 48 |
+| CourseData question bank | 133 |
+| **Total assessment items** | **589** |
+
+---
+
+## Source Material
+
+All content is derived from scraped university PowerPoint lecture slides and lab manuals stored in `public/AllModulesallTXT/`:
+
+| File | Module |
+|------|--------|
+| `6. Endocrine systemPDF.txt` | Endocrine System |
+| `8. heartPDF.txt` | The Heart |
+| `the blood is the lifePDF.txt` | Blood |
+| `9. VesselsPDF.txt` | Blood Vessels |
+| `10 Lymphatic and Immune SystemsPDF.txt` | Lymphatic & Immune System |
+| `BI232_Exercise 13 - Endocrine & Blood.txt` | Endocrine + Blood (lab) |
+| `Exercise 14 - The Heart.txt` | Heart (lab) |
+| `Exercise 15 - Blood Vessels.txt` | Blood Vessels (lab) |
+| `Exercise 16 - Blood Pressure & Lymphatic.txt` | Blood Vessels + Lymphatic (lab) |
+
+All quiz questions, inline questions, and learn content have been verified against these original source documents.
 
 ---
 
@@ -136,23 +196,78 @@ The lymphatic system's structure and functions, immune cell types and tissues, n
 # Install dependencies
 npm install
 
-# Start dev server
+# Start development server
 npm run dev
 
 # Build for production
 npm run build
+
+# Preview production build
+npm run preview
 ```
 
-No API keys or backend required — the app is entirely static and runs in the browser.
+Open `http://localhost:5173` in your browser. No account or backend needed.
 
 ---
 
 ## Tech Stack
 
-- **React 18** — UI components with hooks
-- **Vite 5** — Dev server and production bundler
-- **Vanilla CSS** — Design token system with light/dark mode
-- **localStorage** — Persistent progress tracking across sessions
-#   4 T o r i 
- 
- 
+| Tool | Purpose |
+|------|---------|
+| **React 18** | Component framework |
+| **Vite 5** | Dev server & bundler |
+| **CSS custom properties** | Theming (light/dark) |
+| **localStorage** | Progress persistence |
+
+Zero runtime dependencies beyond React. Pure client-side SPA -- deploy anywhere that serves static files.
+
+---
+
+## Project Structure
+
+```
+src/
+  App.jsx                      # Root component & view routing (7 views)
+  main.jsx                     # React entry point
+  courseData.js                 # Module blueprints & question banks (133 Qs)
+  fullDataOverrides.js          # Enriched learn content from source texts
+  styles.css                    # Global styles import
+  components/
+    common/
+      ProgressRing.jsx          # Circular progress indicator
+      QuestionCard.jsx          # Reusable MC question with try-again
+    flashcards/
+      FlashcardDeck.jsx         # Flip-card review deck
+    home/
+      HomeView.jsx              # Dashboard with module cards
+    labeling/
+      LabelingExercise.jsx      # Circulatory diagram labeling
+      StructureCard.jsx         # Anatomy info card
+    layout/
+      Sidebar.jsx               # Navigation sidebar
+      TopBar.jsx                # Top navigation bar
+    learn/
+      LearnView.jsx             # Progressive learn mode with inline Qs
+    quiz/
+      FinalQuiz.jsx             # 20-question cumulative final
+      ScenarioQuiz.jsx          # Clinical scenario quiz
+      SectionQuiz.jsx           # Per-section quiz
+  context/
+    StudyContext.jsx             # Global state, progress, navigation
+  data/
+    blood.js                    # Blood module data
+    endocrine.js                # Endocrine module data
+    heart.js                    # Heart module data
+    labelingData.js             # 48 labeling structures
+    lymphatic.js                # Lymphatic module data
+    vessels.js                  # Blood Vessels module data
+  styles/
+    components.css
+    flashcards.css
+    home.css
+    labeling.css
+    layout.css
+    learn.css
+    quiz.css
+    variables.css
+```
