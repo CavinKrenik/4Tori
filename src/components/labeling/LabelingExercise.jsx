@@ -54,7 +54,7 @@ export default function LabelingExercise() {
   const options = useMemo(
     () => shuffle(activeLabels.map(l => l.label)),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [activeLabels, mode, checked],
+    [activeLabels, mode],
   );
 
   // Reset answers when region / mode changes
