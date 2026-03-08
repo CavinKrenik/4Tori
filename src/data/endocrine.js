@@ -161,6 +161,26 @@ const endocrine = {
         'Hormonal interactions: "PSA" = Permissive (strengthens), Synergistic (together greater), Antagonistic (opposite effects).',
         'NSAIDs block prostaglandins but NOT leukotrienes — discovered in 1971.'
       ],
+      inlineQuestions: [
+        {
+          question: 'Compared to the nervous system, the endocrine system is:',
+          options: { A: 'Faster acting with shorter duration', B: 'Slower acting with longer-lasting effects', C: 'Equally fast but more targeted', D: 'Electrical only with no chemical component' },
+          answer: 'B',
+          explanation: 'The endocrine system uses hormones in the bloodstream — effects take seconds to days to appear but persist much longer than the brief, millisecond responses of the nervous system.'
+        },
+        {
+          question: 'A cell exposed to excess hormone responds by decreasing its number of receptors. This is called:',
+          options: { A: 'Up-regulation', B: 'Amplification', C: 'Down-regulation', D: 'Positive feedback' },
+          answer: 'C',
+          explanation: 'Down-regulation: excess hormone → receptors undergo endocytosis and degradation → fewer receptors → decreased target cell sensitivity. The cell "turns down the volume."'
+        },
+        {
+          question: 'In the cAMP second messenger system, the amplification cascade allows one hormone molecule to:',
+          options: { A: 'Bind to thousands of receptors at once', B: 'Trigger breakdown of millions of product molecules', C: 'Enter the nucleus and activate genes directly', D: 'Permanently activate phosphodiesterase' },
+          answer: 'B',
+          explanation: 'The cascade (1 hormone → 100 G-proteins → 1000s cAMP → kinases → substrate molecules) means one epinephrine molecule can break down millions of glycogen molecules — explaining why tiny hormone amounts have huge effects.'
+        }
+      ],
       quiz: [
         { id: 'en1-q1', question: 'Compared to the endocrine system, the nervous system response is:', options: { A: 'Slower and longer lasting', B: 'Faster and longer lasting', C: 'Faster and shorter in duration', D: 'Slower and shorter in duration' }, answer: 'C', explanation: 'The nervous system responds in 1-10 milliseconds with brief effects, while the endocrine system responds more slowly but effects persist longer.' },
         { id: 'en1-q2', question: 'A local hormone that affects nearby cells in the same tissue is called a:', options: { A: 'Neurotransmitter', B: 'Gap junction messenger', C: 'Paracrine hormone', D: 'Endocrine hormone' }, answer: 'C', explanation: 'Paracrine hormones are local hormones that act on nearby cells in tissue fluid, unlike endocrine hormones traveling through blood.' },
@@ -276,6 +296,26 @@ const endocrine = {
         'GH = highest in deep SLEEP and after PROTEIN meals.',
         'Melatonin = "Mela-NIGHT-in" — rises at night, makes you sleepy.'
       ],
+      inlineQuestions: [
+        {
+          question: 'The posterior pituitary:',
+          options: { A: 'Synthesizes GH and TSH', B: 'Stores and releases ADH and oxytocin made by the hypothalamus', C: 'Produces ACTH and FSH', D: 'Is the larger lobe making up 75% of the gland' },
+          answer: 'B',
+          explanation: 'The posterior pituitary (neurohypophysis) does NOT synthesize hormones — it stores and releases ADH and oxytocin, which are produced by hypothalamic neurons and transported down their axons.'
+        },
+        {
+          question: 'Calcitonin from thyroid C cells and PTH from parathyroid glands have what type of hormonal interaction?',
+          options: { A: 'Permissive — one strengthens the other', B: 'Synergistic — together greater than alone', C: 'Antagonistic — opposite effects on blood calcium', D: 'Amplifying — one cascades into the other' },
+          answer: 'C',
+          explanation: 'Calcitonin LOWERS blood Ca²⁺ (promotes bone deposition) while PTH RAISES blood Ca²⁺ (activates osteoclasts, increases kidney reabsorption). They are classic antagonists controlling calcium homeostasis.'
+        },
+        {
+          question: 'Insulin is unique because it is:',
+          options: { A: 'The only hormone that raises blood glucose', B: 'Produced by alpha cells of the pancreatic islets', C: 'The ONLY hormone that lowers blood glucose', D: 'A steroid hormone that crosses the plasma membrane' },
+          answer: 'C',
+          explanation: 'Insulin (from beta cells) is the ONLY hypoglycemic hormone. Multiple hormones raise blood glucose (glucagon, epinephrine, norepinephrine, cortisol), but insulin alone lowers it.'
+        }
+      ],
       quiz: [
         { id: 'en2-q1', question: 'The portal system carrying hypothalamic hormones to the anterior pituitary is the:', options: { A: 'Hepatic portal system', B: 'Hypothalamo-hypophyseal portal system', C: 'Systemic venous system', D: 'Pulmonary circulation' }, answer: 'B', explanation: 'The hypothalamo-hypophyseal portal system carries releasing/inhibiting hormones from hypothalamus directly to the anterior pituitary.' },
         { id: 'en2-q2', question: 'The posterior pituitary:', options: { A: 'Synthesizes ADH and oxytocin', B: 'Stores and releases ADH and oxytocin made in hypothalamus', C: 'Releases ACTH and MSH', D: 'Produces GH' }, answer: 'B', explanation: 'The posterior pituitary does not synthesize hormones — it stores and releases ADH and oxytocin made by hypothalamic neurons.' },
@@ -377,6 +417,26 @@ const endocrine = {
         'Type 1 = 1 problem (no insulin — autoimmune). Type 2 = 2 problems (insulin exists but cells resist it).',
         'Acromegaly = ACRO (extremities) + MEGALY (enlargement) in adults.',
         'Graves disease = GRAVE mistake by immune system: antibodies mimic TSH → thyroid hyperstimulation.'
+      ],
+      inlineQuestions: [
+        {
+          question: 'The three stages of General Adaptation Syndrome (GAS) in order are:',
+          options: { A: 'Resistance, Alarm, Exhaustion', B: 'Alarm, Resistance, Exhaustion', C: 'Exhaustion, Alarm, Resistance', D: 'Onset, Stadium, Defervescence' },
+          answer: 'B',
+          explanation: 'GAS proceeds: Alarm (fight-or-flight from sympathetic/adrenal medulla), Resistance (cortisol and aldosterone for long-term coping), and Exhaustion (resources depleted, immune suppression, muscle wasting).'
+        },
+        {
+          question: 'A patient has a "buffalo hump," "moon face," hyperglycemia, and thin legs. This most likely indicates:',
+          options: { A: 'Addison disease', B: 'Graves disease', C: 'Cushing syndrome', D: 'Type I diabetes' },
+          answer: 'C',
+          explanation: 'Cushing syndrome is caused by excess cortisol → fat redistribution (buffalo hump, moon face), protein catabolism (thin legs from muscle wasting), hyperglycemia, hypertension, and poor wound healing.'
+        },
+        {
+          question: 'The "3 Ps" of diabetes mellitus are:',
+          options: { A: 'Pain, pallor, pulselessness', B: 'Polyuria, polydipsia, polyphagia', C: 'Paresthesia, paralysis, paresis', D: 'Pyrexia, petechiae, purpura' },
+          answer: 'B',
+          explanation: 'The classic signs of diabetes mellitus are Polyuria (excessive urination from osmotic diuresis), Polydipsia (excessive thirst from fluid loss), and Polyphagia (excessive hunger because cells can\'t absorb glucose).'
+        }
       ],
       quiz: [
         { id: 'en3-q1', question: 'The three stages of General Adaptation Syndrome are:', options: { A: 'Onset, Stadium, Defervescence', B: 'Alarm, Resistance, Exhaustion', C: 'Acute, Subacute, Chronic', D: 'Initiation, Propagation, Termination' }, answer: 'B', explanation: 'GAS has three stages: Alarm (fight-or-flight from sympathetic/adrenal medulla), Resistance (hypothalamic releasing hormones for long-term), and Exhaustion (resource depletion).' },

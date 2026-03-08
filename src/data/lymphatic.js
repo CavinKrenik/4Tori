@@ -152,6 +152,26 @@ const lymphatic = {
         'Thymus timeline: HUGE in babies, TINY in adults (involution after puberty).',
         'Spleen functions: "BIRD" = Blood reservoir, Immune reactions, RBC disposal, Development (fetal blood production).'
       ],
+      inlineQuestions: [
+        {
+          question: 'The three main functions of the lymphatic system are:',
+          options: { A: 'Gas exchange, hormone transport, waste removal', B: 'Fluid recovery, immunity, lipid absorption', C: 'Blood production, pH regulation, heat distribution', D: 'Oxygen delivery, CO₂ removal, nutrient transport' },
+          answer: 'B',
+          explanation: 'The lymphatic system recovers 2-4 L/day of fluid and plasma proteins from tissues, provides immunity via lymph node filtration, and absorbs dietary lipids via lacteals (chyle) in the small intestine.'
+        },
+        {
+          question: 'Lymph flows through a lymph node in which direction?',
+          options: { A: 'Bidirectionally through afferent vessels', B: 'One-way: afferent vessels in, efferent vessels out at the hilus', C: 'From efferent to afferent vessels', D: 'Randomly through diffuse channels' },
+          answer: 'B',
+          explanation: 'Lymph node flow is one-way: lymph enters through multiple afferent vessels, passes through sinuses where immune cells can respond to foreign material, and exits through fewer efferent vessels at the hilus.'
+        },
+        {
+          question: 'The thymus is largest during infancy (~70g) and shrinks to ~3g by adulthood. This process is called:',
+          options: { A: 'Metastasis', B: 'Involution', C: 'Diapedesis', D: 'Opsonization' },
+          answer: 'B',
+          explanation: 'Thymic involution is the natural shrinking of the thymus after puberty. Despite this, the T cells it produced during early life continue to function throughout adulthood.'
+        }
+      ],
       quiz: [
         { id: 'ly1-q1', question: 'The lymphatic system recovers approximately how much fluid from tissues per day?', options: { A: '0.5-1 L', B: '2-4 L', C: '8-10 L', D: '15-20 L' }, answer: 'B', explanation: 'The lymphatic system absorbs about 2-4 L/day of plasma proteins and fluid from tissues.' },
         { id: 'ly1-q2', question: 'Lacteals are found in the:', options: { A: 'Lungs', B: 'Brain', C: 'Small intestine', D: 'Liver' }, answer: 'C', explanation: 'Lacteals are lymphatic capillaries in the small intestine that absorb dietary lipids (chyle).' },
@@ -242,6 +262,26 @@ const lymphatic = {
         'Fixed macrophages by location: "HiKA-MM" = Histiocytes (skin), Kupffer (liver), Alveolar (lungs), Microglia (brain), Marrow/nodes Macrophages.',
         'Complement end game: "IOC" = Inflammation, Opsonization, Cytolysis (MAC).',
         'Fever stages: "OSD" = Onset, Stadium, Defervescence.'
+      ],
+      inlineQuestions: [
+        {
+          question: 'Neutrophils kill bacteria using a "respiratory burst" that produces toxic chemicals including:',
+          options: { A: 'Antibodies and complement', B: 'Superoxide, hydrogen peroxide, and hypochlorous acid', C: 'Interferons and interleukins', D: 'Histamine and bradykinin' },
+          answer: 'B',
+          explanation: 'The neutrophil respiratory burst creates superoxide (O₂⁻), hydrogen peroxide (H₂O₂), and hypochlorous acid (HClO) — a potent killing zone that destroys bacteria. This is a nonspecific defense mechanism.'
+        },
+        {
+          question: 'The complement system destroys pathogens by forming a ring of proteins (C5b-C9) in the enemy cell membrane called the:',
+          options: { A: 'Respiratory burst', B: 'Opsonization complex', C: 'Membrane attack complex (MAC)', D: 'Antigen-antibody complex' },
+          answer: 'C',
+          explanation: 'The membrane attack complex (MAC) consists of complement proteins C5b-C9 that form a ring/pore in the target cell\'s membrane, causing cytolysis (the cell bursts from uncontrolled water influx).'
+        },
+        {
+          question: 'Fever is initiated when macrophages release which pyrogen?',
+          options: { A: 'Interferon-gamma', B: 'Histamine', C: 'Interleukin-1', D: 'Prostaglandin E' },
+          answer: 'C',
+          explanation: 'Macrophages secrete interleukin-1 (IL-1), a pyrogen that stimulates the anterior hypothalamus to release PGE, which resets the body\'s thermostat to a higher temperature. The fever then promotes interferon activity, speeds tissue repair, and inhibits pathogen reproduction.'
+        }
       ],
       quiz: [
         { id: 'ly2-q1', question: 'Which cells are the quickest to respond during inflammation?', options: { A: 'Monocytes', B: 'Basophils', C: 'Neutrophils', D: 'Eosinophils' }, answer: 'C', explanation: 'Neutrophils are first responders — they phagocytize bacteria, perform respiratory bursts, and recruit macrophages/T cells.' },
@@ -391,6 +431,26 @@ const lymphatic = {
         'Active immunity has memory cells; Passive immunity is temporary (borrowed antibodies).',
         'HIV target: CD4 helper T cells — AIDS = <200 CD4 cells/µL.',
         'Only 1 in 100 T cells survives thymic selection — extremely stringent quality control!'
+      ],
+      inlineQuestions: [
+        {
+          question: 'MHC-I molecules are found on all nucleated cells and display antigens for recognition by:',
+          options: { A: 'Helper T cells (CD4)', B: 'B lymphocytes', C: 'Cytotoxic T cells (CD8)', D: 'Natural killer cells only' },
+          answer: 'C',
+          explanation: 'MHC-I displays endogenous antigens (viral or cancer proteins produced inside the cell) for recognition by cytotoxic T cells (CD8). MHC-II on APCs displays exogenous antigens for helper T cells (CD4).'
+        },
+        {
+          question: 'Which immunoglobulin class makes up 75-85% of circulating antibodies and is the ONLY one that crosses the placenta?',
+          options: { A: 'IgA', B: 'IgM', C: 'IgE', D: 'IgG' },
+          answer: 'D',
+          explanation: 'IgG is the most abundant circulating antibody (75-85%), the only Ig class that crosses the placenta to provide natural passive immunity to the fetus, and dominates during the secondary immune response.'
+        },
+        {
+          question: 'Type I hypersensitivity (anaphylaxis) involves allergens cross-linking which antibody class on mast cells?',
+          options: { A: 'IgG', B: 'IgM', C: 'IgE', D: 'IgA' },
+          answer: 'C',
+          explanation: 'In Type I hypersensitivity, allergens cross-link IgE antibodies already bound to mast cells and basophils, triggering massive histamine release → vasodilation, bronchiolar constriction, edema. Severe cases (anaphylactic shock) require emergency epinephrine.'
+        }
       ],
       quiz: [
         { id: 'ly3-q1', question: 'MHC-I molecules are found on:', options: { A: 'Only antigen-presenting cells', B: 'All nucleated cells except RBCs', C: 'Only T lymphocytes', D: 'Only B lymphocytes' }, answer: 'B', explanation: 'MHC-I is on ALL nucleated cells except RBCs. MHC-II is only on APCs (macrophages, B cells, thymus cells).' },

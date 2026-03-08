@@ -150,6 +150,26 @@ const vessels = {
         'Vasomotion = sphincters doing an on/off dance 5-10 times per minute.',
         '60% rule: 60% of blood sits in veins at rest — veins are the reservoir.'
       ],
+      inlineQuestions: [
+        {
+          question: 'The vessel wall layer responsible for vasoconstriction and vasodilation is the:',
+          options: { A: 'Tunica interna', B: 'Tunica media', C: 'Tunica externa', D: 'Endothelium' },
+          answer: 'B',
+          explanation: 'The tunica media is the middle layer containing smooth muscle, collagen, and elastic tissue — contraction narrows the vessel (vasoconstriction) and relaxation widens it (vasodilation).'
+        },
+        {
+          question: 'Which type of capillary has large fenestrations and an incomplete basement membrane, allowing passage of blood cells and large proteins?',
+          options: { A: 'Continuous capillaries', B: 'Fenestrated capillaries', C: 'Sinusoids', D: 'Metarterioles' },
+          answer: 'C',
+          explanation: 'Sinusoids have very large fenestrations and incomplete basement membranes — found in liver, bone marrow, and spleen where large molecules and blood cells must pass through.'
+        },
+        {
+          question: 'Varicose veins result primarily from:',
+          options: { A: 'Excess smooth muscle in vein walls', B: 'Incompetent venous valves allowing backflow and pooling', C: 'Too much elastic tissue in veins', D: 'High arterial pressure transmitted to veins' },
+          answer: 'B',
+          explanation: 'Leaky venous valves allow blood to flow backward and pool, stretching superficial veins. This is worsened by prolonged standing or pregnancy, and deeper veins are protected by surrounding skeletal muscles.'
+        }
+      ],
       quiz: [
         { id: 'v1-q1', question: 'Which vessel wall layer is primarily responsible for vasoconstriction and vasodilation?', options: { A: 'Tunica interna', B: 'Tunica media', C: 'Tunica externa', D: 'Endocardium' }, answer: 'B', explanation: 'The tunica media is the middle, usually thickest layer with smooth muscle that controls vessel diameter.' },
         { id: 'v1-q2', question: 'Which type of artery expands during systole and recoils during diastole to dampen BP fluctuations?', options: { A: 'Distributing arteries', B: 'Arterioles', C: 'Conducting (elastic) arteries', D: 'Metarterioles' }, answer: 'C', explanation: 'Conducting (elastic) arteries like the aorta have elastic recoil that smooths blood flow between heartbeats.' },
@@ -254,6 +274,26 @@ const vessels = {
         'MAP formula: "1 Systolic + 2 Diastolic, divide by 3" — diastole counts twice because it lasts longer.',
         'Flow ∝ r⁴: "Radius Rules" — double the radius = 16× the flow!',
         'Arterioles are the FAUCETS of the circulation — they control the pressure.'
+      ],
+      inlineQuestions: [
+        {
+          question: 'The MOST important mechanism of capillary exchange is:',
+          options: { A: 'Transcytosis', B: 'Bulk flow', C: 'Diffusion', D: 'Active transport' },
+          answer: 'C',
+          explanation: 'Diffusion is the most important capillary exchange mechanism — substances move down their concentration gradients through lipid bilayers, fenestrations, or intercellular clefts.'
+        },
+        {
+          question: 'A patient with liver disease has low albumin levels. This causes edema because:',
+          options: { A: 'Blood hydrostatic pressure increases', B: 'Blood colloid osmotic pressure drops, reducing reabsorption', C: 'Capillary permeability decreases', D: 'Lymphatic drainage is blocked' },
+          answer: 'B',
+          explanation: 'Albumin is the main contributor to blood colloid osmotic pressure (BCOP). Low albumin from liver disease → reduced BCOP → less fluid reabsorbed at the venous end of capillaries → fluid accumulates in tissues (edema).'
+        },
+        {
+          question: 'Blood flow is proportional to the fourth power of vessel radius (F ∝ r⁴). If a vessel\'s radius is halved, flow decreases by:',
+          options: { A: '2-fold', B: '4-fold', C: '8-fold', D: '16-fold' },
+          answer: 'D',
+          explanation: 'F ∝ r⁴: (1/2)⁴ = 1/16. Halving the radius causes a 16-fold decrease in flow! This is why small changes in arteriolar diameter have dramatic effects on blood pressure and tissue perfusion.'
+        }
       ],
       quiz: [
         { id: 'v2-q1', question: 'Which is the most important mechanism of capillary exchange?', options: { A: 'Transcytosis', B: 'Osmosis', C: 'Diffusion', D: 'Active transport' }, answer: 'C', explanation: 'Diffusion is the most important; substances move down concentration gradients through clefts, fenestrations, or lipid bilayers.' },
@@ -373,6 +413,26 @@ const vessels = {
         'Baroreflexes work like a thermostat: high BP → signals increase → vasodilation → BP drops.',
         'Brain flow rule: "4-5 minutes without blood = irreversible damage."',
         'Pulmonary vessels are backwards: they CONSTRICT with low O₂ (opposite of systemic).'
+      ],
+      inlineQuestions: [
+        {
+          question: 'Which mechanisms help push venous blood back to the heart?',
+          options: { A: 'Precapillary sphincters and vasomotion', B: 'Skeletal muscle pump and thoracic (respiratory) pump', C: 'Fenestrations and transcytosis', D: 'Vasoconstriction of arterioles' },
+          answer: 'B',
+          explanation: 'Venous return is aided by the skeletal muscle pump (contracting muscles compress veins past one-way valves), the thoracic pump (inhalation drops thoracic pressure, drawing blood upward), gravity, cardiac suction, and pressure gradients.'
+        },
+        {
+          question: 'The MOST COMMON type of circulatory shock is:',
+          options: { A: 'Cardiogenic shock', B: 'Septic shock', C: 'Hypovolemic shock', D: 'Anaphylactic shock' },
+          answer: 'C',
+          explanation: 'Hypovolemic shock (blood/fluid volume loss from trauma, bleeding, burns, or dehydration) is the most common form of circulatory shock.'
+        },
+        {
+          question: 'In the RAAS system, angiotensin-converting enzyme (ACE) is located in the lungs and converts angiotensin I to:',
+          options: { A: 'Renin', B: 'Aldosterone', C: 'Angiotensin II (a potent vasoconstrictor)', D: 'Angiotensinogen' },
+          answer: 'C',
+          explanation: 'ACE in the lungs converts angiotensin I to angiotensin II, which is a VERY potent vasoconstrictor that rapidly raises blood pressure. ACE inhibitors block this step to treat hypertension.'
+        }
       ],
       quiz: [
         { id: 'v3-q1', question: 'Which mechanisms aid venous return? (Select the best answer)', options: { A: 'Skeletal muscle pump and thoracic pump', B: 'Precapillary sphincters and vasomotion', C: 'Diffusion and transcytosis', D: 'Fenestrations and sinusoids' }, answer: 'A', explanation: 'Venous return is aided by skeletal muscle pump, thoracic pump, gravity, cardiac suction, and pressure gradients.' },
