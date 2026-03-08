@@ -18,7 +18,7 @@ export default function Sidebar({ modules, isOpen, onClose }) {
       <div className={`sidebar-overlay ${isOpen ? 'visible' : ''}`} onClick={onClose} />
       <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <div className="sidebar-brand" onClick={goHome} style={{ cursor: 'pointer' }}>
+          <div className="sidebar-brand">
             4 Tori
           </div>
           <div className="sidebar-subtitle">Anatomy & Physiology</div>
