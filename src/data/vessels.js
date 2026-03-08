@@ -2,743 +2,415 @@ const vessels = {
   id: 'vessels',
   title: 'Blood Vessels',
   source: '9. VesselsPDF.pdf',
-  description: 'Structure and function of arteries, veins, and capillaries; hemodynamics, capillary exchange, blood pressure regulation, resistance, venous return, and introduction to the lymphatic system.',
+  description: 'Comprehensive study of blood vessel anatomy, wall structure (tunics), artery and vein types, capillary structure and exchange mechanisms, hemodynamics, blood pressure regulation, neural and hormonal BP control, resistance, venous return, circulatory shock, special circulatory routes, and aging of the cardiovascular system.',
   icon: 'vessels',
+
+  learningObjectives: [
+    'Describe the three layers (tunics) of the blood vessel wall and their composition.',
+    'Compare conducting (elastic) arteries, distributing (muscular) arteries, and arterioles.',
+    'Explain the structure and types of capillaries (continuous, fenestrated, sinusoids).',
+    'Describe venous anatomy, venous valves, and the pathology of varicose veins.',
+    'Explain the three mechanisms of capillary exchange: diffusion, transcytosis, and bulk flow.',
+    'Define net filtration pressure and Starling\'s law of the capillaries.',
+    'Describe the causes and consequences of edema.',
+    'Define blood pressure, resistance, and explain their relationship using F ∝ r⁴.',
+    'Compare systemic vascular resistance factors: vessel radius, blood viscosity, and vessel length.',
+    'Describe the mechanisms of venous return: skeletal muscle pump, thoracic pump, cardiac suction.',
+    'Classify types of circulatory shock and describe compensated vs decompensated shock.',
+    'Explain the baroreflex, chemoreflex, and medullary ischemic reflex in BP regulation.',
+    'Describe the renin-angiotensin-aldosterone system (RAAS) and other hormonal BP controls.',
+    'Explain local autoregulation (vasoactive substances, nitric oxide) and special circulatory routes.',
+    'Identify clinical applications including hypertension staging, MAP calculation, syncope, and aging changes.'
+  ],
+
+  clinicalCorrelations: [
+    {
+      title: 'Hypertension Staging',
+      detail: 'Normal: <120/80. Prehypertension: 120-129/80-89. Stage I: 130-159/90-99. Stage II: >160/100. Hypertensive Crisis: >180/120. Chronic hypertension weakens small arteries, causes aneurysms, and is a major risk for stroke, MI, and kidney failure.'
+    },
+    {
+      title: 'Varicose Veins',
+      detail: 'Twisted, dilated superficial veins caused by incompetent venous valves (congenital or from prolonged standing/pregnancy). Backflow and pooling increase pressure, forcing fluid into tissues causing inflammation and tenderness. Deep veins are protected by surrounding skeletal muscles.'
+    },
+    {
+      title: 'Edema: Causes and Consequences',
+      detail: 'Abnormal increase in interstitial fluid when filtration exceeds reabsorption. Causes include hypertension (excess filtration), increased capillary permeability (protein leak), decreased plasma proteins (liver disease, burns, malnutrition, kidney disease), congestive heart failure, poor venous return, and obstructed lymphatic drainage. Consequences: circulatory shock, tissue necrosis, pulmonary edema (suffocation), cerebral edema (seizures/coma). Not noticeable until 30% above normal.'
+    },
+    {
+      title: 'Circulatory Shock',
+      detail: 'Failure of CV system to deliver adequate O₂ and nutrients. Types: Cardiogenic (inadequate heart pumping, e.g., MI), Hypovolemic (most common—blood loss, burns, dehydration), Obstructive (tumor/aneurysm), Neurogenic (loss of vasomotor tone), Septic (bacterial toxins cause vasodilation), Anaphylactic (severe immune reaction, histamine release). Compensated shock activates RAAS, ADH, SNS, and baroreflexes. Decompensated shock involves life-threatening positive feedback loops.'
+    },
+    {
+      title: 'Syncope (Fainting)',
+      detail: 'Sudden, temporary loss of consciousness due to cerebral ischemia. Types: vasodepressor (emotional stress), situational (coughing/defecation pressure), drug-induced (antihypertensives/diuretics), orthostatic hypotension (BP drop on standing). Falling horizontal restores cerebral blood flow; elevated feet aid recovery.'
+    },
+    {
+      title: 'Mean Arterial Pressure (MAP)',
+      detail: 'MAP = (SBP + 2×DBP) / 3. Better indicator of tissue perfusion than BP alone. Low MAP (<60 mmHg) = inadequate perfusion. High MAP (>100 mmHg) = excessive vascular resistance. Used clinically to guide treatment in critical care.'
+    }
+  ],
+
+  quickFacts: [
+    'Arteries carry blood AWAY from the heart; veins carry blood BACK.',
+    'Tunica media is the thickest layer in arteries; responsible for vasoconstriction/vasodilation.',
+    'Vasa vasorum are "vessels of vessels"—small vessels nourishing walls of large vessels.',
+    'Conducting (elastic) arteries expand during systole and recoil during diastole, dampening BP fluctuations.',
+    'Precapillary sphincters regulate capillary bed perfusion via vasomotion (5-10 times/min).',
+    'Capillaries are the ONLY vessels where exchange occurs between blood and tissues.',
+    'Diffusion is the most important capillary exchange mechanism.',
+    '60% of blood volume at rest is in systemic veins/venules (blood reservoirs).',
+    'Starling\'s law: volume filtered ≈ volume reabsorbed; excess (3 L/day) collected by lymphatics.',
+    'Blood pressure: 120/80 in aorta → 35 mmHg entering capillaries → 0 mmHg entering right atrium.',
+    'Blood flow (F) is proportional to the fourth power of the radius: F ∝ r⁴.',
+    'Arterioles are the primary resistance vessels that control moment-to-moment BP.',
+    'Skeletal muscle pump, thoracic pump, and cardiac suction aid venous return.',
+    'The RAAS system: renin → angiotensin I → (ACE in lungs) → angiotensin II (potent vasoconstrictor).',
+    '200 miles of blood vessels per pound of fat—obesity increases total resistance and BP.',
+    'Hypoxemia, hypercapnia, and acidosis stimulate chemoreceptors to raise BP.',
+    'Capillary flow velocity is only 0.1 cm/sec (vs 40 cm/sec in aorta), allowing time for exchange.'
+  ],
+
   sections: [
-    // ===== SECTION 1: Vessels Module 1 =====
+    // ===== SECTION 1: Vessel Anatomy, Types & Circulatory Routes =====
     {
       id: 'vessels-s1',
-      title: 'Vessel Types, Tunics, Arteries, Capillaries & Veins',
-      pageRange: 'Pages 1-8',
+      title: 'Vessel Anatomy, Types & Circulatory Routes',
+      pageRange: 'Pages 1-10',
       learnItems: [
         {
           title: 'Major Vessel Types & Circulatory Layout',
-          body: 'Three principal categories of vessels: arteries carry blood away from the heart, veins carry blood back to the heart, and capillaries connect the smallest arteries to the smallest veins. The cardiovascular system is a closed system of tubes; venules collect blood from capillaries and merge to form veins, while arteries branch into arterioles and then capillaries. Vasa vasorum are small blood vessels within the walls of large vessels that nourish their deeper tissues.'
+          body: 'Three principal categories of blood vessels form a closed system: arteries carry blood from the heart to tissues, veins carry blood back to the heart, and capillaries connect arterioles to venules for exchange. Arteries branch into arterioles then capillaries; capillaries merge into venules then veins. Vasa vasorum are small blood vessels within the walls of large vessels that nourish their deeper tissues.'
         },
         {
           title: 'Vessel Wall Layers (Tunics)',
-          body: 'Tunica interna (intima): innermost layer lining the lumen, made of simple squamous endothelium plus basement membrane and a thin layer of connective tissue; it acts as a selectively permeable barrier and smooth layer that repels blood cells and platelets. Tunica media: middle and usually thickest layer, consisting of smooth muscle, collagen, and sometimes elastic tissue; responsible for vasoconstriction and vasodilation. Tunica externa (adventitia): outermost layer of areolar connective tissue that anchors the vessel to adjacent tissues and provides passage for small nerves, lymphatic vessels, and the vasa vasorum.'
+          body: 'Tunica interna (intima): innermost layer of simple squamous endothelium (endothelium) overlying a basement membrane and layer of fibrous tissue; smooth inner surface repels blood cells and platelets; acts as a selectively permeable barrier. Tunica media: middle and usually thickest layer of smooth muscle, collagen, and sometimes elastic tissue; responsible for vasoconstriction and vasodilation. Tunica externa (adventitia): outermost layer of loose areolar connective tissue; anchors vessel to adjacent tissues and provides passage for small nerves, lymphatic vessels, and vasa vasorum.'
         },
         {
           title: 'Sympathetic Innervation of Vessels',
-          body: 'Vascular smooth muscle is innervated by the sympathetic nervous system. Increased sympathetic stimulation causes vasoconstriction (smooth muscle contraction), decreasing vessel diameter; injury to an artery or arteriole triggers vasospasm, reducing blood loss. Decreased stimulation or certain chemicals (nitric oxide, K+, H+, lactic acid) promote vasodilation, increasing vessel diameter.'
+          body: 'Vascular smooth muscle is innervated by the sympathetic nervous system. Increased stimulation → vasoconstriction (muscle contraction, decreased diameter). Injury to artery/arteriole triggers vasospasm, reducing blood loss. Decreased stimulation or certain chemicals (nitric oxide, K⁺, H⁺, lactic acid) → vasodilation (increased diameter). This is the basis for vasomotor tone—a baseline level of sympathetic stimulation that maintains partial constriction of arterioles.'
         },
         {
-          title: 'Arteries - Conducting (Elastic) Arteries',
-          body: 'Conducting (elastic or large) arteries are the largest, including the aorta, pulmonary trunk, common carotid, subclavian, and common iliac arteries. Their tunica media contains perforated sheets of elastic tissue alternating with thin layers of smooth muscle, collagen, and elastic fibers. They expand during systole and recoil during diastole, helping to dampen blood pressure fluctuations.'
+          title: 'Conducting (Elastic) Arteries',
+          body: 'Largest arteries: aorta, pulmonary trunk, common carotid, subclavian, and common iliac arteries. Tunica media has perforated sheets of elastic tissue alternating with thin layers of smooth muscle, collagen, and elastic fibers. They expand during systole and recoil during diastole, lessening BP fluctuations and providing continuous flow—acting as a "pressure reservoir."'
         },
         {
-          title: 'Arteries - Distributing (Muscular) Arteries',
-          body: 'Distributing (muscular or medium) arteries are smaller branches that distribute blood to specific organs, such as brachial, femoral, splenic, and renal arteries. In these arteries, smooth muscle layers make up about three-quarters of wall thickness, allowing strong vasoconstriction and vasodilation.'
+          title: 'Distributing (Muscular) Arteries',
+          body: 'Medium-sized branches distributing blood to specific organs: femoral, splenic, brachial, and renal arteries. Smooth muscle layers constitute about three-quarters (¾) of wall thickness. Strong capacity for vasoconstriction and vasodilation to regulate blood distribution to organs.'
         },
         {
           title: 'Arterioles and Metarterioles',
-          body: 'Arterioles are small arteries delivering blood to capillaries; their tunica media has only a few layers of smooth muscle. Metarterioles branch into capillary beds; precapillary sphincters regulate whether blood enters the capillaries or bypasses them via a thoroughfare channel. Vasomotion is the intermittent contraction and relaxation of sphincters, allowing capillary beds to fill 5-10 times per minute.'
+          body: 'Arterioles are small arteries delivering blood to capillaries; tunica media has only a few layers of smooth muscle. Metarterioles branch into capillary beds. Precapillary sphincters at the entrance of capillary beds regulate whether blood enters capillaries or bypasses via thoroughfare channels. Vasomotion is the intermittent contraction and relaxation of precapillary sphincters, allowing capillary beds to fill 5-10 times per minute based on tissue demand.'
         },
         {
-          title: 'Capillaries - Microcirculation and Structure',
-          body: 'Capillaries are microscopic vessels connecting arterioles to venules; they are found near almost every cell but are most extensive in active tissues like muscles, liver, kidneys, and brain. Their walls are a single layer of simple squamous endothelium and a basement membrane, making them thin enough for exchange. Their primary function is exchange of nutrients and wastes between blood and tissue fluid; capillary beds are absent in epithelia, cornea, lens of eye, and cartilage.'
+          title: 'Capillaries — Microcirculation',
+          body: 'Microscopic vessels connecting arterioles to venules. Found near almost every cell, most extensive in active tissues (muscles, liver, kidneys, brain). Entire capillary bed fills with blood when tissue is active. Absent in: epithelia, cornea, lens of eye, and cartilage. Structure: single layer of simple squamous endothelium + basement membrane. Function: exchange of nutrients and wastes between blood and tissue fluid—this is their SOLE purpose.'
         },
         {
-          title: 'Capillary Types',
-          body: 'Continuous capillaries: have intercellular clefts (small gaps) between endothelial cells; found in skeletal muscle, smooth muscle, connective tissues, and lungs. Fenestrated capillaries: have many pores (fenestrations) in the plasma membrane; found in kidneys, small intestine, choroid plexuses, ciliary processes, and endocrine glands. Sinusoids: have very large fenestrations and incomplete basement membrane; found in liver, bone marrow, spleen, anterior pituitary, and parathyroid glands.'
+          title: 'Types of Capillaries',
+          body: 'Continuous capillaries: intercellular clefts (small gaps) between neighboring cells; found in skeletal/smooth muscle, connective tissue, and lungs. Fenestrated capillaries: plasma membranes have many pores (fenestrations); found in kidneys, small intestine, choroid plexuses, ciliary processes, and endocrine glands—ideal for rapid filtration/absorption. Sinusoids: very large fenestrations with incomplete basement membrane; found in liver, bone marrow, spleen, anterior pituitary, and parathyroid glands—allow large proteins and blood cells to pass through.'
         },
         {
-          title: 'Veins and Venules',
-          body: 'Venules are small veins that collect blood from capillaries; proximal venules are quite porous and exchange fluid with tissues like capillaries. As venules enlarge, they resemble small veins, with sparse smooth muscle and fibroblasts; their porous endothelium allows WBCs to exit into tissues. Veins have proportionally thinner walls than arteries of similar diameter, with less smooth muscle and no internal or external elastic lamina. Veins have lower average pressure (~10 mmHg), expand easily, and act as high-capacitance vessels; venous valves (folds of tunica interna) prevent backflow and aid skeletal muscle in upward blood flow. Venous sinuses (e.g., coronary sinus, dural venous sinuses) have thin walls, large lumens, and no smooth muscle.'
+          title: 'Venules and Veins',
+          body: 'Venules are small veins collecting blood from capillaries; proximal venules are porous and exchange fluid like capillaries; their porous endothelium allows WBC emigration (diapedesis). Veins have proportionally thinner walls than arteries (less muscle, no elastic laminae), expand easily (high capacitance), and operate at low pressure (~10 mmHg). Venous valves are thin folds of tunica interna preventing backflow; they work with skeletal muscles to push blood upward. Venous sinuses (coronary sinus, dural sinuses) have thin walls, large lumens, and no smooth muscle.'
         },
         {
           title: 'Varicose Veins',
-          body: 'Varicose veins are twisted, dilated superficial veins caused by leaky venous valves (congenital or from prolonged standing or pregnancy). Valve failure allows backflow and pooling, increasing pressure and forcing fluid into tissues, leading to inflamed, tender surrounding tissue. Deep veins are less susceptible due to the support of surrounding muscles.'
+          body: 'Twisted, dilated superficial veins caused by leaky venous valves (congenital or from prolonged standing/pregnancy). Valve failure allows backflow and pooling; increased pressure forces fluid into surrounding tissues → inflammation and tenderness. Deeper veins are less susceptible due to support of surrounding skeletal muscles.'
+        },
+        {
+          title: 'Circulatory Routes and Anastomoses',
+          body: 'Most common route: heart → arteries → arterioles → capillaries → venules → veins → heart. Portal systems: blood flows through two consecutive capillary networks before returning to heart (hypothalamus-anterior pituitary, kidneys, intestines-liver hepatic portal system). Anastomoses: points where two vessels merge. Types: arteriovenous shunts (artery → vein directly; in fingers/toes/ears for heat regulation), venous anastomoses (most common; alternate drainage routes), and arterial anastomoses (collateral circulation, e.g., coronary arteries).'
+        },
+        {
+          title: 'Blood Distribution',
+          body: '60% of blood volume at rest is in systemic veins and venules, functioning as blood reservoirs (especially skin and abdominal organ veins). Blood is diverted from reservoirs during increased activity via venoconstriction. Hemorrhage causes venoconstriction to help maintain blood pressure. Only ~15% of blood volume is in arteries and arterioles at rest.'
         }
       ],
       keyTerms: [
-        { term: 'Tunica Interna (Intima)', definition: 'Innermost vessel layer of simple squamous endothelium and basement membrane; selectively permeable barrier.' },
-        { term: 'Tunica Media', definition: 'Middle vessel layer of smooth muscle, collagen, and elastic tissue; controls vasoconstriction and vasodilation.' },
-        { term: 'Tunica Externa (Adventitia)', definition: 'Outermost vessel layer of areolar connective tissue anchoring the vessel and carrying nerves and vasa vasorum.' },
-        { term: 'Vasa Vasorum', definition: 'Small blood vessels within the walls of large vessels that nourish their deeper tissues.' },
-        { term: 'Vasoconstriction', definition: 'Narrowing of a vessel due to smooth muscle contraction, typically from sympathetic stimulation.' },
-        { term: 'Vasodilation', definition: 'Widening of a vessel due to smooth muscle relaxation, promoted by chemicals like nitric oxide.' },
-        { term: 'Conducting (Elastic) Arteries', definition: 'Largest arteries (e.g., aorta) with elastic tissue that expands during systole and recoils during diastole.' },
-        { term: 'Distributing (Muscular) Arteries', definition: 'Medium arteries distributing blood to specific organs; smooth muscle makes up ~3/4 of wall thickness.' },
-        { term: 'Precapillary Sphincters', definition: 'Smooth muscle rings at capillary bed entrances that regulate blood flow into capillaries.' },
-        { term: 'Vasomotion', definition: 'Intermittent contraction and relaxation of precapillary sphincters, filling capillary beds 5-10 times/min.' },
-        { term: 'Continuous Capillaries', definition: 'Capillaries with intercellular clefts; found in skeletal muscle, smooth muscle, connective tissues, and lungs.' },
-        { term: 'Fenestrated Capillaries', definition: 'Capillaries with pores (fenestrations); found in kidneys, small intestine, and endocrine glands.' },
-        { term: 'Sinusoids', definition: 'Capillaries with very large fenestrations and incomplete basement membrane; found in liver, bone marrow, spleen.' },
-        { term: 'Venous Valves', definition: 'Folds of tunica interna in veins that prevent backflow of blood.' },
-        { term: 'Varicose Veins', definition: 'Twisted, dilated superficial veins caused by leaky venous valves.' }
+        { term: 'Tunica Interna (Intima)', definition: 'Innermost vessel layer: simple squamous endothelium + basement membrane; selectively permeable barrier.' },
+        { term: 'Tunica Media', definition: 'Middle vessel layer of smooth muscle, collagen, elastic tissue; controls vasoconstriction/vasodilation.' },
+        { term: 'Tunica Externa (Adventitia)', definition: 'Outermost vessel layer of areolar CT; anchors vessel and carries nerves/vasa vasorum.' },
+        { term: 'Vasa Vasorum', definition: '"Vessels of vessels"—small blood vessels nourishing the walls of large vessels.' },
+        { term: 'Conducting (Elastic) Arteries', definition: 'Largest arteries (aorta, pulmonary trunk) with elastic tissue that expands/recoils to dampen BP fluctuations.' },
+        { term: 'Distributing (Muscular) Arteries', definition: 'Medium arteries (femoral, brachial) with ~¾ smooth muscle wall for organ-specific blood distribution.' },
+        { term: 'Precapillary Sphincters', definition: 'Smooth muscle rings at capillary bed entrances; regulate perfusion via vasomotion.' },
+        { term: 'Vasomotion', definition: 'Intermittent contraction/relaxation of precapillary sphincters (5-10×/min).' },
+        { term: 'Continuous Capillaries', definition: 'Capillaries with intercellular clefts; found in muscle, CT, lungs.' },
+        { term: 'Fenestrated Capillaries', definition: 'Capillaries with pores; found in kidneys, intestine, endocrine glands.' },
+        { term: 'Sinusoids', definition: 'Capillaries with large fenestrations + incomplete basement membrane; liver, bone marrow, spleen.' },
+        { term: 'Venous Valves', definition: 'Folds of tunica interna preventing venous backflow.' },
+        { term: 'Portal System', definition: 'Circulatory route passing through two consecutive capillary beds before returning to heart.' },
+        { term: 'Anastomosis', definition: 'Point where two blood vessels merge; provides alternate routes for blood flow.' },
+        { term: 'Vasomotor Tone', definition: 'Baseline level of sympathetic stimulation maintaining partial arteriolar constriction.' }
       ],
       memoryAids: [
-        'IME for tunics (inside to outside): Interna, Media, Externa - "I Must Exit"',
-        'Arteries carry Away from the heart (both start with A); Veins carry blood back (V = "venture back").',
-        'Capillary types by pore size: Continuous (Closed tight), Fenestrated (Filtered with pores), Sinusoids (Super-sized openings).',
-        'Vasomotion = "Vaso-motion" - sphincters doing an on/off dance 5-10 times per minute.'
-      ],
-      inlineQuestions: [
-        {
-          question: 'Which type of vessel carries blood away from the heart?',
-          options: { A: 'Veins', B: 'Arteries', C: 'Venules', D: 'Capillaries' },
-          answer: 'B',
-          explanation: 'Arteries carry blood away from the heart. Veins carry blood back to the heart, and capillaries connect the smallest arteries to the smallest veins.'
-        },
-        {
-          question: 'Which vessel wall layer contains most of the smooth muscle for vasoconstriction and vasodilation?',
-          options: { A: 'Tunica externa', B: 'Tunica media', C: 'Tunica interna', D: 'Endocardium' },
-          answer: 'B',
-          explanation: 'The tunica media is the middle and usually thickest layer, consisting of smooth muscle, collagen, and sometimes elastic tissue, making it responsible for vasoconstriction and vasodilation.'
-        },
-        {
-          question: 'Which capillary type has intercellular clefts between neighboring cells and is common in skeletal muscle?',
-          options: { A: 'Continuous capillaries', B: 'Fenestrated capillaries', C: 'Sinusoids', D: 'Venous sinuses' },
-          answer: 'A',
-          explanation: 'Continuous capillaries have intercellular clefts (small gaps) between endothelial cells and are found in skeletal muscle, smooth muscle, connective tissues, and lungs.'
-        }
+        'Tunics from inside out: "IME" = Interna, Media, Externa — "I Must Exit."',
+        'Arteries carry Away (both start with A); Veins Venture back.',
+        'Capillary types by pore size: Continuous (Closed tight), Fenestrated (Filtered pores), Sinusoids (Super-sized openings).',
+        'Vasomotion = sphincters doing an on/off dance 5-10 times per minute.',
+        '60% rule: 60% of blood sits in veins at rest — veins are the reservoir.'
       ],
       quiz: [
-        {
-          question: 'The tunica interna (intima) is primarily composed of:',
-          options: { A: 'Simple squamous endothelium and basement membrane', B: 'Dense irregular connective tissue', C: 'Skeletal muscle', D: 'Elastic cartilage' },
-          answer: 'A',
-          explanation: 'The tunica interna is the innermost layer lining the lumen, made of simple squamous endothelium plus basement membrane and a thin layer of connective tissue.'
-        },
-        {
-          question: 'The tunica externa (adventitia) serves mainly to:',
-          options: { A: 'Repel blood cells', B: 'Provide contractile force', C: 'Anchor the vessel and provide passage for nerves and vasa vasorum', D: 'Form valves in veins' },
-          answer: 'C',
-          explanation: 'The tunica externa is the outermost layer of areolar connective tissue that anchors the vessel to adjacent tissues and provides passage for small nerves, lymphatic vessels, and the vasa vasorum.'
-        },
-        {
-          question: 'Vasa vasorum are:',
-          options: { A: 'Capillaries in alveoli', B: 'Small vessels that nourish the walls of large vessels', C: 'Valves in large veins', D: 'Lymphatic vessels in myocardium' },
-          answer: 'B',
-          explanation: 'Vasa vasorum are small blood vessels within the walls of large vessels that nourish their deeper tissues.'
-        },
-        {
-          question: 'Increased sympathetic stimulation of vascular smooth muscle causes:',
-          options: { A: 'Vasodilation', B: 'Vasoconstriction', C: 'No change in diameter', D: 'Immediate clot formation' },
-          answer: 'B',
-          explanation: 'Increased sympathetic stimulation causes vasoconstriction (smooth muscle contraction), decreasing vessel diameter.'
-        },
-        {
-          question: 'Which chemical listed promotes vasodilation?',
-          options: { A: 'Calcium', B: 'Nitric oxide', C: 'Fibrinogen', D: 'Bilirubin' },
-          answer: 'B',
-          explanation: 'Nitric oxide, along with K+, H+, and lactic acid, promotes vasodilation by causing smooth muscle relaxation and increasing vessel diameter.'
-        },
-        {
-          question: 'Conducting (elastic) arteries include all of these EXCEPT:',
-          options: { A: 'Aorta', B: 'Pulmonary trunk', C: 'Common carotid', D: 'Radial artery' },
-          answer: 'D',
-          explanation: 'The radial artery is a distributing (muscular) artery, not a conducting (elastic) artery. Conducting arteries include the aorta, pulmonary trunk, common carotid, subclavian, and common iliac arteries.'
-        },
-        {
-          question: 'Elastic arteries help stabilize blood pressure mainly by:',
-          options: { A: 'Thick tunica externa', B: 'Expanding during systole and recoiling during diastole', C: 'Having many valves', D: 'Allowing reverse blood flow' },
-          answer: 'B',
-          explanation: 'Elastic arteries expand during systole and recoil during diastole, helping to dampen blood pressure fluctuations.'
-        },
-        {
-          question: 'Distributing (muscular) arteries are characterized by:',
-          options: { A: 'Very thin smooth muscle layer', B: 'Smooth muscle making up about 3/4 of wall thickness', C: 'No tunica media', D: 'Absence of any elastic tissue' },
-          answer: 'B',
-          explanation: 'In distributing (muscular) arteries, smooth muscle layers make up about three-quarters of wall thickness, allowing strong vasoconstriction and vasodilation.'
-        },
-        {
-          question: 'Arterioles are best described as:',
-          options: { A: 'Large elastic arteries', B: 'Small arteries with few layers of smooth muscle delivering blood to capillaries', C: 'Thin-walled vessels returning blood to the heart', D: 'Capillary-like veins' },
-          answer: 'B',
-          explanation: 'Arterioles are small arteries delivering blood to capillaries; their tunica media has only a few layers of smooth muscle.'
-        },
-        {
-          question: 'Precapillary sphincters are found at the entrance to:',
-          options: { A: 'Large veins', B: 'Elastic arteries', C: 'Capillary beds from metarterioles', D: 'Lymphatic ducts' },
-          answer: 'C',
-          explanation: 'Precapillary sphincters regulate whether blood enters the capillaries from metarterioles or bypasses them via a thoroughfare channel.'
-        },
-        {
-          question: 'Vasomotion refers to:',
-          options: { A: 'Heart contraction', B: 'Intermittent contraction and relaxation of precapillary sphincters', C: 'Sympathetic nerve firing', D: 'Respiratory pump activity' },
-          answer: 'B',
-          explanation: 'Vasomotion is the intermittent contraction and relaxation of precapillary sphincters, allowing capillary beds to fill 5-10 times per minute.'
-        },
-        {
-          question: 'The main function of capillaries is to:',
-          options: { A: 'Store blood as a reservoir', B: 'Distribute blood to specific organs', C: 'Exchange nutrients and wastes between blood and tissues', D: 'Generate blood pressure' },
-          answer: 'C',
-          explanation: 'The primary function of capillaries is exchange of nutrients and wastes between blood and tissue fluid.'
-        },
-        {
-          question: 'Fenestrated capillaries are especially common in:',
-          options: { A: 'Skin and skeletal muscle', B: 'Kidneys and small intestine', C: 'Bone marrow and spleen', D: 'Cornea and lens' },
-          answer: 'B',
-          explanation: 'Fenestrated capillaries have many pores (fenestrations) and are found in kidneys, small intestine, choroid plexuses, ciliary processes, and endocrine glands.'
-        },
-        {
-          question: 'Sinusoidal capillaries are typically found in:',
-          options: { A: 'Liver and bone marrow', B: 'Skeletal muscle only', C: 'Lungs', D: 'Skin' },
-          answer: 'A',
-          explanation: 'Sinusoids have very large fenestrations and incomplete basement membrane and are found in liver, bone marrow, spleen, anterior pituitary, and parathyroid glands.'
-        },
-        {
-          question: 'Compared to arteries of the same diameter, veins generally have:',
-          options: { A: 'Thicker tunica media and more elastic tissue', B: 'Thinner walls and less muscle, with valves present', C: 'No tunica externa', D: 'Higher blood pressure' },
-          answer: 'B',
-          explanation: 'Veins have proportionally thinner walls than arteries of similar diameter, with less smooth muscle and no internal or external elastic lamina, but they do have valves.'
-        },
-        {
-          question: 'The average blood pressure within veins is approximately:',
-          options: { A: '0 mmHg', B: '10 mmHg', C: '35 mmHg', D: '120 mmHg' },
-          answer: 'B',
-          explanation: 'Veins have lower average pressure (~10 mmHg) compared to arteries.'
-        },
-        {
-          question: 'Venous valves are:',
-          options: { A: 'Folds of tunica media preventing arterial backflow', B: 'Folds of tunica interna preventing backflow of venous blood', C: 'Present only in arteries', D: 'Found only in the heart' },
-          answer: 'B',
-          explanation: 'Venous valves are folds of tunica interna that prevent backflow and aid skeletal muscle in upward blood flow.'
-        },
-        {
-          question: 'Venous sinuses differ from typical veins because they:',
-          options: { A: 'Have thick smooth muscle', B: 'Lack smooth muscle and have thin walls and large lumens', C: 'Lack endothelium', D: 'Are found only in limbs' },
-          answer: 'B',
-          explanation: 'Venous sinuses (e.g., coronary sinus, dural venous sinuses) have thin walls, large lumens, and no smooth muscle.'
-        },
-        {
-          question: 'Varicose veins are caused primarily by:',
-          options: { A: 'Overactive valves', B: 'Leaky venous valves leading to backflow and pooling', C: 'Excess arterial pressure', D: 'Infection of the tunica interna' },
-          answer: 'B',
-          explanation: 'Varicose veins are twisted, dilated superficial veins caused by leaky venous valves (congenital or from prolonged standing or pregnancy).'
-        },
-        {
-          question: 'Which veins are most prone to becoming varicose?',
-          options: { A: 'Deep veins surrounded by muscle', B: 'Superficial veins exposed to prolonged standing or pregnancy', C: 'Coronary veins alone', D: 'Pulmonary veins' },
-          answer: 'B',
-          explanation: 'Superficial veins are most prone because they lack the support of surrounding muscles that deep veins have.'
-        },
-        {
-          question: 'Which vessel type directly connects arterioles to venules and allows exchange?',
-          options: { A: 'Veins', B: 'Arteries', C: 'Capillaries', D: 'Lymphatics' },
-          answer: 'C',
-          explanation: 'Capillaries are microscopic vessels connecting arterioles to venules whose primary function is exchange of nutrients and wastes.'
-        },
-        {
-          question: 'The layer of a blood vessel that directly contacts blood is the:',
-          options: { A: 'Tunica externa', B: 'Tunica media', C: 'Tunica interna (intima)', D: 'Pericardium' },
-          answer: 'C',
-          explanation: 'The tunica interna (intima) is the innermost layer lining the lumen and is the layer that directly contacts blood.'
-        },
-        {
-          question: 'Conducting arteries, such as the aorta, are specialized to:',
-          options: { A: 'Exchange nutrients', B: 'Expand and recoil to smooth out blood pressure', C: 'Store blood as a reservoir', D: 'Filter lymph' },
-          answer: 'B',
-          explanation: 'Conducting (elastic) arteries expand during systole and recoil during diastole, helping to dampen blood pressure fluctuations.'
-        },
-        {
-          question: 'Venous valves are especially important in:',
-          options: { A: 'Preventing backflow in veins of the limbs', B: 'Preventing backflow in large arteries', C: 'Regulating capillary exchange', D: 'Supporting lymphatic flow' },
-          answer: 'A',
-          explanation: 'Venous valves prevent backflow particularly in the limbs where blood must travel upward against gravity.'
-        },
-        {
-          question: 'Metarterioles and precapillary sphincters are involved in:',
-          options: { A: 'Controlling entry of blood into capillary beds', B: 'Returning lymph to the bloodstream', C: 'Synthesizing plasma proteins', D: 'Generating action potentials' },
-          answer: 'A',
-          explanation: 'Metarterioles branch into capillary beds, and precapillary sphincters regulate whether blood enters the capillaries or bypasses them via a thoroughfare channel.'
-        }
-      ],
-      flashcards: [
-        { front: 'What are the three principal categories of blood vessels?', back: 'Arteries (carry blood away from heart), veins (carry blood back to heart), and capillaries (connect smallest arteries to smallest veins).' },
-        { front: 'What are vasa vasorum?', back: 'Small blood vessels within the walls of large vessels that nourish their deeper tissues.' },
-        { front: 'Name the three tunics of a blood vessel from inside to outside.', back: 'Tunica interna (intima), tunica media, and tunica externa (adventitia).' },
-        { front: 'What is the composition and function of the tunica media?', back: 'Smooth muscle, collagen, and sometimes elastic tissue; responsible for vasoconstriction and vasodilation.' },
-        { front: 'What chemicals promote vasodilation?', back: 'Nitric oxide, K+, H+, and lactic acid promote vasodilation by relaxing smooth muscle.' },
-        { front: 'Name examples of conducting (elastic) arteries.', back: 'Aorta, pulmonary trunk, common carotid, subclavian, and common iliac arteries.' },
-        { front: 'How do elastic arteries stabilize blood pressure?', back: 'They expand during systole and recoil during diastole, dampening blood pressure fluctuations.' },
-        { front: 'What is vasomotion?', back: 'The intermittent contraction and relaxation of precapillary sphincters, allowing capillary beds to fill 5-10 times per minute.' },
-        { front: 'Name the three types of capillaries and where each is found.', back: 'Continuous (skeletal muscle, lungs), fenestrated (kidneys, small intestine, endocrine glands), sinusoids (liver, bone marrow, spleen).' },
-        { front: 'What structures prevent backflow in veins?', back: 'Venous valves - folds of tunica interna that prevent backflow and aid skeletal muscle in upward blood flow.' },
-        { front: 'What causes varicose veins?', back: 'Leaky venous valves (congenital or from prolonged standing/pregnancy) cause backflow and pooling, leading to twisted, dilated superficial veins.' }
+        { id: 'v1-q1', question: 'Which vessel wall layer is primarily responsible for vasoconstriction and vasodilation?', options: { A: 'Tunica interna', B: 'Tunica media', C: 'Tunica externa', D: 'Endocardium' }, answer: 'B', explanation: 'The tunica media is the middle, usually thickest layer with smooth muscle that controls vessel diameter.' },
+        { id: 'v1-q2', question: 'Which type of artery expands during systole and recoils during diastole to dampen BP fluctuations?', options: { A: 'Distributing arteries', B: 'Arterioles', C: 'Conducting (elastic) arteries', D: 'Metarterioles' }, answer: 'C', explanation: 'Conducting (elastic) arteries like the aorta have elastic recoil that smooths blood flow between heartbeats.' },
+        { id: 'v1-q3', question: 'In distributing (muscular) arteries, smooth muscle constitutes approximately what fraction of wall thickness?', options: { A: 'One-quarter', B: 'One-half', C: 'Three-quarters', D: 'Nine-tenths' }, answer: 'C', explanation: 'Distributing arteries have smooth muscle layers making up about ¾ of their wall thickness.' },
+        { id: 'v1-q4', question: 'Precapillary sphincters regulate blood flow into capillary beds through a process called:', options: { A: 'Autoregulation', B: 'Vasomotion', C: 'Hemostasis', D: 'Vasospasm' }, answer: 'B', explanation: 'Vasomotion is the intermittent contraction and relaxation of precapillary sphincters (5-10 times/min).' },
+        { id: 'v1-q5', question: 'Which capillary type has very large fenestrations and an incomplete basement membrane?', options: { A: 'Continuous', B: 'Fenestrated', C: 'Sinusoids', D: 'Pericytic' }, answer: 'C', explanation: 'Sinusoids have very large fenestrations and incomplete basement membrane; found in liver, bone marrow, and spleen.' },
+        { id: 'v1-q6', question: 'Fenestrated capillaries are found in all of the following EXCEPT:', options: { A: 'Kidneys', B: 'Skeletal muscle', C: 'Small intestine', D: 'Endocrine glands' }, answer: 'B', explanation: 'Skeletal muscle contains continuous capillaries. Fenestrated capillaries are in kidneys, intestine, choroid plexuses, and endocrine glands.' },
+        { id: 'v1-q7', question: 'Varicose veins are caused primarily by:', options: { A: 'Excess smooth muscle in vein walls', B: 'Leaky venous valves allowing backflow', C: 'Too much elastic tissue', D: 'Arterial hypertension' }, answer: 'B', explanation: 'Incompetent venous valves allow backflow and pooling, causing dilation—especially in superficial veins unsupported by muscle.' },
+        { id: 'v1-q8', question: 'What percentage of blood volume at rest is found in systemic veins and venules?', options: { A: '15%', B: '30%', C: '45%', D: '60%' }, answer: 'D', explanation: '60% of blood volume is in veins/venules at rest, making them blood reservoirs.' },
+        { id: 'v1-q9', question: 'Chemicals that promote vasodilation include all EXCEPT:', options: { A: 'Nitric oxide', B: 'K⁺ ions', C: 'Norepinephrine', D: 'Lactic acid' }, answer: 'C', explanation: 'Norepinephrine from sympathetic nerves generally causes vasoconstriction. Nitric oxide, K⁺, H⁺, and lactic acid promote vasodilation.' },
+        { id: 'v1-q10', question: 'A portal system is characterized by:', options: { A: 'Blood flowing through two consecutive capillary networks', B: 'Direct shunts between arteries and veins', C: 'Absence of venous valves', D: 'Single-pass capillary exchange' }, answer: 'A', explanation: 'In a portal system, blood passes through two consecutive capillary beds before returning to the heart (e.g., hepatic portal system).' },
+        { id: 'v1-q11', question: 'Capillaries are absent in all of the following EXCEPT:', options: { A: 'Cornea of the eye', B: 'Cartilage', C: 'Liver', D: 'Epithelia' }, answer: 'C', explanation: 'The liver has extensive capillary beds (sinusoids). Capillaries are absent in avascular tissues: cornea, cartilage, and epithelia.' },
+        { id: 'v1-q12', question: 'The vasa vasorum serves to:', options: { A: 'Prevent varicose veins', B: 'Constrict large arteries', C: 'Nourish the walls of large blood vessels', D: 'Connect arteries to veins directly' }, answer: 'C', explanation: 'Vasa vasorum are "vessels of vessels"—small blood vessels within the walls of large vessels that supply nutrients to their deeper tissues.' }
       ]
     },
 
-    // ===== SECTION 2: Vessels Module 2 =====
+    // ===== SECTION 2: Capillary Exchange, Hemodynamics & Blood Pressure =====
     {
       id: 'vessels-s2',
-      title: 'Hemodynamics, Capillary Exchange, Resistance & Venous Return',
-      pageRange: 'Pages 9-16',
+      title: 'Capillary Exchange, Hemodynamics & Blood Pressure',
+      pageRange: 'Pages 10-22',
       learnItems: [
         {
-          title: 'Capillary Exchange Mechanisms',
-          body: 'Exchange occurs only across capillary walls between blood and interstitial fluid via three routes: intercellular clefts, fenestrations, or through endothelial cytoplasm. Diffusion is the main mechanism (down concentration gradients); lipid-soluble substances (steroid hormones, O2, CO2) diffuse through lipid bilayer, while water-soluble substances (glucose, electrolytes) pass through channels, fenestrations, or clefts. Large proteins are held back by the endothelium. Transcytosis (endocytosis/exocytosis in vesicles) moves large lipid-insoluble molecules like insulin or maternal antibodies across the endothelium.'
+          title: 'Capillary Exchange Overview',
+          body: 'Exchange occurs ONLY across capillary walls between blood and surrounding tissues. Three routes across endothelial cells: intercellular clefts, fenestrations, and through cytoplasm. Three mechanisms: diffusion, transcytosis, and bulk flow (filtration/reabsorption).'
         },
         {
-          title: 'Bulk Flow - Filtration and Reabsorption',
-          body: 'Bulk flow moves large amounts of dissolved or suspended material in response to pressure from high to low pressure areas. Filtration: movement out into interstitial fluid, promoted by blood hydrostatic pressure and interstitial osmotic pressure. Reabsorption: movement back into capillaries, promoted by blood colloid osmotic pressure (COP, mainly from albumin). Net filtration pressure = balance of these forces; Starling\'s law states that reabsorbed volume is almost equal to filtered volume (~85% reabsorbed, excess collected by lymphatics).'
+          title: 'Diffusion — Most Important Exchange Mechanism',
+          body: 'Substances move down concentration gradients. All plasma solutes except large proteins pass freely across. Routes: through lipid bilayers (O₂, CO₂, steroid hormones are lipid-soluble), fenestrations, or intercellular clefts (glucose, electrolytes are lipid-insoluble). Blood-brain barrier: nonfenestrated endothelium with tight junctions prevents diffusion of water-soluble materials.'
         },
         {
-          title: 'Net Filtration Pressure Dynamics',
-          body: 'Arterial end of capillary: net outward pressure ~10 mmHg (higher hydrostatic pressure). Venous end: net inward pressure ~9 mmHg (higher COP relative to hydrostatic pressure). About 85% of filtered fluid is reabsorbed; remaining ~3 L/day is returned by lymphatics.'
+          title: 'Transcytosis',
+          body: 'Passage of material across endothelium in tiny vesicles by endocytosis and exocytosis (pinocytosis). Important for large, lipid-insoluble molecules like insulin, fatty acids, albumin, and maternal antibodies crossing placental circulation to the fetus.'
         },
         {
-          title: 'Edema - Causes',
-          body: 'Edema is abnormal increase in interstitial fluid when filtration exceeds reabsorption. Excess filtration: increased BP (hypertension) or increased capillary permeability (e.g., histamine release). Inadequate reabsorption: decreased plasma proteins (low COP) from liver disease, burns, malnutrition, or kidney disease. Not noticeable until ~30% above normal.'
+          title: 'Bulk Flow: Filtration and Reabsorption',
+          body: 'Movement of large amounts of dissolved/suspended material in the same direction, in response to pressure. Much faster than diffusion or osmosis. Most important for regulation of relative volumes of blood and interstitial fluid. Filtration = movement OUT of capillary into interstitial fluid (driven by blood hydrostatic pressure + interstitial fluid osmotic pressure). Reabsorption = movement INTO capillary from interstitial fluid (driven by blood colloid osmotic pressure from plasma proteins, mainly albumin).'
         },
         {
-          title: 'Edema Consequences and Triggers',
-          body: 'Poor venous return: congestive heart failure leads to pulmonary edema; insufficient muscle activity; kidney failure causes water retention and hypertension. Obstructed lymphatic drainage causes edema. Consequences: circulatory shock (low blood volume/BP), tissue necrosis (poor O2/waste removal), pulmonary edema (suffocation), cerebral edema (headaches, nausea, seizures, coma).'
+          title: 'Capillary Pressures and Net Filtration Pressure',
+          body: 'Blood hydrostatic pressure (BHP): high at arterial end, low at venous end — drives fluid OUT. Blood colloid osmotic pressure (BCOP): relatively constant along capillary — draws fluid IN (from plasma proteins, mainly albumin). Oncotic pressure = net COP (blood COP - tissue COP). Net outward pressure at arterial end: ~10 mmHg (filtration dominates). Net inward pressure at venous end: ~9 mmHg (reabsorption dominates). About 85% of filtered fluid is reabsorbed; the remaining ~3 L/day is collected by lymphatic capillaries.'
         },
         {
-          title: 'Hemodynamics - Key Factors',
-          body: 'Hemodynamics involves pressure differences driving flow, velocity of flow, volume of flow, blood pressure, resistance, and venous return. Blood flow velocity is inversely proportional to total cross-sectional area (slowest in capillaries for exchange, fastest in aorta). Circulation time: time for a blood drop to go from right atrium back to right atrium.'
+          title: 'Starling\'s Law of the Capillaries',
+          body: 'The volume of fluid and solutes reabsorbed is almost as large as the volume filtered. This near-balance ensures that blood volume and interstitial fluid volume remain relatively constant. Net filtration pressure (NFP) determines whether fluid enters or exits capillaries.'
         },
         {
-          title: 'Blood Pressure and Volume Flow',
-          body: 'BP is highest in aorta (~120 mmHg systolic, 80 diastolic); falls steadily in systemic circulation (35 mmHg entering capillaries, 0 mmHg at right atrium). Cardiac output = SV x HR; BP rises with increased HR/CO or blood volume. Arterial elasticity (expansion/recoil) maintains steady flow, smooths pressure fluctuations, and reduces stress on small arteries; less elastic arteries with age raise BP.'
+          title: 'Edema',
+          body: 'Abnormal increase in interstitial fluid when filtration exceeds reabsorption. Causes of excess filtration: increased blood pressure (hypertension), increased capillary permeability (allows plasma proteins to escape). Causes of inadequate reabsorption: decreased plasma proteins → lower BCOP (from liver disease, burns, malnutrition, kidney disease). Other causes: poor venous return (CHF → pulmonary edema), insufficient muscular activity, kidney failure (water retention, hypertension), histamine release (increased permeability), obstructed lymphatic drainage. Not clinically detectable until 30% above normal. Consequences: circulatory shock, tissue necrosis, pulmonary edema (suffocation), cerebral edema (headaches, nausea, seizures, coma).'
         },
         {
-          title: 'Resistance to Flow',
-          body: 'Resistance comes from friction between blood and vessel walls; factors include vessel radius, blood viscosity, and vessel length. Blood flow is proportional to the fourth power of vessel radius (r4); halving radius reduces flow to 1/16th (arterioles control BP by changing diameter). Increased viscosity (e.g., dehydration, polycythemia) increases resistance; longer vessels increase resistance (obesity worsens this). Systemic vascular resistance is the total of these factors.'
+          title: 'Hemodynamics — Factors Affecting Circulation',
+          body: 'Key hemodynamic factors: pressure differences driving blood flow, velocity of flow, volume of flow, blood pressure, resistance, and venous return. These forces interact to produce blood flow through the cardiovascular system.'
         },
         {
-          title: 'Blood Flow Velocity and Laminar Flow',
-          body: 'Laminar flow: blood flows in layers with faster flow in center; small vessel radius lowers average velocity, large radius increases it. Velocity decreases from aorta to capillaries (greater distance, smaller radii, larger total cross-sectional area) and increases from capillaries to vena cava as vessels merge. Capillary flow is slowest (~0.1 cm/sec) to allow exchange.'
+          title: 'Velocity of Blood Flow',
+          body: 'Speed (cm/sec) is inversely related to total cross-sectional area. Blood flows fastest in the aorta (~40 cm/sec) and slowest in capillaries (~0.1 cm/sec) — the slow rate across capillaries allows sufficient time for exchange. Flow speed increases again as vessels merge into veins but never regains arterial velocity. Circulation time: time for blood to travel from right atrium back to right atrium.'
         },
         {
-          title: 'Mechanisms of Venous Return',
-          body: 'Pressure gradient: venous pressure ~7-13 mmHg toward the heart (venules ~12-18 mmHg to central venous ~5 mmHg). Skeletal muscle pump: muscle contraction squeezes veins, pushing blood toward heart (valves prevent backflow). Thoracic pump: inhalation lowers thoracic pressure and raises abdominal pressure, forcing blood upward; central venous pressure fluctuates (2 mmHg inhale, 6 mmHg exhale). Cardiac suction: expanding atrial space pulls blood in.'
+          title: 'Blood Pressure',
+          body: 'Pressure exerted by blood on vessel walls, caused by ventricular contraction. Highest in aorta: 120 mmHg systole, 80 mmHg diastole. Falls steadily with distance from left ventricle: 35 mmHg entering capillaries, 0 mmHg entering right atrium. If cardiac output increases → BP rises. If blood volume drops >10% → BP drops. Water retention → increased BP. BP is determined by cardiac output, blood volume, and peripheral resistance.'
         },
         {
-          title: 'Exercise and Venous Return',
-          body: 'Exercise increases venous return via faster/stronger heart (increased CO/BP), vasodilation in skeletal muscle/lungs/heart, increased respiratory rate (thoracic pump), and skeletal muscle pump. Inactivity causes venous pooling (low venous pressure insufficient for upward flow), leading to low CO, dizziness, or syncope; prevented by leg muscle tensing.'
+          title: 'Hypertension and Hypotension',
+          body: 'Hypertension: chronic resting BP >140/90; can weaken small arteries and cause aneurysms. Stages: Normal <120/80, Prehypertension 120-129/80-89, Stage I 130-159/90-99, Stage II >160/100, Hypertensive Crisis >180/120. Hypotension: chronic low resting BP from blood loss, dehydration, or anemia. Orthostatic hypotension: BP drop upon standing.'
         },
         {
-          title: 'Shock and Homeostasis',
-          body: 'Shock: cardiovascular failure to deliver enough O2/nutrients, causing inadequate perfusion and switch to anaerobic respiration leading to lactic acid buildup, cell/tissue damage and death.'
+          title: 'Mean Arterial Pressure (MAP)',
+          body: 'MAP = (SBP + 2×DBP) / 3. Better indicator of tissue perfusion than BP alone. Low MAP (<60 mmHg) = inadequate perfusion. High MAP (>100 mmHg) = excessive resistance. Clinically critical in guiding treatment decisions in shock and critical care.'
+        },
+        {
+          title: 'Resistance to Blood Flow',
+          body: 'Friction between blood and vessel walls. Three factors: (1) Vessel radius — most important; smaller vessels → more resistance; F ∝ r⁴ (flow proportional to fourth power of radius); arterioles can constrict to 1/3 of relaxed radius, reducing flow by 81-fold. (2) Blood viscosity — ratio of RBCs to plasma; dehydration or polycythemia increases viscosity and resistance. (3) Total vessel length — longer vessels = more resistance; 200 miles of vessels per pound of fat (obesity → high BP). Systemic vascular resistance (SVR) is the total of all these factors. Arterioles control BP by changing diameter.'
+        },
+        {
+          title: 'Laminar Flow',
+          body: 'Blood flows in concentric layers (laminae) — fastest in the center, slowest at the vessel wall. Flow rate relates to the fourth power of radius. Example: if vessel radius = 3 mm, flow = 81 mm/sec; if radius = 1 mm, flow = 1 mm/sec.'
+        },
+        {
+          title: 'Arterial Elasticity and Aging',
+          body: 'Arterial expansion during systole and recoil during diastole maintains steady flow and smooths pressure fluctuations, reducing stress on small arteries. BP rises with age as arteries become less distensible. Importance: loss of compliance means the heart must work harder and systolic pressure increases.'
         }
       ],
       keyTerms: [
-        { term: 'Diffusion', definition: 'Main capillary exchange mechanism; substances move down concentration gradients across capillary walls.' },
-        { term: 'Transcytosis', definition: 'Movement of large lipid-insoluble molecules (e.g., insulin) across endothelium via vesicles (endocytosis/exocytosis).' },
-        { term: 'Filtration', definition: 'Movement of fluid out of capillaries into interstitial space, driven by blood hydrostatic pressure.' },
-        { term: 'Reabsorption', definition: 'Movement of fluid back into capillaries, driven by blood colloid osmotic pressure (COP).' },
-        { term: 'Blood Colloid Osmotic Pressure (COP)', definition: 'Osmotic pressure created mainly by albumin that draws fluid back into capillaries.' },
-        { term: 'Starling\'s Law of Capillaries', definition: 'States that reabsorbed volume nearly equals filtered volume; ~85% reabsorbed, rest collected by lymphatics.' },
+        { term: 'Diffusion', definition: 'Most important capillary exchange mechanism; substances move down concentration gradients.' },
+        { term: 'Transcytosis', definition: 'Vesicle-mediated transport across endothelium via pinocytosis; used for large lipid-insoluble molecules.' },
+        { term: 'Filtration', definition: 'Movement of fluid OUT of capillary into interstitial space, driven by blood hydrostatic pressure.' },
+        { term: 'Reabsorption', definition: 'Movement of fluid INTO capillary from interstitial space, driven by blood colloid osmotic pressure.' },
+        { term: 'Blood Colloid Osmotic Pressure (BCOP)', definition: 'Osmotic pressure from plasma proteins (mainly albumin) that draws fluid into capillaries.' },
+        { term: 'Net Filtration Pressure', definition: 'Balance of hydrostatic and osmotic pressures determining whether fluid enters or exits capillaries.' },
+        { term: 'Starling\'s Law', definition: 'Volume of fluid reabsorbed nearly equals volume filtered; excess collected by lymphatics.' },
         { term: 'Edema', definition: 'Abnormal increase in interstitial fluid when filtration exceeds reabsorption.' },
-        { term: 'Hemodynamics', definition: 'Study of forces involved in blood circulation including pressure, flow, velocity, and resistance.' },
-        { term: 'Laminar Flow', definition: 'Smooth layered blood flow with faster flow in the center of the vessel.' },
-        { term: 'Skeletal Muscle Pump', definition: 'Mechanism where muscle contraction squeezes veins, pushing blood toward heart; valves prevent backflow.' },
-        { term: 'Thoracic Pump', definition: 'Inhalation lowers thoracic pressure and raises abdominal pressure, forcing venous blood upward.' },
-        { term: 'Shock', definition: 'Cardiovascular failure to deliver adequate O2/nutrients causing inadequate tissue perfusion.' }
+        { term: 'Systemic Vascular Resistance', definition: 'Total peripheral resistance from vessel radius, blood viscosity, and vessel length.' },
+        { term: 'Laminar Flow', definition: 'Blood flows in layers; fastest in center, slowest at wall; flow ∝ r⁴.' },
+        { term: 'Mean Arterial Pressure (MAP)', definition: 'MAP = (SBP + 2×DBP)/3; indicator of tissue perfusion.' },
+        { term: 'Hypertension', definition: 'Chronic resting BP >140/90; weakens arteries, causes aneurysms.' },
+        { term: 'Orthostatic Hypotension', definition: 'Drop in BP upon standing; may cause dizziness or syncope.' }
       ],
       memoryAids: [
-        'Flow proportional to r4: "r to the FOUR = flow is FOUR times more sensitive to radius changes" - halve the radius, lose 1/16th of flow.',
-        'Filtration at Arterial end, Reabsorption at Venous end: "FAR-V" = Filtration-Arterial, Reabsorption-Venous.',
-        'Starling\'s 85% rule: "85% comes back, 15% goes to lymphatics" - the lymphatic clean-up crew.',
-        'Three venous return pumps: "SMS" = Skeletal muscle, Muscular thoracic pump, Suction by heart.'
-      ],
-      inlineQuestions: [
-        {
-          question: 'The most important mechanism for capillary exchange is:',
-          options: { A: 'Filtration', B: 'Diffusion down concentration gradients', C: 'Osmosis of water only', D: 'Active transport by endothelium' },
-          answer: 'B',
-          explanation: 'Diffusion is the main mechanism for capillary exchange, with substances moving down their concentration gradients across capillary walls.'
-        },
-        {
-          question: 'Blood flow is proportional to the:',
-          options: { A: 'Square of vessel radius', B: 'Fourth power of vessel radius', C: 'Cube of vessel length', D: 'Inverse of blood viscosity only' },
-          answer: 'B',
-          explanation: 'Blood flow is proportional to the fourth power of vessel radius (r4); halving the radius reduces flow to 1/16th.'
-        },
-        {
-          question: 'Shock is primarily a failure of the cardiovascular system to:',
-          options: { A: 'Increase blood viscosity', B: 'Deliver adequate O2 and nutrients to tissues', C: 'Lower blood pressure', D: 'Dilate veins' },
-          answer: 'B',
-          explanation: 'Shock is cardiovascular failure to deliver enough O2/nutrients, causing inadequate perfusion and switch to anaerobic respiration.'
-        }
+        'Diffusion is the STAR of capillary exchange — it does the most work.',
+        'Starling\'s Law: "What goes out, mostly comes back in" — 85% reabsorbed.',
+        'MAP formula: "1 Systolic + 2 Diastolic, divide by 3" — diastole counts twice because it lasts longer.',
+        'Flow ∝ r⁴: "Radius Rules" — double the radius = 16× the flow!',
+        'Arterioles are the FAUCETS of the circulation — they control the pressure.'
       ],
       quiz: [
-        {
-          question: 'Transcytosis in capillaries mainly transports:',
-          options: { A: 'Small ions like Na+', B: 'Lipid-soluble gases like O2', C: 'Large lipid-insoluble molecules like insulin', D: 'Fibrin threads' },
-          answer: 'C',
-          explanation: 'Transcytosis (endocytosis/exocytosis in vesicles) moves large lipid-insoluble molecules like insulin or maternal antibodies across the endothelium.'
-        },
-        {
-          question: 'At the arterial end of a capillary bed, the net filtration pressure is typically:',
-          options: { A: '-9 mmHg (inward)', B: '0 mmHg', C: '+10 mmHg (outward)', D: '+20 mmHg (outward)' },
-          answer: 'C',
-          explanation: 'At the arterial end of capillary, net outward pressure is ~10 mmHg due to higher hydrostatic pressure.'
-        },
-        {
-          question: 'According to Starling\'s law, approximately what percentage of filtered capillary fluid is reabsorbed?',
-          options: { A: '50%', B: '85%', C: '100%', D: '25%' },
-          answer: 'B',
-          explanation: 'Starling\'s law states that reabsorbed volume is almost equal to filtered volume - about 85% is reabsorbed, with excess collected by lymphatics.'
-        },
-        {
-          question: 'Edema can be caused by all of the following EXCEPT:',
-          options: { A: 'Decreased plasma proteins lowering COP', B: 'Hypertension increasing hydrostatic pressure', C: 'Histamine increasing capillary permeability', D: 'Increased venous return reducing filtration' },
-          answer: 'D',
-          explanation: 'Increased venous return would not cause edema. Edema results from excess filtration or inadequate reabsorption.'
-        },
-        {
-          question: 'Blood flow velocity is:',
-          options: { A: 'Fastest in capillaries', B: 'Inversely proportional to total cross-sectional area', C: 'Constant throughout all vessels', D: 'Slower in aorta than in veins' },
-          answer: 'B',
-          explanation: 'Blood flow velocity is inversely proportional to total cross-sectional area - slowest in capillaries (for exchange) and fastest in the aorta.'
-        },
-        {
-          question: 'Blood pressure is highest in the:',
-          options: { A: 'Vena cava', B: 'Capillaries', C: 'Aorta', D: 'Right atrium' },
-          answer: 'C',
-          explanation: 'BP is highest in the aorta (~120 mmHg systolic, 80 diastolic) and falls steadily through systemic circulation.'
-        },
-        {
-          question: 'Arterial elasticity helps to:',
-          options: { A: 'Increase pressure fluctuations', B: 'Smooth out pressure fluctuations and maintain steady flow', C: 'Store blood indefinitely', D: 'Reduce velocity in capillaries' },
-          answer: 'B',
-          explanation: 'Arterial elasticity (expansion/recoil) maintains steady flow, smooths pressure fluctuations, and reduces stress on small arteries.'
-        },
-        {
-          question: 'Which factor does NOT contribute to increased resistance to flow?',
-          options: { A: 'Smaller vessel radius', B: 'Increased blood viscosity', C: 'Longer vessel length', D: 'Decreased hematocrit' },
-          answer: 'D',
-          explanation: 'Decreased hematocrit means lower viscosity, which actually decreases resistance. Smaller radius, increased viscosity, and longer vessel length all increase resistance.'
-        },
-        {
-          question: 'The skeletal muscle pump aids venous return by:',
-          options: { A: 'Increasing capillary permeability', B: 'Squeezing veins to push blood toward the heart, with valves preventing backflow', C: 'Lowering thoracic pressure', D: 'Dilating arteries' },
-          answer: 'B',
-          explanation: 'The skeletal muscle pump works by muscle contraction squeezing veins, pushing blood toward the heart while valves prevent backflow.'
-        },
-        {
-          question: 'During inhalation, the thoracic pump:',
-          options: { A: 'Increases abdominal pressure and forces blood upward', B: 'Lowers abdominal pressure', C: 'Decreases venous return', D: 'Only affects arterial flow' },
-          answer: 'A',
-          explanation: 'Inhalation lowers thoracic pressure and raises abdominal pressure, forcing blood upward toward the heart.'
-        },
-        {
-          question: 'Prolonged inactivity can lead to:',
-          options: { A: 'Venous pooling and low CO', B: 'Increased arterial pressure', C: 'Reduced capillary exchange', D: 'Higher hematocrit' },
-          answer: 'A',
-          explanation: 'Inactivity causes venous pooling (low venous pressure insufficient for upward flow), leading to low cardiac output, dizziness, or syncope.'
-        },
-        {
-          question: 'Cerebral edema can cause all of the following EXCEPT:',
-          options: { A: 'Headaches and nausea', B: 'Seizures and coma', C: 'Increased tissue perfusion', D: 'Tissue hypoxia' },
-          answer: 'C',
-          explanation: 'Cerebral edema decreases tissue perfusion, not increases it. It causes headaches, nausea, seizures, and coma.'
-        },
-        {
-          question: 'Which is a consequence of edema?',
-          options: { A: 'Circulatory shock from low blood volume', B: 'Decreased filtration', C: 'Reduced lymphatic flow', D: 'All of the above' },
-          answer: 'A',
-          explanation: 'Circulatory shock (low blood volume/BP) is a consequence of edema. Other consequences include tissue necrosis and pulmonary edema.'
-        },
-        {
-          question: 'Laminar flow in blood vessels means:',
-          options: { A: 'Turbulent mixing', B: 'Blood flowing in smooth layers with faster flow in the center', C: 'Complete stasis', D: 'Only in capillaries' },
-          answer: 'B',
-          explanation: 'Laminar flow means blood flows in smooth layers with faster flow in the center of the vessel.'
-        },
-        {
-          question: 'Obesity increases resistance to blood flow mainly due to:',
-          options: { A: 'Shorter vessels', B: 'Increased total vessel length', C: 'Lower viscosity', D: 'Larger radius' },
-          answer: 'B',
-          explanation: 'Obesity increases total vessel length, which increases resistance to blood flow.'
-        },
-        {
-          question: 'Central venous pressure fluctuates mainly due to:',
-          options: { A: 'Skeletal muscle pump', B: 'Respiratory cycle (thoracic pump)', C: 'Cardiac systole', D: 'Arterial pressure' },
-          answer: 'B',
-          explanation: 'Central venous pressure fluctuates with the respiratory cycle (2 mmHg on inhale, 6 mmHg on exhale) due to the thoracic pump.'
-        },
-        {
-          question: 'Prolonged standing can cause syncope due to:',
-          options: { A: 'Venous pooling and inadequate venous return', B: 'Excessive capillary exchange', C: 'High hematocrit', D: 'Vasodilation in the brain' },
-          answer: 'A',
-          explanation: 'Prolonged standing causes venous pooling and inadequate venous return, leading to low cardiac output and syncope.'
-        },
-        {
-          question: 'The main force driving filtration out of capillaries is:',
-          options: { A: 'Blood colloid osmotic pressure', B: 'Blood hydrostatic pressure', C: 'Interstitial hydrostatic pressure', D: 'Lymphatic suction' },
-          answer: 'B',
-          explanation: 'Blood hydrostatic pressure is the main force driving filtration out of capillaries into interstitial fluid.'
-        },
-        {
-          question: 'Blood colloid osmotic pressure (COP) is mainly due to:',
-          options: { A: 'Sodium ions', B: 'Plasma proteins like albumin', C: 'Red blood cells', D: 'Glucose' },
-          answer: 'B',
-          explanation: 'Blood colloid osmotic pressure is mainly due to plasma proteins, especially albumin, which draws fluid back into capillaries.'
-        },
-        {
-          question: 'Edema is NOT typically caused by:',
-          options: { A: 'Liver disease reducing plasma proteins', B: 'Congestive heart failure', C: 'Increased plasma protein concentration', D: 'Obstructed lymphatics' },
-          answer: 'C',
-          explanation: 'Increased plasma protein concentration would increase COP and promote reabsorption, not edema. Edema is caused by decreased proteins, CHF, or obstructed lymphatics.'
-        },
-        {
-          question: 'Arterioles control systemic blood pressure mainly by regulating:',
-          options: { A: 'Total blood volume', B: 'Vessel radius (flow proportional to r4)', C: 'Venous capacitance', D: 'Capillary density' },
-          answer: 'B',
-          explanation: 'Arterioles control BP by changing their diameter; blood flow is proportional to the fourth power of vessel radius.'
-        },
-        {
-          question: 'Which mechanism does NOT contribute to venous return?',
-          options: { A: 'Skeletal muscle pump', B: 'Thoracic pump during inhalation', C: 'Cardiac suction of atria', D: 'Arterial vasoconstriction' },
-          answer: 'D',
-          explanation: 'Arterial vasoconstriction does not contribute to venous return. Venous return is aided by the skeletal muscle pump, thoracic pump, and cardiac suction.'
-        }
-      ],
-      flashcards: [
-        { front: 'What are the three routes of capillary exchange?', back: 'Intercellular clefts, fenestrations, and through endothelial cytoplasm (transcytosis).' },
-        { front: 'What is the main mechanism of capillary exchange?', back: 'Diffusion down concentration gradients. Lipid-soluble substances cross the lipid bilayer; water-soluble substances pass through channels, fenestrations, or clefts.' },
-        { front: 'What is transcytosis?', back: 'Movement of large lipid-insoluble molecules (e.g., insulin, maternal antibodies) across endothelium via vesicles (endocytosis/exocytosis).' },
-        { front: 'What forces drive filtration vs. reabsorption in capillaries?', back: 'Filtration: blood hydrostatic pressure + interstitial osmotic pressure push fluid out. Reabsorption: blood colloid osmotic pressure (COP from albumin) pulls fluid back in.' },
-        { front: 'What is Starling\'s law of capillaries?', back: 'Reabsorbed volume nearly equals filtered volume: ~85% is reabsorbed, remaining ~3 L/day collected by lymphatics.' },
-        { front: 'What causes edema?', back: 'Excess filtration (hypertension, increased permeability) or inadequate reabsorption (low plasma proteins/COP from liver disease, burns, malnutrition).' },
-        { front: 'How is blood flow related to vessel radius?', back: 'Blood flow is proportional to the fourth power of radius (r4). Halving the radius reduces flow to 1/16th.' },
-        { front: 'What are the mechanisms of venous return?', back: 'Pressure gradient, skeletal muscle pump, thoracic pump (inhalation), and cardiac suction.' },
-        { front: 'Why is capillary blood flow the slowest?', back: 'Capillaries have the largest total cross-sectional area; velocity is inversely proportional to cross-sectional area. Slow flow (~0.1 cm/sec) allows time for exchange.' },
-        { front: 'What is cardiovascular shock?', back: 'Cardiovascular failure to deliver enough O2/nutrients, causing inadequate perfusion, anaerobic respiration, lactic acid buildup, and cell/tissue damage.' }
+        { id: 'v2-q1', question: 'Which is the most important mechanism of capillary exchange?', options: { A: 'Transcytosis', B: 'Osmosis', C: 'Diffusion', D: 'Active transport' }, answer: 'C', explanation: 'Diffusion is the most important; substances move down concentration gradients through clefts, fenestrations, or lipid bilayers.' },
+        { id: 'v2-q2', question: 'Blood colloid osmotic pressure is primarily generated by:', options: { A: 'Red blood cells', B: 'Electrolytes', C: 'Plasma proteins (mainly albumin)', D: 'Platelets' }, answer: 'C', explanation: 'Albumin and other plasma proteins create osmotic pressure that draws fluid into capillaries (reabsorption).' },
+        { id: 'v2-q3', question: 'At the arterial end of a capillary bed, the net filtration pressure favors:', options: { A: 'Reabsorption into capillary', B: 'Filtration out of capillary', C: 'No net movement', D: 'Transcytosis only' }, answer: 'B', explanation: 'Net outward pressure of ~10 mmHg at the arterial end drives fluid out (filtration). Reabsorption dominates at the venous end.' },
+        { id: 'v2-q4', question: 'Approximately what percentage of filtered capillary fluid is reabsorbed?', options: { A: '50%', B: '70%', C: '85%', D: '99%' }, answer: 'C', explanation: 'About 85% of filtered fluid is reabsorbed; the remaining ~3 L/day is collected by lymphatic capillaries.' },
+        { id: 'v2-q5', question: 'A patient with liver disease develops edema. The most likely mechanism is:', options: { A: 'Increased blood hydrostatic pressure', B: 'Decreased plasma protein production → lower BCOP', C: 'Increased blood viscosity', D: 'Excessive ADH secretion' }, answer: 'B', explanation: 'Liver disease reduces albumin synthesis, lowering blood colloid osmotic pressure and impairing reabsorption → interstitial fluid accumulation.' },
+        { id: 'v2-q6', question: 'Blood velocity is slowest in the capillaries because:', options: { A: 'Capillaries have the smallest individual diameter', B: 'Capillaries have the greatest total cross-sectional area', C: 'Capillaries lack smooth muscle', D: 'Venous valves slow flow' }, answer: 'B', explanation: 'Velocity is inversely related to total cross-sectional area; capillaries collectively have the largest total area, slowing flow to ~0.1 cm/sec to allow exchange.' },
+        { id: 'v2-q7', question: 'Blood flow is proportional to the fourth power of the radius (F ∝ r⁴). If a vessel constricts to half its original radius, flow decreases by a factor of:', options: { A: '2', B: '4', C: '8', D: '16' }, answer: 'D', explanation: 'F ∝ r⁴: (1/2)⁴ = 1/16, so flow decreases 16-fold when radius is halved.' },
+        { id: 'v2-q8', question: 'Systemic vascular resistance is determined by all EXCEPT:', options: { A: 'Vessel radius', B: 'Blood viscosity', C: 'Blood vessel length', D: 'Heart rate' }, answer: 'D', explanation: 'SVR depends on vessel radius, blood viscosity, and vessel length. Heart rate affects cardiac output but not resistance directly.' },
+        { id: 'v2-q9', question: 'A MAP of 55 mmHg indicates:', options: { A: 'Normal perfusion', B: 'Hypertension', C: 'Inadequate tissue perfusion', D: 'Excessive resistance' }, answer: 'C', explanation: 'MAP < 60 mmHg means inadequate perfusion of vital organs. MAP = (SBP + 2×DBP)/3.' },
+        { id: 'v2-q10', question: 'Transcytosis across capillary walls is most important for transporting:', options: { A: 'Oxygen and CO₂', B: 'Small electrolytes', C: 'Large lipid-insoluble molecules like insulin', D: 'Water' }, answer: 'C', explanation: 'Transcytosis uses vesicles to move large, lipid-insoluble molecules (insulin, maternal antibodies) across the endothelium.' },
+        { id: 'v2-q11', question: 'Edema is NOT clinically detectable until interstitial fluid volume exceeds normal by:', options: { A: '10%', B: '20%', C: '30%', D: '50%' }, answer: 'C', explanation: 'Edema is not noticeable until interstitial fluid is about 30% above normal volume.' },
+        { id: 'v2-q12', question: 'Which vessels are the primary resistance vessels controlling moment-to-moment blood pressure?', options: { A: 'Elastic arteries', B: 'Muscular arteries', C: 'Arterioles', D: 'Venules' }, answer: 'C', explanation: 'Arterioles can dramatically change diameter and control systemic vascular resistance and blood pressure.' }
       ]
     },
 
-    // ===== SECTION 3: BP & Lymphatic Module =====
+    // ===== SECTION 3: Venous Return, Shock, BP Regulation & Special Routes =====
     {
       id: 'vessels-s3',
-      title: 'Blood Pressure, Pulse Points, BP Measurement & Lymphatic Overview',
-      pageRange: 'Pages 17-24',
+      title: 'Venous Return, Shock & Blood Pressure Regulation',
+      pageRange: 'Pages 22-35',
       learnItems: [
         {
-          title: 'Cardiac Cycle and Blood Pressure',
-          body: 'The cardiac cycle is one contraction (systole) and relaxation (diastole) of the heart, lasting about 0.8 seconds. The dicrotic notch is a small secondary pressure increase at the beginning of diastole, caused by closure of aortic/pulmonary valves. Pulse pressure is the difference between systolic and diastolic pressures (~40 mmHg).'
+          title: 'Mechanisms of Venous Return',
+          body: 'Venous return is aided by: (1) Pressure gradient: venous pressure 12-18 mmHg in venules → ~5 mmHg central venous pressure. (2) Gravity: drains blood from head and neck. (3) Skeletal muscle pump: contracting limb muscles compress veins, pushing blood upward past one-way valves. (4) Thoracic (respiratory) pump: during inhalation, thoracic cavity expands (pressure drops) while abdominal pressure rises, forcing blood upward; central venous pressure fluctuates 2 mmHg (inhalation) to 6 mmHg (exhalation). (5) Cardiac suction: expanding atrial space draws blood toward the heart.'
         },
         {
-          title: 'Heart Sounds in the Cardiac Cycle',
-          body: 'First and second heart sounds (S1 and S2) are often described as "lubb-dupp" and are due to closing of the valves. S1 ("lubb"): closure of AV valves at start of systole. S2 ("dupp"): closure of semilunar valves at start of diastole.'
+          title: 'Venous Return and Physical Activity',
+          body: 'Exercise increases venous return: faster/stronger heartbeat, muscle/lung/heart vessel dilation, increased respiratory rate (thoracic pump), and increased skeletal muscle pump activity. Venous pooling occurs with inactivity—venous pressure may be insufficient to push blood upward, causing dizziness or syncope from low cardiac output. Prevention: tensing leg muscles, wearing pressure suits (jet pilots).'
         },
         {
-          title: 'Pulse Points',
-          body: 'Common sites for taking pulse: carotid, radial, brachial, dorsalis pedis (dorsal foot artery), posterior tibial.'
+          title: 'Circulatory Shock — Overview',
+          body: 'Failure of the cardiovascular system to deliver adequate O₂ and nutrients. Cells switch to anaerobic respiration → lactic acid builds up → cell damage and death. Result: inadequate tissue perfusion.'
         },
         {
-          title: 'Taking a Blood Pressure - Step-by-Step',
-          body: 'Place cuff on bare upper arm 1 inch above elbow bend, tight enough for two fingertips under top edge. Position stethoscope disk under cuff on inner side of upper arm. Place earpieces facing forward (toward nose tip), rest gauge in palm of cuffed arm. Inflate cuff rapidly to 30 points above usual systolic pressure, then slowly deflate while listening.'
+          title: 'Types of Circulatory Shock',
+          body: 'Cardiogenic shock: inadequate heart pumping (e.g., MI). Low venous return (LVR) shock has three forms: (1) Hypovolemic shock (most common): blood volume loss from trauma, bleeding, burns, dehydration. (2) Obstructed venous return shock: from tumor or aneurysm compressing veins. (3) Venous pooling (vascular) shock: prolonged standing/sitting or widespread vasodilation — includes neurogenic shock (loss of vasomotor tone from emotional shock to brainstem injury). Septic shock: bacterial toxins cause vasodilation and increased capillary permeability. Anaphylactic shock: severe immune reaction → histamine release → generalized vasodilation and increased permeability.'
         },
         {
-          title: 'Lymphatic System - Three Functions',
-          body: 'Fluid recovery: reabsorbs excess interstitial fluid (~15% of filtered fluid not returned by capillaries) and returns it to blood. Immunity: tissue fluid (lymph) is filtered through lymph nodes containing immune cells before returning to bloodstream. Lipid absorption: lacteals in small intestine villi absorb dietary lipids.'
+          title: 'Compensated vs Decompensated Shock',
+          body: 'Compensated shock: homeostatic mechanisms attempt to restore BP — activation of RAAS, ADH secretion, sympathetic nervous system activation, baroreflex, local vasoconstrictors. If person faints and falls horizontal, gravity restores brain blood flow (raising feet helps). Decompensated shock (life-threatening positive feedback loops): decreased CO → myocardial ischemia → further CO drop; slow circulation → DIC → slower circulation; brainstem ischemia/acidosis → loss of vasomotor tone → further CO drop.'
         },
         {
-          title: 'Lymphatic Organs - Thymus',
-          body: 'Thymus: bilobed organ between sternum and aortic arch; microscopic features include cortex, medulla, and Hassall\'s corpuscles.'
+          title: 'Signs and Symptoms of Shock',
+          body: 'Rapid resting heart rate (sympathetic stimulation). Weak, rapid pulse (reduced CO). Clammy, cool skin (cutaneous vasoconstriction). Sweating, altered mental state (cerebral ischemia). Reduced urine production (renal vasoconstriction + increased aldosterone/ADH). Thirst (extracellular fluid loss). Acidosis (lactic acid). Nausea (impaired GI circulation).'
         },
         {
-          title: 'Lymphatic Organs - Spleen',
-          body: 'Spleen: in left hypochondriac region, inferior to diaphragm and posterolateral to stomach; has white pulp and red pulp.'
+          title: 'Syncope (Fainting)',
+          body: 'Sudden, temporary loss of consciousness due to cerebral ischemia. Categories: vasodepressor syncope (sudden emotional stress), situational syncope (coughing, defecation, urination pressure), drug-induced syncope (antihypertensives, diuretics, vasodilators), orthostatic hypotension (BP decrease upon standing).'
         },
         {
-          title: 'Lymphatic Organs - Lymph Nodes',
-          body: 'Lymph nodes: most numerous (~450 in adults), located in cervical, axillary, intestinal, and inguinal regions. Microscopic: capsule, cortex with lymphoid follicles, medulla.'
+          title: 'Neural Control: Cardiovascular Center',
+          body: 'Located in the medulla oblongata. Receives input from: higher brain centers (cortex, limbic system, hypothalamus — anticipation, temperature), proprioceptors (physical activity), baroreceptors (pressure changes in vessels), and chemoreceptors (blood chemistry). Output to heart: parasympathetic via vagus nerve (decreases HR), sympathetic cardiac accelerator nerves (increase rate/contractility). Output to blood vessels: sympathetic vasomotor nerves maintain vasomotor tone, produce vasoconstriction in skin/viscera. Increased stimulation → constriction → higher BP.'
         },
         {
-          title: 'Lymphatic Vessels and Flow',
-          body: 'Lymph flows through lymphatic vessels (lymphatics); openings are gaps between endothelial cells, anchored by filaments. Right lymphatic duct: formed by convergence of right jugular, subclavian, and bronchomediastinal trunks. Thoracic duct: drains from cisterna chyli (sac) and empties into left subclavian vein.'
+          title: 'Neural Control: Baroreflex',
+          body: 'Baroreceptors (stretch receptors) in aortic arch, aortic sinuses (behind aortic valve), and carotid sinus detect BP changes. Autonomous negative feedback: baroreceptors send constant signals to brainstem. When BP rises: signal rate increases → inhibits vasomotor center → decreased sympathetic tone → vasodilation → BP falls. When BP drops: signal rate decreases → excites vasomotor center → increased sympathetic tone → vasoconstriction → BP rises. Clinical: carotid sinus massage can slow heart rate (treats paroxysmal SVT). Tight collar or neck hyperextension may cause carotid sinus syncope.'
         },
         {
-          title: 'Other Lymphatic Structures',
-          body: 'Appendix: contains abundant lymphoid nodules (follicles). Tonsils: three sets - pharyngeal (adenoids), palatine (pair), lingual (numerous); have crypts and lymphoid follicles.'
+          title: 'Neural Control: Chemoreflex',
+          body: 'Chemoreceptors in aortic bodies and carotid bodies (aortic arch, subclavian arteries, external carotid arteries). Detect changes in blood pH, O₂, and CO₂. Primary role: adjust respiration. Secondary role: vasomotion. Hypoxemia (low O₂), hypercapnia (high CO₂), and acidosis → stimulate chemoreceptors → instruct vasomotor center → vasoconstriction → BP rises → improved lung perfusion and gas exchange.'
+        },
+        {
+          title: 'Neural Control: Medullary Ischemic Reflex',
+          body: 'When the brainstem itself receives inadequate perfusion, cardiac and vasomotor centers send sympathetic signals to heart and blood vessels → increased cardiac output + widespread vasoconstriction → BP rises. This is a last-resort emergency mechanism. Stress, anger, and arousal can also raise BP through other brain centers.'
+        },
+        {
+          title: 'Hormonal Control: Renin-Angiotensin-Aldosterone System (RAAS)',
+          body: 'Angiotensinogen (prohormone from liver) → Renin (enzyme released by kidneys when BP is low) converts it to Angiotensin I → ACE (angiotensin-converting enzyme, in lungs) converts to Angiotensin II. Angiotensin II is a VERY potent vasoconstrictor that rapidly raises BP. ACE inhibitors block this conversion to treat hypertension. Angiotensin II also stimulates aldosterone release from adrenal cortex.'
+        },
+        {
+          title: 'Hormonal Control: Other Hormones',
+          body: 'Aldosterone: promotes Na⁺ and water retention by kidneys → increases blood volume and BP. ADH (antidiuretic hormone): promotes water retention; at high concentrations, causes vasoconstriction. Atrial natriuretic factor (ANF): released when BP rises → promotes Na⁺/water excretion and generalized vasodilation → lowers BP. Epinephrine and norepinephrine: α-adrenergic receptors → vasoconstriction (most vessels); β-adrenergic receptors → vasodilation (skeletal/cardiac muscle vessels).'
+        },
+        {
+          title: 'Local Autoregulation',
+          body: 'Tissues independently regulate their own blood flow based on metabolic needs, especially important in brain, cardiac, and skeletal muscle. Physical changes: warming and decreased vascular stretching promote vasodilation. Vasoactive substances: K⁺, H⁺, lactic acid, and nitric oxide dilate systemic vessels when O₂ is low. Exception: pulmonary vessels CONSTRICT in response to low O₂ (redirects flow to better-ventilated lung regions).'
+        },
+        {
+          title: 'Special Circulatory Routes: Brain',
+          body: 'Total brain perfusion is kept constant—a few seconds of deprivation causes loss of consciousness; 4-5 minutes causes irreversible damage. Flow shifts between active regions as needed. Cerebral arteries dilate as BP falls and constrict as BP rises (autoregulation). Main chemical stimulus: pH. If CO₂ rises (hypercapnia) → pH drops → vasodilation. If CO₂ drops (hypocapnia from hyperventilation) → pH rises → vasoconstriction → may cause dizziness/syncope.'
+        },
+        {
+          title: 'Special Circulatory Routes: Skeletal Muscle and Lungs',
+          body: 'Skeletal muscle: highly variable flow. At rest, arterioles constrict (~1 L/min total flow). During exercise, arterioles dilate in response to epinephrine and sympathetic nerves; precapillary sphincters dilate from lactic acid and CO₂; flow can increase 20-fold. Isometric contraction causes faster fatigue than isotonic because sustained compression impedes flow. Lungs: low pulmonary blood pressure allows slower flow for gas exchange; oncotic pressure overrides hydrostatic (net reabsorption favored); unique hypoxic vasoconstriction redirects blood to better-ventilated areas.'
+        },
+        {
+          title: 'Aging and the Cardiovascular System',
+          body: 'General aging changes: decreased aortic compliance, reduced cardiac muscle fiber size, reduced cardiac output and max heart rate, increased systolic pressure. Total cholesterol and LDL increase while HDL decreases. Increased risk for congestive heart failure, coronary artery disease, and atherosclerosis.'
+        },
+        {
+          title: 'Blood Pressure Measurement',
+          body: 'Auscultatory method uses sphygmomanometer cuff on upper arm (1 inch above elbow bend) and stethoscope disk placed under the cuff on inner arm. Inflate cuff to 30 mmHg above expected systolic. Slowly deflate while listening: first Korotkoff sound = systolic pressure; last sound disappears = diastolic pressure. Pulse pressure = systolic - diastolic (normally ~40 mmHg). Common pulse points: carotid, radial, brachial, dorsalis pedis, posterior tibial.'
         }
       ],
       keyTerms: [
-        { term: 'Cardiac Cycle', definition: 'One contraction (systole) and relaxation (diastole) of the heart, lasting about 0.8 seconds.' },
-        { term: 'Dicrotic Notch', definition: 'Small secondary pressure increase at the beginning of diastole caused by closure of aortic/pulmonary valves.' },
-        { term: 'Pulse Pressure', definition: 'Difference between systolic and diastolic pressures (~40 mmHg).' },
-        { term: 'S1 (Lubb)', definition: 'First heart sound caused by closure of AV valves at start of systole.' },
-        { term: 'S2 (Dupp)', definition: 'Second heart sound caused by closure of semilunar valves at start of diastole.' },
-        { term: 'Lacteals', definition: 'Lymphatic capillaries in small intestine villi that absorb dietary lipids.' },
-        { term: 'Hassall\'s Corpuscles', definition: 'Microscopic structures found in the thymus medulla.' },
-        { term: 'White Pulp', definition: 'Lymphatic tissue in the spleen surrounding splenic arteries.' },
-        { term: 'Red Pulp', definition: 'Tissue in the spleen containing erythrocyte-filled sinuses.' },
-        { term: 'Right Lymphatic Duct', definition: 'Formed by convergence of right jugular, subclavian, and bronchomediastinal trunks.' },
-        { term: 'Thoracic Duct', definition: 'Largest lymphatic duct; drains from cisterna chyli and empties into left subclavian vein.' },
-        { term: 'Tonsils', definition: 'Three sets of lymphoid tissue (pharyngeal/adenoids, palatine, lingual) that guard the pharynx entrance.' }
+        { term: 'Skeletal Muscle Pump', definition: 'Contracting muscles compress veins, pushing blood upward past one-way valves.' },
+        { term: 'Thoracic Pump', definition: 'Inhalation expands thorax (lower pressure) while raising abdominal pressure, driving venous blood upward.' },
+        { term: 'Cardiogenic Shock', definition: 'Shock from inadequate heart pumping (e.g., after myocardial infarction).' },
+        { term: 'Hypovolemic Shock', definition: 'Most common shock type; from blood/fluid volume loss (trauma, burns, dehydration).' },
+        { term: 'Anaphylactic Shock', definition: 'Severe immune-mediated shock with histamine-driven vasodilation and increased permeability.' },
+        { term: 'Baroreceptors', definition: 'Stretch receptors in aortic arch and carotid sinus that detect blood pressure changes.' },
+        { term: 'Chemoreceptors', definition: 'Sensors detecting blood pH, O₂, CO₂ in aortic/carotid bodies.' },
+        { term: 'Vasomotor Center', definition: 'Medulla oblongata region controlling sympathetic vasomotor tone and vessel diameter.' },
+        { term: 'RAAS', definition: 'Renin-Angiotensin-Aldosterone System: renin → angiotensin I → ACE → angiotensin II (potent vasoconstrictor).' },
+        { term: 'ACE Inhibitors', definition: 'Drugs that block conversion of angiotensin I to II, lowering blood pressure.' },
+        { term: 'Atrial Natriuretic Factor', definition: 'Heart hormone promoting Na⁺/water excretion and vasodilation to lower BP when BP is high.' },
+        { term: 'Autoregulation', definition: 'Local tissue ability to adjust own blood flow based on metabolic demands.' },
+        { term: 'Korotkoff Sounds', definition: 'Sounds heard during BP measurement; first = systolic, last disappearance = diastolic.' },
+        { term: 'Pulse Pressure', definition: 'Difference between systolic and diastolic pressures (normally ~40 mmHg).' }
       ],
       memoryAids: [
-        'Heart sounds: "Lubb = Leaves (AV valves close, systole starts), Dupp = Done (semilunar valves close, diastole starts)".',
-        'Pulse points: "Can Really Big Dogs Play?" = Carotid, Radial, Brachial, Dorsalis pedis, Posterior tibial.',
-        'Lymphatic functions: "FIL" = Fluid recovery, Immunity, Lipid absorption.',
-        'Thoracic duct drains LEFT and below; Right lymphatic duct drains RIGHT upper quarter only.'
-      ],
-      inlineQuestions: [
-        {
-          question: 'The cardiac cycle lasts approximately:',
-          options: { A: '0.4 seconds', B: '0.8 seconds', C: '1.2 seconds', D: '2 seconds' },
-          answer: 'B',
-          explanation: 'The cardiac cycle is one contraction (systole) and relaxation (diastole) of the heart, lasting about 0.8 seconds.'
-        },
-        {
-          question: 'Which is NOT a typical pulse point?',
-          options: { A: 'Carotid', B: 'Radial', C: 'Hepatic', D: 'Posterior tibial' },
-          answer: 'C',
-          explanation: 'Hepatic is not a pulse point. Common pulse sites include carotid, radial, brachial, dorsalis pedis, and posterior tibial.'
-        },
-        {
-          question: 'Which tonsil is also called the adenoid?',
-          options: { A: 'Palatine', B: 'Lingual', C: 'Pharyngeal', D: 'Intestinal' },
-          answer: 'C',
-          explanation: 'The pharyngeal tonsil is also called the adenoid. It is a single tonsil on the pharyngeal wall.'
-        }
+        'Venous return helpers: "GSTC" = Gravity, Skeletal pump, Thoracic pump, Cardiac suction.',
+        'RAAS pathway: "Liver → Kidney → Lung → Action" = Angiotensinogen → Renin → ACE → Angiotensin II.',
+        'Shock types: "CHANS" = Cardiogenic, Hypovolemic, Anaphylactic, Neurogenic, Septic.',
+        'Baroreflexes work like a thermostat: high BP → signals increase → vasodilation → BP drops.',
+        'Brain flow rule: "4-5 minutes without blood = irreversible damage."',
+        'Pulmonary vessels are backwards: they CONSTRICT with low O₂ (opposite of systemic).'
       ],
       quiz: [
-        {
-          question: 'The dicrotic notch corresponds to:',
-          options: { A: 'Closure of AV valves', B: 'A small secondary pressure increase at the beginning of diastole', C: 'Peak systolic pressure', D: 'Opening of semilunar valves' },
-          answer: 'B',
-          explanation: 'The dicrotic notch is a small secondary pressure increase at the beginning of diastole, caused by closure of aortic/pulmonary valves.'
-        },
-        {
-          question: 'Pulse pressure is the difference between:',
-          options: { A: 'Diastolic and venous pressure', B: 'Systolic and diastolic pressures', C: 'Arterial and capillary pressure', D: 'S1 and S2 sounds' },
-          answer: 'B',
-          explanation: 'Pulse pressure is the difference between systolic and diastolic pressures, normally about 40 mmHg.'
-        },
-        {
-          question: 'The "lubb-dupp" sounds are caused by:',
-          options: { A: 'Opening of all valves', B: 'Closing of the valves', C: 'Blood turbulence only', D: 'Muscle contractions' },
-          answer: 'B',
-          explanation: 'The first and second heart sounds (S1 and S2) are caused by closing of the valves - AV valves for S1 and semilunar valves for S2.'
-        },
-        {
-          question: 'When placing a BP cuff, it should be tight enough to allow:',
-          options: { A: 'One fingertip under it', B: 'Two fingertips under the top edge', C: 'The whole hand under it', D: 'No fingers under it' },
-          answer: 'B',
-          explanation: 'The BP cuff should be placed on bare upper arm 1 inch above elbow bend, tight enough for two fingertips under the top edge.'
-        },
-        {
-          question: 'The lymphatic system\'s fluid recovery function returns about what percentage of filtered interstitial fluid to blood?',
-          options: { A: '5%', B: '15%', C: '50%', D: '85%' },
-          answer: 'B',
-          explanation: 'The lymphatic system reabsorbs ~15% of filtered fluid that is not returned by capillaries and returns it to the blood.'
-        },
-        {
-          question: 'Which lymphatic system function involves filtering lymph through lymph nodes?',
-          options: { A: 'Fluid recovery', B: 'Lipid absorption', C: 'Immunity', D: 'Gas exchange' },
-          answer: 'C',
-          explanation: 'Immunity: tissue fluid (lymph) is filtered through lymph nodes containing immune cells before returning to the bloodstream.'
-        },
-        {
-          question: 'Lacteals in the small intestine are specialized for:',
-          options: { A: 'Gas exchange', B: 'Lipid absorption', C: 'Fluid recovery', D: 'Immunity only' },
-          answer: 'B',
-          explanation: 'Lacteals in small intestine villi absorb dietary lipids as one of the three main functions of the lymphatic system.'
-        },
-        {
-          question: 'The thymus is located:',
-          options: { A: 'In the left hypochondriac region', B: 'Between the sternum and aortic arch', C: 'Posterolateral to the stomach', D: 'In the inguinal region' },
-          answer: 'B',
-          explanation: 'The thymus is a bilobed organ located between the sternum and aortic arch.'
-        },
-        {
-          question: 'The spleen\'s microscopic features include:',
-          options: { A: 'Capsule and crypts', B: 'White pulp and red pulp', C: 'Hassall\'s corpuscles', D: 'Cisterna chyli' },
-          answer: 'B',
-          explanation: 'The spleen has white pulp (lymphatic tissue) and red pulp (erythrocyte-filled sinuses).'
-        },
-        {
-          question: 'Lymph nodes are most numerous in which regions?',
-          options: { A: 'Hepatic and splenic', B: 'Cervical, axillary, intestinal, inguinal', C: 'Femoral and popliteal', D: 'Cranial and sacral' },
-          answer: 'B',
-          explanation: 'Lymph nodes (~450 in adults) are located in cervical, axillary, intestinal, and inguinal regions.'
-        },
-        {
-          question: 'The right lymphatic duct is formed by:',
-          options: { A: 'Cisterna chyli', B: 'Convergence of right jugular, subclavian, and bronchomediastinal trunks', C: 'Thoracic duct branches', D: 'Appendix follicles' },
-          answer: 'B',
-          explanation: 'The right lymphatic duct is formed by convergence of the right jugular, subclavian, and bronchomediastinal trunks.'
-        },
-        {
-          question: 'The thoracic duct empties into the:',
-          options: { A: 'Right subclavian vein', B: 'Left subclavian vein', C: 'Superior vena cava', D: 'Cisterna chyli' },
-          answer: 'B',
-          explanation: 'The thoracic duct drains from the cisterna chyli and empties into the left subclavian vein.'
-        },
-        {
-          question: 'Lymphatic capillaries have openings formed by:',
-          options: { A: 'Valves', B: 'Gaps between endothelial cells', C: 'Smooth muscle contractions', D: 'Anchoring filaments alone' },
-          answer: 'B',
-          explanation: 'Lymphatic vessels have openings that are gaps between endothelial cells, anchored by filaments.'
-        },
-        {
-          question: 'The appendix is notable for:',
-          options: { A: 'Producing EPO', B: 'Containing abundant lymphoid nodules', C: 'Filtering plasma', D: 'Storing platelets' },
-          answer: 'B',
-          explanation: 'The appendix contains abundant lymphoid nodules (follicles), making it part of the lymphatic system.'
-        },
-        {
-          question: 'A lymph node\'s cortex primarily contains:',
-          options: { A: 'Red pulp', B: 'Lymphoid follicles', C: 'White pulp', D: 'Hassall\'s corpuscles' },
-          answer: 'B',
-          explanation: 'The lymph node cortex contains lymphoid follicles. Red/white pulp are spleen features and Hassall\'s corpuscles are thymus features.'
-        },
-        {
-          question: 'When inflating the BP cuff, you should go about how much above expected systolic?',
-          options: { A: '10 points', B: '20 points', C: '30 points', D: '50 points' },
-          answer: 'C',
-          explanation: 'Inflate the cuff rapidly to 30 points above usual systolic pressure, then slowly deflate while listening.'
-        },
-        {
-          question: 'The spleen is located:',
-          options: { A: 'Between sternum and aortic arch', B: 'Left hypochondriac region, inferior to diaphragm', C: 'Inguinal region', D: 'Cervical region' },
-          answer: 'B',
-          explanation: 'The spleen is located in the left hypochondriac region, inferior to the diaphragm and posterolateral to the stomach.'
-        },
-        {
-          question: 'The "lubb" sound (S1) occurs due to:',
-          options: { A: 'Closure of semilunar valves', B: 'Closure of AV valves', C: 'Opening of all valves', D: 'Blood entering capillaries' },
-          answer: 'B',
-          explanation: 'S1 ("lubb") is caused by closure of AV valves at the start of systole.'
-        },
-        {
-          question: 'Which lymphatic structure drains most of the body and empties into the left subclavian vein?',
-          options: { A: 'Right lymphatic duct', B: 'Cisterna chyli', C: 'Thoracic duct', D: 'Spleen' },
-          answer: 'C',
-          explanation: 'The thoracic duct is the larger/longer duct that drains most of the body and empties into the left subclavian vein.'
-        },
-        {
-          question: 'The lymphatic system absorbs lipids in the small intestine via:',
-          options: { A: 'Lymph nodes', B: 'Thymus', C: 'Lacteals', D: 'Spleen' },
-          answer: 'C',
-          explanation: 'Lacteals in small intestine villi are specialized for absorbing dietary lipids.'
-        },
-        {
-          question: 'When measuring BP, the stethoscope disk goes:',
-          options: { A: 'On the wrist', B: 'Under the cuff on the inner upper arm', C: 'Over the brachial artery only', D: 'On the carotid artery' },
-          answer: 'B',
-          explanation: 'Position the stethoscope disk under the cuff on the inner side of the upper arm.'
-        },
-        {
-          question: 'Hassall\'s corpuscles are a feature of the:',
-          options: { A: 'Spleen', B: 'Lymph node cortex', C: 'Thymus', D: 'Appendix' },
-          answer: 'C',
-          explanation: 'Hassall\'s corpuscles are a microscopic feature of the thymus, along with cortex and medulla.'
-        }
-      ],
-      flashcards: [
-        { front: 'How long does one cardiac cycle last?', back: 'About 0.8 seconds - one contraction (systole) and one relaxation (diastole).' },
-        { front: 'What is the dicrotic notch?', back: 'A small secondary pressure increase at the beginning of diastole caused by closure of the aortic/pulmonary valves.' },
-        { front: 'What causes the S1 and S2 heart sounds?', back: 'S1 ("lubb") = closure of AV valves at start of systole. S2 ("dupp") = closure of semilunar valves at start of diastole.' },
-        { front: 'Name five common pulse points.', back: 'Carotid, radial, brachial, dorsalis pedis (dorsal foot artery), and posterior tibial.' },
-        { front: 'What are the three functions of the lymphatic system?', back: 'Fluid recovery (~15% of filtered fluid), immunity (lymph node filtering), and lipid absorption (lacteals in small intestine).' },
-        { front: 'Where is the thymus located and what are its microscopic features?', back: 'Between sternum and aortic arch; features include cortex, medulla, and Hassall\'s corpuscles.' },
-        { front: 'Where is the spleen and what are its main tissue types?', back: 'Left hypochondriac region, inferior to diaphragm, posterolateral to stomach. Contains white pulp (lymphatic tissue) and red pulp (erythrocyte-filled sinuses).' },
-        { front: 'What does the right lymphatic duct drain?', back: 'Right arm, right side of head and thorax; formed by convergence of right jugular, subclavian, and bronchomediastinal trunks.' },
-        { front: 'What does the thoracic duct drain?', back: 'Everything below diaphragm plus left arm, head, neck, and thorax; begins as cisterna chyli and empties into left subclavian vein.' },
-        { front: 'Name the three sets of tonsils.', back: 'Pharyngeal (adenoids - single), palatine (pair at back of oral cavity), and lingual (pair at root of tongue).' }
+        { id: 'v3-q1', question: 'Which mechanisms aid venous return? (Select the best answer)', options: { A: 'Skeletal muscle pump and thoracic pump', B: 'Precapillary sphincters and vasomotion', C: 'Diffusion and transcytosis', D: 'Fenestrations and sinusoids' }, answer: 'A', explanation: 'Venous return is aided by skeletal muscle pump, thoracic pump, gravity, cardiac suction, and pressure gradients.' },
+        { id: 'v3-q2', question: 'The MOST COMMON type of circulatory shock is:', options: { A: 'Cardiogenic', B: 'Hypovolemic', C: 'Septic', D: 'Anaphylactic' }, answer: 'B', explanation: 'Hypovolemic shock (blood/fluid volume loss) is the most common form of shock.' },
+        { id: 'v3-q3', question: 'During compensated shock, which system is activated to help restore blood pressure?', options: { A: 'Parasympathetic nervous system', B: 'Renin-angiotensin-aldosterone system', C: 'Somatic motor system', D: 'Enteric nervous system' }, answer: 'B', explanation: 'Compensated shock activates RAAS, ADH secretion, sympathetic NS, baroreflexes, and local vasoconstrictors.' },
+        { id: 'v3-q4', question: 'Baroreceptors detecting increased blood pressure will cause:', options: { A: 'Increased sympathetic tone and vasoconstriction', B: 'Decreased sympathetic tone and vasodilation', C: 'Increased heart rate and contractility', D: 'Release of renin from kidneys' }, answer: 'B', explanation: 'High BP → increased baroreceptor signal rate → inhibits vasomotor center → decreased sympathetic tone → vasodilation → BP falls.' },
+        { id: 'v3-q5', question: 'In the RAAS system, angiotensin-converting enzyme (ACE) is primarily located in the:', options: { A: 'Kidneys', B: 'Liver', C: 'Lungs', D: 'Heart' }, answer: 'C', explanation: 'ACE in the lungs converts angiotensin I to angiotensin II (a potent vasoconstrictor). ACE inhibitors target this enzyme.' },
+        { id: 'v3-q6', question: 'Angiotensin II acts as a:', options: { A: 'Mild vasodilator', B: 'Potent vasoconstrictor', C: 'Diuretic', D: 'Parasympathetic stimulant' }, answer: 'B', explanation: 'Angiotensin II is a VERY potent vasoconstrictor that rapidly raises blood pressure; also stimulates aldosterone.' },
+        { id: 'v3-q7', question: 'Anaphylactic shock results from:', options: { A: 'Blood loss from trauma', B: 'Bacterial toxins causing vasodilation', C: 'Severe allergic reaction with histamine release', D: 'Loss of vasomotor tone from brainstem injury' }, answer: 'C', explanation: 'Anaphylactic shock is a severe immune reaction where histamine causes generalized vasodilation and increased capillary permeability.' },
+        { id: 'v3-q8', question: 'Chemoreceptors in the aortic and carotid bodies primarily detect:', options: { A: 'Blood pressure changes', B: 'Blood pH, O₂, and CO₂ levels', C: 'Blood glucose levels', D: 'Blood temperature' }, answer: 'B', explanation: 'Chemoreceptors detect blood chemistry changes (pH, O₂, CO₂). Their primary role is adjusting respiration, secondary role is vasomotion.' },
+        { id: 'v3-q9', question: 'The medullary ischemic reflex is best described as:', options: { A: 'A routine BP adjustment response', B: 'A voluntary reflex activated by the cortex', C: 'A last-resort emergency response when the brainstem lacks perfusion', D: 'A reflex only active during exercise' }, answer: 'C', explanation: 'When the brainstem itself receives inadequate blood flow, it sends maximal sympathetic signals to raise CO and vasoconstriction—a last-resort mechanism.' },
+        { id: 'v3-q10', question: 'Atrial natriuretic factor (ANF) is released in response to:', options: { A: 'Low blood pressure', B: 'High blood pressure', C: 'Dehydration', D: 'Low blood glucose' }, answer: 'B', explanation: 'ANF is released when BP is high; it promotes Na⁺ and water excretion (natriuresis) and generalized vasodilation to lower BP.' },
+        { id: 'v3-q11', question: 'Pulmonary arteries respond to low O₂ by:', options: { A: 'Dilating to increase blood flow', B: 'Constricting to redirect blood to better-ventilated areas', C: 'Remaining unchanged', D: 'Increasing permeability' }, answer: 'B', explanation: 'Pulmonary vessels uniquely CONSTRICT in response to low O₂ (hypoxic vasoconstriction), opposite of systemic vessels which dilate.' },
+        { id: 'v3-q12', question: 'Blood flow to skeletal muscle during vigorous exercise can increase by approximately:', options: { A: '2-fold', B: '5-fold', C: '10-fold', D: '20-fold' }, answer: 'D', explanation: 'During exercise, arteriolar dilation and sphincter relaxation from epinephrine, lactic acid, and CO₂ can increase skeletal muscle blood flow up to 20×.' },
+        { id: 'v3-q13', question: 'A patient\'s BP is 130/85. Their MAP is closest to:', options: { A: '85 mmHg', B: '100 mmHg', C: '108 mmHg', D: '130 mmHg' }, answer: 'B', explanation: 'MAP = (130 + 2×85)/3 = (130+170)/3 = 300/3 = 100 mmHg.' },
+        { id: 'v3-q14', question: 'Signs of circulatory shock include all EXCEPT:', options: { A: 'Rapid resting heart rate', B: 'Cool, clammy skin', C: 'Increased urine output', D: 'Thirst and acidosis' }, answer: 'C', explanation: 'Shock REDUCES urine formation due to renal vasoconstriction and increased aldosterone/ADH. All others are classic shock signs.' },
+        { id: 'v3-q15', question: 'Irreversible brain damage occurs after approximately how many minutes without blood flow?', options: { A: '1-2 minutes', B: '4-5 minutes', C: '10-15 minutes', D: '30 minutes' }, answer: 'B', explanation: 'A few seconds without blood causes loss of consciousness; 4-5 minutes without flow causes irreversible brain damage.' }
       ]
     }
+  ],
+
+  // ===== MODULE-LEVEL QUIZ =====
+  quiz: [
+    { id: 'v-q1', question: 'The tunica interna of a blood vessel is composed of:', options: { A: 'Smooth muscle and collagen', B: 'Simple squamous endothelium and basement membrane', C: 'Areolar connective tissue', D: 'Elastic laminae only' }, answer: 'B', explanation: 'The tunica interna consists of simple squamous endothelium overlying a basement membrane; it lines the lumen and acts as a selectively permeable barrier.' },
+    { id: 'v-q2', question: 'Which chemical is a vasodilator released from endothelial cells?', options: { A: 'Norepinephrine', B: 'Aldosterone', C: 'Nitric oxide', D: 'Angiotensin II' }, answer: 'C', explanation: 'Nitric oxide promotes vasodilation by relaxing smooth muscle. K⁺, H⁺, and lactic acid also cause vasodilation.' },
+    { id: 'v-q3', question: 'Sinusoid capillaries differ from other capillary types in that they:', options: { A: 'Have tighter junctions', B: 'Lack fenestrations entirely', C: 'Have very large fenestrations and an incomplete basement membrane', D: 'Are found only in skeletal muscle' }, answer: 'C', explanation: 'Sinusoids have very large fenestrations and incomplete basement membranes, allowing passage of large proteins and blood cells (found in liver, marrow, spleen).' },
+    { id: 'v-q4', question: 'A patient with severe burns loses significant plasma proteins. This most likely leads to:', options: { A: 'Increased blood viscosity', B: 'Decreased blood colloid osmotic pressure causing edema', C: 'Varicose veins', D: 'Increased capillary reabsorption' }, answer: 'B', explanation: 'Protein loss lowers BCOP → less reabsorption → fluid accumulates in tissues (edema). Burns are a classic cause.' },
+    { id: 'v-q5', question: 'The velocity of blood flow is slowest in capillaries primarily because:', options: { A: 'They have the smallest individual diameter', B: 'Blood pressure is lowest', C: 'Total cross-sectional area is greatest', D: 'They lack smooth muscle' }, answer: 'C', explanation: 'Velocity is inversely proportional to total cross-sectional area. Capillaries have the greatest combined area, slowing flow to allow exchange.' },
+    { id: 'v-q6', question: 'If an arteriole constricts from a radius of 3 mm to 1 mm, blood flow through it changes from 81 mm/sec to:', options: { A: '27 mm/sec', B: '9 mm/sec', C: '3 mm/sec', D: '1 mm/sec' }, answer: 'D', explanation: 'F ∝ r⁴. When r = 3: flow = 3⁴ = 81. When r = 1: flow = 1⁴ = 1. An 81-fold decrease in flow!' },
+    { id: 'v-q7', question: 'Which type of shock is caused by bacterial toxins triggering vasodilation and increased capillary permeability?', options: { A: 'Hypovolemic', B: 'Cardiogenic', C: 'Septic', D: 'Neurogenic' }, answer: 'C', explanation: 'Septic shock occurs when bacterial toxins cause widespread vasodilation and increased capillary permeability.' },
+    { id: 'v-q8', question: 'The carotid sinus contains baroreceptors that:', options: { A: 'Detect blood chemistry changes', B: 'Monitor blood glucose', C: 'Detect changes in blood pressure', D: 'Regulate respiratory rate only' }, answer: 'C', explanation: 'Baroreceptors in the carotid sinus are stretch receptors that detect BP changes and trigger autonomic adjustments via the baroreflex.' },
+    { id: 'v-q9', question: 'ACE inhibitors lower blood pressure by:', options: { A: 'Blocking aldosterone receptors', B: 'Preventing conversion of angiotensin I to angiotensin II', C: 'Stimulating histamine release', D: 'Increasing heart rate' }, answer: 'B', explanation: 'ACE inhibitors block angiotensin-converting enzyme in the lungs, preventing formation of angiotensin II (a potent vasoconstrictor).' },
+    { id: 'v-q10', question: 'During exercise, skeletal muscle blood flow increases up to 20-fold primarily due to:', options: { A: 'Parasympathetic stimulation', B: 'Arteriolar dilation from epinephrine, lactic acid, and CO₂', C: 'Increased venous valve activity', D: 'Decreased cardiac output' }, answer: 'B', explanation: 'Arteriolar dilation from sympathetic/epinephrine stimulation and precapillary sphincter relaxation from local metabolites (lactic acid, CO₂) dramatically increase muscle perfusion.' },
+    { id: 'v-q11', question: 'Venous pooling from prolonged standing may cause syncope because:', options: { A: 'Blood viscosity increases', B: 'Cardiac output drops, reducing cerebral perfusion', C: 'Arteriolar resistance increases', D: 'Baroreceptors become hypersensitive' }, answer: 'B', explanation: 'Without skeletal muscle pump activity, blood pools in leg veins → reduced venous return → reduced CO → reduced cerebral perfusion → dizziness/syncope.' },
+    { id: 'v-q12', question: 'How does the blood-brain barrier differ from other capillary beds?', options: { A: 'It has sinusoidal capillaries', B: 'It has nonfenestrated endothelium with tight junctions', C: 'It lacks an endothelial layer', D: 'It has no basement membrane' }, answer: 'B', explanation: 'The blood-brain barrier consists of nonfenestrated continuous capillaries with tight junctions, preventing diffusion of water-soluble materials.' },
+    { id: 'v-q13', question: 'Which hormone promotes Na⁺ and water retention by the kidneys, increasing blood volume and pressure?', options: { A: 'Atrial natriuretic factor', B: 'Nitric oxide', C: 'Aldosterone', D: 'Melatonin' }, answer: 'C', explanation: 'Aldosterone from the adrenal cortex promotes Na⁺ reabsorption (water follows) by the kidneys, increasing blood volume and BP.' },
+    { id: 'v-q14', question: 'Decompensated shock involves:', options: { A: 'Successful restoration of blood pressure', B: 'Life-threatening positive feedback loops', C: 'Activation of baroreflexes only', D: 'Mild reduction in cardiac output' }, answer: 'B', explanation: 'Decompensated shock involves positive feedback loops: decreased CO → ischemia → further CO drop; DIC → slower circulation; brainstem ischemia → vasodilation → worse ischemia.' },
+    { id: 'v-q15', question: 'All of the following are aging-related cardiovascular changes EXCEPT:', options: { A: 'Decreased aortic compliance', B: 'Increased maximum heart rate', C: 'Increased systolic pressure', D: 'Increased total cholesterol' }, answer: 'B', explanation: 'Maximum heart rate DECREASES with age. Aortic compliance decreases, systolic pressure increases, and cholesterol/LDL increase.' }
   ]
 };
 
