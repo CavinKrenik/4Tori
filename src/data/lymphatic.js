@@ -2,749 +2,433 @@ const lymphatic = {
   id: 'lymphatic',
   title: 'Lymphatic & Immune System',
   source: '10 Lymphatic and Immune SystemsPDF.pdf',
-  description: 'Lymphatic system functions, vessels, and organs; immune cells and tissues; nonspecific resistance including barriers, phagocytes, inflammation, and fever; specific immunity with T and B lymphocytes and cellular immunity.',
+  description: 'Comprehensive study of the lymphatic system (vessels, organs, lymph flow) and the immune system: nonspecific resistance (barriers, phagocytosis, inflammation, fever, NK cells, complement, interferons), specific immunity (T cell maturation and selection, cellular immunity, cytotoxic/helper/memory/suppressor T cells, antigen processing, MHC), antibody-mediated immunity (B cells, antibody structure and classes, immunological memory), hypersensitivity types I-IV, autoimmune diseases, immunodeficiency (SCID, AIDS), and aging.',
   icon: 'lymphatic',
+
+  learningObjectives: [
+    'Describe the three main functions of the lymphatic system: fluid recovery, immunity, and lipid absorption.',
+    'Trace the route of lymph flow from capillaries through collecting ducts to the bloodstream.',
+    'Compare the structure and functions of lymph nodes, tonsils, thymus, and spleen.',
+    'Identify lymphatic cells (T cells, B cells, APCs) and lymphatic tissues (diffuse, nodules, MALT).',
+    'Describe nonspecific resistance mechanisms: skin/mucous membrane barriers, leukocytes, antimicrobial proteins.',
+    'Explain the process of phagocytosis including chemotaxis, adherence, ingestion, and digestion.',
+    'Describe the four cardinal signs of inflammation and the stages of inflammatory response.',
+    'Explain the mechanisms and benefits of fever.',
+    'Differentiate between cellular immunity (T cells) and antibody-mediated immunity (B cells).',
+    'Describe T cell maturation, positive/negative selection, and the four classes of T cells.',
+    'Explain antigen processing (exogenous vs endogenous) and the role of MHC-I and MHC-II.',
+    'Describe antibody structure, the five immunoglobulin classes (IgG, IgA, IgM, IgD, IgE), and antibody actions.',
+    'Compare primary and secondary immune responses and explain immunological memory.',
+    'Differentiate natural/artificial active and passive immunity.',
+    'Classify the four types of hypersensitivity reactions (Type I-IV) with clinical examples.',
+    'Describe autoimmune diseases, SCID, and AIDS including HIV structure and transmission.'
+  ],
+
+  clinicalCorrelations: [
+    {
+      title: 'Cancer Metastasis via Lymphatics',
+      detail: 'Malignant tumors spread (metastasize) via lymph or blood to establish secondary tumors. Direction of lymph flow predicts secondary tumor sites. Cancerous lymph nodes are firm, enlarged, and nontender; infected nodes are tender and not firm.'
+    },
+    {
+      title: 'Anaphylactic Shock (Type I Hypersensitivity)',
+      detail: 'Severe allergic reaction: allergen caps IgE on mast cells/basophils → massive histamine release → bronchiolar constriction, dyspnea, generalized vasodilation, shock, and potentially death. Emergency treatment: epinephrine injection. Asthma (most common chronic illness in children) involves inhaled allergens triggering histamine and bronchiole constriction.'
+    },
+    {
+      title: 'AIDS & HIV',
+      detail: 'HIV invades helper T cells (CD4), macrophages, and dendritic cells via receptor-mediated endocytosis. As a retrovirus, it uses reverse transcriptase to make DNA from viral RNA, which integrates into host DNA (may be dormant months to years). Normal T-helper count: 600-1200 cells/µL; AIDS: <200 cells/µL → vulnerability to opportunistic infections (Pneumocystis, TB, CMV). Signs: flu-like → night sweats, weight loss → thrush → Kaposi sarcoma. Transmission: blood, semen, vaginal secretions, breast milk, placenta.'
+    },
+    {
+      title: 'Autoimmune Diseases',
+      detail: 'Failure of self-tolerance where immune system attacks body\'s own cells. Mechanisms: cross-reactivity, abnormal exposure of self-antigens, changes in self-antigen structure. Results in production of autoantibodies. Examples: rheumatoid arthritis, lupus (SLE), myasthenia gravis, Type I diabetes.'
+    },
+    {
+      title: 'Graft Rejection',
+      detail: 'After organ transplant, both cell-mediated and antibody-mediated immune responses target the graft. Close MHC matching reduces rejection severity. Immunosuppressive drugs (cyclosporine) inhibit IL-2 secretion by helper T cells while preserving some B-cell function for minimal infection resistance.'
+    },
+    {
+      title: 'Fever: Defense Mechanism',
+      detail: 'Macrophages secrete interleukin-1 (a pyrogen) which stimulates anterior hypothalamus to release PGE, resetting the thermostat higher. Benefits: promotes interferon activity, accelerates metabolic rate and tissue repair, inhibits pathogen reproduction. Stages: onset, stadium, defervescence. Danger: >105°F may cause delirium; 111-115°F can cause coma and death.'
+    }
+  ],
+
+  quickFacts: [
+    'Lymphatic system recovers 2-4 L/day of plasma proteins and fluid from interstitial space.',
+    'Lacteals in small intestine absorb dietary lipids; lymph from lacteals is called chyle.',
+    'Right lymphatic duct drains right arm, right head/thorax; thoracic duct drains everything else.',
+    'Thoracic duct begins at cisterna chyli and empties into left subclavian vein.',
+    'About 450 lymph nodes in the adult body concentrated near mammary glands, axillae, and groin.',
+    'Cancerous lymph nodes: Firm, Enlarged, Nontender (FEN). Infected nodes: Tender, Not Firm.',
+    'Thymus is largest in infants (~70g), involutes to ~3g by adulthood.',
+    'Spleen functions: blood reservoir, RBC disposal, fetal blood production, immune reactions.',
+    'Neutrophils are first responders creating a "killing zone" via degranulation and respiratory burst.',
+    'NK cells: 5% of circulating lymphocytes; attack cells with abnormal MHC antigens.',
+    'Complement system has classical and alternate pathways leading to inflammation, opsonization, or cytolysis (MAC).',
+    'T cells: 80% of circulating lymphocytes; B cells: 15%; NK cells: 5%.',
+    'Only 1 in 100 T cells in thymus passes positive and negative selection as immunocompetent.',
+    'IgG: 75-85% of circulating antibodies; only Ig that crosses placenta.',
+    'Primary immune response is slow; secondary is rapid (memory cells proliferate → not even sick).',
+    'Four types of hypersensitivity: Type I (acute/anaphylaxis), II (cytotoxic), III (immune complex), IV (delayed).'
+  ],
+
   sections: [
-    // ===== SECTION 1: Lymphatic & Immune Module 1 =====
+    // ===== SECTION 1: Lymphatic System Structure & Function =====
     {
       id: 'lymphatic-s1',
-      title: 'Lymphatic Functions, Vessels, Flow, Cells, Tissues & Organs',
-      pageRange: 'Pages 1-10',
+      title: 'Lymphatic System: Vessels, Flow, Cells, Tissues & Organs',
+      pageRange: 'Pages 1-12',
       learnItems: [
         {
           title: 'Lymphatic and Immune Systems Overview',
-          body: 'The lymphatic and immune systems protect the body from infection and disease. The lymphatic system consists of organs, vessels, and lymph fluid (similar to interstitial fluid). Key organs: red bone marrow, thymus, spleen, lymph nodes, diffuse lymphatic tissue (tonsils, adenoids, Peyer\'s patches).'
+          body: 'The lymphatic and immune systems maintain fluid balance and protect the body from infection and disease. The lymphatic system consists of organs, vessels, and lymph fluid (similar to interstitial fluid). Key organs: red bone marrow, thymus, spleen, lymph nodes, and diffuse lymphatic tissue (tonsils, adenoids, Peyer\'s patches).'
         },
         {
-          title: 'Functions of the Lymphatic System',
-          body: 'Immunity: filters fluids from capillary beds through lymph nodes where immune cells respond to foreign cells/chemicals. Lipid absorption: lacteals in small intestine absorb dietary lipids. Fluid recovery: absorbs plasma proteins and fluid (2-4 L/day) from tissues and returns it to bloodstream; interference causes severe edema.'
+          title: 'Three Functions of the Lymphatic System',
+          body: 'Fluid recovery: absorbs excess plasma proteins and fluid (2-4 L/day, about 15% of capillary filtrate) from tissues and returns it to the bloodstream; interference with lymphatic drainage leads to severe edema. Immunity: tissue fluid is filtered through lymph nodes where immune cells respond to foreign cells or chemicals. Lipid absorption: lacteals in small intestine absorb dietary lipids; lymph from lacteals is called chyle.'
         },
         {
           title: 'Lymph and Lymphatic Capillaries',
-          body: 'Lymph: clear, colorless fluid similar to plasma but with much less protein. Lymphatic capillaries: closed at one end, tethered by protein filaments; endothelial cells loosely overlap to form valve-like flaps (open with high interstitial pressure, close with low pressure), allowing bacteria/cells to enter but not exit. Found throughout body except avascular tissues (cartilage, epidermis, cornea); in GI tract called lacteals (contain chyle).'
+          body: 'Lymph: clear, colorless fluid similar to plasma but with much less protein. Lymphatic capillaries: closed at one end, tethered to surrounding tissue by protein filaments (prevent collapse). Endothelial cells loosely overlap creating valve-like flaps that open when interstitial pressure is high and close when low — designed to let fluid IN but not OUT. Found throughout the body EXCEPT in avascular tissues (cartilage, epidermis, cornea). In GI tract, called lacteals (contain chyle).'
         },
         {
           title: 'Lymphatic Vessels',
-          body: 'Larger vessels have three layers: tunica interna (endothelium + valves), tunica media (elastic fibers + smooth muscle), tunica externa (thin outer layer).'
+          body: 'Larger lymphatic vessels have three layers: tunica interna (endothelium + valves), tunica media (elastic fibers + smooth muscle), tunica externa (thin outer layer). Structure similar to veins but with thinner walls and more valves.'
         },
         {
           title: 'Route of Lymph Flow',
-          body: 'Lymphatic capillaries -> collecting vessels (pass through lymph nodes) -> lymphatic trunks -> collecting ducts. Right lymphatic duct: drains right arm, right side of head/thorax, empties into right subclavian vein. Thoracic duct: larger/longer, begins as cisterna chyli (abdominal sac), drains below diaphragm + left arm/head/neck/thorax, empties into left subclavian vein.'
+          body: 'Lymphatic capillaries → collecting vessels (pass through many lymph nodes) → lymphatic trunks (drain major body portions) → collecting ducts. Right lymphatic duct: receives lymph from right arm, right side of head/thorax; empties into right subclavian vein. Thoracic duct: larger and longer, begins as cisterna chyli (prominent abdominal sac), receives lymph from below diaphragm + left arm + left side of head/neck/thorax; empties into left subclavian vein.'
         },
         {
           title: 'Mechanisms of Lymph Flow',
-          body: 'Low pressure/speed; moved by rhythmic contractions of lymphatic vessels (stretching stimulates contraction), skeletal muscle pump, thoracic pump (abdominal to thoracic flow), valves preventing backflow, and rapid bloodstream suction in subclavian veins. Exercise significantly increases lymphatic return.'
+          body: 'Lymph flows at low pressure and speed. Moved by: rhythmic contractions of lymphatic vessel walls (stretching stimulates contraction), skeletal muscle pump, thoracic pump (aids flow from abdominal to thoracic cavity), valves preventing backflow, and rapidly flowing blood in subclavian veins which draws lymph in. Exercise significantly increases lymphatic return.'
         },
         {
           title: 'Lymphatic Cells',
-          body: 'T lymphocytes: mature in thymus. B lymphocytes: activation leads to plasma cells producing antibodies. Antigen-presenting cells (APCs): macrophages (from monocytes), dendritic cells (epidermis/mucous membranes/lymph organs), reticular cells (stroma of lymph organs).'
+          body: 'T lymphocytes: mature in thymus; involved in cell-mediated immunity. B lymphocytes: activation causes proliferation and differentiation into plasma cells that produce antibodies. Antigen-presenting cells (APCs): macrophages (from monocytes), dendritic cells (in epidermis, mucous membranes, and lymphatic organs), reticular cells (contribute to lymph organ stroma).'
         },
         {
           title: 'Lymphatic Tissue',
-          body: 'Diffuse lymphatic tissue: lymphocytes in mucous membranes/CT of organs; mucosa-associated lymphatic tissue (MALT) prevalent in exterior passages. Lymphatic nodules: dense oval lymphocyte masses that congregate in response to pathogens; Peyer patches are more permanent clusters at small/large intestine junction.'
+          body: 'Diffuse lymphatic tissue: lymphocytes scattered in mucous membranes and connective tissue of many organs. Mucosa-associated lymphatic tissue (MALT): particularly prevalent in passages open to the exterior. Lymphatic nodules: dense oval masses of lymphocytes that congregate in response to pathogens. Peyer patches: more permanent congregations (clusters) found at the junction of small and large intestine.'
         },
         {
-          title: 'Lymphatic Organs Overview',
-          body: 'Encapsulated with CT capsules at defined sites: lymph nodes, tonsils, thymus, spleen. Lymph nodes: in cervical/axillary/inguinal (surface) and thoracic/abdominal/pelvic (deep); scattered near mammary glands, axillae, groin. Tonsils: guard pharynx entrance. Thymus: between sternum and aortic arch. Spleen: inferior to diaphragm, dorsolateral to stomach.'
+          title: 'Lymph Nodes',
+          body: 'Bean-shaped organs, up to 1 inch long, located along lymphatic vessels. About 450 in the adult body, concentrated near mammary glands, axillae, and groin (cervical, axillary, inguinal near surface; thoracic, abdominal, pelvic deep). Stroma: capsule, trabeculae, reticular fibers. Parenchyma: cortex contains lymphatic nodules with germinal centers (dendritic cells, APCs, macrophages; B cells proliferate into plasma cells); medulla contains B cells and plasma cells in medullary cords. One-way flow: afferent vessels → sinuses → efferent vessels exit at hilus. Only lymph NODES filter lymph.'
         },
         {
-          title: 'Lymph Nodes Structure and Function',
-          body: 'Bean-shaped, up to 1 inch long, along lymphatic vessels. Stroma: capsule, trabeculae, reticular fibers. Parenchyma: cortex (lymphatic nodules with germinal centers containing dendritic cells, APCs, macrophages; B cells become plasma cells) and medulla (B cells/plasma cells in medullary cords). One-way flow: afferent vessels in, sinuses to efferent vessels out at hilus; only nodes filter lymph.'
+          title: 'Tonsils',
+          body: 'Guard entrance to pharynx. Three types: palatine tonsils (pair at posterior margin of oral cavity — most often infected), lingual tonsils (pair at root of tongue), pharyngeal tonsil/adenoid (single, on pharyngeal wall). Covered by epithelium; pathogens enter tonsillar crypts and encounter lymphocytes.'
+        },
+        {
+          title: 'Thymus Gland',
+          body: 'Large in infants (~70 g) but atrophies in adults (~3 g) — involution after puberty. Two-lobed organ in mediastinum (between sternum and aortic arch). Divided into lobules by capsule and trabeculae; each lobule has cortex (tightly packed lymphocytes + macrophages) and medulla (reticular epithelial cells producing thymic hormones: thymopoietin and thymosins; also contains Hassall\'s corpuscles). T cells mature here.'
+        },
+        {
+          title: 'Spleen',
+          body: 'Located inferior to diaphragm, dorsolateral to stomach. Parenchyma: red pulp (sinuses filled with erythrocytes) and white pulp (lymphocytes and macrophages surrounding branches of splenic artery). Functions: blood production in fetus, blood reservoir, RBC disposal (removes old/damaged RBCs), and immune reactions (filters blood, quickly detects antigens).'
         },
         {
           title: 'Cancer Metastasis via Lymphatics',
-          body: 'Malignant tumors spread via lymph/blood; secondary sites predictable by lymph flow direction from primary site. Cancerous nodes: firm, enlarged, nontender; infected nodes: tender, not firm.'
+          body: 'Characteristic of malignant tumors — cancer cells spread from one organ to another via blood or lymphatic system, establishing secondary tumors where they lodge. Secondary sites can be predicted by direction of lymph flow from primary tumor. Cancerous lymph nodes: firm, enlarged, nontender. Infected lymph nodes: tender, not firm.'
         }
       ],
       keyTerms: [
-        { term: 'Lymph', definition: 'Clear, colorless fluid similar to plasma but with much less protein; flows through lymphatic vessels.' },
-        { term: 'Lacteals', definition: 'Lymphatic capillaries in GI tract that absorb dietary lipids and contain chyle.' },
-        { term: 'MALT', definition: 'Mucosa-associated lymphatic tissue; diffuse lymphatic tissue prevalent in passages open to the exterior.' },
+        { term: 'Lymph', definition: 'Clear, colorless fluid similar to plasma but with much less protein.' },
+        { term: 'Lacteals', definition: 'Lymphatic capillaries in GI tract that absorb dietary lipids; contain chyle.' },
+        { term: 'Cisterna Chyli', definition: 'Prominent abdominal sac where the thoracic duct begins.' },
+        { term: 'MALT', definition: 'Mucosa-associated lymphatic tissue in passages open to the exterior.' },
         { term: 'Peyer Patches', definition: 'Permanent lymphatic nodule clusters at the small/large intestine junction.' },
-        { term: 'T Lymphocytes', definition: 'Lymphocytes that mature in the thymus; involved in cell-mediated immunity.' },
-        { term: 'B Lymphocytes', definition: 'Lymphocytes that differentiate into antibody-producing plasma cells.' },
-        { term: 'Antigen-Presenting Cells (APCs)', definition: 'Macrophages, dendritic cells, and reticular cells that present antigens to lymphocytes.' },
-        { term: 'Cisterna Chyli', definition: 'Abdominal sac where the thoracic duct begins; collects lymph from below the diaphragm.' },
-        { term: 'Afferent Vessels', definition: 'Lymphatic vessels carrying lymph into a lymph node.' },
-        { term: 'Efferent Vessels', definition: 'Lymphatic vessels carrying lymph out of a lymph node at the hilus.' },
-        { term: 'Germinal Centers', definition: 'Areas in lymph node cortex containing dendritic cells, APCs, macrophages; site of B cell proliferation.' },
-        { term: 'Metastasis', definition: 'Spread of malignant tumor cells via lymph or blood to establish secondary tumors at new sites.' }
+        { term: 'Germinal Centers', definition: 'Lymph node cortex areas where dendritic cells reside and B cells proliferate into plasma cells.' },
+        { term: 'Hassall\'s Corpuscles', definition: 'Distinctive structures in the thymus medulla; contain reticular epithelial cells.' },
+        { term: 'Red Pulp', definition: 'Splenic tissue with sinuses filled with erythrocytes.' },
+        { term: 'White Pulp', definition: 'Splenic tissue with lymphocytes/macrophages surrounding splenic artery branches.' },
+        { term: 'Afferent Vessels', definition: 'Lymphatic vessels carrying lymph INTO a lymph node.' },
+        { term: 'Efferent Vessels', definition: 'Lymphatic vessels carrying lymph OUT of a lymph node at the hilus.' },
+        { term: 'Metastasis', definition: 'Spread of malignant tumor cells via lymph or blood to establish secondary tumors.' }
       ],
       memoryAids: [
         'Lymphatic functions: "FIL" = Fluid recovery, Immunity, Lipid absorption.',
-        'Lymph flow route: "Cap-Col-Trunk-Duct" = Capillaries -> Collecting vessels -> Trunks -> Ducts.',
-        'Lymph node flow is one-way: "A before E" = Afferent in, Efferent out (at hilus).',
-        'Cancerous nodes are "FEN" = Firm, Enlarged, Nontender; Infected nodes are "TNF" = Tender, Not Firm.'
-      ],
-      inlineQuestions: [
-        {
-          question: 'The lymphatic system\'s primary role in immunity is to:',
-          options: { A: 'Produce RBCs', B: 'Filter capillary bed fluids through lymph nodes for immune response', C: 'Absorb water only', D: 'Store fat in adipocytes' },
-          answer: 'B',
-          explanation: 'The lymphatic system\'s immunity function filters fluids from capillary beds through lymph nodes where immune cells respond to foreign cells and chemicals.'
-        },
-        {
-          question: 'Lymphatic capillaries are absent in:',
-          options: { A: 'Muscle tissue', B: 'Avascular tissues like cartilage, epidermis, cornea', C: 'Liver', D: 'Intestines' },
-          answer: 'B',
-          explanation: 'Lymphatic capillaries are found throughout the body except in avascular tissues such as cartilage, epidermis, and cornea.'
-        },
-        {
-          question: 'In lymph nodes, the cortex contains:',
-          options: { A: 'Medullary cords', B: 'Lymphatic nodules with germinal centers and B cell proliferation', C: 'Red pulp', D: 'Hassall\'s corpuscles' },
-          answer: 'B',
-          explanation: 'The cortex of lymph nodes contains lymphatic nodules with germinal centers where dendritic cells, APCs, and macrophages reside and B cells proliferate into plasma cells.'
-        }
+        'Lymph flow route: "Cap-Col-Trunk-Duct" = Capillaries → Collecting vessels → Trunks → Ducts.',
+        'Node flow is one-way: "A before E" = Afferent in, Efferent out (at hilus).',
+        'Cancerous nodes: "FEN" = Firm, Enlarged, Nontender. Infected: "TNF" = Tender, Not Firm.',
+        'Thymus timeline: HUGE in babies, TINY in adults (involution after puberty).',
+        'Spleen functions: "BIRD" = Blood reservoir, Immune reactions, RBC disposal, Development (fetal blood production).'
       ],
       quiz: [
-        {
-          question: 'Daily fluid recovery by the lymphatic system is about:',
-          options: { A: '0.5-1 L', B: '2-4 L', C: '5-6 L', D: '10 L' },
-          answer: 'B',
-          explanation: 'The lymphatic system absorbs plasma proteins and fluid (2-4 L/day) from tissues and returns it to the bloodstream.'
-        },
-        {
-          question: 'Lacteals in the small intestine specialize in absorbing:',
-          options: { A: 'Glucose', B: 'Dietary lipids', C: 'Amino acids', D: 'Vitamins' },
-          answer: 'B',
-          explanation: 'Lacteals in the small intestine are specialized for absorbing dietary lipids.'
-        },
-        {
-          question: 'Lymph is most similar to:',
-          options: { A: 'Blood plasma but with much less protein', B: 'Serum', C: 'Interstitial fluid', D: 'CSF' },
-          answer: 'A',
-          explanation: 'Lymph is a clear, colorless fluid similar to plasma but with much less protein.'
-        },
-        {
-          question: 'Anchoring filaments in lymphatic capillaries mainly:',
-          options: { A: 'Prevent collapse under external pressure', B: 'Pump lymph', C: 'Produce antibodies', D: 'Filter bacteria' },
-          answer: 'A',
-          explanation: 'Anchoring filaments tether lymphatic capillary endothelial cells, preventing collapse under external pressure.'
-        },
-        {
-          question: 'Overlapping endothelial cells in lymphatic capillaries form:',
-          options: { A: 'Permanent openings', B: 'Valve-like flaps that open with high interstitial pressure', C: 'Smooth muscle layers', D: 'Fenestrations' },
-          answer: 'B',
-          explanation: 'Endothelial cells loosely overlap to form valve-like flaps that open with high interstitial pressure and close with low pressure, allowing bacteria/cells to enter but not exit.'
-        },
-        {
-          question: 'Larger lymphatic vessels resemble veins with:',
-          options: { A: 'No valves', B: 'Endothelium, valves, elastic fibers/smooth muscle, thin externa', C: 'Thick tunica media only', D: 'No tunica interna' },
-          answer: 'B',
-          explanation: 'Larger lymphatic vessels have three layers: tunica interna (endothelium + valves), tunica media (elastic fibers + smooth muscle), and tunica externa (thin outer layer).'
-        },
-        {
-          question: 'The thoracic duct drains all of the following EXCEPT:',
-          options: { A: 'Below diaphragm', B: 'Left arm/head/neck/thorax', C: 'Right arm', D: 'Cisterna chyli' },
-          answer: 'C',
-          explanation: 'The right arm is drained by the right lymphatic duct, not the thoracic duct. The thoracic duct drains below the diaphragm plus left arm, head, neck, and thorax.'
-        },
-        {
-          question: 'The right lymphatic duct empties into the:',
-          options: { A: 'Left subclavian vein', B: 'Right subclavian vein', C: 'Cisterna chyli', D: 'Thoracic duct' },
-          answer: 'B',
-          explanation: 'The right lymphatic duct drains the right arm, right side of head/thorax, and empties into the right subclavian vein.'
-        },
-        {
-          question: 'Which mechanism does NOT aid lymph flow?',
-          options: { A: 'Rhythmic contractions of lymphatic vessels', B: 'Skeletal muscle pump', C: 'Arterial pulsations', D: 'Thoracic pump' },
-          answer: 'C',
-          explanation: 'Arterial pulsations do not aid lymph flow. Lymph is moved by rhythmic vessel contractions, skeletal muscle pump, thoracic pump, valves, and subclavian vein suction.'
-        },
-        {
-          question: 'T lymphocytes mature in the:',
-          options: { A: 'Spleen', B: 'Thymus', C: 'Bone marrow', D: 'Lymph nodes' },
-          answer: 'B',
-          explanation: 'T lymphocytes mature in the thymus gland.'
-        },
-        {
-          question: 'B lymphocytes differentiate into:',
-          options: { A: 'Macrophages', B: 'Plasma cells that produce antibodies', C: 'NK cells', D: 'Dendritic cells' },
-          answer: 'B',
-          explanation: 'B lymphocyte activation leads to plasma cells that produce antibodies.'
-        },
-        {
-          question: 'Which cells are antigen-presenting cells (APCs)?',
-          options: { A: 'RBCs', B: 'Macrophages, dendritic cells, reticular cells', C: 'Platelets', D: 'Erythrocytes' },
-          answer: 'B',
-          explanation: 'APCs include macrophages (from monocytes), dendritic cells (epidermis/mucous membranes/lymph organs), and reticular cells (stroma of lymph organs).'
-        },
-        {
-          question: 'Mucosa-associated lymphatic tissue (MALT) is found in:',
-          options: { A: 'Bone marrow only', B: 'Passages open to the exterior', C: 'Avascular tissues', D: 'Large arteries' },
-          answer: 'B',
-          explanation: 'MALT is diffuse lymphatic tissue prevalent in passages that are open to the exterior.'
-        },
-        {
-          question: 'Peyer patches are:',
-          options: { A: 'In the thymus', B: 'Permanent lymphatic nodule clusters at small/large intestine junction', C: 'In the spleen\'s red pulp', D: 'Tonsils' },
-          answer: 'B',
-          explanation: 'Peyer patches are more permanent lymphatic nodule clusters located at the small/large intestine junction.'
-        },
-        {
-          question: 'Lymph nodes are concentrated near:',
-          options: { A: 'Heart and lungs only', B: 'Mammary glands, axillae, groin', C: 'Kidneys', D: 'Liver only' },
-          answer: 'B',
-          explanation: 'Lymph nodes are scattered near mammary glands, axillae, and groin, as well as in cervical, axillary, inguinal, thoracic, abdominal, and pelvic regions.'
-        },
-        {
-          question: 'Cancerous lymph nodes are typically:',
-          options: { A: 'Tender and small', B: 'Firm, enlarged, nontender', C: 'Filled with pus', D: 'Absent' },
-          answer: 'B',
-          explanation: 'Cancerous nodes are firm, enlarged, and nontender. By contrast, infected nodes are tender and not firm.'
-        },
-        {
-          question: 'The spleen is located:',
-          options: { A: 'Between sternum and aortic arch', B: 'Inferior to diaphragm, dorsolateral to stomach', C: 'In the groin', D: 'In the neck' },
-          answer: 'B',
-          explanation: 'The spleen is located inferior to the diaphragm, dorsolateral to the stomach.'
-        },
-        {
-          question: 'Interference with lymphatic drainage primarily causes:',
-          options: { A: 'Hypertension', B: 'Severe edema', C: 'Anemia', D: 'High BP' },
-          answer: 'B',
-          explanation: 'Interference with lymphatic fluid recovery causes severe edema because the system normally absorbs 2-4 L/day of excess fluid from tissues.'
-        },
-        {
-          question: 'Lymphatic capillaries allow entry of bacteria due to:',
-          options: { A: 'Thick walls', B: 'Loosely overlapped endothelial cells forming valve-like flaps', C: 'Smooth muscle pumps', D: 'High pressure' },
-          answer: 'B',
-          explanation: 'Endothelial cells loosely overlap to form valve-like flaps that open with high interstitial pressure, allowing bacteria and cells to enter but not exit.'
-        },
-        {
-          question: 'Which duct receives lymph from the cisterna chyli?',
-          options: { A: 'Right lymphatic duct', B: 'Thoracic duct', C: 'Jugular trunk', D: 'Bronchomediastinal trunk' },
-          answer: 'B',
-          explanation: 'The thoracic duct begins as the cisterna chyli (abdominal sac) and is the larger/longer collecting duct.'
-        },
-        {
-          question: 'Activation of B lymphocytes leads to:',
-          options: { A: 'T cell maturation', B: 'Plasma cells producing antibodies', C: 'Macrophage differentiation', D: 'RBC production' },
-          answer: 'B',
-          explanation: 'B lymphocyte activation leads to differentiation into plasma cells that produce antibodies.'
-        },
-        {
-          question: 'Lymph node flow is one-way from:',
-          options: { A: 'Efferent to afferent vessels', B: 'Afferent vessels through sinuses to efferent vessels at hilus', C: 'Directly to veins', D: 'Capillaries to arteries' },
-          answer: 'B',
-          explanation: 'Lymph node flow is one-way: afferent vessels bring lymph in, it passes through sinuses, and exits via efferent vessels at the hilus.'
-        }
-      ],
-      flashcards: [
-        { front: 'What are the key organs of the lymphatic system?', back: 'Red bone marrow, thymus, spleen, lymph nodes, and diffuse lymphatic tissue (tonsils, adenoids, Peyer\'s patches).' },
-        { front: 'What are the three functions of the lymphatic system?', back: 'Immunity (lymph node filtering), lipid absorption (lacteals), and fluid recovery (2-4 L/day returned to blood).' },
-        { front: 'What is lymph?', back: 'Clear, colorless fluid similar to plasma but with much less protein.' },
-        { front: 'How do lymphatic capillary valve-like flaps work?', back: 'Endothelial cells loosely overlap; flaps open with high interstitial pressure (allowing entry of bacteria/cells) and close with low pressure (preventing exit).' },
-        { front: 'What is the route of lymph flow?', back: 'Lymphatic capillaries -> collecting vessels (through lymph nodes) -> lymphatic trunks -> collecting ducts (right lymphatic duct or thoracic duct).' },
-        { front: 'What mechanisms drive lymph flow?', back: 'Rhythmic contractions of lymphatic vessels, skeletal muscle pump, thoracic pump, valves preventing backflow, and subclavian vein suction.' },
-        { front: 'Name the three types of antigen-presenting cells (APCs).', back: 'Macrophages (from monocytes), dendritic cells (epidermis/mucous membranes/lymph organs), and reticular cells (stroma of lymph organs).' },
-        { front: 'What is MALT?', back: 'Mucosa-associated lymphatic tissue; diffuse lymphatic tissue prevalent in passages open to the exterior.' },
-        { front: 'Describe lymph node structure.', back: 'Bean-shaped; stroma (capsule, trabeculae, reticular fibers); parenchyma with cortex (germinal centers, B cell proliferation) and medulla (B cells/plasma cells in medullary cords). One-way flow: afferent in, efferent out at hilus.' },
-        { front: 'How do cancerous lymph nodes differ from infected nodes?', back: 'Cancerous nodes: firm, enlarged, nontender. Infected nodes: tender, not firm.' }
+        { id: 'ly1-q1', question: 'The lymphatic system recovers approximately how much fluid from tissues per day?', options: { A: '0.5-1 L', B: '2-4 L', C: '8-10 L', D: '15-20 L' }, answer: 'B', explanation: 'The lymphatic system absorbs about 2-4 L/day of plasma proteins and fluid from tissues.' },
+        { id: 'ly1-q2', question: 'Lacteals are found in the:', options: { A: 'Lungs', B: 'Brain', C: 'Small intestine', D: 'Liver' }, answer: 'C', explanation: 'Lacteals are lymphatic capillaries in the small intestine that absorb dietary lipids (chyle).' },
+        { id: 'ly1-q3', question: 'The thoracic duct empties into the:', options: { A: 'Right subclavian vein', B: 'Left subclavian vein', C: 'Inferior vena cava', D: 'Aorta' }, answer: 'B', explanation: 'The thoracic duct (larger and longer) drains the majority of the body and empties into the left subclavian vein.' },
+        { id: 'ly1-q4', question: 'Lymph nodes filter lymph. The flow through a node is:', options: { A: 'Bidirectional through afferent vessels', B: 'One-way: afferent vessels in, efferent out at hilus', C: 'From efferent to afferent', D: 'Diffuse and directionless' }, answer: 'B', explanation: 'Lymph enters via afferent vessels, flows through sinuses, and exits via efferent vessels at the hilus — one-way flow.' },
+        { id: 'ly1-q5', question: 'The thymus is largest during:', options: { A: 'Adolescence', B: 'Infancy', C: 'Middle adulthood', D: 'Old age' }, answer: 'B', explanation: 'The thymus is largest in infants (~70g) and involutes after puberty to about 3g by adulthood.' },
+        { id: 'ly1-q6', question: 'The spleen\'s red pulp contains:', options: { A: 'Lymphocytes surrounding arteries', B: 'Sinuses filled with erythrocytes', C: 'Hassall\'s corpuscles', D: 'Germinal centers' }, answer: 'B', explanation: 'Red pulp consists of sinuses filled with erythrocytes. White pulp contains lymphocytes/macrophages.' },
+        { id: 'ly1-q7', question: 'Cancerous lymph nodes are typically:', options: { A: 'Tender and soft', B: 'Firm, enlarged, and nontender', C: 'Small and mobile', D: 'Warm and fluctuant' }, answer: 'B', explanation: 'Cancerous nodes are FEN: Firm, Enlarged, Nontender. Infected nodes are tender and not firm.' },
+        { id: 'ly1-q8', question: 'Which tonsils are most often infected?', options: { A: 'Lingual', B: 'Pharyngeal (adenoid)', C: 'Palatine', D: 'Tubal' }, answer: 'C', explanation: 'Palatine tonsils (pair at posterior margin of oral cavity) are most commonly infected.' },
+        { id: 'ly1-q9', question: 'Lymphatic capillaries are absent in all EXCEPT:', options: { A: 'Cartilage', B: 'Epidermis', C: 'Skeletal muscle', D: 'Cornea' }, answer: 'C', explanation: 'Lymphatic capillaries are absent in avascular tissues (cartilage, epidermis, cornea) but present in skeletal muscle.' },
+        { id: 'ly1-q10', question: 'Peyer patches are permanent collections of lymphatic nodules found at the:', options: { A: 'Root of the tongue', B: 'Pharynx entrance', C: 'Junction of small and large intestine', D: 'Cervical region' }, answer: 'C', explanation: 'Peyer patches are permanent lymphatic nodule clusters at the small/large intestine junction.' }
       ]
     },
 
-    // ===== SECTION 2: Lymphatic & Immune Module 2 =====
+    // ===== SECTION 2: Nonspecific Resistance to Disease =====
     {
       id: 'lymphatic-s2',
-      title: 'Lymph Nodes, Organs, Immunology Basics & Nonspecific Resistance',
-      pageRange: 'Pages 11-20',
+      title: 'Nonspecific Resistance: Barriers, Phagocytosis, Inflammation & Fever',
+      pageRange: 'Pages 12-22',
       learnItems: [
         {
-          title: 'Lymph Nodes - Flow and Structure',
-          body: 'Flow is one-way: afferent vessels -> sinuses -> efferent vessels exiting at hilus; only lymph nodes filter lymph. Cortex: lymphatic nodules with germinal centers (dendritic cells, APCs, macrophages); B cells proliferate into antibody-secreting plasma cells. Medulla: B cells and plasma cells in medullary cords.'
+          title: 'Resistance vs Susceptibility',
+          body: 'Resistance = ability to ward off disease. Lack of resistance = susceptibility. Two categories: nonspecific resistance (general defense against wide range of pathogens — no specificity or memory) and specific resistance/immunity (defense against specific pathogens — has specificity and memory). Nonspecific mechanisms function regardless of invader type.'
         },
         {
-          title: 'Cancer Metastasis and Lymph Nodes',
-          body: 'Characteristic of malignant tumors; cancer cells travel via lymph or blood to establish new tumors at secondary sites, predictable by lymph flow direction from primary site. Cancerous nodes: firm, enlarged, nontender; infected nodes: tender, not firm.'
+          title: 'External Barriers: Skin and Mucous Membranes',
+          body: 'Mechanical protection: skin (epidermis) — closely packed, keratinized cells; shedding removes microbes. Mucous membranes secrete viscous mucus; cilia trap and move microbes toward throat. Washing action of tears, urine, and saliva. Chemical protection: sebum inhibits bacteria and fungus growth; perspiration contains lysozyme that breaks down bacterial cells; acidic pH of gastric juice and vaginal secretions destroys bacteria.'
         },
         {
-          title: 'Tonsils Location and Structure',
-          body: 'Palatine tonsils: pair at posterior margin of oral cavity (most often infected). Lingual tonsils: pair at root of tongue. Pharyngeal tonsil (adenoid): single on pharyngeal wall. Tonsils covered by epithelium; pathogens enter crypts and meet lymphocytes.'
-        },
-        {
-          title: 'Thymus Gland Structure',
-          body: 'Large in infants (~70 g), atrophied in adults (~3 g); bilobed in mediastinum with capsule/trabeculae dividing into lobules. Cortex: tightly packed lymphocytes/macrophages. Medulla: reticular epithelial cells produce thymic hormones; contains Hassall\'s corpuscles.'
-        },
-        {
-          title: 'Spleen Structure and Functions',
-          body: 'Parenchyma: red pulp (erythrocyte-filled sinuses), white pulp (lymphocytes/macrophages around splenic artery branches). Functions: fetal blood production, blood reservoir, RBC disposal, immune reactions (filters blood, detects antigens).'
-        },
-        {
-          title: 'Immunology Overview',
-          body: 'Resistance wards off disease; susceptibility is lack of resistance. Nonspecific resistance: general mechanisms against wide range of pathogens (no specific response). Specific resistance/immunity: fights specific pathogens via cell-mediated (T cells) or antibody-mediated (B cells).'
-        },
-        {
-          title: 'Nonspecific Resistance - Skin & Mucous Membranes',
-          body: 'Mechanical: keratinized epidermis (shedding removes microbes), mucous (traps microbes), cilia/mucus (move to throat), washing (tears, urine, saliva). Chemical: sebum (inhibits bacteria/fungi), perspiration lysozymes (break down bacteria), acidic pH (gastric juice, vaginal secretions destroys bacteria).'
-        },
-        {
-          title: 'Leukocytes in Cutaneous Defenses',
-          body: 'Neutrophils: phagocytize bacteria, create killing zone via degranulation (lysosomes discharge) and respiratory burst (O2-, H2O2, HClO). Eosinophils: phagocytize antigen-antibody complexes/allergens/inflammatory chemicals; antiparasitic effects via enzyme release.'
-        },
-        {
-          title: 'Internal Nonspecific Defenses - Antimicrobial Proteins',
-          body: 'Interferons: produced by virus-infected lymphocytes/macrophages; diffuse to neighbors inducing antiviral proteins; activate NK cells/macrophages; destroy infected/cancer cells. Complement: inactive plasma proteins activated by pathogens to enhance inflammation/phagocytosis. Transferrins: iron-binding proteins that inhibit bacterial growth by limiting available iron.'
-        },
-        {
-          title: 'Natural Killer (NK) Cells & Phagocytes',
-          body: 'NK cells: kill microbes/tumor cells displaying abnormal MHC; found in blood/spleen/lymph nodes/marrow. Phagocytes: neutrophils/macrophages ingest microbes/particles; fixed macrophages in tissues (histiocytes/skin, Kupffer cells/liver, alveolar macrophages/lungs, microglia/brain); wandering macrophages in most tissues.'
-        },
-        {
-          title: 'Phagocytosis Steps',
-          body: 'Chemotaxis: attraction to chemicals from damaged tissues/complement/microbial products. Adherence: attachment to phagocyte membrane. Ingestion: engulf by pseudopods forming a phagosome. Digestion/killing: merge with lysosome (enzymes), lethal oxidants; exocytosis of residual body.'
-        },
-        {
-          title: 'Inflammation - Signs and Mobilization',
-          body: 'Defensive response to injury limiting pathogen spread, destroying them, removing debris, repairing tissue; -itis suffix indicates inflammation. Cardinal signs: redness (hyperemia), swelling (edema from increased permeability), heat (hyperemia), pain (bradykinin/prostaglandins, nerve pressure). Damaged cells/basophils/mast cells secrete bradykinin/histamine/leukotrienes causing vasodilation (hyperemia: redness/heat, increased metabolism/healing), increased capillary permeability (allows WBCs/antibodies/complement/fibrinogen). Fibrinogen clots to trap bacteria/scaffold repair; heparin prevents clotting in injury site.'
-        },
-        {
-          title: 'Inflammation - Leukocyte Deployment',
-          body: 'Margination: leukocytes adhere to vessel walls via cell adhesion molecules. Diapedesis: leukocytes squeeze between endothelial cells into tissues. Chemotaxis attracts leukocytes (neutrophils first); phagocytosis + respiratory burst + cytokines recruit macrophages/T cells.'
-        },
-        {
-          title: 'Inflammation - Cleanup and Repair',
-          body: 'Monocytes become macrophages for cleanup (arrive 8-12 hours). Edema decreases venous flow but increases lymphatic removal of bacteria/debris. Pus: tissue fluid, debris, dying neutrophils, microbes. PDGF from platelets/endothelium stimulates fibroblasts/collagen for repair; hyperemia provides materials/heat. Pain limits part use for healing.'
-        },
-        {
-          title: 'Abscesses and Ulcers',
-          body: 'Abscess: pus accumulation in confined space (pimples/boils). Ulcer: open sore; common in legs of diabetics with poor circulation (stasis ulcers from poor O2/nutrients).'
-        }
-      ],
-      keyTerms: [
-        { term: 'Palatine Tonsils', definition: 'Pair at posterior margin of oral cavity; the most commonly infected tonsils.' },
-        { term: 'Pharyngeal Tonsil (Adenoid)', definition: 'Single tonsil on pharyngeal wall.' },
-        { term: 'Hassall\'s Corpuscles', definition: 'Structures in thymus medulla associated with reticular epithelial cells that produce thymic hormones.' },
-        { term: 'Red Pulp', definition: 'Spleen tissue containing erythrocyte-filled sinuses.' },
-        { term: 'White Pulp', definition: 'Spleen tissue with lymphocytes and macrophages around splenic artery branches.' },
-        { term: 'Nonspecific Resistance', definition: 'General defense mechanisms against a wide range of pathogens without specific targeting.' },
-        { term: 'Specific Immunity', definition: 'Defense against specific pathogens via cell-mediated (T cells) or antibody-mediated (B cells) responses.' },
-        { term: 'Respiratory Burst', definition: 'Neutrophil killing mechanism producing lethal oxidants (O2-, H2O2, HClO).' },
-        { term: 'Interferons', definition: 'Proteins from virus-infected cells that induce antiviral proteins in neighbors and activate NK cells/macrophages.' },
-        { term: 'Complement', definition: 'Inactive plasma proteins activated by pathogens to enhance inflammation, phagocytosis, and cytolysis.' },
-        { term: 'Transferrins', definition: 'Iron-binding proteins that inhibit bacterial growth by limiting available iron.' },
-        { term: 'Chemotaxis', definition: 'Attraction of phagocytes to chemicals from damaged tissues, complement, or microbial products.' },
-        { term: 'Diapedesis', definition: 'Leukocytes squeezing between endothelial cells to exit blood vessels into tissues.' },
-        { term: 'Margination', definition: 'Leukocytes adhering to vessel walls via cell adhesion molecules during inflammation.' },
-        { term: 'PDGF', definition: 'Platelet-derived growth factor; stimulates fibroblasts to multiply and synthesize collagen for tissue repair.' },
-        { term: 'Abscess', definition: 'Accumulation of pus in a confined space (e.g., pimples, boils).' }
-      ],
-      memoryAids: [
-        'Cardinal signs of inflammation: "RSHP" = Redness, Swelling, Heat, Pain.',
-        'Phagocytosis steps: "CAID" = Chemotaxis, Adherence, Ingestion, Digestion/killing.',
-        'Tonsil types by location: "PPL" = Pharyngeal (pharynx wall), Palatine (oral cavity), Lingual (tongue root).',
-        'Spleen tissues: "Red = RBCs, White = WBCs" - red pulp has erythrocyte sinuses, white pulp has lymphocytes.'
-      ],
-      inlineQuestions: [
-        {
-          question: 'The most commonly infected tonsils are:',
-          options: { A: 'Lingual', B: 'Pharyngeal', C: 'Palatine', D: 'Appendix' },
-          answer: 'C',
-          explanation: 'Palatine tonsils, located as a pair at the posterior margin of the oral cavity, are the most often infected tonsils.'
-        },
-        {
-          question: 'Cardinal signs of inflammation include all EXCEPT:',
-          options: { A: 'Redness (hyperemia)', B: 'Swelling (edema)', C: 'Decreased metabolism', D: 'Pain' },
-          answer: 'C',
-          explanation: 'The cardinal signs are redness, swelling, heat, and pain. Inflammation actually increases metabolism (via hyperemia), not decreases it.'
-        },
-        {
-          question: 'Diapedesis refers to:',
-          options: { A: 'Leukocytes squeezing between endothelial cells into tissues', B: 'Clot formation', C: 'Fever onset', D: 'Antibody binding' },
-          answer: 'A',
-          explanation: 'Diapedesis is the process by which leukocytes squeeze between endothelial cells to exit blood vessels and enter tissues during inflammation.'
-        }
-      ],
-      quiz: [
-        {
-          question: 'Lymph node parenchyma is divided into:',
-          options: { A: 'Red and white pulp', B: 'Cortex and medulla', C: 'Lobules and sinuses', D: 'Germinal centers only' },
-          answer: 'B',
-          explanation: 'Lymph node parenchyma is divided into cortex (with germinal centers and B cell proliferation) and medulla (B cells/plasma cells in medullary cords). Red and white pulp are features of the spleen.'
-        },
-        {
-          question: 'In lymph nodes, germinal centers in the cortex contain:',
-          options: { A: 'Only plasma cells', B: 'Dendritic cells, APCs, macrophages; site of B cell proliferation', C: 'RBCs', D: 'Hassall\'s corpuscles' },
-          answer: 'B',
-          explanation: 'Germinal centers contain dendritic cells, APCs, and macrophages, and are the site where B cells proliferate into antibody-secreting plasma cells.'
-        },
-        {
-          question: 'Cancerous lymph nodes are typically:',
-          options: { A: 'Tender and soft', B: 'Firm, enlarged, nontender', C: 'Filled with pus', D: 'Smaller than normal' },
-          answer: 'B',
-          explanation: 'Cancerous nodes are firm, enlarged, and nontender. Infected nodes, by contrast, are tender and not firm.'
-        },
-        {
-          question: 'The thymus medulla contains:',
-          options: { A: 'Tightly packed lymphocytes', B: 'Reticular epithelial cells producing thymic hormones and Hassall\'s corpuscles', C: 'Red pulp', D: 'Peyer patches' },
-          answer: 'B',
-          explanation: 'The thymus medulla has reticular epithelial cells that produce thymic hormones and contains Hassall\'s corpuscles. The cortex has tightly packed lymphocytes.'
-        },
-        {
-          question: 'Spleen white pulp consists mainly of:',
-          options: { A: 'Erythrocytes', B: 'Lymphocytes and macrophages around splenic artery branches', C: 'Plasma proteins', D: 'Lacteals' },
-          answer: 'B',
-          explanation: 'White pulp contains lymphocytes and macrophages arranged around splenic artery branches.'
-        },
-        {
-          question: 'Specific immunity includes:',
-          options: { A: 'Skin barriers only', B: 'Cell-mediated (T cells) and antibody-mediated (B cells)', C: 'Fever only', D: 'All phagocytosis' },
-          answer: 'B',
-          explanation: 'Specific immunity fights specific pathogens via cell-mediated immunity (T cells) or antibody-mediated immunity (B cells).'
-        },
-        {
-          question: 'Keratinized epidermis provides mechanical protection by:',
-          options: { A: 'Producing antibodies', B: 'Closely packed cells; shedding removes microbes', C: 'Acid secretion', D: 'Cilia movement' },
-          answer: 'B',
-          explanation: 'Keratinized epidermis has closely packed cells and shedding removes microbes as a mechanical defense.'
-        },
-        {
-          question: 'Lysozymes in perspiration:',
-          options: { A: 'Inhibit viruses', B: 'Break down bacterial cell walls', C: 'Promote clotting', D: 'Increase pH' },
-          answer: 'B',
-          explanation: 'Perspiration lysozymes break down bacterial cell walls as part of the chemical defenses of the skin.'
-        },
-        {
-          question: 'Neutrophils kill bacteria via:',
-          options: { A: 'Phagocytosis only', B: 'Degranulation and respiratory burst (O2-, H2O2, HClO)', C: 'Antibody production', D: 'Fever induction' },
-          answer: 'B',
-          explanation: 'Neutrophils phagocytize bacteria and create a killing zone via degranulation (lysosome discharge) and respiratory burst producing lethal oxidants.'
-        },
-        {
-          question: 'Interferons are produced by:',
-          options: { A: 'Virus-infected lymphocytes/macrophages', B: 'RBCs', C: 'Platelets', D: 'Epithelial cells only' },
-          answer: 'A',
-          explanation: 'Interferons are produced by virus-infected lymphocytes and macrophages; they diffuse to neighbors inducing antiviral proteins.'
-        },
-        {
-          question: 'Complement proteins enhance:',
-          options: { A: 'RBC production', B: 'Inflammation, phagocytosis, cytolysis', C: 'Lipid absorption', D: 'Fluid recovery' },
-          answer: 'B',
-          explanation: 'Complement proteins are inactive plasma proteins activated by pathogens to enhance inflammation, phagocytosis, and cytolysis.'
-        },
-        {
-          question: 'Fixed macrophages include:',
-          options: { A: 'Only wandering cells', B: 'Kupffer cells in liver, alveolar macrophages in lungs', C: 'B cells', D: 'T cells' },
-          answer: 'B',
-          explanation: 'Fixed macrophages include histiocytes (skin), Kupffer cells (liver), alveolar macrophages (lungs), and microglia (brain).'
-        },
-        {
-          question: 'The first step in phagocytosis is:',
-          options: { A: 'Digestion', B: 'Chemotaxis (attraction to chemicals)', C: 'Exocytosis', D: 'Adherence only' },
-          answer: 'B',
-          explanation: 'Chemotaxis is the first step - attraction of phagocytes to chemicals from damaged tissues, complement, or microbial products.'
-        },
-        {
-          question: 'Hyperemia during inflammation causes:',
-          options: { A: 'Cooling', B: 'Redness, heat, increased metabolism/healing', C: 'Decreased permeability', D: 'Clot dissolution' },
-          answer: 'B',
-          explanation: 'Hyperemia (increased blood flow from vasodilation) causes redness, heat, and increased metabolism/healing at the inflammation site.'
-        },
-        {
-          question: 'Pus consists mainly of:',
-          options: { A: 'Healthy WBCs', B: 'Tissue fluid, debris, dying neutrophils, microbes', C: 'Plasma proteins', D: 'RBCs' },
-          answer: 'B',
-          explanation: 'Pus is a mixture of tissue fluid, debris, dying neutrophils, and microbes.'
-        },
-        {
-          question: 'PDGF in inflammation stimulates:',
-          options: { A: 'Bacteria growth', B: 'Fibroblasts to multiply and synthesize collagen', C: 'Virus replication', D: 'Edema reduction' },
-          answer: 'B',
-          explanation: 'PDGF (platelet-derived growth factor) from platelets/endothelium stimulates fibroblasts to multiply and synthesize collagen for tissue repair.'
-        },
-        {
-          question: 'An abscess is:',
-          options: { A: 'An open sore', B: 'Accumulation of pus in a confined space (e.g., boils)', C: 'Reduced blood flow', D: 'Lymph node enlargement' },
-          answer: 'B',
-          explanation: 'An abscess is pus accumulation in a confined space, such as pimples or boils. An open sore is an ulcer.'
-        },
-        {
-          question: 'Which inflammatory chemical stimulates vasodilation and permeability?',
-          options: { A: 'Insulin', B: 'Histamine', C: 'EPO', D: 'Thyroxine' },
-          answer: 'B',
-          explanation: 'Histamine (along with bradykinin and leukotrienes) is secreted by damaged cells, basophils, and mast cells to cause vasodilation and increased capillary permeability.'
-        },
-        {
-          question: 'The spleen\'s red pulp contains:',
-          options: { A: 'Lymphocytes only', B: 'Erythrocyte-filled sinuses', C: 'Thymic hormones', D: 'Lacteals' },
-          answer: 'B',
-          explanation: 'Red pulp consists of erythrocyte-filled sinuses, while white pulp contains lymphocytes and macrophages.'
-        },
-        {
-          question: 'Nonspecific resistance differs from immunity by:',
-          options: { A: 'Being specific to one pathogen', B: 'Being general against wide pathogens, lacking specific responses', C: 'Producing antibodies only', D: 'Involving T cells exclusively' },
-          answer: 'B',
-          explanation: 'Nonspecific resistance provides general mechanisms against a wide range of pathogens without specific targeting, unlike specific immunity which targets individual pathogens.'
-        },
-        {
-          question: 'Eosinophils are particularly important against:',
-          options: { A: 'Viruses', B: 'Parasites', C: 'Bacteria', D: 'Fungi only' },
-          answer: 'B',
-          explanation: 'Eosinophils have antiparasitic effects via enzyme release and also phagocytize antigen-antibody complexes, allergens, and inflammatory chemicals.'
-        },
-        {
-          question: 'Transferrins inhibit bacterial growth by:',
-          options: { A: 'Binding iron and limiting availability', B: 'Producing heat', C: 'Enhancing clotting', D: 'Increasing pH' },
-          answer: 'A',
-          explanation: 'Transferrins are iron-binding proteins that inhibit bacterial growth by reducing the amount of available iron that bacteria need to grow.'
-        }
-      ],
-      flashcards: [
-        { front: 'What are the three types of tonsils and their locations?', back: 'Palatine (pair at posterior oral cavity - most often infected), lingual (pair at root of tongue), pharyngeal/adenoid (single on pharyngeal wall).' },
-        { front: 'Describe the thymus structure in infants vs. adults.', back: 'Large in infants (~70 g), atrophied in adults (~3 g). Bilobed in mediastinum; cortex has packed lymphocytes/macrophages; medulla has reticular epithelial cells producing thymic hormones and Hassall\'s corpuscles.' },
-        { front: 'What are the functions of the spleen?', back: 'Fetal blood production, blood reservoir, RBC disposal, and immune reactions (filters blood, detects antigens).' },
-        { front: 'What is the difference between nonspecific resistance and specific immunity?', back: 'Nonspecific: general mechanisms against wide range of pathogens (no specific response). Specific: targets particular pathogens via cell-mediated (T cells) or antibody-mediated (B cells) responses.' },
-        { front: 'Name the mechanical and chemical skin defenses.', back: 'Mechanical: keratinized epidermis/shedding, mucous traps, cilia movement, washing (tears/urine/saliva). Chemical: sebum, lysozymes in perspiration, acidic pH (gastric juice, vaginal secretions).' },
-        { front: 'How do neutrophils kill bacteria?', back: 'Phagocytosis, degranulation (lysosome discharge), and respiratory burst producing lethal oxidants (O2-, H2O2, HClO).' },
-        { front: 'What are the three types of antimicrobial proteins?', back: 'Interferons (induce antiviral proteins), complement (enhance inflammation/phagocytosis/cytolysis), and transferrins (bind iron to limit bacterial growth).' },
-        { front: 'What are the four steps of phagocytosis?', back: 'Chemotaxis (attraction to chemicals), adherence (attachment), ingestion (engulf via pseudopods forming phagosome), digestion/killing (lysosome merge, lethal oxidants, exocytosis of residual body).' },
-        { front: 'What are the four cardinal signs of inflammation?', back: 'Redness (hyperemia), swelling (edema from increased permeability), heat (hyperemia), and pain (bradykinin/prostaglandins, nerve pressure).' },
-        { front: 'What is the sequence of leukocyte deployment in inflammation?', back: 'Margination (adhere to vessel walls) -> diapedesis (squeeze between endothelial cells) -> chemotaxis (attract to site, neutrophils first) -> phagocytosis + respiratory burst -> macrophages/T cells recruited.' },
-        { front: 'What is the difference between an abscess and an ulcer?', back: 'Abscess: pus accumulation in a confined space (pimples, boils). Ulcer: open sore, common in diabetics with poor circulation (stasis ulcers).' }
-      ]
-    },
-
-    // ===== SECTION 3: Lymphatic & Immune Module 3 =====
-    {
-      id: 'lymphatic-s3',
-      title: 'NK Cells, Antimicrobial Proteins, Fever, Cytokines & Cellular Immunity',
-      pageRange: 'Pages 21-30',
-      learnItems: [
-        {
-          title: 'Natural Killer (NK) Cells',
-          body: 'Derived from T lymphocyte precursors; specialized for "self from funky self" (abnormal MHC antigens). Kill variety of microbes and tumor cells; found in blood, spleen, lymph nodes, red marrow. Attack cells displaying abnormal MHC antigens.'
-        },
-        {
-          title: 'NK Cell Action - Perforin',
-          body: 'NK cells secrete perforin (punches holes in target cell membrane) and other toxic substances.'
+          title: 'Leukocytes in Nonspecific Defense',
+          body: 'Neutrophils: phagocytize bacteria, create a "killing zone" via degranulation (lysosomes discharge into tissue fluid) and respiratory burst (toxic chemicals created: superoxide O₂⁻, H₂O₂, HClO). Eosinophils: phagocytize antigen-antibody complexes, allergens, and inflammatory chemicals; have antiparasitic effects — aggregate and release enzymes against parasites.'
         },
         {
           title: 'Antimicrobial Proteins',
-          body: 'Interferons: polypeptides from virus-infected lymphocytes/macrophages; diffuse to neighbors inducing antiviral proteins; activate NK cells/macrophages; destroy infected host cells; anticancer effects. Complement: inactive plasma proteins activated by pathogens via classical or alternate pathways; mechanisms: inflammation, opsonization (phagocytosis promotion), cytolysis (membrane attack complex). Transferrins: iron-binding proteins inhibiting bacterial growth by reducing available iron.'
+          body: 'Interferons: polypeptides secreted by virally-infected lymphocytes and macrophages; diffuse to neighboring cells and stimulate them to produce antiviral proteins. Also have anticancer effects — activate NK cells and macrophages to destroy infected/cancerous cells. Complement proteins: inactive proteins in blood plasma that, when activated, enhance immune, allergic, and inflammatory reactions. Classical pathway (C1 activation) and alternate pathway (C3 activation). Mechanisms: enhanced inflammation, opsonization (promotes phagocytosis), and cytolysis via membrane attack complex (MAC: C5b-C9 form a ring in enemy cell membrane). Transferrins: iron-binding proteins that inhibit bacterial growth by reducing available iron.'
         },
         {
-          title: 'Complement Pathways and Actions',
-          body: 'Classical pathway: begins with C1 activation. Alternate pathway: begins with C3 activation. Both lead to inflammation, enhanced phagocytosis, or microbe bursting; membrane attack complex (C5b-C9 ring) causes cytolysis.'
+          title: 'Natural Killer (NK) Cells',
+          body: 'Derived from T-lymphocyte precursors. Kill a variety of microbes and tumor cells. Found in blood, spleen, lymph nodes, and red bone marrow. Attack cells displaying abnormal MHC antigens. Use perforin to punch holes in target cells — specialized for distinguishing "self" from "funky self."'
+        },
+        {
+          title: 'Phagocytosis',
+          body: 'Phagocytes include neutrophils and macrophages (developed from monocytes). Fixed macrophages: histiocytes (skin), Kupffer cells (liver), alveolar macrophages (lungs), microglia (brain), plus macrophages in spleen, red marrow, and lymph nodes. Wandering macrophages in most tissues. Steps: (1) Chemotaxis — attraction to chemicals from damaged tissues, complement proteins, or microbial products. (2) Adherence — attachment to phagocyte plasma membrane. (3) Ingestion — engulfment by pseudopods forming a phagosome. (4) Digestion and killing — phagosome merges with lysosome containing digestive enzymes; lethal oxidants formed. (5) Exocytosis of residual body.'
+        },
+        {
+          title: 'Inflammation: Cardinal Signs and Purpose',
+          body: 'Defensive response to tissue injury. Purpose: limits pathogen spread, destroys them, removes debris, initiates tissue repair. Suffix "-itis" denotes inflammation. Four cardinal signs: (1) Redness (erythema) — caused by hyperemia (increased blood flow). (2) Swelling (edema) — from increased capillary permeability and filtration. (3) Heat — from hyperemia. (4) Pain — from inflammatory chemicals (bradykinin, prostaglandins) secreted by damaged cells and pressure on nerves.'
+        },
+        {
+          title: 'Inflammation: Mobilization of Defenses',
+          body: 'Bradykinin, histamine, and leukotrienes released by damaged cells, basophils (blood), and mast cells (tissue). Effects: (1) Vasodilation → hyperemia (causes redness and heat, increases metabolic rate, promotes healing, dilutes toxins, provides O₂/nutrients, aids waste removal). (2) Increased capillary permeability → blood cells, plasma chemicals (antibodies, complement, fibrinogen) enter tissue (clotting sequesters bacteria, forms scaffold for repair).'
+        },
+        {
+          title: 'Inflammation: Leukocyte Deployment',
+          body: 'Margination: leukocytes adhere to blood vessel walls via cell adhesion molecules. Diapedesis: leukocytes squeeze between endothelial cells into tissue space. Neutrophils are quickest to respond — phagocytosis, respiratory burst, secrete cytokines to recruit macrophages and T cells.'
+        },
+        {
+          title: 'Containment, Cleanup, and Repair',
+          body: 'Containment: fibrinogen in tissue forms clots trapping microbes; heparin prevents clotting at injury site; pathogens are trapped in fluid pockets surrounded by clot. Chemotaxis attracts leukocytes. Cleanup: monocytes arrive in 8-12 hours, become macrophages (primary cleanup agents). Edema and increased lymphatic flow favor removal of bacteria/debris. Pus = mixture of tissue fluid, cellular debris, dying neutrophils, and microbes. Repair: platelets and endothelial cells secrete PDGF (platelet-derived growth factor) → fibroblasts multiply and synthesize collagen. Fibrin clot provides scaffold. Hyperemia provides materials; heat accelerates metabolism. Pain limits use of body part, allowing repair.'
+        },
+        {
+          title: 'Abscesses and Ulcers',
+          body: 'Pus = dead phagocytes, damaged tissue cells, and fluid. Abscess = pus accumulation in a confined space not open to outside (pimples, boils). Ulcer = open sore. People with poor circulation (diabetics with atherosclerosis) develop stasis ulcers in leg tissues due to poor O₂ and nutrient supply.'
         },
         {
           title: 'Fever',
-          body: 'Defense mechanism promoting interferon, metabolic rate/tissue repair, inhibiting pathogen reproduction. Macrophage cytokine interleukin-1 (pyrogen) stimulates hypothalamus to secrete PGE, resetting thermostat higher. Stages: onset, stadium, defervescence; >105 degrees F may cause delirium, 111-115 degrees F coma/death.'
-        },
-        {
-          title: 'Cytokines and Cytokine Therapy',
-          body: 'Small protein hormones from lymphocytes/APCs involved in immune responses. Alpha-interferon: treats Kaposi\'s sarcoma, genital herpes, hepatitis B/C, leukemias. Beta-interferon: treats multiple sclerosis. Interleukin-2: treats cancer (with side effects).'
-        },
-        {
-          title: 'Lymphocytes in Specific Immunity',
-          body: 'Specific immunity depends on lymphocytes: ~80% T cells (cell-mediated), 15% B cells (antibody-mediated), 5% NK cells (nonspecific).'
-        },
-        {
-          title: 'T Lymphocytes (T Cells)',
-          body: 'Fetal stem cells colonize thymus for 2-3 days; thymosins stimulate antigen receptor production leading to immunocompetent T cells.'
-        },
-        {
-          title: 'T Cell Selection in Thymus',
-          body: 'Negative selection: T cells unable to bind reticular epithelium or reacting to self antigens undergo clonal deletion (death), anergy (inactive), achieving self-tolerance (~1 in 100 survive). Positive selection: T cells binding MHC on epithelium (not self-reactive) divide into clones and leave to colonize lymphatic tissues.'
-        },
-        {
-          title: 'Cellular (Cell-Mediated) Immunity',
-          body: 'T lymphocytes attack foreign cells/diseased host cells via four T cell classes: cytotoxic (killer) T cells (attack), helper T cells (promote T/B/nonspecific), suppressor T cells (limit attack), memory T cells (future immunity).'
-        },
-        {
-          title: 'Cytotoxic T Cell Activation',
-          body: 'CD8 cell receptor binds foreign antigen fragment on MHC-I; costimulation from helper T cell cytokine prevents accidental response. Leads to clonal expansion into cytotoxic T cells and memory Tc cells in secondary organs like lymph nodes.'
-        },
-        {
-          title: 'Cytotoxic T Cells (Tc/CD8)',
-          body: 'Recognize antigen fragments on MHC-I (virus-infected, tumor cells, transplants). Activation requires MHC-I binding + helper T cytokine costimulation leading to clonal selection. Migrate to infection/tumor; attack by perforin (membrane holes), lymphotoxin (DNA fragmentation enzymes), gamma-interferon (activates phagocytes). Tumor necrosis factor kills cancer cells in 2-3 days.'
-        },
-        {
-          title: 'Immunological Surveillance',
-          body: 'Immune system detects tumor antigens on cancerous cells (especially virus-induced); cytotoxic T cells, macrophages, NK cells destroy them. Immunosuppressive drugs (e.g., transplant patients) increase viral cancer risk.'
-        },
-        {
-          title: 'Graft Rejection',
-          body: 'Transplant triggers cell- and antibody-mediated responses; histocompatibility antigen match reduces rejection. Cyclosporine inhibits IL-2 secretion by helper T cells (little B cell effect, preserves some resistance).'
+          body: 'A defense mechanism that can do more good than harm. Macrophages secrete interleukin-1 (a pyrogen) → stimulates anterior hypothalamus to secrete PGE → resets thermostat higher. Benefits: promotes interferon activity, accelerates metabolic rate and tissue repair, inhibits pathogen reproduction. Danger: >105°F may cause delirium; 111-115°F → coma/death. Three stages: onset, stadium, defervescence (breaking of fever).'
         }
       ],
       keyTerms: [
-        { term: 'Perforin', definition: 'Protein secreted by NK cells and cytotoxic T cells that punches holes in target cell membranes.' },
-        { term: 'Opsonization', definition: 'Complement-mediated promotion of phagocytosis by coating pathogens.' },
-        { term: 'Membrane Attack Complex (MAC)', definition: 'Ring of complement proteins C5b-C9 that causes cytolysis by creating pores in pathogen membranes.' },
-        { term: 'Interleukin-1 (IL-1)', definition: 'Pyrogen cytokine from macrophages that stimulates hypothalamus to raise body temperature (fever).' },
-        { term: 'Cytokines', definition: 'Small protein hormones from lymphocytes/APCs that regulate immune responses.' },
-        { term: 'Thymosins', definition: 'Thymic hormones that stimulate T cell antigen receptor production, creating immunocompetent T cells.' },
-        { term: 'Negative Selection', definition: 'Elimination of T cells that react to self antigens via clonal deletion or anergy; achieves self-tolerance.' },
-        { term: 'Positive Selection', definition: 'Survival of T cells that properly bind MHC on epithelium without being self-reactive; they divide and colonize lymphatic tissues.' },
-        { term: 'Cytotoxic (Killer) T Cells', definition: 'CD8+ T cells that attack virus-infected, tumor, and transplant cells recognized on MHC-I.' },
-        { term: 'Helper T Cells', definition: 'T cells that promote T cell, B cell, and nonspecific defense responses via cytokines.' },
-        { term: 'Lymphotoxin', definition: 'Substance from cytotoxic T cells that activates DNA fragmentation enzymes in target cells.' },
-        { term: 'Tumor Necrosis Factor', definition: 'Cytokine that kills cancer cells in 2-3 days.' },
-        { term: 'Cyclosporine', definition: 'Immunosuppressive drug that inhibits IL-2 secretion by helper T cells; used to prevent graft rejection.' },
-        { term: 'Clonal Selection', definition: 'Process by which activated T cells divide into clones of effector and memory cells.' }
+        { term: 'Nonspecific Resistance', definition: 'General defense mechanisms effective against a wide range of pathogens; no specificity or memory.' },
+        { term: 'Interferons', definition: 'Antiviral polypeptides secreted by virus-infected cells; diffuse to neighbors to stimulate antiviral protein production.' },
+        { term: 'Complement System', definition: 'Inactive plasma proteins activated by pathogens; enhance inflammation, opsonization, and cytolysis (MAC).' },
+        { term: 'Membrane Attack Complex (MAC)', definition: 'Complement proteins C5b-C9 forming a ring in enemy cell membrane, causing cytolysis.' },
+        { term: 'Opsonization', definition: 'Coating of pathogen with complement/antibody to promote phagocytosis.' },
+        { term: 'Phagocytosis', definition: 'Ingestion and destruction of microbes by neutrophils and macrophages.' },
+        { term: 'Respiratory Burst', definition: 'Neutrophil production of toxic chemicals (superoxide, H₂O₂, HClO) to kill microbes.' },
+        { term: 'Chemotaxis', definition: 'Attraction of phagocytes toward chemicals from damaged tissues or microbes.' },
+        { term: 'Diapedesis', definition: 'Leukocytes squeezing between endothelial cells to enter tissue space.' },
+        { term: 'Margination', definition: 'Leukocytes adhering to blood vessel walls via cell adhesion molecules.' },
+        { term: 'Pyrogen', definition: 'Substance that induces fever; IL-1 from macrophages stimulates hypothalamus to raise thermostat.' },
+        { term: 'Pus', definition: 'Mixture of tissue fluid, cellular debris, dying neutrophils, and microbes.' },
+        { term: 'NK Cells', definition: 'Lymphocytes that kill virus-infected and tumor cells displaying abnormal MHC antigens using perforin.' }
       ],
       memoryAids: [
-        'Complement pathways: "C1 = Classical (C comes first), C3 = Alternate (A comes after)" - classical starts with C1, alternate starts with C3.',
-        'Fever stages: "OSD" = Onset, Stadium, Defervescence.',
-        'Lymphocyte percentages: "80-15-5" = T cells (80%), B cells (15%), NK cells (5%).',
-        'Cytotoxic T cell weapons: "PLG-T" = Perforin (holes), Lymphotoxin (DNA fragmentation), Gamma-interferon (activates phagocytes), TNF (kills cancer).'
-      ],
-      inlineQuestions: [
-        {
-          question: 'NK cells primarily target cells displaying:',
-          options: { A: 'Normal MHC', B: 'Abnormal MHC antigens', C: 'No antigens', D: 'RBC antigens' },
-          answer: 'B',
-          explanation: 'NK cells are specialized to recognize and attack cells displaying abnormal MHC antigens, including microbes and tumor cells.'
-        },
-        {
-          question: 'Of circulating lymphocytes, approximately what percentage are T cells?',
-          options: { A: '5%', B: '15%', C: '80%', D: '50%' },
-          answer: 'C',
-          explanation: 'Specific immunity depends on lymphocytes: approximately 80% are T cells (cell-mediated), 15% are B cells (antibody-mediated), and 5% are NK cells.'
-        },
-        {
-          question: 'Cytotoxic T cells recognize antigens on:',
-          options: { A: 'MHC-II only', B: 'MHC-I (virus/tumor/transplant cells)', C: 'Free antigens', D: 'Platelets' },
-          answer: 'B',
-          explanation: 'Cytotoxic T cells (CD8+) recognize antigen fragments presented on MHC-I molecules on virus-infected cells, tumor cells, and transplanted cells.'
-        }
+        'Cardinal signs of inflammation: "RSHP" = Redness, Swelling, Heat, Pain.',
+        'Phagocytosis steps: "CAIDK" = Chemotaxis, Adherence, Ingestion, Digestion, Kill (exocytosis).',
+        'Fixed macrophages by location: "HiKA-MM" = Histiocytes (skin), Kupffer (liver), Alveolar (lungs), Microglia (brain), Marrow/nodes Macrophages.',
+        'Complement end game: "IOC" = Inflammation, Opsonization, Cytolysis (MAC).',
+        'Fever stages: "OSD" = Onset, Stadium, Defervescence.'
       ],
       quiz: [
+        { id: 'ly2-q1', question: 'Which cells are the quickest to respond during inflammation?', options: { A: 'Monocytes', B: 'Basophils', C: 'Neutrophils', D: 'Eosinophils' }, answer: 'C', explanation: 'Neutrophils are first responders — they phagocytize bacteria, perform respiratory bursts, and recruit macrophages/T cells.' },
+        { id: 'ly2-q2', question: 'The respiratory burst in neutrophils produces all EXCEPT:', options: { A: 'Superoxide (O₂⁻)', B: 'Hydrogen peroxide (H₂O₂)', C: 'Hypochlorous acid (HClO)', D: 'Immunoglobulin G (IgG)' }, answer: 'D', explanation: 'IgG is an antibody produced by B cells/plasma cells, not a product of neutrophil respiratory burst.' },
+        { id: 'ly2-q3', question: 'Interferons are produced primarily by:', options: { A: 'Platelets', B: 'Virally-infected lymphocytes and macrophages', C: 'Red blood cells', D: 'Osteoclasts' }, answer: 'B', explanation: 'Interferons are polypeptides secreted by virus-infected lymphocytes and macrophages that stimulate neighboring cells to produce antiviral proteins.' },
+        { id: 'ly2-q4', question: 'The complement system destroys pathogens through cytolysis using the:', options: { A: 'Respiratory burst', B: 'Perforin pathway', C: 'Membrane attack complex (MAC)', D: 'Histamine cascade' }, answer: 'C', explanation: 'The MAC (C5b-C9) forms a ring in the enemy cell membrane, creating pores that cause cytolysis.' },
+        { id: 'ly2-q5', question: 'The correct sequence of phagocytosis is:', options: { A: 'Ingestion → Chemotaxis → Digestion → Adherence', B: 'Chemotaxis → Adherence → Ingestion → Digestion', C: 'Adherence → Chemotaxis → Digestion → Ingestion', D: 'Digestion → Ingestion → Adherence → Chemotaxis' }, answer: 'B', explanation: 'Phagocytosis proceeds: Chemotaxis (attraction) → Adherence (attachment) → Ingestion (engulfment) → Digestion/killing.' },
+        { id: 'ly2-q6', question: 'Kupffer cells are fixed macrophages found in the:', options: { A: 'Brain', B: 'Skin', C: 'Liver', D: 'Lungs' }, answer: 'C', explanation: 'Kupffer cells are fixed macrophages in the liver. Microglia are in the brain, histiocytes in the skin, alveolar macrophages in the lungs.' },
+        { id: 'ly2-q7', question: 'The cardinal sign of inflammation caused by increased capillary permeability is:', options: { A: 'Redness', B: 'Heat', C: 'Swelling (edema)', D: 'Pain' }, answer: 'C', explanation: 'Increased permeability allows fluid and proteins to escape into tissue = swelling/edema. Redness and heat come from hyperemia.' },
+        { id: 'ly2-q8', question: 'Diapedesis is the process by which:', options: { A: 'Bacteria are ingested by macrophages', B: 'Leukocytes squeeze between endothelial cells into tissue', C: 'Blood clots form', D: 'Pyrogens reset the thermostat' }, answer: 'B', explanation: 'Diapedesis is leukocytes squeezing between endothelial cells of blood vessel walls to enter tissue spaces.' },
+        { id: 'ly2-q9', question: 'Fever is initiated by which cytokine from macrophages?', options: { A: 'Interferon-gamma', B: 'Interleukin-2', C: 'Interleukin-1', D: 'TNF-beta' }, answer: 'C', explanation: 'IL-1 (a pyrogen from macrophages) stimulates the anterior hypothalamus to release PGE, which resets the thermostat higher.' },
+        { id: 'ly2-q10', question: 'Transferrins inhibit bacterial growth by:', options: { A: 'Punching holes in bacterial membranes', B: 'Reducing available iron', C: 'Stimulating T cells', D: 'Activating complement' }, answer: 'B', explanation: 'Transferrins are iron-binding proteins that inhibit bacterial growth by sequestering iron that bacteria need to multiply.' },
+        { id: 'ly2-q11', question: 'Monocytes arrive at an inflammation site and become macrophages after approximately:', options: { A: '1-2 minutes', B: '8-12 hours', C: '3-5 days', D: '2-3 weeks' }, answer: 'B', explanation: 'Monocytes are the primary agents of cleanup, arriving in 8-12 hours and becoming macrophages in the tissue.' },
+        { id: 'ly2-q12', question: 'PDGF (platelet-derived growth factor) stimulates:', options: { A: 'Phagocytosis by neutrophils', B: 'Fibroblast multiplication and collagen synthesis', C: 'Mast cell degranulation', D: 'NK cell activation' }, answer: 'B', explanation: 'PDGF from platelets and endothelial cells stimulates fibroblasts to multiply and synthesize collagen for tissue repair.' }
+      ]
+    },
+
+    // ===== SECTION 3: Specific Immunity — Cellular and Antibody-Mediated =====
+    {
+      id: 'lymphatic-s3',
+      title: 'Specific Immunity: T Cells, B Cells, Antibodies & Disorders',
+      pageRange: 'Pages 22-45',
+      learnItems: [
         {
-          question: 'Perforin secreted by NK cells:',
-          options: { A: 'Promotes bacterial growth', B: 'Punches holes in target cell membranes', C: 'Produces antibodies', D: 'Resets body temperature' },
-          answer: 'B',
-          explanation: 'NK cells secrete perforin, which punches holes in target cell membranes, along with other toxic substances.'
+          title: 'Specific Immunity Overview',
+          body: 'Immunity is the body\'s ability to defend against specific foreign material (bacteria, toxins, viruses, pollen, etc.). Differs from nonspecific defense by: specificity (recognizes self vs non-self) and memory (2nd encounter produces more vigorous response). The immune system consists of cells and tissues producing the immune response; immunology is the study of these responses.'
         },
         {
-          question: 'Interferons induce neighboring cells to produce:',
-          options: { A: 'Bacteria', B: 'Antiviral proteins', C: 'Clotting factors', D: 'RBCs' },
-          answer: 'B',
-          explanation: 'Interferons are polypeptides that diffuse to neighboring cells and induce them to produce antiviral proteins.'
+          title: 'T and B Cell Maturation',
+          body: 'T cells mature in thymus — responsible for cell-mediated immunity (attack antigens directly). Effective against fungi, viruses, parasites, cancer, and tissue transplants. B cells mature in bone marrow — responsible for antibody-mediated (humoral) immunity. When activated, B cells differentiate into plasma cells that secrete antibodies. Effective mainly against bacteria. Circulating lymphocyte percentages: T cells 80%, B cells 15%, NK cells 5%.'
         },
         {
-          question: 'The classical complement pathway begins with activation of:',
-          options: { A: 'C3', B: 'C1', C: 'C5b', D: 'Plasmin' },
-          answer: 'B',
-          explanation: 'The classical complement pathway begins with C1 activation, while the alternate pathway begins with C3 activation.'
+          title: 'Antigens and Epitopes',
+          body: 'Antigens: molecules or bits of foreign material (whole microbes, microbial parts, toxins, pollen, transplanted organs, incompatible blood cells). Required characteristics: immunogenicity (ability to provoke immune response) and reactivity (ability to react with antibodies/cells it caused). Entry routes: bloodstream → deposited in spleen; skin → end up in lymph nodes; mucous membrane → lodge in MALT. Antigens are large, complex molecules (usually proteins); if they have simple repeating subunits, they\'re usually NOT antigenic (e.g., plastic joint replacements). Epitope (antigenic determinant): the small part of an antigen that triggers the immune response. Hapten: smaller substance that can\'t trigger response alone but can if attached to a body protein (e.g., poison ivy lipid).'
         },
         {
-          question: 'The membrane attack complex is formed by complement proteins:',
-          options: { A: 'C1-C3', B: 'C5b-C9', C: 'Interferons', D: 'Transferrins' },
-          answer: 'B',
-          explanation: 'The membrane attack complex (MAC) is a ring of complement proteins C5b-C9 that causes cytolysis by creating pores in pathogen membranes.'
+          title: 'Antigen Receptor Diversity',
+          body: 'The immune system recognizes and responds to ~1 billion different epitopes (even artificial molecules). This diversity comes from genetic recombination of a few hundred small gene segments. Each B or T cell has its own unique set of gene segments coding its unique antigen receptor.'
         },
         {
-          question: 'Transferrins inhibit bacteria by:',
-          options: { A: 'Binding iron', B: 'Producing heat', C: 'Enhancing inflammation', D: 'Promoting phagocytosis' },
-          answer: 'A',
-          explanation: 'Transferrins are iron-binding proteins that inhibit bacterial growth by reducing the amount of available iron.'
+          title: 'Major Histocompatibility Complex (MHC)',
+          body: 'All cells have unique surface markers (integral membrane proteins called HLA antigens). MHC-I molecules: found on ALL nucleated cells EXCEPT red blood cells — if a cell is infected with virus, MHC-I displays bits of viral protein, marking it for T cell recognition. MHC-II molecules: found ONLY on antigen-presenting cells (macrophages, B cells, thymus cells) — display processed foreign proteins for helper T cell recognition. Histocompatibility testing: similarity of MHC antigens between individuals; required before organ transplants; can help identify biological parents.'
         },
         {
-          question: 'Interleukin-1 (pyrogen) during fever is secreted by:',
-          options: { A: 'RBCs', B: 'Macrophages', C: 'T cells only', D: 'Platelets' },
-          answer: 'B',
-          explanation: 'Macrophages secrete the cytokine interleukin-1 (a pyrogen), which stimulates the hypothalamus to secrete PGE and reset the thermostat higher.'
+          title: 'Antigen Processing: Exogenous Pathway',
+          body: 'Foreign antigen in body fluid is phagocytized by an APC (macrophage, B cell, dendritic/Langerhans cell in skin). Antigen is digested; fragments are bound to MHC-II molecules and inserted into the APC\'s membrane. APC migrates to lymphatic tissue to find helper T cells. Helper T cells "see" antigens ONLY if presented as part of MHC-II molecules.'
         },
         {
-          question: 'Fever benefits immunity by:',
-          options: { A: 'Inhibiting metabolism', B: 'Promoting interferon, tissue repair, inhibiting pathogens', C: 'Cooling the body', D: 'Increasing bacterial growth' },
-          answer: 'B',
-          explanation: 'Fever is a defense mechanism that promotes interferon production, increases metabolic rate/tissue repair, and inhibits pathogen reproduction.'
+          title: 'Antigen Processing: Endogenous Pathway',
+          body: 'Endogenous antigens are foreign proteins produced WITHIN a body cell (viral or cancerous proteins). Fragments of abnormal proteins become part of MHC-I molecules displayed on the cell surface. Signals that a cell needs help because it is infected or has turned cancerous. Cytotoxic T cells "see" antigens ONLY if presented as part of MHC-I molecules.'
         },
         {
-          question: 'Alpha-interferon is used to treat:',
-          options: { A: 'Diabetes', B: 'Hepatitis B/C and some leukemias', C: 'Hypertension', D: 'Anemia' },
-          answer: 'B',
-          explanation: 'Alpha-interferon is used to treat Kaposi\'s sarcoma, genital herpes, hepatitis B/C, and leukemias.'
+          title: 'T Cell Selection in Thymus',
+          body: 'Stem cells colonize fetal thymus for 2-3 days. Thymosins stimulate maturing T cells to produce antigen receptors → immunocompetent cells. Negative selection: immunocompetent T cells must (1) bind to reticular epithelium and (2) NOT react to self-antigens. Failure leads to clonal deletion (destruction) or anergy (alive but unresponsive) → produces self-tolerance. Positive selection: T cells that CAN bind MHC on reticular epithelium and do NOT react to self divide rapidly → form clones → leave thymus to colonize lymphatic tissues. Only 1 in 100 T cells emerges immunocompetent.'
         },
         {
-          question: 'Thymosins in the thymus stimulate T cells to produce:',
-          options: { A: 'Antibodies', B: 'Antigen receptors', C: 'Complement', D: 'Cytokines only' },
-          answer: 'B',
-          explanation: 'Thymosins stimulate antigen receptor production in T cells, making them immunocompetent.'
+          title: 'Cellular Immunity — Four Classes of T Cells',
+          body: 'T lymphocytes attack and destroy foreign cells and diseased host cells. Four classes: (1) Cytotoxic (killer) T cells (CD8/T8/Tc): carry out the attack. (2) Helper T cells (CD4/T4/Th): help promote T and B cell action and nonspecific mechanisms. (3) Suppressor T cells: limit/slow down the immune reaction as pathogen disappears, preventing autoimmune reactions. (4) Memory T cells: provide swift recall response if a 2nd exposure occurs.'
         },
         {
-          question: 'Negative selection in thymus eliminates T cells that:',
-          options: { A: 'Bind MHC properly', B: 'React to self antigens (clonal deletion/anergy)', C: 'Ignore all antigens', D: 'Produce interferons' },
-          answer: 'B',
-          explanation: 'Negative selection eliminates T cells that react to self antigens through clonal deletion (death) or anergy (inactivation), achieving self-tolerance. Only ~1 in 100 survive.'
+          title: 'Cytotoxic T Cell Activation and Function',
+          body: 'CD8 cell receptor binds to foreign antigen fragments on MHC-I (on infected/cancerous body cells or transplants). Costimulation from helper T cell (prevents accidental immune response). Proliferates and differentiates into a clone of Tc cells and memory Tc cells (occurs in secondary lymphatic organs like lymph nodes). Attack: migrate to infection/tumor site → secrete perforin (punches holes in target cell) → secrete lymphotoxin (activates enzymes fragmenting target DNA) → secrete gamma-interferon (activates phagocytes) → tumor necrosis factor (kills cancer cells in 2-3 days).'
         },
         {
-          question: 'Cell-mediated immunity involves four classes of T cells EXCEPT:',
-          options: { A: 'Cytotoxic T cells', B: 'Helper T cells', C: 'B cells', D: 'Suppressor T cells' },
-          answer: 'C',
-          explanation: 'B cells are part of antibody-mediated immunity, not cell-mediated. The four T cell classes are cytotoxic, helper, suppressor, and memory T cells.'
+          title: 'Helper T Cell Activation and Function',
+          body: 'CD4 cell receptor binds to foreign antigen fragments on MHC-II (on APCs). Costimulation with interleukin. Proliferates into clone of Th cells and long-lived memory Th cells. Function: costimulate ALL other lymphocytes by secreting cytokines (especially IL-2). IL-2 has autocrine function — costimulates the helper T cell itself to proliferate and secrete more IL-2 (positive feedback → rapid expansion of helper T cells). Helper T cells coordinate both humoral and cellular immunity.'
         },
         {
-          question: 'Costimulation for cytotoxic T cell activation comes from:',
-          options: { A: 'B cell cytokine', B: 'Helper T cell cytokine', C: 'NK cells', D: 'Macrophages alone' },
-          answer: 'B',
-          explanation: 'Costimulation from helper T cell cytokine is required for cytotoxic T cell activation, preventing accidental immune responses.'
+          title: 'Immunological Surveillance and Graft Rejection',
+          body: 'Cancerous cells display abnormal surface antigens (tumor antigens). Surveillance = immune system finds, recognizes, and destroys cells with tumor antigens — done by Tc cells, macrophages, and NK cells. Most effective against viral-induced tumors. Transplant patients on immunosuppressive drugs suffer most from viral-induced cancers. Graft rejection: after transplant, both cell-mediated and antibody-mediated responses target the graft. Close MHC matching → weaker rejection. Cyclosporine inhibits IL-2 secretion by helper T cells while preserving B cell function.'
         },
         {
-          question: 'Lymphotoxin from cytotoxic T cells:',
-          options: { A: 'Punches holes', B: 'Activates DNA fragmentation enzymes in target', C: 'Produces fever', D: 'Binds iron' },
-          answer: 'B',
-          explanation: 'Lymphotoxin from cytotoxic T cells activates DNA fragmentation enzymes in the target cell. Perforin is the one that punches holes.'
+          title: 'Cytokines and Cytokine Therapy',
+          body: 'Cytokines: small protein hormones secreted by lymphocytes and APCs involved in immune responses. Clinical uses: alpha-interferon for Kaposi\'s sarcoma, genital herpes, hepatitis B/C, some leukemias. Beta-interferon for multiple sclerosis. Interleukin-2 for cancer treatment (with side effects).'
         },
         {
-          question: 'Immunological surveillance is most effective against:',
-          options: { A: 'Bacterial infections', B: 'Virus-induced tumors', C: 'Fungal infections', D: 'Parasites' },
-          answer: 'B',
-          explanation: 'Immunological surveillance is especially effective at detecting tumor antigens on cancerous cells, particularly virus-induced tumors.'
+          title: 'Antibody-Mediated (Humoral) Immunity',
+          body: 'Millions of different B cells, each recognizing different antigens. B cells stay in lymph nodes, spleen, or Peyer\'s patches (let antigens come to them). B cell receptors bind to antigen (more intense if on APC). Helper T cell costimulates → rapid division and differentiation into long-lived memory cells and a clone of plasma cells. Plasma cells produce antibodies at ~2000 molecules/sec for 4-5 days; each plasma cell secretes only one kind of antibody. Antibodies enter circulation to attack antigens.'
         },
         {
-          question: 'Cyclosporine prevents graft rejection by:',
-          options: { A: 'Killing B cells', B: 'Inhibiting IL-2 secretion by helper T cells', C: 'Enhancing complement', D: 'Increasing perforin' },
-          answer: 'B',
-          explanation: 'Cyclosporine inhibits IL-2 secretion by helper T cells, with little effect on B cells, thus preserving some immune resistance while preventing rejection.'
+          title: 'Antibody Structure',
+          body: 'Glycoproteins called immunoglobulins (Ig). Structure: 4 polypeptide chains (2 heavy + 2 light), hinged midregion (T or Y shape), variable region tips (antigen-binding sites), and constant region (determines antibody class). Five classes based on constant region: IgG, IgA, IgM, IgD, IgE.'
         },
         {
-          question: 'Which pathway of complement activation begins with C3?',
-          options: { A: 'Classical', B: 'Alternate', C: 'Final common', D: 'Interferon' },
-          answer: 'B',
-          explanation: 'The alternate complement pathway begins with C3 activation, while the classical pathway begins with C1.'
+          title: 'Antibody Classes (IgG, IgA, IgM, IgD, IgE)',
+          body: 'IgA: monomer in plasma; dimer in mucus, saliva, tears, milk, intestinal secretions; prevents pathogen adherence to epithelia. IgD: monomer on B cell membrane; functions as B cell antigen receptor. IgE: monomer in tonsils, skin, mucous membranes; stimulates histamine release from mast cells/basophils; attracts eosinophils — major role in allergies. IgG: monomer; 75-85% of circulating antibodies; ONLY Ig that crosses placenta to fetus; dominant in secondary immune response; binds complement. IgM: monomer on B cell membrane (antigen receptor); pentamer in plasma; first Ig produced in primary immune response; excellent at agglutination.'
         },
         {
-          question: 'Only about what fraction of T cells in the thymus become immunocompetent?',
-          options: { A: '1 in 10', B: '1 in 100', C: 'All', D: '1 in 2' },
-          answer: 'B',
-          explanation: 'Only about 1 in 100 T cells survive the selection process in the thymus to become immunocompetent.'
+          title: 'Antibody Actions',
+          body: 'Neutralization: block toxin effects or prevent pathogen attachment to body cells. Immobilization: attack bacterial cilia/flagella. Agglutination and precipitation: cross-link antigens causing clumping and precipitation. Complement activation: trigger complement cascade. Enhanced phagocytosis: through precipitation, complement activation, or opsonization (coating pathogen for easier recognition).'
         },
         {
-          question: 'Helper T cells mainly:',
-          options: { A: 'Directly kill infected cells', B: 'Promote T/B cell action and nonspecific defenses', C: 'Suppress all immunity', D: 'Produce antibodies' },
-          answer: 'B',
-          explanation: 'Helper T cells promote the action of T cells, B cells, and nonspecific defenses via cytokine secretion.'
+          title: 'Immunological Memory',
+          body: 'Primary immune response: first exposure — steady, slow response; memory cells may remain for decades. Secondary immune response: 2nd exposure — thousands of memory cells rapidly proliferate and differentiate into plasma cells and cytotoxic T cells. Antibody titer (measure of serum antibody levels) rises rapidly. Recognition and removal occurs so quickly the person may not even get sick.'
         },
         {
-          question: 'Gamma-interferon from cytotoxic T cells:',
-          options: { A: 'Kills cancer cells', B: 'Activates phagocytic cells', C: 'Resets thermostat', D: 'Binds antigens' },
-          answer: 'B',
-          explanation: 'Gamma-interferon released by cytotoxic T cells activates phagocytic cells at the infection/tumor site.'
+          title: 'Active and Passive Immunity',
+          body: 'Natural active immunity: production of own antibodies/T cells from infection or natural exposure — produces memory cells. Artificial active immunity: production of own antibodies/T cells from vaccination — produces memory cells. Natural passive immunity: temporary; fetus acquires antibodies from mother (through placenta, breast milk). Artificial passive immunity: temporary; injection of immune serum with antibodies (used for snakebite, rabies, tetanus).'
         },
         {
-          question: 'Beta-interferon is used therapeutically for:',
-          options: { A: 'Hepatitis', B: 'Multiple sclerosis', C: 'Anemia', D: 'Hypertension' },
-          answer: 'B',
-          explanation: 'Beta-interferon is used therapeutically to treat multiple sclerosis.'
+          title: 'Hypersensitivity (Allergy) Types I-IV',
+          body: 'Type I (Acute/Anaphylaxis): most common; allergen caps IgE on mast cells/basophils → inflammatory chemicals release → local edema, mucus hypersecretion, congestion (hives, watery eyes, runny nose). Asthma: inhaled allergens trigger histamine and bronchiolar constriction (most common chronic illness in children). Anaphylactic shock: bronchiolar constriction + vasodilation + shock → death possible; treat with epinephrine. Type II (Antibody-Dependent Cytotoxic): IgG/IgM binds to cell surface antigens → lysis via complement fixation (transfusion reactions) or interferes with/overstimulates cell receptors (myasthenia gravis, erythroblastosis fetalis). Type III (Immune Complex): widespread antigen-antibody complexing → intense inflammation; involved in acute glomerulonephritis and systemic lupus erythematosus (SLE). Type IV (Delayed): 12-72 hour delay; APCs display antigens to helper T cells which secrete interferon and lymphokines activating Tc cells and macrophages. Examples: cosmetic allergies, poison ivy (haptens), TB skin test.'
+        },
+        {
+          title: 'Autoimmune Diseases',
+          body: 'Failure of self-tolerance. Causes: cross-reactivity (antibodies against foreign antigen also attack self), abnormal exposure of self-antigens, changes in structure of self-antigens. Result: production of autoantibodies that attack body\'s own cells.'
+        },
+        {
+          title: 'Immunodeficiency: SCID and AIDS',
+          body: 'SCID (Severe Combined Immunodeficiency Disease): hereditary lack of both T and B cells → extreme vulnerability to opportunistic infections. AIDS (Acquired Immunodeficiency Syndrome): caused by HIV. HIV structure: retrovirus using reverse transcriptase. HIV invades helper T cells (CD4), macrophages, and dendritic cells via receptor-mediated endocytosis. Once inside, reverse transcriptase converts viral RNA → DNA → integrates into host cell DNA (may be dormant months to years). Normal Th count: 600-1200 cells/µL; AIDS: <200 cells/µL → susceptible to opportunistic infections (Toxoplasma, Pneumocystis, herpes, CMV, TB). Signs: early flu-like → night sweats, fatigue, weight loss → thrush (white patches on mucous membranes) → Kaposi sarcoma (purple skin lesions from blood vessel endothelial cancer). Transmission: blood, semen, vaginal secretions, breast milk, placenta. NOT transmitted by casual contact. Latex condoms effective barrier.'
+        },
+        {
+          title: 'Tumor Immunotherapy',
+          body: 'Inactive cytotoxic T cells from patient are cultured with IL-2, creating lymphokine-activated killer (LAK) cells, then reinjected. Can cause tumor regression but has severe complications.'
+        },
+        {
+          title: 'Aging and the Immune System',
+          body: 'More susceptible to all types of infections and malignancies. Response to vaccines is decreased. More autoantibodies are produced. Reduced immune function: T cells less responsive to antigens, age-related thymus atrophy, decreased thymic hormone production, B cells less responsive, antibody production is slowed.'
         }
       ],
-      flashcards: [
-        { front: 'What do NK cells target and how do they kill?', back: 'Target cells displaying abnormal MHC antigens (microbes, tumor cells). Kill by secreting perforin (membrane holes) and other toxic substances.' },
-        { front: 'What are the three types of antimicrobial proteins?', back: 'Interferons (induce antiviral proteins, activate NK cells/macrophages), complement (enhance inflammation/phagocytosis/cytolysis), transferrins (bind iron to starve bacteria).' },
-        { front: 'Describe the classical vs. alternate complement pathways.', back: 'Classical: begins with C1 activation. Alternate: begins with C3 activation. Both lead to inflammation, enhanced phagocytosis, or cytolysis via membrane attack complex (C5b-C9).' },
-        { front: 'How does fever develop and what are its stages?', back: 'Macrophages secrete IL-1 (pyrogen) -> hypothalamus secretes PGE -> thermostat reset higher. Stages: onset, stadium, defervescence. >105F = delirium; 111-115F = coma/death.' },
-        { front: 'What is the distribution of circulating lymphocytes?', back: '~80% T cells (cell-mediated), 15% B cells (antibody-mediated), 5% NK cells (nonspecific).' },
-        { front: 'What happens during T cell selection in the thymus?', back: 'Negative selection: T cells reacting to self antigens undergo clonal deletion/anergy (~99% eliminated). Positive selection: T cells properly binding MHC (not self-reactive) divide into clones and colonize lymphatic tissues.' },
-        { front: 'Name the four classes of T cells in cell-mediated immunity.', back: 'Cytotoxic (killer) T cells (attack), helper T cells (promote T/B/nonspecific), suppressor T cells (limit attack), memory T cells (future immunity).' },
-        { front: 'How do cytotoxic T cells attack targets?', back: 'Perforin (membrane holes), lymphotoxin (DNA fragmentation enzymes), gamma-interferon (activates phagocytes), and tumor necrosis factor (kills cancer cells in 2-3 days).' },
-        { front: 'What is required for cytotoxic T cell activation?', back: 'CD8 receptor binds foreign antigen on MHC-I + costimulation from helper T cell cytokine. This leads to clonal expansion into effector and memory T cells.' },
-        { front: 'How does cyclosporine prevent graft rejection?', back: 'Inhibits IL-2 secretion by helper T cells, with little B cell effect, preserving some immune resistance while preventing rejection.' },
-        { front: 'What are the therapeutic uses of interferons?', back: 'Alpha-interferon: Kaposi\'s sarcoma, genital herpes, hepatitis B/C, leukemias. Beta-interferon: multiple sclerosis. Interleukin-2: cancer treatment.' }
+      keyTerms: [
+        { term: 'Cellular Immunity', definition: 'T cell-mediated immune response; attacks infected/cancerous cells and transplants directly.' },
+        { term: 'Antibody-Mediated Immunity', definition: 'B cell/plasma cell response producing antibodies that circulate in blood/lymph to attack antigens.' },
+        { term: 'Antigen', definition: 'Foreign molecule that provokes an immune response; has immunogenicity and reactivity.' },
+        { term: 'Epitope', definition: 'The specific small part of an antigen that triggers the immune response (antigenic determinant).' },
+        { term: 'Hapten', definition: 'Small molecule that triggers immune response only when attached to a body protein (e.g., poison ivy).' },
+        { term: 'MHC-I', definition: 'Surface markers on ALL nucleated cells; display endogenous antigens (viral/cancer) for cytotoxic T cells.' },
+        { term: 'MHC-II', definition: 'Surface markers ONLY on APCs; display exogenous antigens for helper T cells.' },
+        { term: 'Cytotoxic T Cells (CD8)', definition: 'Kill infected/cancerous cells using perforin, lymphotoxin, and TNF; recognize MHC-I.' },
+        { term: 'Helper T Cells (CD4)', definition: 'Costimulate all lymphocytes via IL-2; coordinate cellular and humoral immunity; recognize MHC-II.' },
+        { term: 'Plasma Cells', definition: 'Differentiated B cells producing antibodies at ~2000 molecules/sec for 4-5 days.' },
+        { term: 'IgG', definition: '75-85% of circulating Ig; monomer; only Ig crossing placenta; dominant in secondary response.' },
+        { term: 'IgE', definition: 'Monomer in skin/mucous membranes; triggers histamine release; major role in Type I allergy.' },
+        { term: 'IgM', definition: 'Pentamer in plasma; first Ig in primary response; excellent at agglutination.' },
+        { term: 'IgA', definition: 'Dimer in secretions (saliva, tears, milk, mucus); prevents pathogen adherence to epithelia.' },
+        { term: 'Clonal Selection', definition: 'Antigen-stimulated lymphocyte produces a clone of identical cells against that specific antigen.' },
+        { term: 'Immunological Memory', definition: 'Memory cells from primary response enable rapid, stronger secondary response upon re-exposure.' },
+        { term: 'Anergy', definition: 'T cell alive but unresponsive; result of failed negative selection — contributes to self-tolerance.' },
+        { term: 'Reverse Transcriptase', definition: 'HIV enzyme converting viral RNA to DNA for integration into host cell genome.' }
+      ],
+      memoryAids: [
+        'MHC classes: "Class I = all cells type I" (all nucleated cells); "Class II = APCs type II" (macrophages, B cells).',
+        'T cell recognition: "CD8 sees MHC-I" (8÷1=8); "CD4 sees MHC-II" (4×2=8... or just 4→2).',
+        'Antibody classes: "GAMED" = IgG (75-85%), IgA (secretions), IgM (1st response), IgE (allergies), IgD (B cell receptor).',
+        'Hypersensitivity types: "ACID" = Type I Anaphylactic, Type II Cytotoxic, Type III Immune complex, Type IV Delayed.',
+        'Primary = Slow; Secondary = Swift (memory cells are ready).',
+        'Active immunity has memory cells; Passive immunity is temporary (borrowed antibodies).',
+        'HIV target: CD4 helper T cells — AIDS = <200 CD4 cells/µL.',
+        'Only 1 in 100 T cells survives thymic selection — extremely stringent quality control!'
+      ],
+      quiz: [
+        { id: 'ly3-q1', question: 'MHC-I molecules are found on:', options: { A: 'Only antigen-presenting cells', B: 'All nucleated cells except RBCs', C: 'Only T lymphocytes', D: 'Only B lymphocytes' }, answer: 'B', explanation: 'MHC-I is on ALL nucleated cells except RBCs. MHC-II is only on APCs (macrophages, B cells, thymus cells).' },
+        { id: 'ly3-q2', question: 'Helper T cells (CD4) recognize antigens presented on:', options: { A: 'MHC-I molecules', B: 'MHC-II molecules', C: 'Free-floating antigens', D: 'Complement proteins' }, answer: 'B', explanation: 'CD4 helper T cells recognize antigen fragments on MHC-II molecules on antigen-presenting cells.' },
+        { id: 'ly3-q3', question: 'What percentage of T cells survive positive and negative selection in the thymus?', options: { A: '50%', B: '25%', C: '1%', D: '10%' }, answer: 'C', explanation: 'Only 1 in 100 T cells emerges immunocompetent — the rest are eliminated by clonal deletion or anergy.' },
+        { id: 'ly3-q4', question: 'Cytotoxic T cells destroy target cells using all EXCEPT:', options: { A: 'Perforin', B: 'Lymphotoxin', C: 'Antibodies', D: 'Tumor necrosis factor' }, answer: 'C', explanation: 'Antibodies are produced by plasma cells (B cell lineage). Cytotoxic T cells use perforin, lymphotoxin, gamma-interferon, and TNF.' },
+        { id: 'ly3-q5', question: 'The antibody class that constitutes 75-85% of circulating antibodies and can cross the placenta is:', options: { A: 'IgA', B: 'IgM', C: 'IgG', D: 'IgE' }, answer: 'C', explanation: 'IgG is the most abundant circulating antibody and the only class that crosses the placenta to the fetus.' },
+        { id: 'ly3-q6', question: 'The first immunoglobulin produced during a primary immune response is:', options: { A: 'IgG', B: 'IgA', C: 'IgE', D: 'IgM' }, answer: 'D', explanation: 'IgM (pentamer) is the first antibody produced in a primary response; excellent at agglutination.' },
+        { id: 'ly3-q7', question: 'IgE is primarily involved in:', options: { A: 'Crossing the placenta', B: 'Allergic reactions — triggering histamine release', C: 'Opsonization of bacteria', D: 'Activating cytotoxic T cells' }, answer: 'B', explanation: 'IgE on mast cells/basophils triggers histamine release when allergen binds — key player in Type I hypersensitivity/allergies.' },
+        { id: 'ly3-q8', question: 'A vaccination provides:', options: { A: 'Natural active immunity', B: 'Artificial active immunity', C: 'Natural passive immunity', D: 'Artificial passive immunity' }, answer: 'B', explanation: 'Vaccination = artificial active immunity — your body produces its own antibodies and memory cells in response to the vaccine antigen.' },
+        { id: 'ly3-q9', question: 'Type IV hypersensitivity is characterized by:', options: { A: 'Immediate IgE-mediated reaction', B: 'IgG/IgM cytotoxic lysis', C: 'Immune complex deposition', D: '12-72 hour delayed T cell-mediated response' }, answer: 'D', explanation: 'Type IV (delayed) takes 12-72 hours; involves APCs presenting antigen to helper T cells → Tc cell and macrophage activation. Examples: poison ivy, TB skin test.' },
+        { id: 'ly3-q10', question: 'HIV primarily targets which cells?', options: { A: 'Cytotoxic T cells (CD8)', B: 'Helper T cells (CD4)', C: 'B lymphocytes', D: 'Natural killer cells' }, answer: 'B', explanation: 'HIV invades CD4 helper T cells, macrophages, and dendritic cells. AIDS is diagnosed when CD4 count falls below 200 cells/µL.' },
+        { id: 'ly3-q11', question: 'In the secondary immune response:', options: { A: 'Response is slower than primary', B: 'Only IgM is produced', C: 'Memory cells rapidly proliferate → person may not get sick', D: 'No antibodies are produced' }, answer: 'C', explanation: 'Secondary response: thousands of memory cells rapidly proliferate → recognition and removal so fast the person may not even get sick.' },
+        { id: 'ly3-q12', question: 'Plasma cells produce antibodies at approximately:', options: { A: '10 molecules/sec', B: '200 molecules/sec', C: '2000 molecules/sec', D: '20,000 molecules/sec' }, answer: 'C', explanation: 'Each plasma cell produces ~2000 antibody molecules per second for 4-5 days, and secretes only one kind of antibody.' },
+        { id: 'ly3-q13', question: 'Systemic lupus erythematosus (SLE) is an example of which hypersensitivity type?', options: { A: 'Type I', B: 'Type II', C: 'Type III', D: 'Type IV' }, answer: 'C', explanation: 'SLE involves widespread antigen-antibody complexation (Type III immune complex hypersensitivity) causing intense inflammation.' },
+        { id: 'ly3-q14', question: 'Which antibody class prevents pathogen adherence to epithelia and is found in saliva, tears, and breast milk?', options: { A: 'IgG', B: 'IgA', C: 'IgD', D: 'IgM' }, answer: 'B', explanation: 'IgA (dimer in secretions) is found in mucus, saliva, tears, milk, and intestinal secretions — prevents pathogen adherence.' },
+        { id: 'ly3-q15', question: 'Autoimmune diseases result from:', options: { A: 'Excess antibody production against foreign antigens', B: 'Failure of self-tolerance leading to attack on body\'s own cells', C: 'Overactive NK cells', D: 'Too many memory cells' }, answer: 'B', explanation: 'Autoimmune diseases occur when self-tolerance fails — immune system attacks body\'s own cells via autoantibodies.' }
       ]
     }
+  ],
+
+  // ===== MODULE-LEVEL QUIZ =====
+  quiz: [
+    { id: 'ly-q1', question: 'The lymphatic system\'s three main functions are:', options: { A: 'Gas exchange, hormone transport, waste removal', B: 'Fluid recovery, immunity, lipid absorption', C: 'Blood production, pH regulation, heat distribution', D: 'Oxygen delivery, CO₂ removal, nutrient transport' }, answer: 'B', explanation: 'The lymphatic system recovers fluid, provides immunity via lymph node filtration, and absorbs lipids via lacteals.' },
+    { id: 'ly-q2', question: 'The cisterna chyli is the origin of the:', options: { A: 'Right lymphatic duct', B: 'Thoracic duct', C: 'Spleen', D: 'Thymus' }, answer: 'B', explanation: 'The thoracic duct begins at the cisterna chyli (a prominent abdominal sac) and drains most of the body.' },
+    { id: 'ly-q3', question: 'White pulp of the spleen contains:', options: { A: 'Sinuses filled with erythrocytes', B: 'Lymphocytes and macrophages surrounding splenic artery branches', C: 'Hassall\'s corpuscles', D: 'Germinal centers only' }, answer: 'B', explanation: 'White pulp consists of lymphocytes and macrophages surrounding small branches of the splenic artery (immune function). Red pulp has RBC-filled sinuses.' },
+    { id: 'ly-q4', question: 'The complement system\'s membrane attack complex (MAC) causes:', options: { A: 'Fever', B: 'Opsonization', C: 'Cytolysis by forming a ring/pore in the enemy cell membrane', D: 'Chemotaxis' }, answer: 'C', explanation: 'MAC (C5b-C9) inserts into the plasma membrane of target cells, forming pores that cause cytolysis (cell bursting).' },
+    { id: 'ly-q5', question: 'Negative selection of T cells in the thymus ensures that:', options: { A: 'Only the fastest-growing T cells survive', B: 'T cells that react to self-antigens are eliminated', C: 'B cells are produced', D: 'NK cells are activated' }, answer: 'B', explanation: 'Negative selection eliminates T cells that react to self-antigens (via clonal deletion or anergy), establishing self-tolerance.' },
+    { id: 'ly-q6', question: 'Helper T cells are crucial because they:', options: { A: 'Directly kill cancer cells', B: 'Produce antibodies', C: 'Costimulate all other lymphocytes via cytokines, coordinating the entire immune response', D: 'Form the membrane attack complex' }, answer: 'C', explanation: 'Helper T cells (CD4) secrete IL-2 and other cytokines to costimulate T cells, B cells, and nonspecific mechanisms. They coordinate everything.' },
+    { id: 'ly-q7', question: 'An antigen that can provoke an immune response only when attached to a body protein is called a:', options: { A: 'Hapten', B: 'Epitope', C: 'Cytokine', D: 'Complement' }, answer: 'A', explanation: 'A hapten is too small to trigger immunity alone but becomes antigenic when bound to a larger body protein (e.g., poison ivy).' },
+    { id: 'ly-q8', question: 'In antibody-mediated immunity, antibodies are produced by:', options: { A: 'Helper T cells', B: 'Cytotoxic T cells', C: 'Plasma cells (differentiated B cells)', D: 'Macrophages' }, answer: 'C', explanation: 'Activated B cells differentiate into plasma cells that secrete antibodies at ~2000/sec.' },
+    { id: 'ly-q9', question: 'A patient previously vaccinated against measles is exposed again. The rapid, strong response is due to:', options: { A: 'Innate immunity', B: 'Primary immune response', C: 'Immunological memory (secondary response)', D: 'Passive immunity from the vaccine' }, answer: 'C', explanation: 'Memory cells from vaccination enable a rapid, powerful secondary response — recognition is so fast the person may not get sick.' },
+    { id: 'ly-q10', question: 'Type I hypersensitivity involves:', options: { A: 'IgG/IgM binding cell surface antigens', B: 'Immune complex deposition', C: 'IgE on mast cells triggering histamine release', D: 'Delayed T cell response' }, answer: 'C', explanation: 'Type I (acute): allergen crosslinks IgE on mast cells/basophils → histamine release → edema, congestion, hives. Severe form = anaphylaxis.' },
+    { id: 'ly-q11', question: 'Which antibody class is found as a pentamer in plasma and is the first produced during a primary immune response?', options: { A: 'IgG', B: 'IgA', C: 'IgE', D: 'IgM' }, answer: 'D', explanation: 'IgM exists as a pentamer in plasma (monomer on B cell membrane). It\'s the first antibody class produced during primary response and is excellent at agglutination.' },
+    { id: 'ly-q12', question: 'HIV uses which enzyme to convert its RNA genome into DNA?', options: { A: 'DNA polymerase', B: 'Reverse transcriptase', C: 'RNA polymerase', D: 'Helicase' }, answer: 'B', explanation: 'HIV is a retrovirus that uses reverse transcriptase to create DNA from its RNA genome, which then integrates into host cell DNA.' },
+    { id: 'ly-q13', question: 'Natural passive immunity is exemplified by:', options: { A: 'Vaccination', B: 'Recovering from chickenpox', C: 'Fetus receiving maternal antibodies through the placenta', D: 'Injection of tetanus antiserum' }, answer: 'C', explanation: 'Natural passive immunity: fetus acquires antibodies from mother via placenta and breast milk. It\'s temporary (no memory cells formed).' },
+    { id: 'ly-q14', question: 'Aging affects the immune system by:', options: { A: 'Increasing thymus size', B: 'Making T cells more responsive', C: 'Increasing susceptibility to infections and producing more autoantibodies', D: 'Accelerating antibody production' }, answer: 'C', explanation: 'With aging: thymus atrophies, T/B cells less responsive, more autoantibodies produced, increased susceptibility to infections and malignancies.' },
+    { id: 'ly-q15', question: 'The endogenous antigen pathway involves display of foreign proteins on:', options: { A: 'MHC-II by APCs', B: 'MHC-I by infected body cells', C: 'IgG receptors', D: 'Complement receptors' }, answer: 'B', explanation: 'Endogenous antigens (viral/cancer proteins made inside cells) are displayed on MHC-I molecules, signaling cytotoxic T cells that the cell is infected.' }
   ]
 };
 
