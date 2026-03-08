@@ -9,6 +9,7 @@ export default function SectionQuiz({ module, sectionIndex }) {
     answerQuizQuestion,
     completeQuiz,
     resetSectionQuiz,
+    resetSection,
     getSectionProgress,
     goToSection,
     goToFlashcards,
@@ -66,6 +67,11 @@ export default function SectionQuiz({ module, sectionIndex }) {
     setAnswers({});
     setCurrentQ(0);
     setShowResults(false);
+  }
+
+  function handleResetSection() {
+    resetSection(module.id, section.id);
+    navigate('learn');
   }
 
   function handleNextSection() {
@@ -147,6 +153,10 @@ export default function SectionQuiz({ module, sectionIndex }) {
           <div className="results-actions">
             <button className="btn btn-secondary" onClick={handleRetry}>
               Retry Quiz
+            </button>
+            <button className="btn btn-secondary" onClick={handleResetSection}
+              title="Reset all progress for this section and start over">
+              Reset Section
             </button>
             <button className="btn btn-secondary" onClick={goToFlashcards}>
               Review Flashcards

@@ -225,6 +225,31 @@ export function StudyProvider({ children, modules }) {
               ...prev.modules[moduleId].sections[sectionId],
               quizAnswers: {},
               quizScore: null,
+              complete: false,
+            }
+          }
+        }
+      }
+    }));
+  }, [update]);
+
+  // Fully reset a section (learn + quiz + inline)
+  const resetSection = useCallback((moduleId, sectionId) => {
+    update(prev => ({
+      ...prev,
+      modules: {
+        ...prev.modules,
+        [moduleId]: {
+          ...prev.modules[moduleId],
+          sections: {
+            ...prev.modules[moduleId].sections,
+            [sectionId]: {
+              learnComplete: false,
+              inlineAnswers: {},
+              quizAnswers: {},
+              quizScore: null,
+              quizTotal: prev.modules[moduleId].sections[sectionId].quizTotal,
+              complete: false,
             }
           }
         }
@@ -318,6 +343,7 @@ export function StudyProvider({ children, modules }) {
     answerQuizQuestion,
     completeQuiz,
     resetSectionQuiz,
+    resetSection,
     nextSection,
     toggleTheme,
     getModuleProgress,
