@@ -317,3 +317,29 @@
   color: var(--text-success);
   font-weight: var(--weight-medium);
 }
+
+/* ============================================
+   Final Quiz - All Modules Mixed
+   ============================================ */
+
+.final-quiz-source-tag {
+  display: inline-block;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  background: var(--bg-hover);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-md);
+}
+
+.final-quiz-module-group {
+  margin-bottom: var(--space-lg);
+}
+
+.final-quiz-module-heading {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--border-light);
+}

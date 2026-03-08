@@ -19,6 +19,7 @@ import SectionQuiz from './components/quiz/SectionQuiz';
 import ScenarioQuiz from './components/quiz/ScenarioQuiz';
 import FlashcardDeck from './components/flashcards/FlashcardDeck';
 import LabelingExercise from './components/labeling/LabelingExercise';
+import FinalQuiz from './components/quiz/FinalQuiz';
 
 const ALL_MODULES = [endocrine, heart, blood, vessels, lymphatic];
 
@@ -62,6 +63,8 @@ function AppShell() {
         );
       case 'labeling':
         return <LabelingExercise />;
+      case 'finalQuiz':
+        return <FinalQuiz modules={ALL_MODULES} />;
       case 'home':
       default:
         return <HomeView modules={ALL_MODULES} />;

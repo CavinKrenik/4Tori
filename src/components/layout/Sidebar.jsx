@@ -10,7 +10,7 @@ const MODULE_ICONS = {
 };
 
 export default function Sidebar({ modules, isOpen, onClose }) {
-  const { progress, openModule, goHome, goToLabeling, toggleTheme, getModuleProgress, getOverallProgress } = useStudy();
+  const { progress, openModule, goHome, goToLabeling, goToFinalQuiz, toggleTheme, getModuleProgress, getOverallProgress } = useStudy();
   const overall = getOverallProgress();
 
   return (
@@ -81,6 +81,18 @@ export default function Sidebar({ modules, isOpen, onClose }) {
             <div className="sidebar-module-info">
               <div className="sidebar-module-title">Diagram Labeling</div>
               <div className="sidebar-module-meta">Circulatory system</div>
+            </div>
+          </button>
+          <button
+            className={`sidebar-module-btn ${progress.currentView === 'finalQuiz' ? 'active' : ''}`}
+            onClick={() => { goToFinalQuiz(); onClose?.(); }}
+          >
+            <div className="sidebar-module-icon" style={{ background: '#fef3c7', color: '#d97706' }}>
+              {"🏆"}
+            </div>
+            <div className="sidebar-module-info">
+              <div className="sidebar-module-title">Final Quiz</div>
+              <div className="sidebar-module-meta">All modules mixed</div>
             </div>
           </button>
         </div>
