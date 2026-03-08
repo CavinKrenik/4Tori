@@ -18,7 +18,7 @@ const MODULE_EMOJIS = {
 };
 
 export default function HomeView({ modules }) {
-  const { openModule, goToMasterQuiz, getModuleProgress, getOverallProgress } = useStudy();
+  const { openModule, goToMasterQuiz, goToLabeling, getModuleProgress, getOverallProgress } = useStudy();
   const overall = getOverallProgress();
 
   return (
@@ -69,6 +69,14 @@ export default function HomeView({ modules }) {
           )}
         </div>
       )}
+
+      <div className="labeling-cta animate-fade-up" style={{ marginBottom: 'var(--space-xl)' }}>
+        <div className="stat-card" onClick={goToLabeling} style={{ cursor: 'pointer', textAlign: 'center' }}>
+          <div className="stat-value" style={{ fontSize: '1.6rem' }}>{"\uD83E\uDEC0"}</div>
+          <div className="stat-label" style={{ fontWeight: 600 }}>Diagram Labeling</div>
+          <p style={{ margin: '4px 0 0', fontSize: '0.8rem', color: 'var(--muted)' }}>Interactive circulatory system labeling exercise</p>
+        </div>
+      </div>
 
       <div className="module-grid">
         {modules.map((mod, i) => {

@@ -10,7 +10,7 @@ const MODULE_ICONS = {
 };
 
 export default function Sidebar({ modules, isOpen, onClose }) {
-  const { progress, openModule, goHome, toggleTheme, getModuleProgress, getOverallProgress } = useStudy();
+  const { progress, openModule, goHome, goToLabeling, toggleTheme, getModuleProgress, getOverallProgress } = useStudy();
   const overall = getOverallProgress();
 
   return (
@@ -69,6 +69,21 @@ export default function Sidebar({ modules, isOpen, onClose }) {
             );
           })}
         </nav>
+
+        <div className="sidebar-extras">
+          <button
+            className={`sidebar-module-btn ${progress.currentView === 'labeling' ? 'active' : ''}`}
+            onClick={() => { goToLabeling(); onClose?.(); }}
+          >
+            <div className="sidebar-module-icon" style={{ background: '#fce4ec', color: '#d32f2f' }}>
+              {"\uD83E\uDEC0"}
+            </div>
+            <div className="sidebar-module-info">
+              <div className="sidebar-module-title">Diagram Labeling</div>
+              <div className="sidebar-module-meta">Circulatory system</div>
+            </div>
+          </button>
+        </div>
 
         <div className="sidebar-theme-toggle">
           <button className="theme-btn" onClick={toggleTheme}>
