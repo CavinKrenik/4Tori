@@ -11,6 +11,8 @@ const MODULE_ICONS = {
   lymphatic: '🛡️',
 };
 
+const QUIZ_SIZE = 20;
+
 function shuffle(arr, seed) {
   const a = [...arr];
   let s = seed;
@@ -44,8 +46,8 @@ export default function FinalQuiz({ modules }) {
     return pool;
   }, [modules]);
 
-  // Load saved state or create fresh shuffle
-  const [seed] = useState(() => {
+  // Seed drives the shuffle — changing it gives a new random 20
+  const [seed, setSeed] = useState(() => {
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
       if (saved && saved.seed != null) return saved.seed;
@@ -53,7 +55,8 @@ export default function FinalQuiz({ modules }) {
     return Date.now();
   });
 
-  const shuffled = useMemo(() => shuffle(allQuestions, seed), [allQuestions, seed]);
+  // Shuffle full pool then take first QUIZ_SIZE
+  const questions = useMemo(() => shuffle(allQuestions, seed).slice(0, QUIZ_SIZE), [allQuestions, seed]);
 
   const [currentQ, setCurrentQ] = useState(() => {
     try {
@@ -91,26 +94,23 @@ export default function FinalQuiz({ modules }) {
     setAnswers(newAnswers);
 
     setTimeout(() => {
-      if (currentQ < shuffled.length - 1) {
+      if (currentQ < questions.length - 1) {
         setCurrentQ(currentQ + 1);
       } else {
         setShowResults(true);
       }
     }, 1200);
-  }, [answers, currentQ, shuffled.length]);
+  }, [answers, currentQ, questions.length]);
 
-  function handleRetry() {
+  function handleNewRound() {
     const newSeed = Date.now();
-    localStorage.removeItem(STORAGE_KEY);
+    setSeed(newSeed);
     setAnswers({});
     setCurrentQ(0);
     setShowResults(false);
-    // Force re-mount by navigating
-    navigate('home');
-    setTimeout(() => navigate('finalQuiz'), 0);
   }
 
-  if (shuffled.length === 0) {
+  if (questions.length === 0) {
     return (
       <div className="page-content">
         <div className="empty-state">
@@ -127,20 +127,20 @@ export default function FinalQuiz({ modules }) {
   // Results
   if (showResults) {
     const score = Object.keys(answers).reduce((sum, key) => {
-      return sum + (answers[key] === shuffled[key]?.answer ? 1 : 0);
+      return sum + (answers[key] === questions[key]?.answer ? 1 : 0);
     }, 0);
-    const percent = Math.round((score / shuffled.length) * 100);
+    const percent = Math.round((score / questions.length) * 100);
     const passed = percent >= 60;
 
     let message, messageClass;
-    if (percent >= 90) { message = 'Outstanding! You\'ve mastered all the material!'; messageClass = 'excellent'; }
-    else if (percent >= 70) { message = 'Great work! Strong grasp across all modules.'; messageClass = 'good'; }
+    if (percent >= 90) { message = 'Outstanding! You\'ve mastered this round!'; messageClass = 'excellent'; }
+    else if (percent >= 70) { message = 'Great work! Strong grasp across modules.'; messageClass = 'good'; }
     else if (percent >= 60) { message = 'You passed! Review missed topics to solidify your knowledge.'; messageClass = 'good'; }
     else { message = 'Keep studying — review the modules you missed and try again.'; messageClass = 'needs-work'; }
 
     // Group missed by module
     const missed = [];
-    shuffled.forEach((q, i) => {
+    questions.forEach((q, i) => {
       if (answers[i] !== q.answer) {
         missed.push({ ...q, index: i, userAnswer: answers[i] });
       }
@@ -164,7 +164,7 @@ export default function FinalQuiz({ modules }) {
                 color={passed ? 'var(--success)' : 'var(--warning)'}
               />
             </div>
-            <div className="results-score">{score} / {shuffled.length}</div>
+            <div className="results-score">{score} / {questions.length}</div>
             <div className="results-label">{percent}% Correct</div>
             <div className={`results-message ${messageClass}`}>{message}</div>
           </div>
@@ -203,8 +203,8 @@ export default function FinalQuiz({ modules }) {
           </div>
 
           <div className="results-actions">
-            <button className="btn btn-secondary" onClick={handleRetry}>
-              Retry Final Quiz
+            <button className="btn btn-secondary" onClick={handleNewRound}>
+              🔀 New Random 20
             </button>
             <button className="btn btn-primary" onClick={() => navigate('home')}>
               Back to Home
@@ -216,7 +216,7 @@ export default function FinalQuiz({ modules }) {
   }
 
   // Quiz in progress
-  const q = shuffled[currentQ];
+  const q = questions[currentQ];
   const answeredCount = Object.keys(answers).length;
 
   return (
@@ -225,18 +225,18 @@ export default function FinalQuiz({ modules }) {
         <div className="quiz-header">
           <h2 className="quiz-title">🏆 Final Quiz</h2>
           <p className="quiz-subtitle">
-            {shuffled.length} questions from all modules — mixed & shuffled. 60% to pass.
+            20 random questions from all modules. 60% to pass.
           </p>
         </div>
 
         <div className="quiz-progress">
           <span className="quiz-progress-text">
-            {answeredCount}/{shuffled.length}
+            {answeredCount}/{questions.length}
           </span>
           <div className="progress-bar quiz-progress-bar" style={{ flex: 1 }}>
             <div
               className="progress-bar-fill"
-              style={{ width: `${(answeredCount / shuffled.length) * 100}%` }}
+              style={{ width: `${(answeredCount / questions.length) * 100}%` }}
             />
           </div>
         </div>
@@ -269,8 +269,8 @@ export default function FinalQuiz({ modules }) {
           </span>
           <button
             className="btn btn-ghost btn-sm"
-            onClick={() => setCurrentQ(Math.min(shuffled.length - 1, currentQ + 1))}
-            disabled={currentQ >= shuffled.length - 1 || !answers[currentQ]}
+            onClick={() => setCurrentQ(Math.min(questions.length - 1, currentQ + 1))}
+            disabled={currentQ >= questions.length - 1 || !answers[currentQ]}
           >
             Next →
           </button>
