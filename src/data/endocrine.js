@@ -2,913 +2,419 @@ const endocrine = {
   id: 'endocrine',
   title: 'Endocrine System',
   source: '6. Endocrine systemPDF.pdf',
-  description: 'Comprehensive coverage of the endocrine system including nervous vs endocrine comparison, cell communication, hypothalamus-pituitary axis, thyroid, pineal, thymus, adrenal and pancreatic hormones, stress responses, aging changes, and endocrine disorders including diabetes mellitus.',
+  description: 'Comprehensive coverage of the endocrine system including nervous vs endocrine comparison, cell communication, hormone chemistry, transport, receptors, mechanisms of action (lipid-soluble vs water-soluble, G-proteins, cAMP, amplification), hormonal interactions, eicosanoids, growth factors, hypothalamus-pituitary axis, thyroid, parathyroids, adrenals, pancreas, gonads, other endocrine organs (heart ANP, kidneys, skin), stress responses (GAS), aging changes, and endocrine disorders including diabetes mellitus.',
   icon: 'endocrine',
+
+  learningObjectives: [
+    'Compare and contrast the nervous and endocrine systems in terms of speed, duration, and specificity.',
+    'Describe the four types of cell communication: gap junctions, neurotransmitters, paracrine hormones, and endocrine hormones.',
+    'Explain hormone transport in blood (bound vs unbound) and the significance of half-life.',
+    'Differentiate between lipid-soluble and water-soluble hormone mechanisms of action.',
+    'Describe the cAMP second messenger system including G-proteins, adenylate cyclase, and amplification.',
+    'Explain up-regulation and down-regulation of hormone receptors.',
+    'Describe hormonal interactions: permissive, synergistic, and antagonistic effects.',
+    'Identify hypothalamic releasing/inhibiting hormones and anterior pituitary tropic hormones.',
+    'Describe thyroid hormones (T3/T4), calcitonin, PTH, and calcium regulation.',
+    'Distinguish adrenal cortex zones and their hormones (mineralocorticoids, glucocorticoids, androgens).',
+    'Describe adrenal medulla hormones (epinephrine/norepinephrine) and their fight-or-flight effects.',
+    'Explain pancreatic islet hormones (insulin, glucagon, somatostatin) and blood glucose regulation.',
+    'Describe the three stages of General Adaptation Syndrome (alarm, resistance, exhaustion).',
+    'Identify endocrine disorders: Graves disease, Cushing syndrome, Addison disease, diabetes mellitus Types I and II.',
+    'Explain eicosanoids (prostaglandins, leukotrienes) and the action of NSAIDs.'
+  ],
+
+  clinicalCorrelations: [
+    {
+      title: 'Diabetes Mellitus',
+      detail: 'Type I (~10%): autoimmune destruction of beta cells, diagnosed ~age 12, requires insulin. Type II (~90%): insulin resistance, risk factors include heredity, age >40, obesity. Signs: polyuria, polydipsia, polyphagia, hyperglycemia. Acute: ketoacidosis (lowered blood pH → dyspnea → coma). Chronic: neuropathy, atherosclerosis, retinal/kidney damage, gangrene.'
+    },
+    {
+      title: 'Cushing Syndrome',
+      detail: 'Excess cortical secretion causing hyperglycemia, hypertension, weakness, edema, muscle/bone loss from protein catabolism. Classic body changes: "buffalo hump" fat between shoulders and "moon face" with thin spindly legs. Poor wound healing.'
+    },
+    {
+      title: 'Addison Disease',
+      detail: 'Hyposecretion of glucocorticoids causing hypoglycemia, muscle weakness, low BP, dehydration from low Na+, skin darkening (similar to MSH effects), and risk of cardiac arrest.'
+    },
+    {
+      title: 'Graves Disease (Toxic Goiter)',
+      detail: 'Autoimmune: antibodies mimic TSH on thyroid receptors → excessive T3/T4 → weight loss, tremors, nervousness, exophthalmos. Contrast with endemic goiter from iodine deficiency → no T3/T4 → elevated TSH → thyroid enlargement.'
+    },
+    {
+      title: 'Cholera Toxin & G-Proteins',
+      detail: 'Cholera toxin locks G-protein in activated state in intestinal epithelium → persistent cAMP production → intestinal cells actively transport Cl⁻ (Na+ and water follow) into lumen → massive watery diarrhea → death from dehydration unless ions/fluids replaced and antibiotics given.'
+    },
+    {
+      title: 'GH Disorders',
+      detail: 'Childhood hypersecretion → gigantism; childhood hyposecretion → dwarfism. Adult hypersecretion → acromegaly (thickening of bones/soft tissues). Diabetogenic effect of excess GH: persistent hyperglycemia → beta-cell burnout → diabetes.'
+    }
+  ],
+
+  quickFacts: [
+    'Endocrine effects: slow onset (seconds-days), long-lasting (weeks). Nervous: fast (1-10 ms), brief.',
+    'Negative feedback is the most common hormone regulation; positive feedback amplifies (e.g., oxytocin).',
+    'Lipid-soluble hormones enter cells and activate genes directly; water-soluble use surface receptors and second messengers.',
+    'One molecule of epinephrine can trigger breakdown of millions of glycogen molecules (amplification).',
+    'Down-regulation: excess hormone → fewer receptors → less sensitivity. Up-regulation: low hormone → more receptors.',
+    'Hormonal interactions: Permissive (thyroid strengthens epinephrine), Synergistic (estrogen + LH for oocyte), Antagonistic (insulin vs glucagon).',
+    'Anterior pituitary hormones (FLAT PEG): FSH, LH, ACTH, TSH, PRL, Endorphins, GH.',
+    'Posterior pituitary stores and releases ADH and oxytocin (made by hypothalamus).',
+    'Thyroid is largest endocrine gland; T3/T4 increase metabolic rate; calcitonin lowers blood Ca²⁺.',
+    'PTH raises blood Ca²⁺ by activating osteoclasts, increasing kidney reabsorption, promoting calcitriol.',
+    'Adrenal cortex 3 zones: mineralocorticoids (aldosterone), glucocorticoids (cortisol), androgens.',
+    'Adrenal medulla: sympathetic ganglion releasing epinephrine/norepinephrine (fight-or-flight).',
+    'Pancreatic islets: alpha cells (glucagon), beta cells (insulin), delta cells (somatostatin).',
+    'Heart secretes ANP: decreases blood volume and BP by increasing Na+ and H₂O loss by kidneys.',
+    'NSAIDs (aspirin, ibuprofen) work by inhibiting prostaglandin synthesis without affecting leukotrienes.',
+    'GAS stages: Alarm (fight-or-flight), Resistance (cortisol/aldosterone), Exhaustion (resource depletion).'
+  ],
+
   sections: [
-    // ===== MODULE 1 =====
+    // ===== SECTION 1: Endocrine Basics, Hormone Chemistry & Mechanisms =====
     {
       id: 'endocrine-s1',
-      title: 'Nervous vs Endocrine & Cell Communication',
-      pageRange: 'Pages 1-8',
+      title: 'Endocrine Basics, Hormone Chemistry & Mechanisms of Action',
+      pageRange: 'Pages 1-12',
       learnItems: [
         {
           title: 'Nervous vs Endocrine Basics',
-          body: 'Endocrine system: hormones released into the bloodstream, effects may take hours but last longer. Nervous system: uses neurotransmitters, effects in milliseconds, brief duration.'
+          body: 'Endocrine system: hormones released into bloodstream, effects may take hours but last longer. Nervous system: uses neurotransmitters, effects in milliseconds, brief duration. Means: nervous has electrical + chemical; endocrine only chemical. Speed: nervous reacts 1-10 msec; endocrine reacts seconds to days. Adaptation: nervous adapts quickly; endocrine responses are more persistent. Area: nervous is targeted/specific (one organ); endocrine is general/widespread (many organs).'
         },
         {
           title: 'Cell Communication Mechanisms',
-          body: 'Gap junctions: pores allowing signaling chemicals to move cell to cell. Neurotransmitters: released from neurons across synaptic gaps. Paracrine (local) hormones: act on nearby cells in tissue fluid. Hormones (strict): chemical messengers traveling in bloodstream to distant targets.'
+          body: 'Gap junctions: pores allowing signaling chemicals to move cell to cell. Neurotransmitters: released from neurons across synaptic gaps. Paracrine (local) hormones: act on nearby cells in tissue fluid. Hormones (strict): chemical messengers traveling in bloodstream to distant targets. Some chemicals act as both hormones and neurotransmitters (e.g., norepinephrine, dopamine, TRH, ADH). Neuroendocrine cells secrete hormones like oxytocin and catecholamines.'
         },
         {
-          title: 'Differences: Nervous vs Endocrine',
-          body: 'Means: nervous has electrical + chemical; endocrine only chemical. Speed: nervous reacts 1-10 msec and stops quickly; endocrine reacts more slowly (seconds-days), effects can persist for weeks. Adaptation: nervous adapts quickly and response declines; endocrine responses are more persistent. Area: nervous is targeted/specific (one organ); endocrine is general/widespread (many organs).'
-        },
-        {
-          title: 'System Interactions & Overlap',
-          body: 'Some chemicals act as both hormones and neurotransmitters (e.g., norepinephrine, dopamine, TRH, ADH). Neuroendocrine cells (neurons) secrete hormones like oxytocin and catecholamines. Both systems can act on same target (norepinephrine and glucagon both cause glycogen breakdown in liver). Systems regulate each other: neurons trigger hormone secretion, hormones can stimulate or inhibit neurons.'
+          title: 'Exocrine vs Endocrine Glands',
+          body: 'Exocrine: secrete products into ducts to body cavities/surfaces (sweat, oil, mucous, digestive). Endocrine: secrete hormones into bloodstream; includes pituitary, thyroid, parathyroid, adrenal, pineal. Some organs are mixed (2nd function): hypothalamus, thymus, pancreas, ovaries, testes, kidneys, stomach, liver, small intestine, skin, heart, placenta.'
         },
         {
           title: 'General Functions of Hormones',
           body: 'Help regulate: extracellular fluid, metabolism, biological clock, cardiac and smooth muscle contraction, glandular secretion, some immune functions. Support growth and development and reproduction.'
         },
         {
-          title: 'Exocrine vs Endocrine Glands',
-          body: 'Exocrine: secrete products into ducts to body cavities/surfaces (sweat, oil, mucous, digestive glands) with extracellular effects. Endocrine: secrete hormones into bloodstream with intracellular effects; includes pituitary, thyroid, parathyroid, adrenal, pineal. Some organs are mixed (2nd function): hypothalamus, thymus, pancreas, ovaries, testes, kidneys, stomach, liver, small intestine, skin, heart, placenta.'
-        },
-        {
-          title: 'Hormones, Target Cells, and Components',
-          body: 'Hormone: chemical messenger secreted into bloodstream that stimulates response in another tissue or organ. Target cells have specific receptors for a hormone. Endocrine system includes classic glands and hormone-producing cells in organs like brain, heart, and small intestine. Major Endocrine Organs: Hypothalamus, pituitary, pineal, thyroid, parathyroids, thymus, adrenal glands, pancreas, gonads (ovaries/testes).'
-        },
-        {
           title: 'Control of Hormone Secretion',
-          body: 'Regulated by nervous signals, blood chemistry, or other hormones. Negative feedback: most common; changes in blood levels are reversed (e.g., T3/T4-TSH-TRH loop). Positive feedback: hormone-caused change triggers more hormone release (e.g., oxytocin and uterine contractions). Disorders can arise from hyposecretion or hypersecretion.'
+          body: 'Regulated by nervous signals, blood chemistry, or other hormones. Negative feedback: most common; changes in blood levels are reversed (e.g., T3/T4-TSH-TRH loop). Positive feedback: hormone-caused change triggers more hormone release (e.g., oxytocin during labor — contractions stimulate more oxytocin until delivery). Disorders arise from hyposecretion or hypersecretion.'
         },
         {
-          title: 'Thyroid Negative Feedback Example',
-          body: 'Low T3/T4 or low metabolic rate leads to TRH from hypothalamus, then TSH from anterior pituitary, then T3/T4 release from thyroid. Elevated T3 inhibits TRH and TSH (classic negative feedback).'
+          title: 'Hormone Transport in Blood',
+          body: 'Monoamines and peptide hormones are hydrophilic — mix easily with blood plasma. Steroids and thyroid hormones are hydrophobic — must bind to transport proteins. Bound hormone: attached to transport protein, prolongs half-life to weeks, protected from enzymes and kidney filtration. Only UNBOUND hormone can leave capillary to reach target cell (half-life a few minutes). Transport proteins: albumin, thyretin, and TBG (thyroxine-binding globulin) bind thyroid hormone; steroid hormones bind to globulins (transcortin). Aldosterone has NO transport protein — 20-minute half-life.'
         },
         {
-          title: 'Positive Feedback - Oxytocin',
-          body: 'Oxytocin stimulates uterine contractions; contractions stimulate more oxytocin release. Suckling stimulates nerve endings leading to hypothalamus then posterior pituitary then oxytocin then milk ejection.'
+          title: 'Hormone Receptors and Regulation',
+          body: 'Hormones only affect target cells with specific membrane proteins called receptors. Receptors constantly being synthesized and broken down. Range: 2,000-100,000 receptors per target cell. Down-regulation: excess hormone → decrease in number of receptors (endocytosis and degradation) → decreases target cell sensitivity. Up-regulation: hormone deficiency → increase in number of receptors → target tissue becomes MORE sensitive. Long-term high pharmacological doses can bind to receptor sites of related hormones. Example: RU486 (mifepristone) blocks progesterone receptors, preventing pregnancy maintenance.'
         },
         {
-          title: 'Hypothalamus-Pituitary Overview',
-          body: 'Both called master endocrine glands because their hormones control other glands. Hypothalamus is brain region above pituitary, receives input from cortex, thalamus, limbic system, and internal organs. Hypothalamus controls pituitary with 9 releasing and inhibiting hormones.'
+          title: 'Mechanism: Lipid-Soluble Hormones',
+          body: 'Lipid-soluble hormones (steroids, thyroid hormones) diffuse through the phospholipid bilayer and into cell. Bind to intracellular receptor turning on/off specific genes. New mRNA is formed and directs synthesis of new proteins. New protein alters cell\'s activity. This is a DIRECT mechanism — hormone acts as a transcription factor.'
         },
         {
-          title: 'Pituitary Anatomy (Basic)',
-          body: 'Pea-sized gland in sella turcica, attached to brain via infundibulum. Anterior lobe is approximately 75% (glandular), develops from roof of mouth. Posterior lobe is approximately 25%, made of axon terminals from hypothalamic neurons and pituicytes.'
+          title: 'Mechanism: Water-Soluble Hormones',
+          body: 'Water-soluble hormones (peptides, amines) CANNOT diffuse through plasma membrane. Hormone receptors are integral membrane proteins — hormone acts as FIRST messenger. Receptor protein activates G-protein in membrane. G-protein activates adenylate cyclase to convert ATP to cAMP (cyclic AMP) in the cytosol. cAMP is the SECOND messenger. cAMP activates kinases in cytosol to speed up or slow down physiological responses. Phosphodiesterase inactivates cAMP quickly — cell response turns off unless new hormones arrive.'
+        },
+        {
+          title: 'Second Messengers and Variations',
+          body: 'Some hormones increase cAMP: ADH, TSH, ACTH, glucagon, and epinephrine. Some decrease cAMP: growth hormone inhibiting hormone (GHIH/somatostatin). Other substances can also act as second messengers: calcium ions, cGMP. Same hormone may use different second messengers in different target cells.'
+        },
+        {
+          title: 'Amplification of Hormone Effects',
+          body: 'Single molecule of hormone binds to receptor → activates ~100 G-proteins → each activates adenylate cyclase producing ~1000 cAMP → each cAMP activates a protein kinase acting on thousands of substrate molecules. Result: one molecule of epinephrine can trigger breakdown of MILLIONS of glycogen molecules into glucose. This cascade explains why tiny hormone amounts have enormous physiological effects.'
+        },
+        {
+          title: 'Cholera Toxin and G-Proteins',
+          body: 'Cholera toxin locks G-protein in ACTIVATED state in intestinal epithelium → persistent cAMP production → intestinal cells actively transport chloride (Na+ and water follow) into the lumen → massive watery diarrhea → death from dehydration. Treatment: replace ions and fluids + antibiotic therapy. This demonstrates the critical importance of G-protein regulation.'
+        },
+        {
+          title: 'Hormonal Interactions',
+          body: 'Permissive effect: a second hormone strengthens the effects of the first (thyroid hormone strengthens epinephrine\'s effect on lipolysis). Synergistic effect: two hormones acting together produce a greater effect than either alone (estrogen + LH both needed for oocyte production). Antagonistic effects: two hormones with opposite effects (insulin promotes glycogen formation; glucagon stimulates glycogen breakdown).'
+        },
+        {
+          title: 'Eicosanoids (Prostaglandins & Leukotrienes)',
+          body: 'Local hormones released by ALL body cells. Leukotrienes: influence WBCs and inflammation. Prostaglandins: alter smooth muscle contraction, glandular secretion, blood flow, platelet function, nerve transmission, metabolism, and more. NSAIDs (ibuprofen, aspirin) treat pain, fever, and inflammation by inhibiting a key enzyme in prostaglandin synthesis WITHOUT affecting leukotriene synthesis. Discovery of how aspirin works was made in 1971. Usefulness of aspirin for fever and pain implies prostaglandins mediate those symptoms.'
+        },
+        {
+          title: 'Growth Factors',
+          body: 'Substances with mitogenic qualities — cause cell growth from cell division. Many act locally as autocrines or paracrines. Selected growth factors: epidermal growth factor (EGF), platelet-derived growth factor (PDGF), fibroblast growth factor (FGF), nerve growth factor (NGF), tumor angiogenesis factors, transforming growth factors.'
         }
       ],
       keyTerms: [
-        { term: 'Hormone', definition: 'Chemical messenger secreted into the bloodstream that stimulates a response in another tissue or organ.' },
-        { term: 'Target Cell', definition: 'A cell that has specific receptors for a particular hormone and responds to its signal.' },
-        { term: 'Paracrine Hormone', definition: 'A local hormone that acts on nearby cells in the same tissue fluid rather than traveling through the bloodstream.' },
-        { term: 'Gap Junction', definition: 'Pores that directly connect neighboring cells, allowing signaling chemicals to move from cell to cell.' },
-        { term: 'Negative Feedback', definition: 'The most common regulatory mechanism where changes in blood hormone levels are reversed to maintain homeostasis (e.g., T3/T4-TSH-TRH loop).' },
-        { term: 'Positive Feedback', definition: 'A regulatory mechanism where a hormone-caused change triggers even more hormone release (e.g., oxytocin during labor).' },
-        { term: 'Exocrine Gland', definition: 'A gland that secretes its products into ducts leading to body cavities or surfaces (e.g., sweat glands, oil glands).' },
-        { term: 'Endocrine Gland', definition: 'A ductless gland that secretes hormones directly into the bloodstream (e.g., pituitary, thyroid, adrenal).' }
+        { term: 'Hormone', definition: 'Chemical messenger secreted into bloodstream that stimulates response in distant target cells.' },
+        { term: 'Paracrine Hormone', definition: 'Local hormone acting on nearby cells in tissue fluid rather than traveling through bloodstream.' },
+        { term: 'Negative Feedback', definition: 'Most common regulation: changes in blood hormone levels are reversed to maintain homeostasis.' },
+        { term: 'Transport Protein', definition: 'Blood protein (albumin, transcortin, TBG) that binds hydrophobic hormones, prolonging half-life.' },
+        { term: 'Down-Regulation', definition: 'Excess hormone causes decrease in receptor number → less target cell sensitivity.' },
+        { term: 'Up-Regulation', definition: 'Hormone deficiency causes increase in receptor number → greater target cell sensitivity.' },
+        { term: 'First Messenger', definition: 'The water-soluble hormone itself that binds to the membrane receptor.' },
+        { term: 'Second Messenger', definition: 'Intracellular signal (cAMP, Ca²⁺, cGMP) activated by hormone-receptor binding.' },
+        { term: 'G-Protein', definition: 'Membrane protein activated by receptor binding; activates adenylate cyclase to produce cAMP.' },
+        { term: 'Adenylate Cyclase', definition: 'Enzyme converting ATP to cAMP (second messenger) when activated by G-protein.' },
+        { term: 'Phosphodiesterase', definition: 'Enzyme that rapidly inactivates cAMP, turning off the cell response.' },
+        { term: 'Amplification', definition: 'Cascading effect where one hormone molecule triggers millions of product molecules.' },
+        { term: 'Eicosanoids', definition: 'Local hormones (prostaglandins, leukotrienes) released by all body cells; involved in pain, fever, inflammation.' },
+        { term: 'NSAIDs', definition: 'Nonsteroidal anti-inflammatory drugs (aspirin, ibuprofen) that inhibit prostaglandin synthesis.' }
       ],
       memoryAids: [
-        'Think of hormones as "text messages" sent through the bloodstream - they take a while to arrive but the message lasts longer. Neurotransmitters are like phone calls - instant but brief.',
-        'ENDO = INTO blood (endocrine glands secrete INTO blood). EXO = EXIT via ducts (exocrine glands EXIT through ducts to surfaces).',
-        'Negative feedback is like a thermostat: when the room gets warm enough, the heater turns off. Positive feedback is like a microphone next to a speaker: the sound keeps getting louder until someone intervenes.',
-        'The hypothalamus is the "boss" and the pituitary is the "manager" - the boss gives 9 orders (releasing/inhibiting hormones) and the manager carries them out by directing all the other glands.'
-      ],
-      inlineQuestions: [
-        {
-          question: 'The endocrine system primarily communicates using:',
-          options: { A: 'Electrical impulses', B: 'Neurotransmitters at synapses', C: 'Hormones in the bloodstream', D: 'Action potentials in neurons' },
-          answer: 'C',
-          explanation: 'The endocrine system uses hormones released into the bloodstream to communicate with distant target cells, unlike the nervous system which uses electrical impulses and neurotransmitters.'
-        },
-        {
-          question: 'Which communication method uses pores that directly connect neighboring cells?',
-          options: { A: 'Neurotransmitters', B: 'Hormones', C: 'Gap junctions', D: 'Paracrine signals' },
-          answer: 'C',
-          explanation: 'Gap junctions are pores that directly connect neighboring cells, allowing signaling chemicals to pass from one cell to another without entering the bloodstream.'
-        },
-        {
-          question: 'What type of feedback is most common in hormone regulation?',
-          options: { A: 'Negative feedback', B: 'Positive feedback', C: 'Neutral feedback', D: 'Recursive feedback' },
-          answer: 'A',
-          explanation: 'Negative feedback is the most common mechanism for hormone regulation. When hormone levels rise above the set point, the system reverses the change to maintain homeostasis.'
-        }
+        'Nervous = phone call (instant, brief); Endocrine = text message (delayed but lasts longer).',
+        'Lipid-soluble hormones go INSIDE the cell (direct gene activation). Water-soluble stay OUTSIDE (use second messengers).',
+        'Amplification cascade: 1 hormone → 100 G-proteins → 1000s cAMP → millions of product molecules.',
+        'Down-regulation: TOO MUCH hormone → FEWER receptors (cell turns down the volume). Up-regulation: TOO LITTLE → MORE receptors (cell turns up the volume).',
+        'Hormonal interactions: "PSA" = Permissive (strengthens), Synergistic (together greater), Antagonistic (opposite effects).',
+        'NSAIDs block prostaglandins but NOT leukotrienes — discovered in 1971.'
       ],
       quiz: [
-        {
-          question: 'Compared to the endocrine system, the nervous system response is:',
-          options: { A: 'Slower and longer lasting', B: 'Faster and longer lasting', C: 'Faster and shorter in duration', D: 'Slower and shorter in duration' },
-          answer: 'C',
-          explanation: 'The nervous system responds in 1-10 milliseconds and effects are brief, while the endocrine system responds more slowly (seconds to days) but effects persist longer.'
-        },
-        {
-          question: 'A local hormone that affects nearby cells in the same tissue is called a:',
-          options: { A: 'Neurotransmitter', B: 'Gap junction messenger', C: 'Paracrine hormone', D: 'Endocrine hormone' },
-          answer: 'C',
-          explanation: 'Paracrine hormones are local hormones that act on nearby cells in tissue fluid, unlike endocrine hormones which travel through the bloodstream to distant targets.'
-        },
-        {
-          question: 'Which system uses both electrical and chemical signals?',
-          options: { A: 'Endocrine', B: 'Nervous', C: 'Lymphatic', D: 'Immune' },
-          answer: 'B',
-          explanation: 'The nervous system uses both electrical signals (action potentials) and chemical signals (neurotransmitters), while the endocrine system uses only chemical signals (hormones).'
-        },
-        {
-          question: 'Endocrine responses are typically:',
-          options: { A: 'Rapid and short-lived', B: 'Rapid and localized', C: 'Slow and localized', D: 'Slow and long-lasting' },
-          answer: 'D',
-          explanation: 'Endocrine responses are characteristically slow (taking seconds to days to begin) and long-lasting (effects can persist for weeks), in contrast to the rapid, short-lived nervous system responses.'
-        },
-        {
-          question: 'Which statement best describes endocrine effects?',
-          options: { A: 'Always limited to one organ', B: 'Targeted to a single synapse', C: 'Often general and widespread', D: 'Only in skeletal muscle' },
-          answer: 'C',
-          explanation: 'Endocrine effects are often general and widespread, affecting many organs simultaneously, unlike the nervous system which targets specific organs.'
-        },
-        {
-          question: 'A chemical that functions as both hormone and neurotransmitter is:',
-          options: { A: 'Calcitonin', B: 'Thyroxine', C: 'Norepinephrine', D: 'Insulin' },
-          answer: 'C',
-          explanation: 'Norepinephrine can act as both a neurotransmitter (released at synapses in the nervous system) and a hormone (released from the adrenal medulla into the bloodstream).'
-        },
-        {
-          question: 'Neuroendocrine cells can secrete which of the following?',
-          options: { A: 'Only neurotransmitters', B: 'Only steroid hormones', C: 'Oxytocin and catecholamines', D: 'Glucose and amino acids' },
-          answer: 'C',
-          explanation: 'Neuroendocrine cells are neurons that secrete hormones such as oxytocin and catecholamines, bridging the nervous and endocrine systems.'
-        },
-        {
-          question: 'Hormones help regulate all of the following EXCEPT:',
-          options: { A: 'Extracellular fluid', B: 'Metabolism', C: 'Biological clock', D: 'Bone fracture repair by casts' },
-          answer: 'D',
-          explanation: 'Hormones regulate extracellular fluid, metabolism, biological clock, muscle contraction, glandular secretion, and immune functions, but bone fracture repair by casts is a mechanical intervention, not a hormonal function.'
-        },
-        {
-          question: 'Which is NOT a general function of hormones?',
-          options: { A: 'Growth and development', B: 'Reproduction', C: 'Contraction of cardiac and smooth muscle', D: 'Direct synthesis of DNA in neurons' },
-          answer: 'D',
-          explanation: 'Hormones support growth, development, reproduction, and contraction of cardiac and smooth muscle. Direct synthesis of DNA in neurons is not a general function of hormones.'
-        },
-        {
-          question: 'Exocrine glands release their products:',
-          options: { A: 'Directly into blood', B: 'Into ducts to body surfaces or cavities', C: 'Into synaptic clefts', D: 'Into the cerebrospinal fluid' },
-          answer: 'B',
-          explanation: 'Exocrine glands release their products through ducts to body surfaces or cavities, such as sweat glands releasing sweat onto the skin surface.'
-        },
-        {
-          question: 'Which is an example of an exocrine gland product?',
-          options: { A: 'Insulin', B: 'Thyroxine', C: 'Sweat', D: 'ADH' },
-          answer: 'C',
-          explanation: 'Sweat is an exocrine product released through ducts to the skin surface. Insulin, thyroxine, and ADH are all endocrine hormones released into the bloodstream.'
-        },
-        {
-          question: 'Endocrine glands are characterized by:',
-          options: { A: 'Ducts opening to body surfaces', B: 'Hormone secretion into the bloodstream', C: 'Only local effects', D: 'Storage of neurotransmitters' },
-          answer: 'B',
-          explanation: 'Endocrine glands are ductless glands characterized by secreting hormones directly into the bloodstream for widespread effects throughout the body.'
-        },
-        {
-          question: 'Which organ has a secondary endocrine function?',
-          options: { A: 'Sweat gland', B: 'Lung', C: 'Heart', D: 'Skeletal muscle' },
-          answer: 'C',
-          explanation: 'The heart has a secondary endocrine function (it produces atrial natriuretic peptide). Other mixed-function organs include the hypothalamus, thymus, pancreas, ovaries, testes, kidneys, stomach, liver, small intestine, skin, and placenta.'
-        },
-        {
-          question: 'A hormone is best defined as:',
-          options: { A: 'Any neurotransmitter in the brain', B: 'Chemical messenger secreted into bloodstream affecting distant tissues', C: 'Any molecule secreted into intestines', D: 'A local paracrine factor only' },
-          answer: 'B',
-          explanation: 'A hormone is specifically defined as a chemical messenger secreted into the bloodstream that stimulates a response in another (distant) tissue or organ.'
-        },
-        {
-          question: 'Cells that have specific receptors for a hormone are called:',
-          options: { A: 'Neuroglia', B: 'Target cells', C: 'Exocrine cells', D: 'Erythrocytes' },
-          answer: 'B',
-          explanation: 'Target cells are cells that possess specific receptors for a particular hormone, enabling them to recognize and respond to that hormone\'s signal.'
-        },
-        {
-          question: 'Which of these is NOT a major endocrine organ listed in the PDF?',
-          options: { A: 'Thyroid gland', B: 'Parathyroid glands', C: 'Adrenal glands', D: 'Appendix' },
-          answer: 'D',
-          explanation: 'The major endocrine organs include the hypothalamus, pituitary, pineal, thyroid, parathyroids, thymus, adrenal glands, pancreas, and gonads. The appendix is not a major endocrine organ.'
-        },
-        {
-          question: 'In the T3/T4 feedback loop, which hormone directly stimulates thyroid follicular cells?',
-          options: { A: 'TRH', B: 'TSH', C: 'ACTH', D: 'GH' },
-          answer: 'B',
-          explanation: 'TSH (thyroid-stimulating hormone) from the anterior pituitary directly stimulates thyroid follicular cells to produce and release T3 and T4.'
-        },
-        {
-          question: 'Elevated T3 levels will:',
-          options: { A: 'Stimulate more TRH and TSH release', B: 'Inhibit TRH and TSH release', C: 'Have no effect on TRH', D: 'Only increase ACTH' },
-          answer: 'B',
-          explanation: 'Elevated T3 levels inhibit both TRH (from hypothalamus) and TSH (from anterior pituitary) release through negative feedback, preventing further thyroid hormone production.'
-        },
-        {
-          question: 'Oxytocin during labor is an example of:',
-          options: { A: 'Negative feedback', B: 'Positive feedback', C: 'Neutral feedback', D: 'Feedforward inhibition' },
-          answer: 'B',
-          explanation: 'Oxytocin during labor is a classic example of positive feedback: oxytocin stimulates uterine contractions, which stimulate more oxytocin release, creating an amplifying cycle until delivery.'
-        },
-        {
-          question: 'Which event directly increases oxytocin release for milk ejection?',
-          options: { A: 'Rising blood glucose', B: 'Elevated TSH', C: 'Suckling infant stimulating nerve endings', D: 'Low blood pressure in aorta' },
-          answer: 'C',
-          explanation: 'Suckling stimulates nerve endings, which signal the hypothalamus and posterior pituitary to release oxytocin, causing myoepithelial cell contraction and milk ejection.'
-        },
-        {
-          question: 'The hypothalamus controls the pituitary gland using:',
-          options: { A: 'Only nerve impulses', B: 'Nine releasing and inhibiting hormones', C: 'Digestive enzymes', D: 'Gap junctions exclusively' },
-          answer: 'B',
-          explanation: 'The hypothalamus controls the pituitary gland by producing 9 releasing and inhibiting hormones that regulate pituitary hormone secretion.'
-        },
-        {
-          question: 'The anterior pituitary develops from:',
-          options: { A: 'Neural tissue in the brainstem', B: 'Roof of the mouth', C: 'Spinal cord', D: 'Adrenal cortex' },
-          answer: 'B',
-          explanation: 'The anterior pituitary (adenohypophysis) develops embryologically from the roof of the mouth (Rathke\'s pouch), making it glandular tissue rather than neural tissue.'
-        },
-        {
-          question: 'The posterior pituitary mainly consists of:',
-          options: { A: 'Glandular epithelial cells', B: 'Axon terminals of hypothalamic neurons and pituicytes', C: 'Skeletal muscle fibers', D: 'Chondrocytes' },
-          answer: 'B',
-          explanation: 'The posterior pituitary (neurohypophysis) is made of axon terminals from hypothalamic neurons and supporting pituicytes. It does not synthesize hormones but stores and releases them.'
-        },
-        {
-          question: 'Which system has more persistent responses to long-term stimuli?',
-          options: { A: 'Nervous', B: 'Endocrine', C: 'Respiratory', D: 'Digestive' },
-          answer: 'B',
-          explanation: 'The endocrine system has more persistent responses because hormones can circulate for extended periods, and endocrine responses do not adapt and decline as quickly as nervous system responses.'
-        },
-        {
-          question: 'A chemical messenger released into tissue fluid that affects nearby cells is called a:',
-          options: { A: 'Neurotransmitter', B: 'Paracrine hormone', C: 'Autocrine enzyme', D: 'Exocrine hormone' },
-          answer: 'B',
-          explanation: 'A paracrine hormone is a chemical messenger released into tissue fluid that acts locally on nearby cells, rather than traveling through the bloodstream like endocrine hormones.'
-        },
-        {
-          question: 'Which is a true statement about endocrine glands?',
-          options: { A: 'They have ducts to skin surfaces', B: 'They secrete hormones into blood', C: 'They produce only digestive enzymes', D: 'They never interact with the nervous system' },
-          answer: 'B',
-          explanation: 'Endocrine glands are ductless and secrete hormones directly into the blood. They do interact with the nervous system - in fact, the two systems regulate each other extensively.'
-        },
-        {
-          question: 'Low levels of T3 and T4 will initially stimulate release of:',
-          options: { A: 'TSH from thyroid', B: 'TRH from hypothalamus', C: 'ACTH from pituitary', D: 'PTH from parathyroids' },
-          answer: 'B',
-          explanation: 'Low T3/T4 levels are first detected by the hypothalamus, which responds by releasing TRH (thyrotropin-releasing hormone), which then stimulates TSH release from the anterior pituitary.'
-        },
-        {
-          question: 'Oxytocin\'s role in milk ejection and uterine contractions is an example of:',
-          options: { A: 'Negative feedback loop', B: 'Lack of feedback', C: 'Positive feedback loop', D: 'Neural reflex without hormones' },
-          answer: 'C',
-          explanation: 'Oxytocin in both milk ejection and uterine contractions operates via positive feedback: the stimulus (suckling or contractions) causes more hormone release, amplifying the response.'
-        },
-        {
-          question: 'The part of the pituitary that is purely neural tissue is the:',
-          options: { A: 'Anterior lobe', B: 'Posterior lobe', C: 'Intermediate lobe', D: 'Pineal body' },
-          answer: 'B',
-          explanation: 'The posterior lobe (neurohypophysis) is purely neural tissue, composed of axon terminals from hypothalamic neurons and pituicytes. The anterior lobe is glandular tissue.'
-        }
-      ],
-      flashcards: [
-        { front: 'What system uses hormones in the bloodstream for body-wide communication?', back: 'The endocrine system.' },
-        { front: 'How does the nervous system differ from the endocrine system in speed?', back: 'The nervous system reacts in 1-10 milliseconds with brief effects; the endocrine system reacts more slowly (seconds to days) with effects lasting up to weeks.' },
-        { front: 'What are gap junctions?', back: 'Pores that directly connect neighboring cells, allowing signaling chemicals to pass from cell to cell.' },
-        { front: 'What are paracrine hormones?', back: 'Local hormones that act on nearby cells in tissue fluid rather than traveling through the bloodstream.' },
-        { front: 'Name a chemical that acts as both a hormone and neurotransmitter.', back: 'Norepinephrine (also dopamine, TRH, and ADH).' },
-        { front: 'What is the difference between exocrine and endocrine glands?', back: 'Exocrine glands secrete products into ducts to body surfaces/cavities. Endocrine glands secrete hormones directly into the bloodstream.' },
-        { front: 'What is negative feedback in hormone regulation?', back: 'The most common regulatory mechanism where changes in blood hormone levels are reversed to maintain homeostasis (e.g., elevated T3 inhibits TRH and TSH).' },
-        { front: 'Give an example of positive feedback in the endocrine system.', back: 'Oxytocin during labor: uterine contractions stimulate more oxytocin release, which causes stronger contractions, amplifying until delivery.' },
-        { front: 'How many releasing/inhibiting hormones does the hypothalamus produce to control the pituitary?', back: 'Nine releasing and inhibiting hormones.' },
-        { front: 'What are the two lobes of the pituitary and their relative sizes?', back: 'Anterior lobe (~75%, glandular, develops from roof of mouth) and posterior lobe (~25%, made of axon terminals and pituicytes).' }
+        { id: 'en1-q1', question: 'Compared to the endocrine system, the nervous system response is:', options: { A: 'Slower and longer lasting', B: 'Faster and longer lasting', C: 'Faster and shorter in duration', D: 'Slower and shorter in duration' }, answer: 'C', explanation: 'The nervous system responds in 1-10 milliseconds with brief effects, while the endocrine system responds more slowly but effects persist longer.' },
+        { id: 'en1-q2', question: 'A local hormone that affects nearby cells in the same tissue is called a:', options: { A: 'Neurotransmitter', B: 'Gap junction messenger', C: 'Paracrine hormone', D: 'Endocrine hormone' }, answer: 'C', explanation: 'Paracrine hormones are local hormones that act on nearby cells in tissue fluid, unlike endocrine hormones traveling through blood.' },
+        { id: 'en1-q3', question: 'Only _____ hormone can leave capillaries to reach target cells.', options: { A: 'Bound', B: 'Unbound (free)', C: 'Albumin-linked', D: 'Transcortin-linked' }, answer: 'B', explanation: 'Only unbound hormone can leave capillaries to reach target cells. Bound hormone is protected but inactive, with a longer half-life.' },
+        { id: 'en1-q4', question: 'Which hormone has NO transport protein and a 20-minute half-life?', options: { A: 'Cortisol', B: 'T4', C: 'Aldosterone', D: 'Estrogen' }, answer: 'C', explanation: 'Aldosterone has no transport protein and thus a very short half-life of about 20 minutes.' },
+        { id: 'en1-q5', question: 'Down-regulation of receptors results from:', options: { A: 'Hormone deficiency', B: 'Excess hormone exposure', C: 'Receptor synthesis', D: 'Decreased phosphodiesterase' }, answer: 'B', explanation: 'Excess hormone → receptors undergo endocytosis and degradation (down-regulation) → decreased target cell sensitivity.' },
+        { id: 'en1-q6', question: 'Lipid-soluble hormones act by:', options: { A: 'Activating G-proteins and cAMP', B: 'Diffusing into cells and activating genes directly', C: 'Binding membrane receptors only', D: 'Using calcium as second messenger' }, answer: 'B', explanation: 'Lipid-soluble hormones diffuse through the membrane into the cell, bind intracellular receptors, and directly activate/repress gene transcription.' },
+        { id: 'en1-q7', question: 'In the cAMP second messenger system, the enzyme that converts ATP to cAMP is:', options: { A: 'Phosphodiesterase', B: 'Protein kinase', C: 'Adenylate cyclase', D: 'G-protein' }, answer: 'C', explanation: 'Adenylate cyclase, activated by G-protein, converts ATP to cAMP (the second messenger).' },
+        { id: 'en1-q8', question: 'Amplification means that one hormone molecule can:', options: { A: 'Activate only one enzyme', B: 'Trigger breakdown of millions of product molecules', C: 'Bind to thousands of receptors simultaneously', D: 'Permanently activate the G-protein' }, answer: 'B', explanation: 'Through the cascade (1 hormone → 100 G-proteins → 1000s cAMP → kinases → substrate molecules), one epinephrine molecule can break down millions of glycogen molecules.' },
+        { id: 'en1-q9', question: 'Cholera toxin causes deadly diarrhea because it:', options: { A: 'Destroys intestinal villi', B: 'Locks G-protein in activated state → persistent cAMP → Cl⁻/water secretion', C: 'Blocks all hormone receptors', D: 'Inhibits phosphodiesterase permanently' }, answer: 'B', explanation: 'Cholera toxin locks G-protein in activated state → continuous cAMP production → intestinal cells secrete Cl⁻, Na+, and water into lumen → massive diarrhea.' },
+        { id: 'en1-q10', question: 'Insulin promoting glycogen formation while glucagon stimulates glycogen breakdown is an example of:', options: { A: 'Permissive effect', B: 'Synergistic effect', C: 'Antagonistic effect', D: 'Amplification' }, answer: 'C', explanation: 'Antagonistic effects: two hormones with opposite effects on the same process — insulin and glucagon have opposite effects on glycogen.' },
+        { id: 'en1-q11', question: 'NSAIDs treat pain and inflammation by:', options: { A: 'Blocking leukotriene synthesis', B: 'Inhibiting prostaglandin synthesis', C: 'Activating complement', D: 'Increasing histamine release' }, answer: 'B', explanation: 'NSAIDs (aspirin, ibuprofen) inhibit a key enzyme in prostaglandin synthesis without affecting leukotriene synthesis.' },
+        { id: 'en1-q12', question: 'Growth factors primarily act as:', options: { A: 'Endocrine hormones traveling through blood', B: 'Local autocrines or paracrines with mitogenic effects', C: 'Neurotransmitters at synapses', D: 'Transport proteins for steroids' }, answer: 'B', explanation: 'Growth factors are mitogenic substances that cause cell division; many act locally as autocrines or paracrines.' }
       ]
     },
 
-    // ===== MODULE 2 =====
+    // ===== SECTION 2: Hypothalamus-Pituitary, Thyroid, Parathyroids, Adrenals, Pancreas & Other Organs =====
     {
       id: 'endocrine-s2',
-      title: 'Hypothalamus-Pituitary-Pineal-Thymus-Thyroid',
-      pageRange: 'Pages 9-16',
+      title: 'Glands & Hormones: Hypothalamus, Pituitary, Thyroid, Adrenals, Pancreas & More',
+      pageRange: 'Pages 9-22',
       learnItems: [
         {
-          title: 'Hypothalamo-Hypophyseal Portal System',
-          body: 'Hypothalamus secretes releasing/inhibiting hormones into a portal system that goes directly to the anterior pituitary. Key hypothalamic hormones: GnRH, TRH, CRH, PRH, PIH, GHRH, somatostatin.'
+          title: 'Hypothalamus-Pituitary Overview',
+          body: 'Both called master endocrine glands because their hormones control other glands. Hypothalamus receives input from cortex, thalamus, limbic system, and internal organs. Controls pituitary with releasing and inhibiting hormones via hypothalamo-hypophyseal portal system. Pituitary: pea-sized gland in sella turcica, attached to brain via infundibulum. Anterior lobe ~75% (glandular, develops from roof of mouth). Posterior lobe ~25% (neural tissue — axon terminals from hypothalamic neurons and pituicytes).'
         },
         {
-          title: 'Anterior Pituitary Tropic Hormones',
-          body: 'Anterior pituitary (adenohypophysis) secretes FSH, LH, TSH, ACTH, PRL, GH under hypothalamic control. Tropic hormones target other endocrine glands (gonads, thyroid, adrenal cortex, etc.).'
+          title: 'Anterior Pituitary Hormones',
+          body: 'Adenohypophysis secretes under hypothalamic control: GH (from somatotropes — tissue growth via mitosis/differentiation + liver IGF-I), TSH (from thyrotrophs — stimulates T3/T4), FSH and LH (from gonadotrophs — gonads), PRL (from lactotrophs — milk production), ACTH and MSH (from corticotrophs — adrenal cortex/melanocytes). All are tropic hormones targeting other endocrine glands.'
         },
         {
-          title: 'GH and IGF Functions',
-          body: 'GH from somatotropes promotes tissue growth directly (mitosis, differentiation) and indirectly via IGF-I from liver. GH-IGF increase protein synthesis, enhance amino acid transport, reduce protein breakdown. They stimulate lipid metabolism (FFA and glycerol release), glucose-sparing, and promote Na+, K+, Cl- retention and Ca2+ absorption.'
+          title: 'Growth Hormone (GH) Details',
+          body: 'GH-IGF increase protein synthesis, enhance amino acid transport, reduce protein breakdown. Stimulate lipid metabolism (FFA and glycerol release), glucose-sparing, Na+/K+/Cl- retention, and Ca²⁺ absorption. Regulation: low blood glucose → GHRH → more GH; high blood glucose → GHIH → less GH. GH highest during deep sleep and after high-protein meals; falls to ~1/4 by age 75. Diabetogenic effect: excess GH → persistent hyperglycemia → beta-cell burnout → diabetes.'
         },
         {
-          title: 'Regulation of hGH',
-          body: 'Low blood glucose triggers GHRH from hypothalamus leading to more hGH, which causes glycogen breakdown to glucose in liver. High blood glucose triggers GHIH from hypothalamus leading to less hGH, which means less glycogen breakdown.'
+          title: 'FSH and LH',
+          body: 'FSH: forms ovarian follicles and stimulates estrogen secretion in females; stimulates sperm production in males. LH: stimulates estrogen, ovulation, corpus luteum formation, progesterone secretion in females; stimulates interstitial (Leydig) cells to secrete testosterone in males. Both controlled by GnRH from hypothalamus.'
         },
         {
-          title: 'Diabetogenic Effect & Aging of GH',
-          body: 'Excess GH raises blood glucose, causing continual insulin release and potential beta-cell burnout, contributing to diabetes mellitus. In childhood/adolescence GH drives bone, cartilage, muscle growth; in adults it increases osteoblastic activity and bone thickening. GH levels are higher in deep sleep, after high-protein meals, and vigorous exercise, and lower after high-carb meals; levels fall to about one-quarter by age 75.'
+          title: 'Prolactin and ACTH',
+          body: 'PRL: causes milk production; suckling reduces hypothalamic inhibition (PIH) → raises PRL → milk production. ACTH: stimulates adrenal cortex to produce glucocorticoids. MSH: increases skin pigmentation in frogs, uncertain function in humans.'
         },
         {
-          title: 'TSH - Thyroid-Stimulating Hormone',
-          body: 'Hypothalamus regulates thyrotrophs, which produce TSH. TSH stimulates thyroid to synthesize and secrete T3 and T4, raising metabolic rate.'
-        },
-        {
-          title: 'FSH - Follicle-Stimulating Hormone',
-          body: 'GnRH from hypothalamus controls gonadotrophs which release FSH. FSH forms ovarian follicles and stimulates estrogen secretion in females, and stimulates sperm production in testes in males.'
-        },
-        {
-          title: 'LH - Luteinizing Hormone',
-          body: 'GnRH stimulates gonadotrophs to release LH. In females: stimulates estrogen secretion, ovulation, corpus luteum formation, and progesterone secretion. In males: stimulates interstitial cells to secrete testosterone.'
-        },
-        {
-          title: 'PRL - Prolactin',
-          body: 'Hypothalamus controls lactotrophs; they produce prolactin. Under proper conditions, PRL causes milk production; suckling reduces hypothalamic inhibition, raising PRL and milk production; when nursing stops, milk production slows.'
-        },
-        {
-          title: 'ACTH and MSH',
-          body: 'Hypothalamic releasing hormones stimulate corticotrophs to secrete ACTH and MSH. ACTH stimulates adrenal cortex cells to produce glucocorticoids. MSH function in humans is uncertain (known to increase skin pigmentation in frogs).'
-        },
-        {
-          title: 'Posterior Pituitary - ADH and Oxytocin',
-          body: 'Posterior pituitary (neurohypophysis) does not synthesize hormones; it stores and releases ADH and oxytocin from hypothalamic axon terminals. Oxytocin: during delivery, cervical stretch leads to more uterine contractions; after delivery, suckling/hearing baby leads to milk ejection via myoepithelial contraction. ADH (vasopressin): decreases urine production, decreases sweating, increases blood pressure.'
-        },
-        {
-          title: 'Regulation of ADH',
-          body: 'Dehydration triggers ADH release causing kidneys to retain water, sweat glands to reduce water loss, and arterioles to constrict to raise BP. Overhydration triggers ADH inhibition leading to more urine and less water retention.'
+          title: 'Posterior Pituitary — ADH and Oxytocin',
+          body: 'Neurohypophysis does NOT synthesize hormones — stores and releases ADH and oxytocin from hypothalamic axon terminals. Oxytocin: stimulates uterine contractions (positive feedback during labor); causes milk ejection via myoepithelial contraction when suckling/hearing baby cry. ADH (vasopressin): decreases urine production, decreases sweating, increases BP. Dehydration → ADH release → water retention + vasoconstriction. Overhydration → ADH inhibition → more urine.'
         },
         {
           title: 'Pineal Gland and Melatonin',
-          body: 'Pineal gland: peak secretion at 1-5 years; about 75% lower by puberty. Produces serotonin by day and converts it to melatonin at night; melatonin may regulate timing of puberty. Melatonin is increased in Seasonal Affective Disorder (SAD) and PMS; phototherapy can reduce symptoms.'
+          body: 'Peak secretion at 1-5 years; ~75% lower by puberty. Produces serotonin by day, converts to melatonin at night. Melatonin may regulate timing of puberty. In darkness: fewer retinal impulses → less norepinephrine → more melatonin → sleepiness. In light: norepinephrine inhibits melatonin. Melatonin is increased in SAD and PMS; phototherapy can reduce symptoms.'
         },
         {
-          title: 'Light Regulation of Melatonin',
-          body: 'In darkness, fewer impulses from retina lead through a pathway involving suprachiasmatic nucleus and superior cervical ganglion, resulting in lack of norepinephrine, increased melatonin, and sleepiness. In light, norepinephrine inhibits melatonin secretion, leading to less sleepiness.'
+          title: 'Thyroid Gland and Hormones',
+          body: 'LARGEST endocrine gland with high blood flow; two lobes with isthmus on anterior/lateral trachea. Follicular cells in follicles secrete T3 and T4: increase metabolic rate, O₂ consumption, heat production, heart rate/contractility, respiratory rate, appetite, and breakdown of carbs/lipids/proteins. C (parafollicular) cells secrete calcitonin: DECREASES blood Ca²⁺ by promoting bone deposition (especially important in children). Regulation: TRH → TSH → T3/T4 (negative feedback).'
+        },
+        {
+          title: 'Parathyroid Glands and PTH',
+          body: '4 pea-sized glands on back of thyroid. PTH RAISES blood calcium levels by: increasing osteoclast activity (bone resorption), increasing Ca²⁺ reabsorption by kidneys, inhibiting phosphate reabsorption, promoting calcitriol (vitamin D3) formation by kidneys → increased Ca²⁺/Mg²⁺ absorption from intestine. PTH is opposite of calcitonin. High/low blood Ca²⁺ levels determine which hormone is released (PTH or calcitonin).'
+        },
+        {
+          title: 'Adrenal Glands — Structure',
+          body: 'One on top of each kidney; 3×3×1 cm, weighs 5 grams. Cortex (from mesoderm): 3 zones producing 3 types of hormones. Medulla (from ectoderm): modified sympathetic ganglion producing epinephrine/norepinephrine. Cortex and medulla are functionally distinct.'
+        },
+        {
+          title: 'Adrenal Cortex — Mineralocorticoids',
+          body: '95% of activity from aldosterone. Functions: increase Na+ reabsorption (Cl⁻, bicarbonate, and water follow), promote K+ and H+ excretion. Hypersecretion → aldosteronism: tumor causing high BP from Na+/water retention. Regulation involves renin-angiotensin-aldosterone system (RAAS).'
+        },
+        {
+          title: 'Adrenal Cortex — Glucocorticoids',
+          body: '95% of activity from cortisol. Functions: increase protein catabolism and lipolysis, conversion of amino acids to glucose (gluconeogenesis), provide resistance to stress by making nutrients available for ATP production, raise BP by vasoconstriction. Anti-inflammatory effects (reduce histamine from mast cells, decrease capillary permeability, depress phagocytosis — basis for cortisone skin creams). Regulated by ACTH.'
+        },
+        {
+          title: 'Adrenal Cortex — Androgens & Adrenal Medulla',
+          body: 'Androgens (zona reticularis): small amount of male hormone; insignificant in males; may contribute to sex drive in females; converted to estrogen in postmenopausal females. Adrenal Medulla: sympathetic ganglion with chromaffin cells; sympathetic stimulation releases epinephrine/norepinephrine. Effects: increase BP, heart rate, blood flow to skeletal muscle, pulmonary airflow; decrease digestion and urine formation; stimulate gluconeogenesis and glycogenolysis. Hormonal effect is longer lasting than direct sympathetic stimulation. Stress causes medullary cells to stimulate cortex.'
+        },
+        {
+          title: 'Pancreatic Hormones',
+          body: 'Retroperitoneal, inferior/dorsal to stomach. 1-2 million pancreatic islets (98% of organ produces digestive enzymes — exocrine). Endocrine: Beta cells (β) produce insulin: secreted when blood glucose rises after meals; stimulates glucose/amino acid uptake, glycogen/fat/protein synthesis; antagonizes glucagon. Alpha cells (α) produce glucagon: secreted during low carbohydrate/fasting; stimulates glycogenolysis, fat catabolism, gluconeogenesis. Delta cells (δ) produce somatostatin: modulates alpha and beta cell secretion. Hyperglycemic hormones: glucagon, epinephrine, norepinephrine, cortisol. Hypoglycemic hormone: insulin (the only one!).'
         },
         {
           title: 'Thymus',
-          body: 'Located in mediastinum superior to heart; undergoes involution after puberty. Secretes thymopoietin and thymosins, which regulate development and later activation of T-lymphocytes.'
+          body: 'Located in mediastinum superior to heart; undergoes involution after puberty. Secretes thymopoietin and thymosins that regulate T-lymphocyte development and activation.'
         },
         {
-          title: 'Thyroid Gland & Hormones',
-          body: 'Largest endocrine gland with high blood flow; two lobes with isthmus on anterior/lateral trachea. Follicular cells in follicles secrete T3 and T4, which increase metabolic rate and O2 consumption, heat production, heart rate/contractility, respiratory rate, appetite, and breakdown of carbs, lipids, and proteins. C (parafollicular) cells secrete calcitonin, decreasing blood Ca2+ by promoting bone deposition, especially in children.'
+          title: 'Endocrine Functions of Other Organs',
+          body: 'Heart: atrial natriuretic peptide (ANP) — released with increased BP → decreases blood volume and BP by increasing Na+ and H₂O loss by kidneys. Skin: keratinocytes produce vitamin D3 (first step in synthesis). Liver: converts D3 to calcidiol, source of IGF-I, secretes ~15% of erythropoietin, secretes angiotensinogen (precursor of angiotensin II). Kidneys: convert calcidiol to calcitriol (active vitamin D), produce 85% of erythropoietin, convert angiotensinogen to angiotensin I. Stomach/small intestine: 10 enteric hormones coordinating digestive motility/secretion. Ovaries/Testes: estrogen/progesterone, testosterone/inhibin. Placenta: estrogen, progesterone for pregnancy.'
+        },
+        {
+          title: 'Gonads — Ovaries and Testes',
+          body: 'Ovaries: granulosa cells produce estradiol (first half of cycle), corpus luteum produces estradiol + progesterone. Functions: development of female reproductive system/physique, regulate menstrual cycle, sustain pregnancy, prepare mammary glands. Both ovaries secrete inhibin (suppresses FSH). Testes: interstitial (Leydig) cells produce testosterone and estrogen. Functions: male reproductive system development, sustain sperm production and sex drive. Sertoli cells secrete inhibin to suppress FSH and stabilize sperm production.'
         }
       ],
       keyTerms: [
-        { term: 'Hypothalamo-Hypophyseal Portal System', definition: 'A portal blood system that carries releasing and inhibiting hormones directly from the hypothalamus to the anterior pituitary gland.' },
-        { term: 'Tropic Hormone', definition: 'A hormone that targets and regulates another endocrine gland (e.g., TSH targets the thyroid, ACTH targets the adrenal cortex).' },
-        { term: 'Growth Hormone (GH)', definition: 'Hormone from somatotropes that promotes tissue growth directly via mitosis and differentiation, and indirectly via IGF-I from the liver.' },
-        { term: 'IGF-I (Insulin-like Growth Factor)', definition: 'A hormone produced by the liver in response to GH that mediates many of GH\'s growth-promoting effects.' },
-        { term: 'ADH (Antidiuretic Hormone)', definition: 'Also called vasopressin; stored in the posterior pituitary. Decreases urine production, decreases sweating, and increases blood pressure.' },
-        { term: 'Melatonin', definition: 'Hormone produced by the pineal gland from serotonin at night; promotes sleepiness and may regulate puberty timing. Increased in SAD and PMS.' },
-        { term: 'Calcitonin', definition: 'Hormone from thyroid C (parafollicular) cells that decreases blood calcium by promoting bone deposition, especially important in children.' },
-        { term: 'Prolactin (PRL)', definition: 'Hormone from lactotrophs in the anterior pituitary that stimulates milk production; suckling reduces hypothalamic inhibition to increase PRL levels.' }
+        { term: 'Hypothalamo-Hypophyseal Portal System', definition: 'Portal blood system carrying releasing/inhibiting hormones from hypothalamus directly to anterior pituitary.' },
+        { term: 'Tropic Hormone', definition: 'Hormone targeting and regulating another endocrine gland (TSH → thyroid, ACTH → adrenal cortex).' },
+        { term: 'IGF-I', definition: 'Insulin-like growth factor from liver; mediates many GH growth-promoting effects.' },
+        { term: 'ADH (Vasopressin)', definition: 'Posterior pituitary hormone decreasing urine production, decreasing sweating, increasing BP.' },
+        { term: 'Calcitonin', definition: 'Thyroid C-cell hormone decreasing blood Ca²⁺ by promoting bone deposition.' },
+        { term: 'PTH', definition: 'Parathyroid hormone raising blood Ca²⁺ via osteoclast activation, kidney reabsorption, and calcitriol.' },
+        { term: 'Aldosterone', definition: 'Primary mineralocorticoid; increases Na+ reabsorption; 95% of mineralocorticoid activity.' },
+        { term: 'Cortisol', definition: 'Primary glucocorticoid; increases gluconeogenesis, protein catabolism, stress resistance; anti-inflammatory.' },
+        { term: 'Chromaffin Cells', definition: 'Modified neurons in adrenal medulla that release epinephrine/norepinephrine.' },
+        { term: 'Insulin', definition: 'Beta-cell hormone; the ONLY hypoglycemic hormone; promotes glucose uptake and nutrient storage.' },
+        { term: 'Glucagon', definition: 'Alpha-cell hormone; stimulates glycogenolysis, fat catabolism, and gluconeogenesis to raise blood glucose.' },
+        { term: 'ANP', definition: 'Atrial natriuretic peptide; heart hormone that lowers blood volume/BP by increasing renal Na+ and H₂O excretion.' },
+        { term: 'Melatonin', definition: 'Pineal hormone converted from serotonin at night; promotes sleepiness; increased in SAD/PMS.' }
       ],
       memoryAids: [
-        'FLAT PEG for anterior pituitary hormones: FSH, LH, ACTH, TSH, PRL, Endorphins, GH.',
-        'ADH = Anti-Diuretic Hormone: think "anti-diuretic" = anti-peeing. It makes you retain water and pee less.',
-        'Melatonin = "Mela-NIGHT-in" - it rises at night to make you sleepy. More darkness = more melatonin.',
-        'Calci-TONE-in TONES DOWN calcium levels in the blood by depositing calcium into bones.',
-        'GH is highest during deep SLEEP and after PROTEIN meals - think "Sleep and Protein = Growth".'
-      ],
-      inlineQuestions: [
-        {
-          question: 'Which hormone is NOT secreted by the anterior pituitary?',
-          options: { A: 'FSH', B: 'LH', C: 'Oxytocin', D: 'ACTH' },
-          answer: 'C',
-          explanation: 'Oxytocin is produced by the hypothalamus and stored/released by the posterior pituitary, not the anterior pituitary. The anterior pituitary secretes FSH, LH, TSH, ACTH, PRL, and GH.'
-        },
-        {
-          question: 'ADH functions include all of the following EXCEPT:',
-          options: { A: 'Decreasing urine production', B: 'Decreasing sweating', C: 'Increasing blood pressure', D: 'Increasing digestive enzyme secretion' },
-          answer: 'D',
-          explanation: 'ADH (vasopressin) decreases urine production, decreases sweating, and increases blood pressure by constricting arterioles. It does not increase digestive enzyme secretion.'
-        },
-        {
-          question: 'The largest endocrine gland is the:',
-          options: { A: 'Pituitary', B: 'Thyroid', C: 'Adrenal cortex', D: 'Pancreas' },
-          answer: 'B',
-          explanation: 'The thyroid is the largest endocrine gland, with high blood flow and two lobes connected by an isthmus located on the anterior/lateral trachea.'
-        }
+        'Anterior pituitary hormones: "FLAT PEG" = FSH, LH, ACTH, TSH, PRL, Endorphins, GH.',
+        'ADH = Anti-Diuretic Hormone = anti-peeing; retains water.',
+        'CalciTONIN TONES DOWN calcium. PTH PUTS (calcium) To High.',
+        'Adrenal cortex zones (outer→inner): "GFR" = Glomerulosa (mineralocorticoids), Fasciculata (glucocorticoids), Reticularis (androgens). "Go Find Rex, the Salt, Sugar, Sex dog."',
+        'Insulin is the ONLY hypoglycemic hormone; everything else raises blood sugar.',
+        'GH = highest in deep SLEEP and after PROTEIN meals.',
+        'Melatonin = "Mela-NIGHT-in" — rises at night, makes you sleepy.'
       ],
       quiz: [
-        {
-          question: 'The portal system that carries hypothalamic hormones to the anterior pituitary is the:',
-          options: { A: 'Hypothalamo-pituitary vein', B: 'Hypothalamo-hypophyseal portal system', C: 'Systemic venous system', D: 'Dural venous sinus' },
-          answer: 'B',
-          explanation: 'The hypothalamo-hypophyseal portal system is a specialized portal blood system that carries releasing and inhibiting hormones directly from the hypothalamus to the anterior pituitary.'
-        },
-        {
-          question: 'Tropic hormones primarily:',
-          options: { A: 'Regulate digestion', B: 'Target other endocrine glands', C: 'Act only on skeletal muscles', D: 'Stimulate neuron action potentials' },
-          answer: 'B',
-          explanation: 'Tropic hormones are hormones that target and regulate other endocrine glands, such as TSH targeting the thyroid and ACTH targeting the adrenal cortex.'
-        },
-        {
-          question: 'Growth hormone promotes tissue growth by:',
-          options: { A: 'Blocking IGF production', B: 'Stimulating mitosis and cellular differentiation', C: 'Reducing amino acid transport into cells', D: 'Inhibiting protein synthesis' },
-          answer: 'B',
-          explanation: 'GH promotes tissue growth directly by stimulating mitosis and cellular differentiation, and indirectly via IGF-I from the liver.'
-        },
-        {
-          question: 'Which is a function of the GH-IGF system?',
-          options: { A: 'Decreasing Na+ retention', B: 'Increasing lipid breakdown and glucose-sparing', C: 'Completely stopping protein synthesis', D: 'Lowering Ca2+ absorption' },
-          answer: 'B',
-          explanation: 'The GH-IGF system stimulates lipid metabolism (releasing FFA and glycerol) and is glucose-sparing. It also increases protein synthesis, Na+/K+/Cl- retention, and Ca2+ absorption.'
-        },
-        {
-          question: 'Low blood glucose triggers which response?',
-          options: { A: 'Release of GHIH and reduction of hGH', B: 'Release of GHRH and increased hGH', C: 'Release of insulin from hypothalamus', D: 'Increased calcitonin secretion' },
-          answer: 'B',
-          explanation: 'Low blood glucose triggers GHRH release from the hypothalamus, which stimulates increased hGH secretion. hGH then promotes glycogen breakdown to glucose in the liver.'
-        },
-        {
-          question: 'Chronic excess of growth hormone can lead to:',
-          options: { A: 'Hypoglycemia and low insulin', B: 'Lower blood glucose and anemia', C: 'High blood glucose and beta-cell burnout', D: 'Reduced insulin secretion and hypothermia' },
-          answer: 'C',
-          explanation: 'Chronic excess GH raises blood glucose (diabetogenic effect), causing continual insulin release that can exhaust beta cells, contributing to diabetes mellitus.'
-        },
-        {
-          question: 'In adulthood, GH primarily:',
-          options: { A: 'Stops bone remodeling', B: 'Increases osteoblastic activity and bone thickening', C: 'Eliminates muscle mass', D: 'Has no effect on tissues' },
-          answer: 'B',
-          explanation: 'In adults, GH increases osteoblastic activity and bone thickening, rather than driving longitudinal bone growth as it does in childhood.'
-        },
-        {
-          question: 'GH levels are highest during:',
-          options: { A: 'Prolonged fasting and no sleep', B: 'First 2 hours of deep sleep and after high-protein meals', C: 'Immediately after high-carb meals', D: 'Exposure to bright light' },
-          answer: 'B',
-          explanation: 'GH levels peak during the first 2 hours of deep sleep and after high-protein meals. They are lower after high-carb meals and decline to about one-quarter by age 75.'
-        },
-        {
-          question: 'TSH is produced by:',
-          options: { A: 'Thyroid follicular cells', B: 'Thyrotrophs in the anterior pituitary', C: 'Adrenal cortex cells', D: 'Pancreatic beta cells' },
-          answer: 'B',
-          explanation: 'TSH is produced by thyrotrophs (specialized cells) in the anterior pituitary, under regulation by the hypothalamus.'
-        },
-        {
-          question: 'The primary effect of TSH is to:',
-          options: { A: 'Stimulate adrenal medulla', B: 'Increase melatonin production', C: 'Stimulate synthesis and secretion of T3 and T4', D: 'Decrease metabolic rate' },
-          answer: 'C',
-          explanation: 'TSH stimulates the thyroid gland to synthesize and secrete T3 and T4, which raise the metabolic rate.'
-        },
-        {
-          question: 'FSH in females:',
-          options: { A: 'Stimulates uterine contractions', B: 'Initiates ovarian follicle formation and estrogen secretion', C: 'Causes milk ejection', D: 'Raises blood glucose' },
-          answer: 'B',
-          explanation: 'FSH in females initiates ovarian follicle formation and stimulates estrogen secretion from the developing follicles.'
-        },
-        {
-          question: 'FSH in males:',
-          options: { A: 'Stimulates testosterone production in interstitial cells', B: 'Inhibits sperm production', C: 'Stimulates sperm production in testes', D: 'Induces ovulation' },
-          answer: 'C',
-          explanation: 'In males, FSH stimulates sperm production (spermatogenesis) in the testes. Testosterone production is stimulated by LH, not FSH.'
-        },
-        {
-          question: 'In females, LH does all of the following EXCEPT:',
-          options: { A: 'Stimulates estrogen secretion', B: 'Triggers ovulation', C: 'Stimulates corpus luteum formation and progesterone secretion', D: 'Stimulates milk ejection' },
-          answer: 'D',
-          explanation: 'LH stimulates estrogen secretion, triggers ovulation, and promotes corpus luteum formation with progesterone secretion. Milk ejection is stimulated by oxytocin, not LH.'
-        },
-        {
-          question: 'In males, LH stimulates:',
-          options: { A: 'Sertoli cells to release FSH', B: 'Interstitial cells to secrete testosterone', C: 'Thyroid cells to secrete calcitonin', D: 'Beta cells to produce insulin' },
-          answer: 'B',
-          explanation: 'In males, LH stimulates interstitial (Leydig) cells in the testes to secrete testosterone.'
-        },
-        {
-          question: 'Prolactin is mainly involved in:',
-          options: { A: 'Regulation of blood pressure', B: 'Milk production in mammary glands', C: 'Uterine contraction during labor', D: 'Increasing heart rate' },
-          answer: 'B',
-          explanation: 'Prolactin\'s primary function is stimulating milk production in the mammary glands. Uterine contraction is the role of oxytocin.'
-        },
-        {
-          question: 'What effect does suckling have on prolactin?',
-          options: { A: 'Increases hypothalamic inhibition of PRL', B: 'Reduces hypothalamic inhibition, raising PRL', C: 'Has no effect', D: 'Stops PRL release permanently' },
-          answer: 'B',
-          explanation: 'Suckling reduces the hypothalamic inhibition of prolactin (reduces PIH), which raises PRL levels and increases milk production.'
-        },
-        {
-          question: 'ACTH primarily stimulates:',
-          options: { A: 'Thyroid follicles to make thyroxine', B: 'Adrenal cortex to produce glucocorticoids', C: 'Pancreatic islets to produce insulin', D: 'Pineal gland to secrete melatonin' },
-          answer: 'B',
-          explanation: 'ACTH (adrenocorticotropic hormone) primarily stimulates the adrenal cortex to produce glucocorticoids such as cortisol.'
-        },
-        {
-          question: 'Which hormone\'s role in humans is uncertain, though it increases skin pigmentation in frogs?',
-          options: { A: 'ADH', B: 'PRL', C: 'MSH', D: 'GH' },
-          answer: 'C',
-          explanation: 'MSH (melanocyte-stimulating hormone) is known to increase skin pigmentation in frogs, but its role in humans is uncertain.'
-        },
-        {
-          question: 'The posterior pituitary:',
-          options: { A: 'Synthesizes ADH and oxytocin', B: 'Stores and releases ADH and oxytocin made in the hypothalamus', C: 'Stores T3 and T4', D: 'Releases ACTH and MSH' },
-          answer: 'B',
-          explanation: 'The posterior pituitary (neurohypophysis) does not synthesize hormones. It stores and releases ADH and oxytocin, which are made by neurons in the hypothalamus.'
-        },
-        {
-          question: 'During dehydration, ADH will:',
-          options: { A: 'Decrease water reabsorption in kidneys', B: 'Increase urine output', C: 'Cause kidneys to retain more water and constrict arterioles', D: 'Increase sweating' },
-          answer: 'C',
-          explanation: 'During dehydration, ADH is released, causing kidneys to retain more water, sweat glands to reduce water loss, and arterioles to constrict to raise blood pressure.'
-        },
-        {
-          question: 'The pineal gland primarily secretes:',
-          options: { A: 'Insulin', B: 'Melatonin', C: 'Cortisol', D: 'Aldosterone' },
-          answer: 'B',
-          explanation: 'The pineal gland primarily secretes melatonin, which is converted from serotonin at night and promotes sleepiness.'
-        },
-        {
-          question: 'Melatonin levels are increased in:',
-          options: { A: 'Hyperthyroidism', B: 'Seasonal Affective Disorder and PMS', C: 'Cushing syndrome', D: 'Diabetes insipidus' },
-          answer: 'B',
-          explanation: 'Melatonin levels are increased in Seasonal Affective Disorder (SAD) and PMS. Phototherapy can reduce symptoms by suppressing melatonin production.'
-        },
-        {
-          question: 'In darkness, melatonin secretion:',
-          options: { A: 'Decreases due to high norepinephrine', B: 'Increases due to lack of sympathetic stimulation', C: 'Stops entirely', D: 'Is unrelated to light' },
-          answer: 'B',
-          explanation: 'In darkness, fewer impulses from the retina result in lack of norepinephrine stimulation, leading to increased melatonin secretion and sleepiness.'
-        },
-        {
-          question: 'The thymus secretes hormones that regulate:',
-          options: { A: 'B-cell antibody production', B: 'Development and activation of T-lymphocytes', C: 'Erythrocyte maturation', D: 'Insulin sensitivity' },
-          answer: 'B',
-          explanation: 'The thymus secretes thymopoietin and thymosins, which regulate the development and later activation of T-lymphocytes (T cells) for immune function.'
-        },
-        {
-          question: 'Thyroid follicular cells secrete:',
-          options: { A: 'Calcitonin only', B: 'T3 and T4', C: 'PTH', D: 'Melatonin' },
-          answer: 'B',
-          explanation: 'Thyroid follicular cells in follicles secrete T3 (triiodothyronine) and T4 (thyroxine). Calcitonin is secreted by C (parafollicular) cells, not follicular cells.'
-        },
-        {
-          question: 'A major effect of thyroid hormone is:',
-          options: { A: 'Decreasing metabolic rate', B: 'Lowering respiratory rate', C: 'Increasing metabolic rate and oxygen consumption', D: 'Reducing heart rate and contractility' },
-          answer: 'C',
-          explanation: 'Thyroid hormones T3 and T4 increase metabolic rate and O2 consumption, as well as heat production, heart rate, contractility, respiratory rate, appetite, and breakdown of carbs, lipids, and proteins.'
-        },
-        {
-          question: 'Calcitonin from C cells:',
-          options: { A: 'Raises blood Ca2+', B: 'Lowers blood Ca2+ and promotes bone deposition', C: 'Has no effect on bone', D: 'Acts only on the kidneys' },
-          answer: 'B',
-          explanation: 'Calcitonin from thyroid C (parafollicular) cells lowers blood calcium levels by promoting calcium deposition into bones, especially important in children.'
-        },
-        {
-          question: 'Which hormones are stored and released by the posterior pituitary?',
-          options: { A: 'T3 and T4', B: 'FSH and LH', C: 'ADH and oxytocin', D: 'GH and PRL' },
-          answer: 'C',
-          explanation: 'The posterior pituitary stores and releases ADH and oxytocin, which are synthesized by hypothalamic neurons and transported down their axons to the posterior pituitary.'
-        },
-        {
-          question: 'Which hormone stimulates the adrenal cortex to produce glucocorticoids?',
-          options: { A: 'TSH', B: 'ACTH', C: 'FSH', D: 'GH' },
-          answer: 'B',
-          explanation: 'ACTH (adrenocorticotropic hormone) from the anterior pituitary stimulates the adrenal cortex to produce glucocorticoids like cortisol.'
-        },
-        {
-          question: 'Chronic excess hGH will most likely lead to:',
-          options: { A: 'Persistent hypoglycemia', B: 'Hyperglycemia and potential diabetes mellitus', C: 'Severe hypothyroidism', D: 'Immediate adrenal failure' },
-          answer: 'B',
-          explanation: 'Chronic excess hGH raises blood glucose (diabetogenic effect), causing continual insulin release that can exhaust beta cells and lead to diabetes mellitus.'
-        },
-        {
-          question: 'Melatonin secretion is highest:',
-          options: { A: 'In bright sunlight', B: 'During darkness', C: 'After carbohydrate meals', D: 'During intense exercise' },
-          answer: 'B',
-          explanation: 'Melatonin secretion is highest during darkness, when reduced light stimulation leads to decreased norepinephrine and increased melatonin production.'
-        },
-        {
-          question: 'Calcitonin\'s primary effect is to:',
-          options: { A: 'Raise blood Ca2+ by bone resorption', B: 'Lower blood Ca2+ by promoting bone deposition', C: 'Increase Na+ retention', D: 'Stimulate insulin release' },
-          answer: 'B',
-          explanation: 'Calcitonin lowers blood calcium levels by promoting calcium deposition into bones, opposing the effects of PTH which raises blood calcium.'
-        },
-        {
-          question: 'Which hormone directly stimulates ovarian follicles and sperm production?',
-          options: { A: 'LH', B: 'FSH', C: 'TSH', D: 'PRL' },
-          answer: 'B',
-          explanation: 'FSH (follicle-stimulating hormone) directly stimulates ovarian follicle development in females and sperm production (spermatogenesis) in males.'
-        }
-      ],
-      flashcards: [
-        { front: 'What is the hypothalamo-hypophyseal portal system?', back: 'A portal blood system that carries releasing and inhibiting hormones directly from the hypothalamus to the anterior pituitary gland.' },
-        { front: 'What hormones does the anterior pituitary secrete?', back: 'FSH, LH, TSH, ACTH, PRL, and GH, all under hypothalamic control.' },
-        { front: 'How does GH promote growth?', back: 'Directly by stimulating mitosis and cellular differentiation, and indirectly via IGF-I produced by the liver.' },
-        { front: 'What triggers increased hGH release?', back: 'Low blood glucose triggers GHRH from the hypothalamus, which increases hGH release.' },
-        { front: 'What is the diabetogenic effect of GH?', back: 'Excess GH raises blood glucose, causing continual insulin release and potential beta-cell burnout, contributing to diabetes mellitus.' },
-        { front: 'What does FSH do in females vs males?', back: 'In females: forms ovarian follicles and stimulates estrogen secretion. In males: stimulates sperm production in testes.' },
-        { front: 'What does the posterior pituitary do?', back: 'It does not synthesize hormones; it stores and releases ADH and oxytocin made by hypothalamic neurons.' },
-        { front: 'What are the functions of ADH?', back: 'Decreases urine production, decreases sweating, and increases blood pressure by constricting arterioles.' },
-        { front: 'How is melatonin regulated by light?', back: 'In darkness, lack of norepinephrine increases melatonin and sleepiness. In light, norepinephrine inhibits melatonin secretion.' },
-        { front: 'What do thyroid follicular cells secrete and what is the effect?', back: 'They secrete T3 and T4, which increase metabolic rate, O2 consumption, heat production, heart rate, respiratory rate, appetite, and breakdown of carbs, lipids, and proteins.' }
+        { id: 'en2-q1', question: 'The portal system carrying hypothalamic hormones to the anterior pituitary is the:', options: { A: 'Hepatic portal system', B: 'Hypothalamo-hypophyseal portal system', C: 'Systemic venous system', D: 'Pulmonary circulation' }, answer: 'B', explanation: 'The hypothalamo-hypophyseal portal system carries releasing/inhibiting hormones from hypothalamus directly to the anterior pituitary.' },
+        { id: 'en2-q2', question: 'The posterior pituitary:', options: { A: 'Synthesizes ADH and oxytocin', B: 'Stores and releases ADH and oxytocin made in hypothalamus', C: 'Releases ACTH and MSH', D: 'Produces GH' }, answer: 'B', explanation: 'The posterior pituitary does not synthesize hormones — it stores and releases ADH and oxytocin made by hypothalamic neurons.' },
+        { id: 'en2-q3', question: 'Excess GH in childhood causes _____, while in adults it causes _____.', options: { A: 'Dwarfism; acromegaly', B: 'Gigantism; acromegaly', C: 'Acromegaly; gigantism', D: 'Dwarfism; gigantism' }, answer: 'B', explanation: 'Childhood GH excess → gigantism (longitudinal growth). Adult GH excess → acromegaly (bone/tissue thickening, growth plates are closed).' },
+        { id: 'en2-q4', question: 'Thyroid follicular cells secrete:', options: { A: 'Calcitonin only', B: 'T3 and T4', C: 'PTH', D: 'Melatonin' }, answer: 'B', explanation: 'Thyroid follicular cells secrete T3 and T4 (increase metabolic rate). Calcitonin is from C (parafollicular) cells.' },
+        { id: 'en2-q5', question: 'PTH raises blood calcium by all EXCEPT:', options: { A: 'Increasing osteoclast activity', B: 'Promoting calcitriol formation in kidneys', C: 'Promoting bone deposition', D: 'Increasing Ca²⁺ reabsorption by kidneys' }, answer: 'C', explanation: 'PTH raises Ca²⁺ by activating osteoclasts (bone resorption), promoting calcitriol, and increasing kidney reabsorption. Bone deposition is the role of calcitonin.' },
+        { id: 'en2-q6', question: 'The adrenal cortex zone producing mineralocorticoids (aldosterone) is the:', options: { A: 'Zona fasciculata', B: 'Zona reticularis', C: 'Zona glomerulosa', D: 'Medulla' }, answer: 'C', explanation: 'Zona glomerulosa produces mineralocorticoids (aldosterone). Fasciculata produces glucocorticoids. Reticularis produces androgens.' },
+        { id: 'en2-q7', question: 'Cortisol functions include all EXCEPT:', options: { A: 'Gluconeogenesis', B: 'Anti-inflammatory effects', C: 'Lowering blood pressure', D: 'Increasing protein catabolism' }, answer: 'C', explanation: 'Cortisol RAISES BP by vasoconstriction. Other functions: gluconeogenesis, anti-inflammatory effects, increased protein catabolism and lipolysis.' },
+        { id: 'en2-q8', question: 'The adrenal medulla releases hormones that are:', options: { A: 'Mineralocorticoids', B: 'Epinephrine and norepinephrine', C: 'Androgens', D: 'Glucocorticoids' }, answer: 'B', explanation: 'Adrenal medulla chromaffin cells release epinephrine and norepinephrine in response to sympathetic stimulation.' },
+        { id: 'en2-q9', question: 'The ONLY hormone that lowers blood glucose is:', options: { A: 'Glucagon', B: 'Cortisol', C: 'Insulin', D: 'Epinephrine' }, answer: 'C', explanation: 'Insulin is the only hypoglycemic hormone. Glucagon, cortisol, epinephrine, and norepinephrine all RAISE blood glucose.' },
+        { id: 'en2-q10', question: 'Glucagon is produced by pancreatic islet _____ cells and acts to:', options: { A: 'Beta; lower blood glucose', B: 'Alpha; raise blood glucose', C: 'Delta; modulate other islet cells', D: 'Alpha; lower blood glucose' }, answer: 'B', explanation: 'Alpha cells produce glucagon which raises blood glucose via glycogenolysis, fat catabolism, and gluconeogenesis.' },
+        { id: 'en2-q11', question: 'ANP from the heart:', options: { A: 'Raises blood pressure', B: 'Decreases blood volume and BP by increasing Na+/H₂O loss by kidneys', C: 'Stimulates aldosterone release', D: 'Constricts blood vessels' }, answer: 'B', explanation: 'ANP (atrial natriuretic peptide) is released when BP rises; it decreases blood volume and BP by increasing renal excretion of Na+ and water.' },
+        { id: 'en2-q12', question: 'FSH in females and males respectively:', options: { A: 'Produces testosterone; stimulates ovulation', B: 'Stimulates ovarian follicle development; stimulates sperm production', C: 'Causes milk ejection; increases BP', D: 'Stimulates estrogen only; inhibits sperm' }, answer: 'B', explanation: 'FSH stimulates ovarian follicle formation and estrogen in females, and sperm production (spermatogenesis) in testes in males.' },
+        { id: 'en2-q13', question: 'Melatonin secretion is highest during:', options: { A: 'Bright sunlight', B: 'Darkness', C: 'Exercise', D: 'High-carb meals' }, answer: 'B', explanation: 'In darkness, fewer retinal impulses → less norepinephrine → increased melatonin → sleepiness.' },
+        { id: 'en2-q14', question: 'The kidneys produce 85% of the body\'s:', options: { A: 'Calcitonin', B: 'Erythropoietin', C: 'Insulin', D: 'Cortisol' }, answer: 'B', explanation: 'Kidneys produce 85% of erythropoietin (stimulates bone marrow RBC production). Liver produces ~15%.' },
+        { id: 'en2-q15', question: 'Aldosterone hypersecretion (aldosteronism) causes:', options: { A: 'Low blood pressure', B: 'High blood pressure from Na+/water retention', C: 'Hypoglycemia', D: 'Bone resorption' }, answer: 'B', explanation: 'Aldosteronism (tumor) → excessive Na+ and water reabsorption → high blood pressure.' }
       ]
     },
 
-    // ===== MODULE 3 =====
+    // ===== SECTION 3: Stress, Aging, Endocrine Disorders & Diabetes =====
     {
       id: 'endocrine-s3',
-      title: 'Stress, Aging, Endocrine Disorders & Diabetes',
-      pageRange: 'Pages 17-24',
+      title: 'Stress (GAS), Aging & Endocrine Disorders',
+      pageRange: 'Pages 22-30',
       learnItems: [
         {
+          title: 'Stress and General Adaptation Syndrome (GAS)',
+          body: 'Stress response = set of bodily changes called General Adaptation Syndrome (GAS). Any stimulus producing stress response = stressor. Stress resets body to meet emergency. Eustress: productive stress for challenges. Distress: harmful stress lowering resistance to infection. GAS has three stages: Alarm, Resistance, and Exhaustion.'
+        },
+        {
+          title: 'Alarm Reaction (Fight-or-Flight)',
+          body: 'Initiated by hypothalamic stimulation of sympathetic ANS and adrenal medulla. Effects: increases circulation, promotes ATP synthesis, nonessential body functions inhibited (digestive, urinary, reproductive). Catecholamines (epinephrine/norepinephrine) released for immediate response.'
+        },
+        {
+          title: 'Resistance Reaction',
+          body: 'Initiated by hypothalamic releasing hormones for long-term stress response (CRH, GHRH, TRH). Results: increased aldosterone secretion → conserve Na+ and raise BP, eliminate H+. Increased cortisol secretion → protein catabolism increased, alternative glucose sources found (gluconeogenesis). Increased thyroid hormone → increased metabolism. Allows body to continue to fight stressor over extended period.'
+        },
+        {
+          title: 'Exhaustion Stage',
+          body: 'Resources of body become depleted. Resistance stage cannot be maintained. Prolonged exposure to resistance-reaction hormones causes: wasting of muscle (protein catabolism), suppression of immune system, ulceration of GI tract, failure of pancreatic beta cells. Demonstrates that chronic stress is genuinely harmful.'
+        },
+        {
           title: 'Stress, Immune System, and Disease',
-          body: 'Stress can contribute to disease by inhibiting the immune system, increasing risk of hypertension, asthma, migraine, gastritis, colitis, and depression. Macrophages secrete interleukin-1, linking stress and immunity by stimulating immune substance production; these immune substances then suppress interleukin-1 in a feedback loop.'
+          body: 'Stress inhibits immune system, increasing risk of hypertension, asthma, migraine, gastritis, colitis, and depression. Macrophages secrete interleukin-1 linking stress and immunity; immune substances then suppress interleukin-1 in feedback loop.'
         },
         {
           title: 'Endocrine Changes with Aging',
-          body: 'Human growth hormone production decreases with age, leading to muscle atrophy. TSH production increases with age to stimulate the thyroid, but metabolic rate still decreases, body fat increases, and hypothyroidism becomes more common. Thymus is replaced with adipose tissue after puberty; adrenal glands produce less cortisol and aldosterone. Receptor sensitivity to glucose declines; ovaries stop responding to gonadotropins, reducing estrogen and contributing to osteoporosis and atherosclerosis.'
+          body: 'GH production decreases → muscle atrophy. TSH increases but metabolic rate still decreases, body fat increases, hypothyroidism more common. Thymus replaced with adipose after puberty. Adrenals produce less cortisol/aldosterone. Receptor sensitivity to glucose declines. Ovaries stop responding to gonadotropins → reduced estrogen → osteoporosis and atherosclerosis.'
         },
         {
           title: 'General Endocrine Disorders',
-          body: 'Variations in hormone concentration and target-cell sensitivity cause noticeable body effects. Hyposecretion: inadequate hormone release, often from tumors/lesions destroying glands; example: head trauma damaging pituitary leading to ADH deficiency causing diabetes insipidus with chronic polyuria. Hypersecretion: excessive hormone release from tumors or autoimmune disorders; example: toxic goiter (Graves disease) where antibodies mimic TSH on the thyroid.'
+          body: 'Hyposecretion: inadequate hormone release from tumors/lesions destroying glands. Example: head trauma damaging pituitary → ADH deficiency → diabetes insipidus (chronic polyuria). Hypersecretion: excessive hormone from tumors or autoimmune. Example: Graves disease (antibodies mimic TSH).'
         },
         {
-          title: 'Pituitary Disorders - GH Imbalance',
-          body: 'Hypersecretion of GH: acromegaly in adults (thickening of bones and soft tissues). Childhood/adolescence: GH oversecretion causes gigantism; GH hyposecretion causes dwarfism.'
+          title: 'Pituitary Disorders — GH Imbalance',
+          body: 'GH hypersecretion in adults → acromegaly (thickening of bones/soft tissues). GH oversecretion in childhood/adolescence → gigantism. GH hyposecretion in childhood → dwarfism.'
         },
         {
-          title: 'Thyroid Disorders - Hyper and Hypo',
-          body: 'Hyperthyroidism: symptoms include weight loss, tremors, nervousness, and exophthalmos. Endemic goiter: iodine deficiency leads to no thyroid hormone, no negative feedback, elevated TSH and enlarged thyroid. Toxic goiter (Graves disease): antibodies mimic TSH, causing high thyroid hormone and exophthalmos. Congenital hypothyroidism (low TH in infants): abnormal bone development, thick facial features, low temp, lethargy, brain damage, dwarfism/cretinism. Myxedema (adult hypothyroidism): low metabolic rate, sluggishness, sleepiness, weight gain, constipation, dry skin/hair, cold sensitivity, increased blood pressure and tissue swelling.'
+          title: 'Thyroid Disorders',
+          body: 'Hyperthyroidism: weight loss, tremors, nervousness, exophthalmos. Endemic goiter: iodine deficiency → no T3/T4, no negative feedback → elevated TSH → thyroid enlargement. Toxic goiter (Graves disease): antibodies mimic TSH → excessive T3/T4 + exophthalmos. Congenital hypothyroidism (infants): abnormal bone development, thick facial features, low temp, lethargy, brain damage, cretinism. Myxedema (adult hypothyroidism): low metabolic rate, sluggishness, weight gain, constipation, dry skin/hair, cold sensitivity, high BP, tissue swelling.'
         },
         {
           title: 'Parathyroid Disorders',
-          body: 'Hypoparathyroidism: often after surgical removal during thyroid surgery, can cause fatal tetany within 3-4 days. Hyperparathyroidism: excess PTH from tumor leads to soft, fragile, deformed bones, increased blood Ca2+, and renal calculi (kidney stones).'
+          body: 'Hypoparathyroidism: often from accidental surgical removal during thyroid surgery → can cause fatal tetany within 3-4 days. Hyperparathyroidism: excess PTH from tumor → soft, fragile, deformed bones + increased blood Ca²⁺ + renal calculi (kidney stones).'
         },
         {
-          title: 'Adrenal Disorders - Cortex',
-          body: 'Cushing syndrome: excess cortical secretion causing hyperglycemia, hypertension, weakness, edema, muscle and bone loss from protein catabolism, poor wound healing. Cushing body changes: "buffalo hump" fat between shoulders and "moon face" with thin, spindly legs. Adrenogenital syndrome (AGS): adrenal androgen hypersecretion often accompanying Cushing leading to external genital enlargement in children and early puberty, and masculinization in women (deeper voice, beard). Addison\'s disease: hyposecretion of glucocorticoids causing hypoglycemia, muscle weakness, low BP, dehydration from low Na+, skin darkening similar to MSH effects, and risk of cardiac arrest.'
+          title: 'Adrenal Disorders',
+          body: 'Cushing syndrome: excess cortical secretion → hyperglycemia, hypertension, weakness, edema, muscle/bone loss, "buffalo hump" and "moon face" with thin legs, poor wound healing. Adrenogenital syndrome (AGS): adrenal androgen hypersecretion → external genital enlargement in children/early puberty, masculinization in women (deeper voice, beard). Addison disease: glucocorticoid hyposecretion → hypoglycemia, muscle weakness, low BP, dehydration, skin darkening, risk of cardiac arrest.'
         },
         {
-          title: 'Diabetes Mellitus - Core Features',
-          body: 'Due to hyposecretion of insulin: signs include polyuria, polydipsia, polyphagia, plus hyperglycemia, glycosuria, and ketonuria. Osmotic diuresis: blood glucose above renal transport maximum means glucose remains in urine, increases osmolarity, pulls water into urine. Kidney tubules cannot reabsorb glucose fast enough without insulin, causing continued glucose and ketone loss and diuresis.'
+          title: 'Diabetes Mellitus — Core Features and Types',
+          body: 'Due to insulin hyposecretion or resistance. Classic signs: polyuria, polydipsia, polyphagia + hyperglycemia, glycosuria, ketonuria. Osmotic diuresis: glucose above renal transport maximum remains in urine → increases osmolarity → pulls water. Type I (IDDM, ~10%): autoimmune destruction of beta cells, diagnosed ~age 12; treatment: diet, exercise, insulin injections/pump. Type II (NIDDM, ~90%): insulin resistance; risk factors: heredity, age >40, obesity; treatment: weight loss + oral meds.'
         },
         {
-          title: 'Types of Diabetes Mellitus',
-          body: 'Type I (IDDM): approximately 10% of cases; often autoimmune destruction of beta cells; usually diagnosed around age 12. Type I treatment: diet, exercise, blood glucose monitoring, and insulin injections or pump. Type II (NIDDM): approximately 90%; insulin resistance with target cells failing to respond to insulin. Type II risk factors: heredity, age over 40, and obesity; treatment is weight loss (diet + exercise) and oral meds that improve insulin secretion or sensitivity.'
+          title: 'Diabetes Pathology — Acute and Chronic',
+          body: 'Acute: cells cannot absorb glucose → rely on fats/proteins → weight loss/weakness. Increased fat catabolism → elevated FFA and ketone bodies; ketonuria causes osmotic diuresis with Na+/K+ loss. Ketoacidosis: ketones lower blood pH → dyspnea → diabetic coma if untreated. Chronic hyperglycemia → neuropathy + atherosclerosis → retina/kidney damage (Type I), heart failure/gangrene (Type II).'
         },
         {
-          title: 'Pathology of Diabetes - Acute and Chronic',
-          body: 'Acute: cells cannot absorb glucose, rely on fats and proteins leading to weight loss and weakness. Increased fat catabolism leads to elevated FFA and ketone bodies; ketonuria causes osmotic diuresis with loss of Na+ and K+. Ketoacidosis: ketones lowering blood pH leading to dyspnea and possibly diabetic coma if untreated. Chronic hyperglycemia leads to neuropathy and cardiovascular damage due to atherosclerosis, affecting retina and kidneys (type I), causing heart failure and gangrene (type II).'
-        },
-        {
-          title: 'Hyperinsulinism',
-          body: 'Causes: excessive insulin injection or pancreatic islet tumor. Leads to hypoglycemia, weakness, hunger, and triggers epinephrine, GH, and glucagon release with anxiety, sweating, and increased heart rate. Insulin shock: uncorrected hyperinsulinism resulting in disorientation, convulsions, or unconsciousness.'
+          title: 'Hyperinsulinism and Insulin Shock',
+          body: 'Causes: excessive insulin injection or pancreatic islet tumor. Effects: hypoglycemia → weakness, hunger → triggers epinephrine, GH, glucagon release → anxiety, sweating, increased heart rate. Insulin shock: uncorrected hyperinsulinism → disorientation, convulsions, unconsciousness.'
         }
       ],
       keyTerms: [
-        { term: 'Acromegaly', definition: 'Condition caused by GH hypersecretion in adulthood, resulting in thickening of bones and soft tissues.' },
-        { term: 'Cushing Syndrome', definition: 'Disorder from excess cortical secretion causing hyperglycemia, hypertension, weakness, edema, muscle/bone loss, "buffalo hump" and "moon face".' },
-        { term: 'Addison\'s Disease', definition: 'Disorder from hyposecretion of glucocorticoids causing hypoglycemia, muscle weakness, low BP, dehydration, skin darkening, and risk of cardiac arrest.' },
-        { term: 'Diabetes Mellitus', definition: 'Metabolic disorder due to insulin hyposecretion (Type I) or insulin resistance (Type II), characterized by polyuria, polydipsia, polyphagia, and hyperglycemia.' },
-        { term: 'Ketoacidosis', definition: 'Dangerous condition where ketone bodies from excessive fat catabolism lower blood pH, causing dyspnea and possibly diabetic coma.' },
-        { term: 'Myxedema', definition: 'Adult hypothyroidism characterized by low metabolic rate, sluggishness, weight gain, constipation, dry skin/hair, cold sensitivity, and tissue swelling.' },
-        { term: 'Graves Disease (Toxic Goiter)', definition: 'Autoimmune hyperthyroid condition where antibodies mimic TSH, causing excessive thyroid hormone production and exophthalmos.' },
-        { term: 'Hyperinsulinism', definition: 'Excess insulin from overdose or islet tumor causing hypoglycemia, weakness, hunger, anxiety, sweating, and potentially insulin shock.' }
+        { term: 'General Adaptation Syndrome (GAS)', definition: 'Three-stage stress response: Alarm (fight-or-flight), Resistance (cortisol/aldosterone), Exhaustion (depletion).' },
+        { term: 'Acromegaly', definition: 'Adult GH hypersecretion → thickening of bones and soft tissues.' },
+        { term: 'Cushing Syndrome', definition: 'Excess cortisol → hyperglycemia, hypertension, weakness, buffalo hump, moon face.' },
+        { term: 'Addison Disease', definition: 'Glucocorticoid hyposecretion → hypoglycemia, low BP, dehydration, skin darkening, cardiac arrest risk.' },
+        { term: 'Graves Disease', definition: 'Autoimmune: antibodies mimic TSH → excessive thyroid hormone → weight loss, exophthalmos.' },
+        { term: 'Myxedema', definition: 'Adult hypothyroidism → low metabolic rate, weight gain, cold sensitivity, tissue swelling.' },
+        { term: 'Diabetes Mellitus', definition: 'Insulin hyposecretion (Type I) or resistance (Type II); polyuria, polydipsia, polyphagia, hyperglycemia.' },
+        { term: 'Ketoacidosis', definition: 'Ketone bodies from fat catabolism lower blood pH → dyspnea → diabetic coma.' },
+        { term: 'Hyperinsulinism', definition: 'Excess insulin causing hypoglycemia → weakness, anxiety, sweating; may progress to insulin shock.' },
+        { term: 'Diabetes Insipidus', definition: 'ADH deficiency → chronic polyuria; caused by pituitary damage, distinct from diabetes mellitus.' }
       ],
       memoryAids: [
+        'GAS stages: "ARE" = Alarm (fight-or-flight), Resistance (long-term hormones), Exhaustion (depletion).',
         'The 3 Ps of diabetes: Polyuria (peeing a lot), Polydipsia (drinking a lot), Polyphagia (eating a lot).',
-        'Cushing = CUSHION: patients look cushioned with fat (moon face, buffalo hump). Addison = ADDITION of dark skin color.',
-        'Type 1 = 1 letter short of insulin (body destroys beta cells, no insulin). Type 2 = 2 problems (insulin is made but cells resist it).',
-        'Acromegaly = ACRO (extremities) + MEGALY (enlargement): bones and soft tissues thicken in adults with excess GH.',
-        'Graves disease = GRAVE mistake by the immune system: antibodies mimic TSH and overstimulate the thyroid.'
-      ],
-      inlineQuestions: [
-        {
-          question: 'Stress can promote disease primarily by:',
-          options: { A: 'Increasing antibody production', B: 'Inhibiting the immune system', C: 'Increasing bone mass', D: 'Stimulating pancreatic beta cells' },
-          answer: 'B',
-          explanation: 'Stress contributes to disease primarily by inhibiting the immune system, which increases susceptibility to conditions like hypertension, asthma, migraine, gastritis, colitis, and depression.'
-        },
-        {
-          question: 'Acromegaly is caused by:',
-          options: { A: 'GH hypersecretion in adulthood', B: 'GH hyposecretion in childhood', C: 'Thyroid hormone deficiency', D: 'Insulin resistance' },
-          answer: 'A',
-          explanation: 'Acromegaly is caused by hypersecretion of growth hormone in adulthood, resulting in thickening of bones and soft tissues. In childhood, GH hypersecretion causes gigantism instead.'
-        },
-        {
-          question: 'Classic signs of diabetes mellitus due to insulin hyposecretion include all EXCEPT:',
-          options: { A: 'Polyuria', B: 'Polydipsia', C: 'Polyphagia', D: 'Hypoglycemia' },
-          answer: 'D',
-          explanation: 'Diabetes mellitus causes hyperglycemia (high blood glucose), not hypoglycemia. The classic signs are polyuria (excess urination), polydipsia (excess thirst), and polyphagia (excess hunger).'
-        }
+        'Cushing = CUSHION (fat: moon face, buffalo hump). Addison = ADDITION of dark skin color.',
+        'Type 1 = 1 problem (no insulin — autoimmune). Type 2 = 2 problems (insulin exists but cells resist it).',
+        'Acromegaly = ACRO (extremities) + MEGALY (enlargement) in adults.',
+        'Graves disease = GRAVE mistake by immune system: antibodies mimic TSH → thyroid hyperstimulation.'
       ],
       quiz: [
-        {
-          question: 'Interleukin-1 is secreted by:',
-          options: { A: 'Thyroid follicles', B: 'Macrophages', C: 'Beta cells', D: 'Chromaffin cells' },
-          answer: 'B',
-          explanation: 'Interleukin-1 is secreted by macrophages, linking stress and immunity by stimulating immune substance production in a feedback loop.'
-        },
-        {
-          question: 'Which change with aging contributes to muscle atrophy?',
-          options: { A: 'Increased GH production', B: 'Decreased GH production', C: 'Increased melatonin', D: 'Increased calcitonin' },
-          answer: 'B',
-          explanation: 'Decreased GH production with aging leads to muscle atrophy, as GH is essential for maintaining muscle mass and tissue growth.'
-        },
-        {
-          question: 'With age, TSH levels tend to:',
-          options: { A: 'Decrease, causing hyperthyroidism', B: 'Increase, trying to stimulate the thyroid', C: 'Stay constant', D: 'Decrease to zero' },
-          answer: 'B',
-          explanation: 'TSH levels increase with age as the body tries to stimulate the declining thyroid, but metabolic rate still decreases and hypothyroidism becomes more common.'
-        },
-        {
-          question: 'After puberty, the thymus:',
-          options: { A: 'Enlarges significantly', B: 'Is replaced largely by adipose tissue', C: 'Starts secreting insulin', D: 'Stops making T-cell hormones but stays large' },
-          answer: 'B',
-          explanation: 'After puberty, the thymus undergoes involution and is replaced largely by adipose (fat) tissue, reducing its immune function.'
-        },
-        {
-          question: 'An example of hormone hyposecretion is:',
-          options: { A: 'Cushing syndrome', B: 'Toxic goiter', C: 'ADH deficiency causing diabetes insipidus', D: 'Hyperparathyroidism' },
-          answer: 'C',
-          explanation: 'ADH deficiency causing diabetes insipidus is an example of hyposecretion (inadequate hormone release). Cushing syndrome, toxic goiter, and hyperparathyroidism are all examples of hypersecretion.'
-        },
-        {
-          question: 'Toxic goiter (Graves disease) involves:',
-          options: { A: 'Iodine deficiency', B: 'Autoantibodies mimicking TSH', C: 'Lack of ACTH', D: 'Pituitary tumor only' },
-          answer: 'B',
-          explanation: 'Graves disease (toxic goiter) is an autoimmune condition where antibodies mimic TSH on the thyroid, causing excessive thyroid hormone production.'
-        },
-        {
-          question: 'Gigantism results from:',
-          options: { A: 'GH hypersecretion in adulthood', B: 'GH hypersecretion in childhood/adolescence', C: 'GH hyposecretion in old age', D: 'Excess cortisol' },
-          answer: 'B',
-          explanation: 'Gigantism results from GH hypersecretion during childhood/adolescence when growth plates are still open. In adulthood, the same condition causes acromegaly instead.'
-        },
-        {
-          question: 'Which symptom is characteristic of hyperthyroidism?',
-          options: { A: 'Weight gain and constipation', B: 'Weight loss and nervousness', C: 'Severe bradycardia', D: 'Thickened facial features at birth' },
-          answer: 'B',
-          explanation: 'Hyperthyroidism is characterized by weight loss, tremors, nervousness, and exophthalmos due to excess thyroid hormone increasing metabolic rate.'
-        },
-        {
-          question: 'Endemic goiter is most directly caused by:',
-          options: { A: 'Excess TSH', B: 'Iodine deficiency', C: 'Excess PTH', D: 'Lack of cortisol' },
-          answer: 'B',
-          explanation: 'Endemic goiter is caused by iodine deficiency, which prevents thyroid hormone production. Without negative feedback from T3/T4, TSH remains elevated, causing thyroid enlargement.'
-        },
-        {
-          question: 'Myxedema typically presents with:',
-          options: { A: 'High metabolic rate and sweating', B: 'Low metabolic rate, weight gain, and cold sensitivity', C: 'High fever and diarrhea', D: 'Early onset puberty' },
-          answer: 'B',
-          explanation: 'Myxedema (adult hypothyroidism) presents with low metabolic rate, sluggishness, sleepiness, weight gain, constipation, dry skin/hair, cold sensitivity, increased blood pressure, and tissue swelling.'
-        },
-        {
-          question: 'Hypoparathyroidism is often due to:',
-          options: { A: 'Adrenal tumors', B: 'Surgical removal of parathyroids', C: 'Autoantibodies to insulin', D: 'Pineal calcification' },
-          answer: 'B',
-          explanation: 'Hypoparathyroidism is most often caused by accidental surgical removal of the parathyroid glands during thyroid surgery, and can cause fatal tetany within 3-4 days.'
-        },
-        {
-          question: 'Hyperparathyroidism can cause:',
-          options: { A: 'Stronger, denser bones', B: 'Soft, fragile, deformed bones and kidney stones', C: 'Decrease in blood Ca2+', D: 'Massive hair growth' },
-          answer: 'B',
-          explanation: 'Hyperparathyroidism causes excess PTH from a tumor, leading to excessive bone resorption resulting in soft, fragile, deformed bones, elevated blood Ca2+, and renal calculi (kidney stones).'
-        },
-        {
-          question: 'Cushing syndrome is associated with:',
-          options: { A: 'Hypoglycemia and low BP', B: 'Hyperglycemia, hypertension, and muscle wasting', C: 'Massive weight loss and hypotension', D: 'Increased melatonin and SAD' },
-          answer: 'B',
-          explanation: 'Cushing syndrome features hyperglycemia, hypertension, weakness, edema, and muscle/bone loss from protein catabolism due to excess cortical secretion.'
-        },
-        {
-          question: 'The classic body changes of Cushing syndrome include:',
-          options: { A: 'Goiter and exophthalmos', B: 'Buffalo hump and moon face with thin legs', C: 'Tetany and spasms', D: 'Severe dehydration only' },
-          answer: 'B',
-          explanation: 'Cushing syndrome causes characteristic body changes including "buffalo hump" (fat between shoulders) and "moon face" with thin, spindly legs due to protein catabolism.'
-        },
-        {
-          question: 'Adrenogenital syndrome may cause in women:',
-          options: { A: 'Feminization', B: 'Masculinization with deeper voice and beard', C: 'Complete loss of hair', D: 'Severe hypothyroidism' },
-          answer: 'B',
-          explanation: 'Adrenogenital syndrome (AGS) involves adrenal androgen hypersecretion, which can cause masculinization in women including deeper voice and beard growth.'
-        },
-        {
-          question: 'Addison\'s disease is due to:',
-          options: { A: 'Hypersecretion of glucocorticoids', B: 'Hyposecretion of glucocorticoids', C: 'Hypersecretion of insulin', D: 'Hypersecretion of PTH' },
-          answer: 'B',
-          explanation: 'Addison\'s disease is caused by hyposecretion of glucocorticoids from the adrenal cortex, leading to hypoglycemia, muscle weakness, low BP, dehydration, and skin darkening.'
-        },
-        {
-          question: 'A hallmark of Addison\'s disease is:',
-          options: { A: 'Hyperglycemia and obesity', B: 'Hypoglycemia, low BP, dehydration, and skin darkening', C: 'Goiter', D: 'Exophthalmos' },
-          answer: 'B',
-          explanation: 'Addison\'s disease hallmarks include hypoglycemia, muscle weakness, low blood pressure, dehydration from low Na+, and skin darkening similar to MSH effects.'
-        },
-        {
-          question: 'Osmotic diuresis in diabetes occurs because:',
-          options: { A: 'Kidneys reabsorb all glucose', B: 'Excess glucose in urine raises osmolarity and pulls water', C: 'ADH is absent', D: 'Kidneys stop filtering blood' },
-          answer: 'B',
-          explanation: 'When blood glucose exceeds the renal transport maximum, glucose remains in urine, raises osmolarity, and pulls water into the urine via osmotic diuresis.'
-        },
-        {
-          question: 'Type I diabetes is most closely associated with:',
-          options: { A: 'Insulin resistance in target cells', B: 'Autoimmune destruction of beta cells', C: 'Onset only after age 40', D: 'No need for insulin therapy' },
-          answer: 'B',
-          explanation: 'Type I diabetes (IDDM) is most closely associated with autoimmune destruction of pancreatic beta cells, usually diagnosed around age 12, requiring insulin therapy.'
-        },
-        {
-          question: 'Type II diabetes is characterized primarily by:',
-          options: { A: 'Total absence of insulin', B: 'Failure of target cells to respond to insulin', C: 'Autoimmune attack on thyroid', D: 'Excess growth hormone' },
-          answer: 'B',
-          explanation: 'Type II diabetes (NIDDM) is characterized by insulin resistance, where target cells fail to respond properly to insulin despite its presence.'
-        },
-        {
-          question: 'Major risk factors for Type II diabetes include:',
-          options: { A: 'Iodine deficiency and hypercalcemia', B: 'Heredity, age over 40, and obesity', C: 'Low protein diet only', D: 'Excess melatonin' },
-          answer: 'B',
-          explanation: 'The major risk factors for Type II diabetes are heredity (genetic predisposition), age over 40, and obesity.'
-        },
-        {
-          question: 'Acute effects of diabetes include:',
-          options: { A: 'Increased glycogen stores and weight gain', B: 'Weight loss and weakness from using fats and proteins', C: 'Massive bone growth', D: 'Reduced ketone body production' },
-          answer: 'B',
-          explanation: 'In acute diabetes, cells cannot absorb glucose and must rely on fats and proteins for energy, leading to weight loss and weakness.'
-        },
-        {
-          question: 'Ketoacidosis in diabetes:',
-          options: { A: 'Raises blood pH', B: 'Lowers blood pH and may cause dyspnea and coma', C: 'Has no effect on respiration', D: 'Only affects thyroid hormones' },
-          answer: 'B',
-          explanation: 'Ketoacidosis occurs when ketone bodies from excessive fat catabolism lower blood pH, causing dyspnea (difficulty breathing) and potentially diabetic coma if untreated.'
-        },
-        {
-          question: 'Chronic hyperglycemia can lead to all of the following EXCEPT:',
-          options: { A: 'Neuropathy', B: 'Cardiovascular damage from atherosclerosis', C: 'Retinal and kidney damage', D: 'Increased bone density' },
-          answer: 'D',
-          explanation: 'Chronic hyperglycemia causes neuropathy, cardiovascular damage from atherosclerosis, and retinal/kidney damage, but does not increase bone density.'
-        },
-        {
-          question: 'Hyperinsulinism is often caused by:',
-          options: { A: 'Insulin resistance', B: 'Excess insulin injection or islet tumor', C: 'Thyroidectomy', D: 'Lack of glucagon' },
-          answer: 'B',
-          explanation: 'Hyperinsulinism is caused by excessive insulin injection or a pancreatic islet tumor that produces too much insulin.'
-        },
-        {
-          question: 'A hallmark of insulin shock is:',
-          options: { A: 'Very high blood glucose', B: 'Disorientation, convulsions, or unconsciousness from hypoglycemia', C: 'Severe hypernatremia', D: 'Excess ketone bodies in blood' },
-          answer: 'B',
-          explanation: 'Insulin shock results from uncorrected hyperinsulinism causing severe hypoglycemia, leading to disorientation, convulsions, or unconsciousness.'
-        },
-        {
-          question: 'Which symptoms are typical of hyperinsulinism before shock?',
-          options: { A: 'Lethargy only', B: 'Weakness, hunger, anxiety, sweating, increased HR', C: 'Weight gain without hunger', D: 'Tetany and exophthalmos' },
-          answer: 'B',
-          explanation: 'Before insulin shock, hyperinsulinism causes hypoglycemia leading to weakness, hunger, and triggers epinephrine release causing anxiety, sweating, and increased heart rate.'
-        },
-        {
-          question: 'Which endocrine change with aging contributes to increased body fat and lower metabolic rate?',
-          options: { A: 'Decreased TSH', B: 'Increased TSH with declining thyroid response', C: 'Increased GH', D: 'Increased cortisol secretion' },
-          answer: 'B',
-          explanation: 'With aging, TSH production increases trying to stimulate the thyroid, but the thyroid response declines, resulting in lower metabolic rate and increased body fat.'
-        },
-        {
-          question: 'Endemic goiter is most directly related to a deficiency of:',
-          options: { A: 'Calcium', B: 'Iodine', C: 'Sodium', D: 'Potassium' },
-          answer: 'B',
-          explanation: 'Endemic goiter is directly related to iodine deficiency, which prevents thyroid hormone synthesis and causes compensatory thyroid enlargement from elevated TSH.'
-        },
-        {
-          question: 'Which combination describes Addison\'s disease?',
-          options: { A: 'Hyperglycemia, moon face, buffalo hump', B: 'Hypoglycemia, low BP, dehydration, skin darkening', C: 'Weight loss, tremor, exophthalmos', D: 'Tetany and renal stones' },
-          answer: 'B',
-          explanation: 'Addison\'s disease is characterized by hypoglycemia, low blood pressure, dehydration from low Na+, and skin darkening. The first option describes Cushing syndrome.'
-        },
-        {
-          question: 'Type II diabetes is best described as:',
-          options: { A: 'Autoimmune beta-cell destruction', B: 'Insulin resistance at target cells', C: 'Complete absence of glucagon', D: 'Excess T3/T4' },
-          answer: 'B',
-          explanation: 'Type II diabetes is best described as insulin resistance at target cells - the body produces insulin but cells fail to respond to it properly.'
-        },
-        {
-          question: 'Ketoacidosis is dangerous because it:',
-          options: { A: 'Raises blood pH above normal', B: 'Lowers blood pH and can cause dyspnea and coma', C: 'Only affects the kidneys', D: 'Is always asymptomatic' },
-          answer: 'B',
-          explanation: 'Ketoacidosis is dangerous because ketone bodies lower blood pH (acidosis), which can cause dyspnea (difficulty breathing) and potentially lead to diabetic coma.'
-        },
-        {
-          question: 'Hyperinsulinism from overdose of insulin will primarily cause:',
-          options: { A: 'Hyperglycemia', B: 'Hypoglycemia with possible insulin shock', C: 'Hypernatremia', D: 'Hyperthyroidism' },
-          answer: 'B',
-          explanation: 'Hyperinsulinism from insulin overdose causes hypoglycemia (dangerously low blood glucose), which can progress to insulin shock with disorientation, convulsions, or unconsciousness.'
-        }
-      ],
-      flashcards: [
-        { front: 'How does stress affect the immune system?', back: 'Stress inhibits the immune system, increasing risk of hypertension, asthma, migraine, gastritis, colitis, and depression.' },
-        { front: 'What happens to GH production with aging?', back: 'GH production decreases with age, leading to muscle atrophy.' },
-        { front: 'What is acromegaly?', back: 'A condition caused by GH hypersecretion in adulthood, resulting in thickening of bones and soft tissues.' },
-        { front: 'What is the difference between gigantism and dwarfism?', back: 'Gigantism is caused by GH oversecretion in childhood/adolescence; dwarfism is caused by GH hyposecretion in childhood/adolescence.' },
-        { front: 'What is Graves disease?', back: 'An autoimmune condition (toxic goiter) where antibodies mimic TSH on the thyroid, causing excessive thyroid hormone production and exophthalmos.' },
-        { front: 'What is Cushing syndrome and its classic body changes?', back: 'Excess cortical secretion causing hyperglycemia, hypertension, weakness, edema, muscle/bone loss, "buffalo hump" and "moon face" with thin legs.' },
-        { front: 'What is Addison\'s disease?', back: 'Hyposecretion of glucocorticoids causing hypoglycemia, muscle weakness, low BP, dehydration, skin darkening, and risk of cardiac arrest.' },
-        { front: 'What are the 3 Ps of diabetes mellitus?', back: 'Polyuria (excessive urination), polydipsia (excessive thirst), and polyphagia (excessive hunger).' },
-        { front: 'What is the difference between Type I and Type II diabetes?', back: 'Type I (~10%): autoimmune destruction of beta cells, requires insulin. Type II (~90%): insulin resistance at target cells, treated with diet/exercise and oral medications.' },
-        { front: 'What is insulin shock?', back: 'Result of uncorrected hyperinsulinism causing severe hypoglycemia, leading to disorientation, convulsions, or unconsciousness.' }
+        { id: 'en3-q1', question: 'The three stages of General Adaptation Syndrome are:', options: { A: 'Onset, Stadium, Defervescence', B: 'Alarm, Resistance, Exhaustion', C: 'Acute, Subacute, Chronic', D: 'Initiation, Propagation, Termination' }, answer: 'B', explanation: 'GAS has three stages: Alarm (fight-or-flight from sympathetic/adrenal medulla), Resistance (hypothalamic releasing hormones for long-term), and Exhaustion (resource depletion).' },
+        { id: 'en3-q2', question: 'During the resistance stage of GAS, which hormone conserves Na+ and raises BP?', options: { A: 'Insulin', B: 'Melatonin', C: 'Aldosterone', D: 'Calcitonin' }, answer: 'C', explanation: 'During resistance, increased aldosterone secretion conserves Na+ (and water), raising blood pressure and eliminating H+.' },
+        { id: 'en3-q3', question: 'Prolonged exhaustion stage of GAS can cause all EXCEPT:', options: { A: 'Muscle wasting', B: 'Immune suppression', C: 'GI ulceration', D: 'Increased bone density' }, answer: 'D', explanation: 'Exhaustion causes muscle wasting (protein catabolism), immune suppression, GI ulceration, and beta-cell failure — not increased bone density.' },
+        { id: 'en3-q4', question: 'Diabetes insipidus is caused by:', options: { A: 'Insulin resistance', B: 'ADH deficiency', C: 'Excess aldosterone', D: 'Thyroid hyperfunction' }, answer: 'B', explanation: 'Diabetes insipidus results from ADH deficiency (e.g., from head trauma damaging pituitary) → chronic polyuria. It is unrelated to insulin/glucose.' },
+        { id: 'en3-q5', question: 'Graves disease involves:', options: { A: 'Iodine deficiency', B: 'Autoantibodies mimicking TSH', C: 'Lack of ACTH', D: 'Excess GH' }, answer: 'B', explanation: 'Graves disease: autoimmune antibodies mimic TSH on thyroid receptors → excessive T3/T4 production → hyperthyroidism with exophthalmos.' },
+        { id: 'en3-q6', question: 'Cushing syndrome is associated with:', options: { A: 'Hypoglycemia and low BP', B: 'Hyperglycemia, hypertension, and muscle wasting', C: 'Weight loss and hypotension', D: 'Increased melatonin' }, answer: 'B', explanation: 'Cushing syndrome: excess cortisol → hyperglycemia, hypertension, weakness, edema, muscle/bone loss, buffalo hump, moon face.' },
+        { id: 'en3-q7', question: 'Addison disease is characterized by:', options: { A: 'Hyperglycemia and obesity', B: 'Hypoglycemia, low BP, dehydration, skin darkening', C: 'Goiter and exophthalmos', D: 'Tetany and kidney stones' }, answer: 'B', explanation: 'Addison disease: glucocorticoid hyposecretion → hypoglycemia, muscle weakness, low BP, dehydration, skin darkening, cardiac arrest risk.' },
+        { id: 'en3-q8', question: 'Type I diabetes is most closely associated with:', options: { A: 'Insulin resistance', B: 'Autoimmune destruction of beta cells', C: 'Onset after age 40', D: 'Obesity' }, answer: 'B', explanation: 'Type I diabetes: autoimmune destruction of pancreatic beta cells, usually diagnosed ~age 12, requires insulin therapy.' },
+        { id: 'en3-q9', question: 'Ketoacidosis in diabetes:', options: { A: 'Raises blood pH', B: 'Lowers blood pH and may cause dyspnea and coma', C: 'Only affects thyroid', D: 'Is always asymptomatic' }, answer: 'B', explanation: 'Ketoacidosis: excessive ketone bodies from fat catabolism lower blood pH → dyspnea → potentially diabetic coma if untreated.' },
+        { id: 'en3-q10', question: 'Hyperinsulinism can progress to:', options: { A: 'Ketoacidosis', B: 'Insulin shock (disorientation, convulsions, unconsciousness)', C: 'Hyperthyroidism', D: 'Acromegaly' }, answer: 'B', explanation: 'Uncorrected hyperinsulinism → severe hypoglycemia → insulin shock with disorientation, convulsions, or unconsciousness.' },
+        { id: 'en3-q11', question: 'With aging, TSH levels tend to:', options: { A: 'Decrease', B: 'Increase to compensate for declining thyroid response', C: 'Stay constant', D: 'Drop to zero' }, answer: 'B', explanation: 'TSH increases with age trying to stimulate the thyroid, but metabolic rate still decreases and hypothyroidism becomes more common.' },
+        { id: 'en3-q12', question: 'Congenital hypothyroidism in infants can cause:', options: { A: 'Gigantism', B: 'Abnormal bone development, brain damage, cretinism', C: 'Exophthalmos', D: 'Aldosteronism' }, answer: 'B', explanation: 'Congenital hypothyroidism (low TH in infants): abnormal bone development, thick facial features, low temp, lethargy, brain damage, dwarfism/cretinism.' },
+        { id: 'en3-q13', question: 'Osmotic diuresis in diabetes occurs because:', options: { A: 'Kidneys reabsorb all glucose', B: 'Excess glucose in urine raises osmolarity and pulls water', C: 'ADH is absent', D: 'Kidneys stop filtering' }, answer: 'B', explanation: 'When glucose exceeds renal transport maximum, it remains in urine, raises osmolarity, and pulls water into urine via osmosis.' },
+        { id: 'en3-q14', question: 'Hypoparathyroidism can cause fatal _____ within 3-4 days.', options: { A: 'Ketoacidosis', B: 'Tetany', C: 'Insulin shock', D: 'Myxedema coma' }, answer: 'B', explanation: 'Hypoparathyroidism (often from accidental surgical removal during thyroidectomy) → low Ca²⁺ → fatal tetany (muscle spasms) within 3-4 days.' },
+        { id: 'en3-q15', question: 'Adrenogenital syndrome may cause in women:', options: { A: 'Feminization', B: 'Masculinization with deeper voice and beard', C: 'Complete hair loss', D: 'Hypothyroidism' }, answer: 'B', explanation: 'AGS: adrenal androgen hypersecretion → masculinization in women (deeper voice, beard growth).' }
       ]
     }
+  ],
+
+  // ===== MODULE-LEVEL QUIZ =====
+  quiz: [
+    { id: 'en-q1', question: 'The second messenger produced by adenylate cyclase is:', options: { A: 'ATP', B: 'cAMP', C: 'G-protein', D: 'cGMP' }, answer: 'B', explanation: 'Adenylate cyclase converts ATP to cAMP (cyclic AMP), which is the primary second messenger activating protein kinases.' },
+    { id: 'en-q2', question: 'Which hormone is stored but NOT synthesized by the posterior pituitary?', options: { A: 'GH', B: 'ACTH', C: 'Oxytocin', D: 'TSH' }, answer: 'C', explanation: 'The posterior pituitary stores and releases ADH and oxytocin, both synthesized by hypothalamic neurons.' },
+    { id: 'en-q3', question: 'The thyroid is the _______ endocrine gland.', options: { A: 'Smallest', B: 'Most vascular', C: 'Largest', D: 'Least important' }, answer: 'C', explanation: 'The thyroid is the largest endocrine gland, with high blood flow and two lobes connected by an isthmus.' },
+    { id: 'en-q4', question: 'Calcitonin and PTH have _____ effects on blood calcium.', options: { A: 'Identical', B: 'Antagonistic (opposite)', C: 'Synergistic', D: 'Permissive' }, answer: 'B', explanation: 'Calcitonin lowers blood Ca²⁺ (promotes bone deposition); PTH raises blood Ca²⁺ (activates osteoclasts). They are antagonistic.' },
+    { id: 'en-q5', question: 'The adrenal cortex zone producing glucocorticoids (cortisol) is the:', options: { A: 'Zona glomerulosa', B: 'Zona fasciculata', C: 'Zona reticularis', D: 'Medulla' }, answer: 'B', explanation: 'Zona fasciculata produces glucocorticoids (cortisol). Glomerulosa → mineralocorticoids. Reticularis → androgens.' },
+    { id: 'en-q6', question: 'The fight-or-flight alarm reaction involves:', options: { A: 'Only cortisol release', B: 'Sympathetic ANS and adrenal medulla activation', C: 'Parasympathetic dominance', D: 'Increased digestion' }, answer: 'B', explanation: 'The alarm reaction (GAS stage 1) is initiated by hypothalamic activation of sympathetic ANS and adrenal medulla releasing epinephrine/norepinephrine.' },
+    { id: 'en-q7', question: 'Which organ produces atrial natriuretic peptide (ANP)?', options: { A: 'Kidneys', B: 'Liver', C: 'Heart', D: 'Adrenals' }, answer: 'C', explanation: 'The heart secretes ANP in response to high BP, which decreases blood volume and BP by increasing renal Na+ and water excretion.' },
+    { id: 'en-q8', question: 'Down-regulation means:', options: { A: 'More receptors produced in response to low hormone', B: 'Fewer receptors produced in response to excess hormone', C: 'Hormone concentration doubles', D: 'G-proteins are locked in active state' }, answer: 'B', explanation: 'Down-regulation: excess hormone → receptors undergo endocytosis/degradation → fewer receptors → decreased target cell sensitivity.' },
+    { id: 'en-q9', question: 'Prostaglandins are synthesized by:', options: { A: 'Only the liver', B: 'All body cells', C: 'Only mast cells', D: 'Only the adrenal cortex' }, answer: 'B', explanation: 'Eicosanoids (including prostaglandins and leukotrienes) are local hormones released by ALL body cells.' },
+    { id: 'en-q10', question: 'Somatostatin (from delta cells) functions as:', options: { A: 'The only hypoglycemic hormone', B: 'A paracrine modulator of alpha and beta cell secretion', C: 'The primary glucocorticoid', D: 'A transport protein for T4' }, answer: 'B', explanation: 'Somatostatin from pancreatic delta cells acts as a paracrine secretion that modulates the secretion of both alpha (glucagon) and beta (insulin) cells.' },
+    { id: 'en-q11', question: 'A permissive hormonal interaction example is:', options: { A: 'Insulin vs glucagon', B: 'Thyroid hormone strengthening epinephrine\'s lipolysis effect', C: 'Estrogen + LH for oocyte production', D: 'PTH vs calcitonin' }, answer: 'B', explanation: 'Permissive: thyroid hormone strengthens epinephrine\'s effect on lipolysis. Synergistic: estrogen + LH. Antagonistic: insulin/glucagon, PTH/calcitonin.' },
+    { id: 'en-q12', question: 'Type II diabetes is characterized primarily by:', options: { A: 'Total absence of insulin', B: 'Insulin resistance at target cells', C: 'Autoimmune thyroid attack', D: 'Excess GH' }, answer: 'B', explanation: 'Type II diabetes (~90% of cases): insulin resistance where target cells fail to respond properly to insulin despite its presence.' },
+    { id: 'en-q13', question: 'The classic body changes of Cushing syndrome include:', options: { A: 'Goiter and exophthalmos', B: 'Buffalo hump and moon face with thin legs', C: 'Tetany and spasms', D: 'Severe dehydration only' }, answer: 'B', explanation: 'Cushing syndrome: "buffalo hump" (fat between shoulders) and "moon face" with thin spindly legs due to protein catabolism and fat redistribution.' },
+    { id: 'en-q14', question: 'The only Ig class that crosses the placenta (relevant to natural passive immunity) is produced by the endocrine-regulated immune system. This relates to which endocrine concept?', options: { A: 'Thymus secretion of thymosins', B: 'Cortisol suppression of immune function', C: 'Adrenal androgen secretion', D: 'None — this is strictly an immune function' }, answer: 'A', explanation: 'The thymus secretes thymopoietin and thymosins that regulate T-lymphocyte development, demonstrating endocrine-immune integration.' },
+    { id: 'en-q15', question: 'During amplification, one molecule of epinephrine can cause breakdown of:', options: { A: 'One glycogen molecule', B: 'One hundred glycogen molecules', C: 'Millions of glycogen molecules', D: 'No glycogen molecules' }, answer: 'C', explanation: 'Through the amplification cascade (1 hormone → 100 G-proteins → 1000s cAMP → kinases), one epinephrine molecule triggers breakdown of millions of glycogen molecules.' }
   ]
 };
 
