@@ -38,18 +38,7 @@ export default function SectionQuiz({ module, sectionIndex }) {
     }
   }, [module.id, section.id]);
 
-  // Keyboard navigation
-  useEffect(() => {
-    function handleKey(e) {
-      if (showResults) return;
-      const key = e.key.toUpperCase();
-      if (['A', 'B', 'C', 'D'].includes(key) && !answers[currentQ]) {
-        handleAnswer(key);
-      }
-    }
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, [currentQ, answers, showResults]);
+  // Keyboard navigation is handled by QuestionCard (try-again aware)
 
   function handleAnswer(answer) {
     const newAnswers = { ...answers, [currentQ]: answer };
