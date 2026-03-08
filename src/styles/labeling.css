@@ -137,6 +137,18 @@
   border-color: rgba(255, 255, 255, 0.6);
 }
 
+.marker--focused {
+  transform: translate(-50%, -50%) scale(1.5);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.4), 0 0 16px rgba(99, 102, 241, 0.5);
+  z-index: 10;
+  animation: marker-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes marker-glow {
+  from { box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3), 0 0 12px rgba(99, 102, 241, 0.4); }
+  to   { box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.5), 0 0 24px rgba(99, 102, 241, 0.6); }
+}
+
 .marker--study-dim {
   background: rgba(99, 102, 241, 0.35);
   border-color: rgba(255, 255, 255, 0.3);
@@ -472,4 +484,142 @@
     font-size: 8px;
     border-width: 1.5px;
   }
+}
+
+/* ── Focus-mode dimming ── */
+
+.labeling-focus-active .labeling-diagram-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+  pointer-events: none;
+  border-radius: var(--radius-lg);
+  transition: opacity 0.3s;
+}
+
+.labeling-focus-active .label-marker {
+  z-index: 3;
+}
+
+.labeling-focus-active .marker--focused {
+  z-index: 10;
+}
+
+/* ── Structure Card ── */
+
+.structure-card {
+  position: relative;
+  animation: card-slide-in 0.25s ease-out;
+}
+
+@keyframes card-slide-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.structure-card-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s, background 0.15s;
+}
+
+.structure-card-close:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.structure-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--card-accent, #6366f1);
+}
+
+.structure-card-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.structure-card-name {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.structure-card-type {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.structure-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.structure-card-field {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.structure-card-field p {
+  margin: 2px 0 0;
+  color: var(--text-primary);
+}
+
+.structure-card-field-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--card-accent, var(--text-secondary));
+  margin-bottom: 1px;
+}
+
+.structure-card-branches {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  list-style: disc;
+  color: var(--text-primary);
+  font-size: 0.83rem;
+  line-height: 1.55;
+}
+
+.structure-card-clinical {
+  margin-top: var(--space-xs);
+  padding: var(--space-sm);
+  background: var(--card-accent-bg, rgba(99,102,241,0.06));
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--card-accent, #6366f1);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.structure-card-clinical p {
+  margin: 4px 0 0;
+  color: var(--text-primary);
+}
+
+.structure-card-clinical .structure-card-field-label {
+  font-size: 0.75rem;
 }

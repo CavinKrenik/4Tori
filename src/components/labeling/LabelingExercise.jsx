@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { useStudy } from '../../context/StudyContext';
 import { LABELS, REGIONS } from '../../data/labelingData';
+import StructureCard from './StructureCard';
 
 const SVG_URL = '/Circulatory_System_en%20labeld.svg';
 
@@ -29,10 +30,9 @@ export default function LabelingExercise() {
     fetch(SVG_URL).then(r => r.text()).then(setRawSvg);
   }, []);
 
-  // Produce SVG HTML — hide text layer in test mode
+  // Produce SVG HTML — always hide text layer (labels shown via numbered markers + side panel)
   const svgHtml = useMemo(() => {
     if (!rawSvg) return '';
-    if (mode === 'study') return rawSvg;
     try {
       const parser = new DOMParser();
       const doc = parser.parseFromString(rawSvg, 'image/svg+xml');
@@ -42,7 +42,7 @@ export default function LabelingExercise() {
     } catch {
       return rawSvg;
     }
-  }, [rawSvg, mode]);
+  }, [rawSvg]);
 
   // Filter by region
   const activeLabels = useMemo(() => {
@@ -103,8 +103,14 @@ export default function LabelingExercise() {
 
   const allCorrect = score.correct === score.total;
 
+  // Active structure for the card (study mode)
+  const activeLabel = useMemo(() => {
+    if (activeMarker === null) return null;
+    return LABELS.find(l => l.id === activeMarker) || null;
+  }, [activeMarker]);
+
   return (
-    <div className="labeling-page page-content">
+    <div className={`labeling-page page-content ${mode === 'study' && activeMarker !== null ? 'labeling-focus-active' : ''}`}>
       {/* Header */}
       <div className="labeling-header animate-fade-up">
         <button className="btn btn-ghost btn-sm" onClick={goHome}>&larr; Home</button>
@@ -153,7 +159,7 @@ export default function LabelingExercise() {
             />
 
             {/* Numbered markers overlay */}
-            {(mode === 'test' || activeMarker !== null) && activeLabels.map((label, idx) => {
+            {(mode === 'test' || activeMarker !== null || mode === 'study') && activeLabels.map((label, idx) => {
               const num = idx + 1;
               let statusClass = '';
               if (mode === 'test') {
@@ -165,7 +171,11 @@ export default function LabelingExercise() {
                   statusClass = 'marker--answered';
                 }
               } else {
-                statusClass = activeMarker === label.id ? 'marker--study' : 'marker--study-dim';
+                statusClass = activeMarker === label.id
+                  ? 'marker--study marker--focused'
+                  : activeMarker !== null
+                    ? 'marker--study-dim'
+                    : 'marker--study';
               }
               return (
                 <button
@@ -272,12 +282,19 @@ export default function LabelingExercise() {
         {/* Study info panel */}
         {mode === 'study' && (
           <div className="labeling-answers">
-            <div className="labeling-answers-header">
-              <h3>Structure Reference</h3>
-            </div>
-            <p className="labeling-study-hint" style={{ margin: '0 0 var(--space-sm)' }}>
-              Click a numbered marker to highlight it here.
-            </p>
+            {activeLabel ? (
+              <StructureCard
+                label={activeLabel}
+                onClose={() => setActiveMarker(null)}
+              />
+            ) : (
+              <>
+                <div className="labeling-answers-header">
+                  <h3>Structure Reference</h3>
+                </div>
+                <p className="labeling-study-hint" style={{ margin: '0 0 var(--space-sm)' }}>
+                  Click a numbered marker or a structure below to see detailed info.
+                </p>
             <div className="labeling-answer-list">
               {activeLabels.map((label, idx) => {
                 const num = idx + 1;
@@ -301,6 +318,8 @@ export default function LabelingExercise() {
               <span className="legend-item legend-vein">Veins (blue)</span>
               <span className="legend-item legend-both">Both a.&nbsp;&amp;&nbsp;v. (purple)</span>
             </div>
+              </>
+            )}
           </div>
         )}
       </div>
