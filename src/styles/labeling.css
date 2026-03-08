@@ -317,6 +317,85 @@
   border-top: 1px solid var(--border-light);
 }
 
+/* ── Live progress bar ── */
+
+.labeling-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--bg-hover);
+  border-radius: 3px;
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+}
+
+.labeling-progress-fill {
+  height: 100%;
+  background: var(--success);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+/* ── Completion message ── */
+
+.labeling-complete-msg {
+  text-align: center;
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+  background: rgba(44, 154, 104, 0.1);
+  color: var(--success);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+}
+
+/* ── Inline feedback ── */
+
+.answer-feedback-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.answer-feedback-icon.correct {
+  background: rgba(44, 154, 104, 0.15);
+  color: var(--success);
+}
+
+.answer-feedback-icon.wrong {
+  background: rgba(182, 70, 70, 0.15);
+  color: var(--error);
+  animation: shake 0.3s ease;
+}
+
+.answer-locked-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--success);
+}
+
+.answer-select--wrong {
+  border-color: var(--error) !important;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(3px); }
+}
+
 /* ── Study info ── */
 
 .labeling-study-info {

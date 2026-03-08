@@ -18,8 +18,9 @@ export default function LabelingExercise() {
   const [rawSvg, setRawSvg] = useState('');
   const [mode, setMode] = useState('study');       // 'study' | 'test'
   const [region, setRegion] = useState('all');
-  const [answers, setAnswers] = useState({});
-  const [checked, setChecked] = useState(false);
+  const [answers, setAnswers] = useState({});       // id -> chosen value
+  const [locked, setLocked] = useState({});          // id -> true (correct & locked)
+  const [wrong, setWrong] = useState({});            // id -> true (last attempt was wrong)
   const [activeMarker, setActiveMarker] = useState(null);
   const answerListRef = useRef(null);
 
@@ -59,19 +60,32 @@ export default function LabelingExercise() {
   // Reset answers when region / mode changes
   useEffect(() => {
     setAnswers({});
-    setChecked(false);
+    setLocked({});
+    setWrong({});
     setActiveMarker(null);
   }, [region, mode]);
 
-  const handleAnswer = useCallback((id, value) => {
+  const handleAnswer = useCallback((id, value, correctLabel) => {
     setAnswers(prev => ({ ...prev, [id]: value }));
+    if (!value) {
+      // cleared selection
+      setWrong(prev => ({ ...prev, [id]: false }));
+      return;
+    }
+    if (value === correctLabel) {
+      // Correct — lock it
+      setLocked(prev => ({ ...prev, [id]: true }));
+      setWrong(prev => ({ ...prev, [id]: false }));
+    } else {
+      // Wrong — mark it, don't lock
+      setWrong(prev => ({ ...prev, [id]: true }));
+    }
   }, []);
-
-  const handleCheck = () => setChecked(true);
 
   const handleReset = () => {
     setAnswers({});
-    setChecked(false);
+    setLocked({});
+    setWrong({});
     setActiveMarker(null);
   };
 
@@ -81,17 +95,13 @@ export default function LabelingExercise() {
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }, []);
 
-  // Score
+  // Score — computed live
   const score = useMemo(() => {
-    if (!checked) return null;
-    let correct = 0;
-    activeLabels.forEach(l => {
-      if (answers[l.id] === l.label) correct++;
-    });
-    return { correct, total: activeLabels.length };
-  }, [checked, answers, activeLabels]);
+    const correctCount = Object.keys(locked).length;
+    return { correct: correctCount, total: activeLabels.length };
+  }, [locked, activeLabels]);
 
-  const allAnswered = activeLabels.every(l => answers[l.id]);
+  const allCorrect = score.correct === score.total;
 
   return (
     <div className="labeling-page page-content">
@@ -147,8 +157,10 @@ export default function LabelingExercise() {
               const num = idx + 1;
               let statusClass = '';
               if (mode === 'test') {
-                if (checked) {
-                  statusClass = answers[label.id] === label.label ? 'marker--correct' : 'marker--wrong';
+                if (locked[label.id]) {
+                  statusClass = 'marker--correct';
+                } else if (wrong[label.id]) {
+                  statusClass = 'marker--wrong';
                 } else if (answers[label.id]) {
                   statusClass = 'marker--answered';
                 }
@@ -167,7 +179,7 @@ export default function LabelingExercise() {
                       setActiveMarker(prev => prev === label.id ? null : label.id);
                     }
                   }}
-                  title={mode === 'study' || checked ? label.label : `#${num}`}
+                  title={mode === 'study' || locked[label.id] ? label.label : `#${num}`}
                 >
                   {num}
                 </button>
@@ -181,21 +193,34 @@ export default function LabelingExercise() {
           <div className="labeling-answers" ref={answerListRef}>
             <div className="labeling-answers-header">
               <h3>Identify Each Structure</h3>
-              {score && (
-                <div className={`labeling-score ${score.correct === score.total ? 'labeling-score--perfect' : ''}`}>
-                  {score.correct} / {score.total}
-                </div>
-              )}
+              <div className={`labeling-score ${allCorrect ? 'labeling-score--perfect' : ''}`}>
+                {score.correct} / {score.total}
+              </div>
             </div>
+
+            {/* Live progress bar */}
+            <div className="labeling-progress-bar">
+              <div
+                className="labeling-progress-fill"
+                style={{ width: `${(score.correct / score.total) * 100}%` }}
+              />
+            </div>
+
+            {allCorrect && (
+              <div className="labeling-complete-msg">
+                Perfect! You identified all structures correctly!
+              </div>
+            )}
 
             <div className="labeling-answer-list">
               {activeLabels.map((label, idx) => {
                 const num = idx + 1;
                 const userAnswer = answers[label.id] || '';
+                const isLocked = locked[label.id];
+                const isWrong = wrong[label.id] && !isLocked;
                 let rowClass = '';
-                if (checked) {
-                  rowClass = userAnswer === label.label ? 'answer-row--correct' : 'answer-row--wrong';
-                }
+                if (isLocked) rowClass = 'answer-row--correct';
+                else if (isWrong) rowClass = 'answer-row--wrong';
                 return (
                   <div
                     key={label.id}
@@ -203,19 +228,33 @@ export default function LabelingExercise() {
                     className={`answer-row ${rowClass} ${activeMarker === label.id ? 'answer-row--active' : ''}`}
                   >
                     <span className="answer-num">{num}</span>
-                    <select
-                      className="answer-select"
-                      value={userAnswer}
-                      onChange={e => handleAnswer(label.id, e.target.value)}
-                      disabled={checked}
-                    >
-                      <option value="">— select —</option>
-                      {options.map(opt => (
-                        <option key={opt} value={opt}>{opt}</option>
-                      ))}
-                    </select>
-                    {checked && userAnswer !== label.label && (
-                      <span className="answer-correct-label">{label.label}</span>
+                    {isLocked ? (
+                      <span className="answer-locked-text">
+                        <span className="answer-feedback-icon correct">✔</span>
+                        {label.label}
+                      </span>
+                    ) : (
+                      <>
+                        <select
+                          className={`answer-select ${isWrong ? 'answer-select--wrong' : ''}`}
+                          value={userAnswer}
+                          onChange={e => handleAnswer(label.id, e.target.value, label.label)}
+                        >
+                          <option value="">— select —</option>
+                          {options.filter(opt => {
+                            // Hide options already locked by other rows
+                            if (opt === userAnswer) return true;
+                            return !Object.entries(locked).some(
+                              ([lockedId, v]) => v && answers[lockedId] === opt
+                            );
+                          }).map(opt => (
+                            <option key={opt} value={opt}>{opt}</option>
+                          ))}
+                        </select>
+                        {isWrong && (
+                          <span className="answer-feedback-icon wrong">✖</span>
+                        )}
+                      </>
                     )}
                   </div>
                 );
@@ -223,13 +262,6 @@ export default function LabelingExercise() {
             </div>
 
             <div className="labeling-actions">
-              <button
-                className="btn btn-primary"
-                onClick={handleCheck}
-                disabled={checked || !allAnswered}
-              >
-                Check Answers
-              </button>
               <button className="btn btn-ghost" onClick={handleReset}>
                 Reset
               </button>
