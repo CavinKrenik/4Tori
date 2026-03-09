@@ -10,7 +10,7 @@ const MODULE_ICONS = {
 };
 
 export default function Sidebar({ modules, isOpen, onClose }) {
-  const { progress, openModule, goHome, goToLabeling, goToFinalQuiz, toggleTheme, getModuleProgress, getOverallProgress } = useStudy();
+  const { progress, openModule, goHome, goToLabeling, goToFinalQuiz, goToReview, toggleTheme, getModuleProgress, getOverallProgress } = useStudy();
   const overall = getOverallProgress();
 
   return (
@@ -93,6 +93,18 @@ export default function Sidebar({ modules, isOpen, onClose }) {
             <div className="sidebar-module-info">
               <div className="sidebar-module-title">Final Quiz</div>
               <div className="sidebar-module-meta">All modules mixed</div>
+            </div>
+          </button>
+          <button
+            className={`sidebar-module-btn ${progress.currentView === 'review' ? 'active' : ''}`}
+            onClick={() => { goToReview(); onClose?.(); }}
+          >
+            <div className="sidebar-module-icon" style={{ background: '#ede9fe', color: '#7c3aed' }}>
+              {"📖"}
+            </div>
+            <div className="sidebar-module-info">
+              <div className="sidebar-module-title">Lecture Review</div>
+              <div className="sidebar-module-meta">Pathways & test review</div>
             </div>
           </button>
         </div>

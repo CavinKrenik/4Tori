@@ -11,6 +11,7 @@ import './styles/quiz.css';
 import './styles/flashcards.css';
 import './styles/home.css';
 import './styles/labeling.css';
+import './styles/review.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -1,0 +1,174 @@
+﻿hypothalamus
+TRH: Thyrotropin-releasing hormone
+CRH: Corticotropin-releasing hormone
+GnRH: Gonadotropin-releasing hormone
+GHRH: Growth hormone-releasing hormone
+Somatostatin: Somatostatin (also known as Growth hormone-inhibiting hormone or GHIH)
+Prolactin-inhibiting hormone
+Anterior pituitary gland
+GH – Growth hormone
+TSH – Thyroid stimulating hormone
+ACTH – Adrenocorticotropic hormone
+FSH – Follicle stimulating hormone
+LH – Luteinizing hormone
+PRL – Prolactin
+Posterior pituitary
+ADH
+Oxytocin
+
+
+Thyroid 
+TH t3 t4
+Calcitonin lowers calcium 
+
+
+Parathyroid
+PTH 
+
+
+Adrenal gland 
+Cortex 
+Cortisol 
+Aldosterone
+Androgens 
+        Medulla
+Catecholamines 
+
+
+Pancreas (islets)
+A cells - glucagon
+B cells - insulin
+
+
+Pineal
+Melatonin 
+
+
+Gonads
+Estrogen- secondary sex c 
+Progesterone- pregnancy 
+Testosterone 
+
+
+
+
+Blood:
+
+
+Stem Cell Lines
+
+
+Stem Cell Line        Produces
+Myeloid stem cells                RBCs, platelets, some WBCs
+Lymphoid stem cells                lymphocytes (B & T cells)
+
+
+Hormonal regulation
+
+
+Hormone        Function
+Erythropoietin (EPO)                        stimulates RBC production
+Thrombopoietin (TPO)                stimulates platelet production
+Colony-stimulating factors (CSF)        stimulate WBC production
+
+
+
+
+Order of phases:
+1. Late ventricular diastole (passive filling)
+
+2. Atrial contraction
+
+3. Isovolumetric contraction
+
+4. Ventricular ejection
+
+5. Isovolumetric relaxation
+
+
+In the common pathway of coagulation:
+   1. Prothrombinase converts prothrombin → thrombin.
+
+   2. Thrombin then converts fibrinogen into fibrin.
+
+   3. Fibrin forms the mesh that stabilizes the blood clot.
+
+
+Hemostasis occurs in three main steps:
+      1. Vascular spasm – the injured vessel constricts to reduce blood loss.
+
+      2. Platelet plug formation – platelets adhere and form a temporary plug.
+
+      3. Coagulation – a stable clot forms through the clotting cascade.
+
+
+Pathway
+	Trigger
+	Key Feature
+	Extrinsic
+	Tissue damage
+	Factor III + VII
+	Intrinsic
+	Vessel damage
+	Factors XII, XI, IX, VIII
+	Common
+	Both pathways meet
+	Factor X → thrombin → fibrin
+	
+
+Immunity
+
+
+Type I hypersensitivity – IgE-mediated allergies (e.g., anaphylaxis, hay fever).
+
+
+Type II hypersensitivity – antibodies attack cells directly (e.g., hemolytic anemia).
+
+
+Type III hypersensitivity – immune complex deposition (e.g., lupus).
+
+
+Type IV hypersensitivity – T-cell mediated (delayed) hypersensitivity
+
+
+
+
+Immunoglobulin
+	Main Role
+	IgM
+	First antibody produced during infection
+Primary response pentamer
+	IgG
+	Most abundant in blood; long-term immunity secondary immune response
+	IgA
+	Found in secretions (saliva, tears, mucus, breast milk) dimer
+	IgE
+	Allergic reactions; mast cells
+	IgD
+	B-cell activation
+	
+
+Steps of immune cell movement to infection
+
+
+1️⃣ Chemotaxis
+Cells move toward chemical signals.
+
+
+2️⃣ Adhesion (CAM binding)
+Leukocytes stick to blood vessel walls using CAMs.
+
+
+3️⃣ Diapedesis
+Cells squeeze between endothelial cells to leave the bloodstream.
+
+
+4️⃣ Phagocytosis
+They attack pathogens.
+
+
+complement system
+1️⃣ A pathogen enters the body.
+2️⃣ Antibodies (usually IgG or IgM) bind to the pathogen's Antigen.
+3️⃣ The complement protein Complement protein C1 binds to the antibody–antigen complex.
+4️⃣ This triggers a cascade reaction activating other complement proteins.

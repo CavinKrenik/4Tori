@@ -127,6 +127,10 @@ export function StudyProvider({ children, modules }) {
     update(prev => ({ ...prev, currentView: 'finalQuiz' }));
   }, [update]);
 
+  const goToReview = useCallback(() => {
+    update(prev => ({ ...prev, currentView: 'review' }));
+  }, [update]);
+
   // Learn progress
   const markLearnComplete = useCallback((moduleId, sectionId) => {
     update(prev => ({
@@ -343,6 +347,7 @@ export function StudyProvider({ children, modules }) {
     goToMasterQuiz,
     goToLabeling,
     goToFinalQuiz,
+    goToReview,
     markLearnComplete,
     answerInlineQuestion,
     answerQuizQuestion,

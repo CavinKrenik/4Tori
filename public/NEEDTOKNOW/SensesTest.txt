@@ -1,0 +1,358 @@
+﻿Question 1
+	
+
+	1 / 1 point
+	The taste sensation that is triggered by monovalent metallic cations is
+Question options:
+
+	sweet.
+	
+	minty.
+	
+	sour.
+	
+	umami.
+	
+	salty.
+	
+
+Question 2
+	
+
+	0 / 1 point
+	Taste involves
+Question options:
+
+	mechanoceptors.
+	
+	nociceptors.
+	
+	chemoreceptors.
+	
+	thermoceptors.
+	
+	all of the above.
+	
+
+Question 3
+	
+
+	1 / 1 point
+	Which structural classification on sensory receptor are only mechanoreceptors
+Question options:
+
+	delta cells
+	
+	special receptor cells
+	
+	free dendritic endings
+	
+	encapsulated
+	
+	more than one of the above
+	
+
+Question 4
+	
+
+	1 / 1 point
+	You are hiking along the top of a very steep ridge. you slip and fall and as you go bouncing down the hill you have receptors that are keeping track of limb movement, changes in blood pressure, the pressure of you bouncing off of rocks and trees, but the ones that seem to be holding your attention at the moment are the receptors that specialize in pain called
+Question options:
+
+	exteroceptors
+	
+	somatoceptors
+	
+	proprioceptors
+	
+	nociceptors
+	
+	interoceptors
+	
+
+Question 5
+	
+
+	1 / 1 point
+	The following are true of olfaction, EXCEPT
+Question options:
+
+	adapts slowly
+	
+	uses analytical integration
+	
+	uses synthetic integration
+	
+	has neuronal replacement
+	
+	may involve pain
+	
+
+Question 6
+	
+
+	1 / 1 point
+	Decreased sensitivity to a continued stimulus is called
+Question options:
+
+	boredom
+	
+	conduction
+	
+	adaptation
+	
+	translation
+	
+	projection
+	
+
+Question 7
+	
+
+	1 / 1 point
+	Which of the following would NOT function as a proprioceptor:
+Question options:
+
+	Ruffini's corpuscle
+	
+	Pacinian corpuscle
+	
+	End bulbs of Krause
+	
+	Meissner's corpuscle
+	
+	All of the above are proprioceptors
+	
+
+Question 8
+	
+
+	1 / 1 point
+	All of the following are involved in the perception of taste except
+Question options:
+
+	mechanoreceptors.
+	
+	nociceptors.
+	
+	thermoreceptors.
+	
+	chemoreceptors
+	
+	There is no except, all of the above play a role in taste.
+	
+
+Question 9
+	
+
+	1 / 1 point
+	All of the following are true of the fibrous tunic of the eye, except
+Question options:
+
+	provides mechanical support and some protection for the eye.
+	
+	is where extrinsic eye muscles insert.
+	
+	is important in focusing for the eye.
+	
+	consists of the sclera and cornea.
+	
+	produces aqueous humor.
+	
+
+Question 10
+	
+
+	1 / 1 point
+	In the human eye, most refraction occurs when light passes through the
+Question options:
+
+	lens.
+	
+	iris.
+	
+	vitreous humor.
+	
+	cornea.
+	
+	aqueous humor.
+	
+
+Question 11
+	
+
+	0 / 1 point
+	The amacrine cells are responsible for
+Question options:
+
+	summation of receptor fields
+	
+	divergence
+	
+	cochlear tuning
+	
+	accommodation
+	
+	lateral inhibition
+	
+
+Question 12
+	
+
+	1 / 1 point
+	When all three cone populations are stimulated equally, we perceive
+Question options:
+
+	red.
+	
+	blackness.
+	
+	white.
+	
+	green.
+	
+	blue.
+	
+
+Question 13
+	
+
+	1 / 1 point
+	Which of the following descriptions best matches the term aqueous humor?
+Question options:
+
+	secreted in bright light
+	
+	provides the liquid component of lacrimal secretions
+	
+	gelatinous fluid that fills anterior chamber
+	
+	converts to vitreous humor with age
+	
+	excessive production may lead to glaucoma
+	
+
+Question 14
+	
+
+	1 / 1 point
+	Perception of gravity and linear acceleration depends on
+Question options:
+
+	changes in the pressure exerted by the cupula on hair cells.
+	
+	vibrations of the tectorial membrane striking hair cells.
+	
+	the movement of endolymph within the semicircular canals.
+	
+	the bending of hair cells in the ampullae.
+	
+	the inertia of the otoliths relative to the hair cells of the maculae.
+	
+
+Question 15
+	
+
+	1 / 1 point
+	An eye with which of the following conditions does not need a corrective lens to focus the image?
+Question options:
+
+	Myopia
+	
+	Emmetropia
+	
+	Astigmatism
+	
+	Hyperopia
+	
+	Presbyopia
+	
+
+Question 16
+	
+
+	1 / 1 point
+	In the special senses, specialized receptor cells transduce the signal by
+Question options:
+
+	voltage regulated gates.
+	
+	electrical synapses.
+	
+	acting as mechanoreceptors.
+	
+	releasing neurotransmitters.
+	
+	none of the above.
+	
+
+Question 17
+	
+
+	1 / 1 point
+	A pigment synthesized from vitamin A is
+Question options:
+
+	opsin.
+	
+	retinal.
+	
+	transducin.
+	
+	cGMP.
+	
+	rhodopsin.
+	
+
+Question 18
+	
+
+	1 / 1 point
+	Distinguishing the pitch of sounds is possible because
+Question options:
+
+	different frequencies of sounds cause different frequencies of action potentials in neurons in the auditory nerve.
+	
+	different frequencies of sounds stimulate different regions of the basilar membrane in the cochlear duct.
+	
+	different frequencies of sounds cause different kinds of action potentials in neurons in the auditory nerve.
+	
+	different frequencies of sounds make the eardrum vibrate with different amplitudes.
+	
+	there are many different types of receptors for sound, each of which responds to a single frequency.
+	
+
+Question 19
+	
+
+	1 / 1 point
+	When photons of light convert cis-retinal to trans-retinal it leads to:
+Question options:
+
+	closing of potassium channels leading to hyperpolarization of the photoreceptor
+	
+	opening of both sodium and potassium channels simultaneously
+	
+	opening of potassium channels leading to depolarization of the photoreceptor
+	
+	opening of sodium channels leading to depolarization of the photoreceptor
+	
+	closing of sodium channels leading to hyperpolarization of the photoreceptor
+	
+
+Question 20
+	
+
+	1 / 1 point
+	What is the crista ampullaris associated with?
+Question options:
+
+	Hearing high-pitch sounds
+	
+	Dynamic equilibrium in angular acceleration
+	
+	Static equilibrium when standing still
+	
+	Vision related to color
+	
+	Static acceleration in linear acceleration
