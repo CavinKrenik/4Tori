@@ -12,6 +12,7 @@ import './styles/flashcards.css';
 import './styles/home.css';
 import './styles/labeling.css';
 import './styles/review.css';
+import './styles/sequence.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

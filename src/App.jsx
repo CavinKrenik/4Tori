@@ -21,6 +21,7 @@ import FlashcardDeck from './components/flashcards/FlashcardDeck';
 import LabelingExercise from './components/labeling/LabelingExercise';
 import FinalQuiz from './components/quiz/FinalQuiz';
 import LectureReview from './components/review/LectureReview';
+import SequenceExercise from './components/sequence/SequenceExercise';
 
 const ALL_MODULES = [endocrine, heart, blood, vessels, lymphatic];
 
@@ -69,6 +70,8 @@ function AppShell() {
         return <FinalQuiz modules={ALL_MODULES} />;
       case 'review':
         return <LectureReview mode={reviewMode} setMode={setReviewMode} />;
+      case 'sequence':
+        return <SequenceExercise />;
       case 'home':
       default:
         return <HomeView modules={ALL_MODULES} />;
