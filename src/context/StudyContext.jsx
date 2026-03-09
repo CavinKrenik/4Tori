@@ -116,19 +116,19 @@ export function StudyProvider({ children, modules }) {
   }, [update]);
 
   const goToMasterQuiz = useCallback(() => {
-    update(prev => ({ ...prev, currentView: 'masterQuiz' }));
+    update(prev => ({ ...prev, currentView: 'masterQuiz', currentModuleId: null }));
   }, [update]);
 
   const goToLabeling = useCallback(() => {
-    update(prev => ({ ...prev, currentView: 'labeling' }));
+    update(prev => ({ ...prev, currentView: 'labeling', currentModuleId: null }));
   }, [update]);
 
   const goToFinalQuiz = useCallback(() => {
-    update(prev => ({ ...prev, currentView: 'finalQuiz' }));
+    update(prev => ({ ...prev, currentView: 'finalQuiz', currentModuleId: null }));
   }, [update]);
 
   const goToReview = useCallback(() => {
-    update(prev => ({ ...prev, currentView: 'review' }));
+    update(prev => ({ ...prev, currentView: 'review', currentModuleId: null }));
   }, [update]);
 
   // Learn progress

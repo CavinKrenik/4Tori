@@ -147,6 +147,61 @@
   margin-bottom: var(--space-md);
 }
 
+/* ── Standalone Feature Cards (Labeling, Final Quiz, Lecture Review) ── */
+.standalone-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+.standalone-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg, 12px);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  border-left: 4px solid var(--card-color, var(--accent));
+}
+.standalone-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  border-color: var(--card-color, var(--accent));
+}
+
+.standalone-card-icon {
+  font-size: 1.7rem;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--card-color, var(--accent)) 10%, transparent);
+}
+
+.standalone-card-body {
+  min-width: 0;
+}
+
+.standalone-card-title {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+.standalone-card-desc {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
 @media (max-width: 640px) {
   .module-grid {
     grid-template-columns: 1fr;
@@ -154,5 +209,9 @@
 
   .welcome-title {
     font-size: var(--text-2xl);
+  }
+
+  .standalone-cards {
+    grid-template-columns: 1fr;
   }
 }

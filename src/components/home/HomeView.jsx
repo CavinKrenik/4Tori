@@ -18,7 +18,7 @@ const MODULE_EMOJIS = {
 };
 
 export default function HomeView({ modules }) {
-  const { openModule, goToMasterQuiz, goToLabeling, getModuleProgress, getOverallProgress } = useStudy();
+  const { openModule, goToMasterQuiz, goToLabeling, goToReview, getModuleProgress, getOverallProgress } = useStudy();
   const overall = getOverallProgress();
 
   return (
@@ -70,11 +70,27 @@ export default function HomeView({ modules }) {
         </div>
       )}
 
-      <div className="labeling-cta animate-fade-up" style={{ marginBottom: 'var(--space-xl)' }}>
-        <div className="stat-card" onClick={goToLabeling} style={{ cursor: 'pointer', textAlign: 'center' }}>
-          <div className="stat-value" style={{ fontSize: '1.6rem' }}>{"\uD83E\uDEC0"}</div>
-          <div className="stat-label" style={{ fontWeight: 600 }}>Diagram Labeling</div>
-          <p style={{ margin: '4px 0 0', fontSize: '0.8rem', color: 'var(--muted)' }}>Interactive circulatory system labeling exercise</p>
+      <div className="standalone-cards animate-fade-up" style={{ marginBottom: 'var(--space-xl)' }}>
+        <div className="standalone-card" onClick={goToLabeling} style={{ '--card-color': '#e11d48' }}>
+          <div className="standalone-card-icon">{"\uD83E\uDEC0"}</div>
+          <div className="standalone-card-body">
+            <h3 className="standalone-card-title">Diagram Labeling</h3>
+            <p className="standalone-card-desc">Circulatory system — 48 structures</p>
+          </div>
+        </div>
+        <div className="standalone-card" onClick={goToMasterQuiz} style={{ '--card-color': '#f59e0b' }}>
+          <div className="standalone-card-icon">{"\uD83C\uDFC6"}</div>
+          <div className="standalone-card-body">
+            <h3 className="standalone-card-title">Final Quiz</h3>
+            <p className="standalone-card-desc">All modules mixed — 20 random Qs</p>
+          </div>
+        </div>
+        <div className="standalone-card" onClick={goToReview} style={{ '--card-color': '#6366f1' }}>
+          <div className="standalone-card-icon">{"\uD83D\uDCD6"}</div>
+          <div className="standalone-card-body">
+            <h3 className="standalone-card-title">Lecture Review</h3>
+            <p className="standalone-card-desc">Pathways & test review — 5 sections</p>
+          </div>
         </div>
       </div>
 

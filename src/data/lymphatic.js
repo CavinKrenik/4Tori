@@ -183,6 +183,21 @@ const lymphatic = {
         { id: 'ly1-q8', question: 'Which tonsils are most often infected?', options: { A: 'Lingual', B: 'Pharyngeal (adenoid)', C: 'Palatine', D: 'Tubal' }, answer: 'C', explanation: 'Palatine tonsils (pair at posterior margin of oral cavity) are most commonly infected.' },
         { id: 'ly1-q9', question: 'Lymphatic capillaries are absent in all EXCEPT:', options: { A: 'Cartilage', B: 'Epidermis', C: 'Skeletal muscle', D: 'Cornea' }, answer: 'C', explanation: 'Lymphatic capillaries are absent in avascular tissues (cartilage, epidermis, cornea) but present in skeletal muscle.' },
         { id: 'ly1-q10', question: 'Peyer patches are permanent collections of lymphatic nodules found at the:', options: { A: 'Root of the tongue', B: 'Pharynx entrance', C: 'Junction of small and large intestine', D: 'Cervical region' }, answer: 'C', explanation: 'Peyer patches are permanent lymphatic nodule clusters at the small/large intestine junction.' }
+      ],
+      flashcards: [
+        { front: 'What are the three main functions of the lymphatic system?', back: 'Fluid recovery (2-4 L/day of plasma proteins and fluid), immunity (lymph node filtration), and lipid absorption (lacteals absorb dietary fats as chyle).' },
+        { front: 'What are lacteals?', back: 'Lymphatic capillaries in the small intestine that absorb dietary lipids. The lymph they contain is called chyle.' },
+        { front: 'How do lymphatic capillaries prevent backflow?', back: 'Endothelial cells loosely overlap creating valve-like flaps that open when interstitial pressure is high (letting fluid IN) and close when low (preventing flow OUT).' },
+        { front: 'What is the route of lymph flow?', back: 'Lymphatic capillaries → collecting vessels (through lymph nodes) → lymphatic trunks → collecting ducts → subclavian veins.' },
+        { front: 'What do the right lymphatic duct and thoracic duct drain?', back: 'Right lymphatic duct: right arm + right side of head/thorax → right subclavian vein. Thoracic duct: everything else (begins at cisterna chyli) → left subclavian vein.' },
+        { front: 'What drives lymph flow?', back: 'Rhythmic contractions of lymphatic vessel walls, skeletal muscle pump, thoracic pump, valves preventing backflow, and rapid blood flow in subclavian veins drawing lymph in.' },
+        { front: 'How does lymph flow through a lymph node?', back: 'One-way: afferent vessels IN → through sinuses (immune cells respond) → efferent vessels OUT at the hilus. "A before E."' },
+        { front: 'How can you distinguish cancerous vs infected lymph nodes?', back: 'Cancerous: Firm, Enlarged, Nontender (FEN). Infected: Tender, Not Firm (TNF).' },
+        { front: 'What happens to the thymus over a lifetime?', back: 'Largest in infants (~70g), involutes after puberty to ~3g in adults. T cells mature here. Contains Hassall\'s corpuscles in medulla.' },
+        { front: 'What are the functions of the spleen?', back: 'Blood reservoir, RBC disposal (removes old/damaged RBCs), immune reactions (filters blood, detects antigens), and fetal blood production. Mnemonic: BIRD.' },
+        { front: 'What are the three types of tonsils?', back: 'Palatine (most often infected — posterior oral cavity), lingual (root of tongue), and pharyngeal/adenoid (single, on pharyngeal wall).' },
+        { front: 'What are Peyer patches?', back: 'Permanent clusters of lymphatic nodules at the junction of the small and large intestine that respond to pathogens.' },
+        { front: 'Where are lymphatic capillaries absent?', back: 'In avascular tissues: cartilage, epidermis, cornea.' }
       ]
     },
 
@@ -296,6 +311,21 @@ const lymphatic = {
         { id: 'ly2-q10', question: 'Transferrins inhibit bacterial growth by:', options: { A: 'Punching holes in bacterial membranes', B: 'Reducing available iron', C: 'Stimulating T cells', D: 'Activating complement' }, answer: 'B', explanation: 'Transferrins are iron-binding proteins that inhibit bacterial growth by sequestering iron that bacteria need to multiply.' },
         { id: 'ly2-q11', question: 'Monocytes arrive at an inflammation site and become macrophages after approximately:', options: { A: '1-2 minutes', B: '8-12 hours', C: '3-5 days', D: '2-3 weeks' }, answer: 'B', explanation: 'Monocytes are the primary agents of cleanup, arriving in 8-12 hours and becoming macrophages in the tissue.' },
         { id: 'ly2-q12', question: 'PDGF (platelet-derived growth factor) stimulates:', options: { A: 'Phagocytosis by neutrophils', B: 'Fibroblast multiplication and collagen synthesis', C: 'Mast cell degranulation', D: 'NK cell activation' }, answer: 'B', explanation: 'PDGF from platelets and endothelial cells stimulates fibroblasts to multiply and synthesize collagen for tissue repair.' }
+      ],
+      flashcards: [
+        { front: 'What is the difference between nonspecific and specific resistance?', back: 'Nonspecific: general defense against many pathogens, no specificity or memory. Specific (immunity): targets specific pathogens, has memory for faster secondary response.' },
+        { front: 'What are the four cardinal signs of inflammation?', back: 'Redness (hyperemia), Swelling (edema from increased permeability), Heat (hyperemia), Pain (bradykinin, prostaglandins, nerve pressure). Mnemonic: RSHP.' },
+        { front: 'What are the steps of phagocytosis?', back: 'Chemotaxis (attraction) → Adherence (attachment) → Ingestion (engulfment by pseudopods) → Digestion (phagosome + lysosome) → Killing/Exocytosis. Mnemonic: CAIDK.' },
+        { front: 'What is the neutrophil respiratory burst?', back: 'Neutrophils create a "killing zone" by producing toxic chemicals: superoxide (O₂⁻), hydrogen peroxide (H₂O₂), and hypochlorous acid (HClO) to destroy bacteria.' },
+        { front: 'Name the fixed macrophages by location.', back: 'Histiocytes (skin), Kupffer cells (liver), Alveolar macrophages (lungs), Microglia (brain), plus macrophages in spleen, red marrow, and lymph nodes.' },
+        { front: 'What are interferons?', back: 'Antiviral polypeptides secreted by virus-infected cells that diffuse to neighboring cells and stimulate them to produce antiviral proteins. Also activate NK cells and macrophages against cancer.' },
+        { front: 'What are the three outcomes of complement activation?', back: 'Inflammation (enhanced), Opsonization (coating pathogens for phagocytosis), and Cytolysis via MAC (membrane attack complex — C5b-C9 ring in enemy cell membrane). Mnemonic: IOC.' },
+        { front: 'How do NK cells kill?', back: 'NK cells attack cells displaying abnormal MHC antigens using perforin to punch holes in target cells. They distinguish "self" from "funky self." Found in blood, spleen, lymph nodes, and red marrow.' },
+        { front: 'What are the three stages of fever?', back: 'Onset, Stadium, Defervescence. Initiated by macrophage IL-1 (pyrogen) → hypothalamus releases PGE → thermostat reset higher. Benefits: promotes interferon, speeds repair, inhibits pathogens.' },
+        { front: 'What is diapedesis?', back: 'Leukocytes squeezing between endothelial cells of blood vessel walls to enter tissue spaces during inflammation.' },
+        { front: 'What is margination?', back: 'Leukocytes adhering to blood vessel walls via cell adhesion molecules — the first step before diapedesis.' },
+        { front: 'What is pus?', back: 'A mixture of tissue fluid, cellular debris, dying neutrophils, and microbes. An abscess is pus in a confined space; an ulcer is an open sore.' },
+        { front: 'What are transferrins?', back: 'Iron-binding proteins that inhibit bacterial growth by reducing available iron that bacteria need to multiply.' }
       ]
     },
 
@@ -504,6 +534,25 @@ const lymphatic = {
         { id: 'ly3-q13', question: 'Systemic lupus erythematosus (SLE) is an example of which hypersensitivity type?', options: { A: 'Type I', B: 'Type II', C: 'Type III', D: 'Type IV' }, answer: 'C', explanation: 'SLE involves widespread antigen-antibody complexation (Type III immune complex hypersensitivity) causing intense inflammation.' },
         { id: 'ly3-q14', question: 'Which antibody class prevents pathogen adherence to epithelia and is found in saliva, tears, and breast milk?', options: { A: 'IgG', B: 'IgA', C: 'IgD', D: 'IgM' }, answer: 'B', explanation: 'IgA (dimer in secretions) is found in mucus, saliva, tears, milk, and intestinal secretions — prevents pathogen adherence.' },
         { id: 'ly3-q15', question: 'Autoimmune diseases result from:', options: { A: 'Excess antibody production against foreign antigens', B: 'Failure of self-tolerance leading to attack on body\'s own cells', C: 'Overactive NK cells', D: 'Too many memory cells' }, answer: 'B', explanation: 'Autoimmune diseases occur when self-tolerance fails — immune system attacks body\'s own cells via autoantibodies.' }
+      ],
+      flashcards: [
+        { front: 'What are the percentages of circulating lymphocytes?', back: 'T cells: 80%, B cells: 15%, NK cells: 5%.' },
+        { front: 'What is the difference between cellular and antibody-mediated immunity?', back: 'Cellular (T cells): directly attacks infected/cancerous cells and transplants. Antibody-mediated (B cells → plasma cells): produces circulating antibodies against antigens, mainly bacteria.' },
+        { front: 'What is the difference between MHC-I and MHC-II?', back: 'MHC-I: on ALL nucleated cells (except RBCs) — displays endogenous antigens for cytotoxic T cells (CD8). MHC-II: ONLY on APCs — displays exogenous antigens for helper T cells (CD4).' },
+        { front: 'What do cytotoxic T cells (CD8) use to kill target cells?', back: 'Perforin (punches holes), lymphotoxin (fragments target DNA), gamma-interferon (activates phagocytes), and tumor necrosis factor (kills cancer cells in 2-3 days).' },
+        { front: 'Why are helper T cells (CD4) so important?', back: 'They costimulate ALL other lymphocytes by secreting IL-2, coordinating both cellular and humoral immunity. IL-2 also has autocrine function (positive feedback → rapid expansion).' },
+        { front: 'What is the success rate of T cell selection in the thymus?', back: 'Only 1 in 100 T cells survives positive and negative selection. Cells that react to self-antigens are eliminated (clonal deletion) or made unresponsive (anergy).' },
+        { front: 'What is the structure of an antibody?', back: '4 polypeptide chains (2 heavy + 2 light), T or Y shape with hinge. Variable region tips = antigen-binding sites. Constant region determines the antibody class.' },
+        { front: 'What are the five immunoglobulin classes?', back: 'IgG (75-85%, only crosses placenta), IgA (secretions — saliva/tears/milk), IgM (first in primary response, pentamer), IgE (allergies — triggers histamine), IgD (B cell receptor). Mnemonic: GAMED.' },
+        { front: 'How fast do plasma cells produce antibodies?', back: '~2000 antibody molecules per second for 4-5 days. Each plasma cell produces only ONE kind of antibody.' },
+        { front: 'What is the difference between primary and secondary immune responses?', back: 'Primary: slow, steady response; produces memory cells. Secondary: rapid and powerful — memory cells proliferate so fast the person may not even get sick.' },
+        { front: 'What are the four types of immunity?', back: 'Natural active (infection), Artificial active (vaccination), Natural passive (maternal antibodies via placenta/milk), Artificial passive (injection of immune serum, e.g., snakebite antiserum).' },
+        { front: 'What are the four types of hypersensitivity?', back: 'Type I: Anaphylactic (IgE/histamine). Type II: Cytotoxic (IgG/IgM on cell surfaces). Type III: Immune complex (antigen-antibody complexes). Type IV: Delayed (T cell-mediated, 12-72 hrs). Mnemonic: ACID.' },
+        { front: 'What is a hapten?', back: 'A small molecule that cannot trigger an immune response alone, but CAN when attached to a body protein (e.g., poison ivy lipid bound to skin protein).' },
+        { front: 'How does HIV cause AIDS?', back: 'HIV (retrovirus) invades CD4 helper T cells using reverse transcriptase to integrate into host DNA. Normal CD4: 600-1200/µL; AIDS: <200/µL → susceptible to opportunistic infections.' },
+        { front: 'What are the antibody actions?', back: 'Neutralization (block toxins), Immobilization (attack flagella), Agglutination/Precipitation (clumping), Complement activation, and Enhanced phagocytosis (opsonization).' },
+        { front: 'What is an epitope?', back: 'The specific small part of an antigen that triggers the immune response (also called an antigenic determinant). The immune system recognizes ~1 billion different epitopes.' },
+        { front: 'What is SCID?', back: 'Severe Combined Immunodeficiency Disease — hereditary lack of both T and B cells, causing extreme vulnerability to opportunistic infections.' }
       ]
     }
   ],

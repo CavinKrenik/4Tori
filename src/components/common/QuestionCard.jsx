@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-const LETTERS = ['A', 'B', 'C', 'D'];
+const ALL_LETTERS = ['A', 'B', 'C', 'D', 'E'];
 
 export default function QuestionCard({
   question,
@@ -14,6 +14,7 @@ export default function QuestionCard({
   compact = false,
   allowRetry = true,
 }) {
+  const LETTERS = ALL_LETTERS.filter(l => options[l] !== undefined);
   const [firstWrongAttempt, setFirstWrongAttempt] = useState(null);
   const [finalAnswer, setFinalAnswer] = useState(selectedAnswer || null);
 

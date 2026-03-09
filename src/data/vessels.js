@@ -183,6 +183,22 @@ const vessels = {
         { id: 'v1-q10', question: 'A portal system is characterized by:', options: { A: 'Blood flowing through two consecutive capillary networks', B: 'Direct shunts between arteries and veins', C: 'Absence of venous valves', D: 'Single-pass capillary exchange' }, answer: 'A', explanation: 'In a portal system, blood passes through two consecutive capillary beds before returning to the heart (e.g., hepatic portal system).' },
         { id: 'v1-q11', question: 'Capillaries are absent in all of the following EXCEPT:', options: { A: 'Cornea of the eye', B: 'Cartilage', C: 'Liver', D: 'Epithelia' }, answer: 'C', explanation: 'The liver has extensive capillary beds (sinusoids). Capillaries are absent in avascular tissues: cornea, cartilage, and epithelia.' },
         { id: 'v1-q12', question: 'The vasa vasorum serves to:', options: { A: 'Prevent varicose veins', B: 'Constrict large arteries', C: 'Nourish the walls of large blood vessels', D: 'Connect arteries to veins directly' }, answer: 'C', explanation: 'Vasa vasorum are "vessels of vessels"—small blood vessels within the walls of large vessels that supply nutrients to their deeper tissues.' }
+      ],
+      flashcards: [
+        { front: 'What are the three layers (tunics) of a blood vessel wall?', back: 'Tunica interna (endothelium + basement membrane), tunica media (smooth muscle, collagen, elastic tissue — controls diameter), tunica externa (areolar CT — anchors vessel, carries nerves/vasa vasorum).' },
+        { front: 'What are vasa vasorum?', back: '"Vessels of vessels" — small blood vessels within the walls of large vessels that nourish their deeper tissues.' },
+        { front: 'What are conducting (elastic) arteries and what do they do?', back: 'Largest arteries (aorta, pulmonary trunk). Elastic tissue expands during systole and recoils during diastole, dampening BP fluctuations — acting as a "pressure reservoir."' },
+        { front: 'How do distributing (muscular) arteries differ from elastic arteries?', back: 'Medium-sized arteries (femoral, brachial). Smooth muscle makes up ~¾ of wall thickness, giving strong capacity for vasoconstriction/vasodilation to regulate organ-specific blood distribution.' },
+        { front: 'What are precapillary sphincters and vasomotion?', back: 'Precapillary sphincters are smooth muscle rings at capillary bed entrances. Vasomotion is their intermittent contraction/relaxation (5-10×/min), regulating capillary perfusion based on tissue demand.' },
+        { front: 'What are the three types of capillaries?', back: 'Continuous (intercellular clefts — muscle, lung). Fenestrated (membrane pores — kidneys, intestine, endocrine glands). Sinusoids (large fenestrations, incomplete basement membrane — liver, bone marrow, spleen).' },
+        { front: 'What is the SOLE function of capillaries?', back: 'Exchange of nutrients and wastes between blood and tissue fluid. They are the ONLY vessels where exchange occurs.' },
+        { front: 'What causes varicose veins?', back: 'Incompetent (leaky) venous valves allow backflow and blood pooling → dilation of superficial veins. Worsened by prolonged standing or pregnancy. Deep veins are protected by surrounding skeletal muscles.' },
+        { front: 'What is a portal system?', back: 'A circulatory route where blood flows through two consecutive capillary networks before returning to the heart (e.g., hepatic portal system, hypothalamus-pituitary portal).' },
+        { front: 'How much blood is in veins at rest?', back: '60% of total blood volume is in systemic veins/venules at rest — they serve as blood reservoirs. Only ~15% is in arteries/arterioles.' },
+        { front: 'What is vasomotor tone?', back: 'A baseline level of sympathetic stimulation that maintains partial constriction of arterioles, keeping blood pressure at a stable resting level.' },
+        { front: 'What chemicals promote vasodilation?', back: 'Nitric oxide, K⁺, H⁺, lactic acid, and CO₂ promote vasodilation. Norepinephrine from sympathetic nerves generally causes vasoconstriction.' },
+        { front: 'Where are capillaries absent?', back: 'Capillaries are absent in avascular tissues: epidermis, cartilage, cornea, and lens of the eye.' },
+        { front: 'What are arteriovenous anastomoses?', back: 'Direct shunts from artery to vein (bypassing capillaries), found in fingers, toes, and ears for heat regulation.' }
       ]
     },
 
@@ -320,6 +336,22 @@ const vessels = {
         { id: 'v2-q10', question: 'Transcytosis across capillary walls is most important for transporting:', options: { A: 'Oxygen and CO₂', B: 'Small electrolytes', C: 'Large lipid-insoluble molecules like insulin', D: 'Water' }, answer: 'C', explanation: 'Transcytosis uses vesicles to move large, lipid-insoluble molecules (insulin, maternal antibodies) across the endothelium.' },
         { id: 'v2-q11', question: 'Edema is NOT clinically detectable until interstitial fluid volume exceeds normal by:', options: { A: '10%', B: '20%', C: '30%', D: '50%' }, answer: 'C', explanation: 'Edema is not noticeable until interstitial fluid is about 30% above normal volume.' },
         { id: 'v2-q12', question: 'Which vessels are the primary resistance vessels controlling moment-to-moment blood pressure?', options: { A: 'Elastic arteries', B: 'Muscular arteries', C: 'Arterioles', D: 'Venules' }, answer: 'C', explanation: 'Arterioles can dramatically change diameter and control systemic vascular resistance and blood pressure.' }
+      ],
+      flashcards: [
+        { front: 'What are the three mechanisms of capillary exchange?', back: 'Diffusion (most important — down concentration gradients), transcytosis (vesicle-mediated for large molecules), and bulk flow (filtration out / reabsorption in, driven by pressure).' },
+        { front: 'What drives filtration vs reabsorption across capillaries?', back: 'Filtration (OUT): driven by blood hydrostatic pressure (higher at arterial end). Reabsorption (IN): driven by blood colloid osmotic pressure from plasma proteins, mainly albumin.' },
+        { front: 'What is Starling\'s Law of the Capillaries?', back: 'Volume filtered ≈ volume reabsorbed. About 85% of filtered fluid returns; the remaining ~3 L/day is collected by lymphatic capillaries.' },
+        { front: 'What causes edema?', back: 'Filtration exceeds reabsorption. Causes: hypertension, increased capillary permeability, decreased plasma proteins (low BCOP), CHF, poor venous return, lymphatic obstruction. Not detectable until 30% above normal.' },
+        { front: 'Why is blood flow slowest in capillaries?', back: 'Velocity is inversely related to total cross-sectional area. Capillaries have the greatest total area, slowing flow to ~0.1 cm/sec (vs 40 cm/sec in aorta) — allowing time for exchange.' },
+        { front: 'What is the relationship between vessel radius and blood flow?', back: 'Flow is proportional to the fourth power of radius: F ∝ r⁴. Halving the radius = 16-fold decrease in flow. This is why small arteriolar changes have dramatic BP effects.' },
+        { front: 'What three factors determine systemic vascular resistance?', back: '(1) Vessel radius (most important, F ∝ r⁴), (2) Blood viscosity (hematocrit), (3) Total vessel length (200 miles per pound of fat — obesity increases BP).' },
+        { front: 'What is MAP and how is it calculated?', back: 'Mean Arterial Pressure = (SBP + 2×DBP) / 3. Better indicator of tissue perfusion. Low MAP (<60) = inadequate perfusion. High MAP (>100) = excessive resistance.' },
+        { front: 'What are the hypertension stages?', back: 'Normal: <120/80. Prehypertension: 120-129/80-89. Stage I: 130-159/90-99. Stage II: >160/100. Hypertensive Crisis: >180/120.' },
+        { front: 'What is the blood-brain barrier?', back: 'Nonfenestrated continuous capillaries with tight junctions that prevent diffusion of water-soluble materials into brain tissue.' },
+        { front: 'What is transcytosis and when is it important?', back: 'Vesicle-mediated transport across endothelium via pinocytosis. Important for large, lipid-insoluble molecules like insulin, fatty acids, albumin, and maternal antibodies crossing the placenta.' },
+        { front: 'What determines blood pressure?', back: 'BP is determined by cardiac output, blood volume, and peripheral resistance. BP highest in aorta (120/80) → 35 mmHg entering capillaries → 0 mmHg entering right atrium.' },
+        { front: 'What is laminar flow?', back: 'Blood flows in concentric layers — fastest in the center, slowest at the vessel wall. Flow rate relates to the fourth power of radius.' },
+        { front: 'What are arterioles often called and why?', back: 'The "faucets" of the circulation — they are the primary resistance vessels that control moment-to-moment blood pressure by changing diameter.' }
       ]
     },
 
@@ -474,6 +506,22 @@ const vessels = {
         { id: 'v3-q13', question: 'A patient\'s BP is 130/85. Their MAP is closest to:', options: { A: '85 mmHg', B: '100 mmHg', C: '108 mmHg', D: '130 mmHg' }, answer: 'B', explanation: 'MAP = (130 + 2×85)/3 = (130+170)/3 = 300/3 = 100 mmHg.' },
         { id: 'v3-q14', question: 'Signs of circulatory shock include all EXCEPT:', options: { A: 'Rapid resting heart rate', B: 'Cool, clammy skin', C: 'Increased urine output', D: 'Thirst and acidosis' }, answer: 'C', explanation: 'Shock REDUCES urine formation due to renal vasoconstriction and increased aldosterone/ADH. All others are classic shock signs.' },
         { id: 'v3-q15', question: 'Irreversible brain damage occurs after approximately how many minutes without blood flow?', options: { A: '1-2 minutes', B: '4-5 minutes', C: '10-15 minutes', D: '30 minutes' }, answer: 'B', explanation: 'A few seconds without blood causes loss of consciousness; 4-5 minutes without flow causes irreversible brain damage.' }
+      ],
+      flashcards: [
+        { front: 'What mechanisms aid venous return?', back: 'Pressure gradient, gravity (drains head/neck), skeletal muscle pump, thoracic (respiratory) pump, and cardiac suction.' },
+        { front: 'How does the skeletal muscle pump work?', back: 'Contracting limb muscles compress veins, pushing blood upward past one-way valves. Inactivity leads to venous pooling, dizziness, or syncope.' },
+        { front: 'How does the thoracic pump work?', back: 'During inhalation, thoracic cavity expands (pressure drops) while abdominal pressure rises → forces blood upward toward the heart.' },
+        { front: 'What are the main types of circulatory shock?', back: 'Cardiogenic (MI), Hypovolemic (most common — blood loss), Obstructive (tumor), Neurogenic (loss of vasomotor tone), Septic (bacterial toxins), Anaphylactic (immune/histamine). Mnemonic: CHANS.' },
+        { front: 'What is compensated vs decompensated shock?', back: 'Compensated: RAAS, ADH, SNS, baroreflexes attempt to restore BP. Decompensated: life-threatening positive feedback loops — decreased CO → ischemia → further CO drop.' },
+        { front: 'How does the baroreflex work?', back: 'Baroreceptors in aortic arch/carotid sinus detect BP. High BP → increased signals → decreased sympathetic tone → vasodilation → BP falls. Low BP → decreased signals → vasoconstriction → BP rises. Negative feedback.' },
+        { front: 'What do chemoreceptors detect and where are they?', back: 'Located in aortic and carotid bodies. Detect blood pH, O₂, CO₂. Hypoxemia, hypercapnia, acidosis → stimulate vasomotor center → vasoconstriction → BP rises.' },
+        { front: 'What is the RAAS pathway?', back: 'Angiotensinogen (liver) → Renin (kidneys) → Angiotensin I → ACE (lungs) → Angiotensin II (very potent vasoconstrictor). Also stimulates aldosterone release.' },
+        { front: 'What are ACE inhibitors?', back: 'Drugs that block angiotensin-converting enzyme in the lungs, preventing formation of angiotensin II — used to treat hypertension.' },
+        { front: 'What is the medullary ischemic reflex?', back: 'A last-resort emergency: when the brainstem itself lacks perfusion, it sends maximal sympathetic signals → increased CO + widespread vasoconstriction → BP rises.' },
+        { front: 'How are pulmonary vessels unique in their response to low O₂?', back: 'Pulmonary vessels CONSTRICT with low O₂ (opposite of systemic vessels which dilate). This redirects blood to better-ventilated lung regions.' },
+        { front: 'What is syncope and what are its types?', back: 'Sudden loss of consciousness from cerebral ischemia. Types: vasodepressor (emotional), situational (coughing/straining), drug-induced (antihypertensives), orthostatic hypotension (standing up).' },
+        { front: 'How long can the brain survive without blood flow?', back: 'A few seconds without blood = loss of consciousness. 4-5 minutes = irreversible brain damage. The brain autoregulates blood flow — arteries dilate as BP falls.' },
+        { front: 'How much can skeletal muscle blood flow increase during exercise?', back: 'Up to 20-fold (from ~1 L/min at rest to ~20 L/min) due to arteriolar dilation from local metabolites (CO₂, lactic acid, K⁺) and epinephrine.' }
       ]
     }
   ],

@@ -206,6 +206,22 @@ const endocrine = {
         { id: 'en1-q10', question: 'Insulin promoting glycogen formation while glucagon stimulates glycogen breakdown is an example of:', options: { A: 'Permissive effect', B: 'Synergistic effect', C: 'Antagonistic effect', D: 'Amplification' }, answer: 'C', explanation: 'Antagonistic effects: two hormones with opposite effects on the same process — insulin and glucagon have opposite effects on glycogen.' },
         { id: 'en1-q11', question: 'NSAIDs treat pain and inflammation by:', options: { A: 'Blocking leukotriene synthesis', B: 'Inhibiting prostaglandin synthesis', C: 'Activating complement', D: 'Increasing histamine release' }, answer: 'B', explanation: 'NSAIDs (aspirin, ibuprofen) inhibit a key enzyme in prostaglandin synthesis without affecting leukotriene synthesis.' },
         { id: 'en1-q12', question: 'Growth factors primarily act as:', options: { A: 'Endocrine hormones traveling through blood', B: 'Local autocrines or paracrines with mitogenic effects', C: 'Neurotransmitters at synapses', D: 'Transport proteins for steroids' }, answer: 'B', explanation: 'Growth factors are mitogenic substances that cause cell division; many act locally as autocrines or paracrines.' }
+      ],
+      flashcards: [
+        { front: 'How does the endocrine system compare to the nervous system in speed and duration?', back: 'Endocrine: slow onset (seconds to days), long-lasting effects. Nervous: fast (1-10 ms), brief duration. Endocrine uses only chemical signals; nervous uses electrical + chemical.' },
+        { front: 'What are the four types of cell communication?', back: 'Gap junctions (cell-to-cell pores), neurotransmitters (across synapses), paracrine hormones (local, via tissue fluid), and endocrine hormones (distant, via bloodstream).' },
+        { front: 'What is the difference between exocrine and endocrine glands?', back: 'Exocrine glands secrete into ducts to body surfaces/cavities (sweat, oil, digestive). Endocrine glands secrete hormones directly into the bloodstream.' },
+        { front: 'What is the most common mechanism for regulating hormone secretion?', back: 'Negative feedback — changes in blood hormone levels are reversed to maintain homeostasis. Positive feedback is rare (e.g., oxytocin during labor).' },
+        { front: 'How do bound and unbound hormones differ in the blood?', back: 'Bound hormone is attached to a transport protein — protected, long half-life (weeks), but inactive. Only UNBOUND (free) hormone can leave capillaries to reach target cells (half-life minutes).' },
+        { front: 'What is down-regulation vs up-regulation of receptors?', back: 'Down-regulation: excess hormone → fewer receptors → decreased sensitivity. Up-regulation: low hormone → more receptors → increased sensitivity.' },
+        { front: 'How do lipid-soluble hormones act on target cells?', back: 'They diffuse through the plasma membrane, bind intracellular receptors, and directly activate or repress genes — a DIRECT mechanism (no second messenger needed).' },
+        { front: 'How do water-soluble hormones act on target cells?', back: 'They bind membrane receptors (first messenger) → activate G-protein → adenylate cyclase converts ATP to cAMP (second messenger) → cAMP activates kinases → physiological response.' },
+        { front: 'What is the amplification cascade?', back: '1 hormone molecule → ~100 G-proteins → each activates adenylate cyclase producing ~1000 cAMP → each activates kinases acting on thousands of substrates. One epinephrine molecule can break down MILLIONS of glycogen molecules.' },
+        { front: 'What enzyme inactivates cAMP?', back: 'Phosphodiesterase rapidly inactivates cAMP, turning off the cell response unless new hormone molecules continue arriving.' },
+        { front: 'What are the three types of hormonal interactions?', back: 'Permissive: one hormone strengthens another (thyroid + epinephrine). Synergistic: two together > either alone (estrogen + LH). Antagonistic: opposite effects (insulin vs glucagon).' },
+        { front: 'How does cholera toxin cause deadly diarrhea?', back: 'Cholera toxin locks G-protein in activated state → persistent cAMP → intestinal cells secrete Cl⁻, Na⁺, and water into lumen → massive watery diarrhea → death from dehydration.' },
+        { front: 'What are eicosanoids and what do NSAIDs do?', back: 'Eicosanoids (prostaglandins, leukotrienes) are local hormones released by ALL cells. NSAIDs (aspirin, ibuprofen) inhibit prostaglandin synthesis WITHOUT affecting leukotrienes, reducing pain/fever/inflammation.' },
+        { front: 'Which hormone has NO transport protein and a 20-minute half-life?', back: 'Aldosterone — it circulates unbound, giving it the shortest half-life among steroid hormones.' }
       ]
     },
 
@@ -362,6 +378,24 @@ const endocrine = {
         { id: 'en2-q13', question: 'Melatonin secretion is highest during:', options: { A: 'Bright sunlight', B: 'Darkness', C: 'Exercise', D: 'High-carb meals' }, answer: 'B', explanation: 'In darkness, fewer retinal impulses → less norepinephrine → increased melatonin → sleepiness.' },
         { id: 'en2-q14', question: 'The kidneys produce 85% of the body\'s:', options: { A: 'Calcitonin', B: 'Erythropoietin', C: 'Insulin', D: 'Cortisol' }, answer: 'B', explanation: 'Kidneys produce 85% of erythropoietin (stimulates bone marrow RBC production). Liver produces ~15%.' },
         { id: 'en2-q15', question: 'Aldosterone hypersecretion (aldosteronism) causes:', options: { A: 'Low blood pressure', B: 'High blood pressure from Na+/water retention', C: 'Hypoglycemia', D: 'Bone resorption' }, answer: 'B', explanation: 'Aldosteronism (tumor) → excessive Na+ and water reabsorption → high blood pressure.' }
+      ],
+      flashcards: [
+        { front: 'What is the hypothalamo-hypophyseal portal system?', back: 'A portal blood system carrying releasing and inhibiting hormones from the hypothalamus directly to the anterior pituitary, controlling its hormone secretion.' },
+        { front: 'What mnemonic helps remember anterior pituitary hormones?', back: 'FLAT PEG: FSH, LH, ACTH, TSH, PRL (Prolactin), Endorphins, GH (Growth Hormone).' },
+        { front: 'What does the posterior pituitary do?', back: 'It does NOT synthesize hormones — it stores and releases ADH and oxytocin, which are made by hypothalamic neurons and transported down their axons.' },
+        { front: 'What is the diabetogenic effect of excess GH?', back: 'Excess GH → persistent hyperglycemia → pancreatic beta-cell burnout → diabetes mellitus.' },
+        { front: 'What are the effects of oxytocin?', back: 'Stimulates uterine contractions during labor (positive feedback) and causes milk ejection by contracting myoepithelial cells when baby suckles or mother hears baby cry.' },
+        { front: 'What does ADH (vasopressin) do?', back: 'Decreases urine production, decreases sweating, increases blood pressure. Released during dehydration; inhibited during overhydration.' },
+        { front: 'What does the thyroid gland secrete and what are the effects?', back: 'Follicular cells secrete T3/T4 (increase metabolic rate, O₂ consumption, heat, heart rate). C (parafollicular) cells secrete calcitonin (decreases blood Ca²⁺ by promoting bone deposition).' },
+        { front: 'How does PTH raise blood calcium?', back: 'PTH increases osteoclast activity (bone resorption), increases kidney Ca²⁺ reabsorption, inhibits phosphate reabsorption, and promotes calcitriol (vitamin D3) formation → increased intestinal Ca²⁺ absorption.' },
+        { front: 'What are the three zones of the adrenal cortex and their hormones?', back: 'Outer → Inner: Zona Glomerulosa (mineralocorticoids/aldosterone), Zona Fasciculata (glucocorticoids/cortisol), Zona Reticularis (androgens). Mnemonic: "GFR" or "Salt, Sugar, Sex."' },
+        { front: 'What does cortisol do?', back: 'Increases protein catabolism, lipolysis, gluconeogenesis; provides stress resistance; raises BP by vasoconstriction; anti-inflammatory effects (reduces histamine, decreases permeability, depresses phagocytosis).' },
+        { front: 'What does the adrenal medulla release and why?', back: 'Chromaffin cells release epinephrine and norepinephrine in response to sympathetic stimulation — fight-or-flight: increased HR, BP, blood flow to muscles, gluconeogenesis; decreased digestion.' },
+        { front: 'What are the pancreatic islet cell types and their hormones?', back: 'Alpha (α) cells → glucagon (raises blood glucose). Beta (β) cells → insulin (the ONLY hypoglycemic hormone). Delta (δ) cells → somatostatin (modulates alpha and beta cells).' },
+        { front: 'What is ANP and what does it do?', back: 'Atrial natriuretic peptide — released by the heart when BP rises. Decreases blood volume and BP by increasing Na⁺ and H₂O excretion by kidneys.' },
+        { front: 'What does melatonin do and when is it secreted?', back: 'Secreted by the pineal gland at night (darkness → less norepinephrine → more melatonin → sleepiness). Peak at ages 1-5; ~75% lower by puberty. Increased in SAD and PMS.' },
+        { front: 'What is the largest endocrine gland?', back: 'The thyroid gland — two lobes with an isthmus on the anterior/lateral trachea, with high blood flow.' },
+        { front: 'How do FSH and LH differ between males and females?', back: 'FSH: forms ovarian follicles + stimulates estrogen (F) / stimulates sperm production (M). LH: stimulates ovulation + corpus luteum + progesterone (F) / stimulates testosterone from Leydig cells (M).' }
       ]
     },
 
@@ -490,6 +524,21 @@ const endocrine = {
         { id: 'en3-q13', question: 'Osmotic diuresis in diabetes occurs because:', options: { A: 'Kidneys reabsorb all glucose', B: 'Excess glucose in urine raises osmolarity and pulls water', C: 'ADH is absent', D: 'Kidneys stop filtering' }, answer: 'B', explanation: 'When glucose exceeds renal transport maximum, it remains in urine, raises osmolarity, and pulls water into urine via osmosis.' },
         { id: 'en3-q14', question: 'Hypoparathyroidism can cause fatal _____ within 3-4 days.', options: { A: 'Ketoacidosis', B: 'Tetany', C: 'Insulin shock', D: 'Myxedema coma' }, answer: 'B', explanation: 'Hypoparathyroidism (often from accidental surgical removal during thyroidectomy) → low Ca²⁺ → fatal tetany (muscle spasms) within 3-4 days.' },
         { id: 'en3-q15', question: 'Adrenogenital syndrome may cause in women:', options: { A: 'Feminization', B: 'Masculinization with deeper voice and beard', C: 'Complete hair loss', D: 'Hypothyroidism' }, answer: 'B', explanation: 'AGS: adrenal androgen hypersecretion → masculinization in women (deeper voice, beard growth).' }
+      ],
+      flashcards: [
+        { front: 'What are the three stages of General Adaptation Syndrome (GAS)?', back: 'Alarm (fight-or-flight: sympathetic + adrenal medulla), Resistance (cortisol, aldosterone for long-term coping), Exhaustion (resources depleted, immune suppression, muscle wasting).' },
+        { front: 'What happens during the exhaustion stage of GAS?', back: 'Resources become depleted: muscle wasting from protein catabolism, immune suppression, GI ulceration, pancreatic beta-cell failure. Chronic stress is genuinely harmful.' },
+        { front: 'What are the classic signs of diabetes mellitus ("3 Ps")?', back: 'Polyuria (excessive urination), Polydipsia (excessive thirst), Polyphagia (excessive hunger) + hyperglycemia and glycosuria.' },
+        { front: 'How do Type I and Type II diabetes differ?', back: 'Type I (~10%): autoimmune destruction of beta cells, diagnosed ~age 12, requires insulin. Type II (~90%): insulin resistance, risk factors include age >40, obesity, heredity. Treatment: weight loss + oral meds.' },
+        { front: 'What is ketoacidosis?', back: 'When cells cannot use glucose, fat catabolism increases → elevated ketone bodies → ketones lower blood pH → dyspnea → diabetic coma if untreated.' },
+        { front: 'What is Cushing syndrome?', back: 'Excess cortisol → hyperglycemia, hypertension, muscle/bone wasting, edema, "buffalo hump" and "moon face" with thin spindly legs, poor wound healing.' },
+        { front: 'What is Addison disease?', back: 'Glucocorticoid hyposecretion → hypoglycemia, muscle weakness, low BP, dehydration, skin darkening, risk of cardiac arrest.' },
+        { front: 'What is Graves disease?', back: 'Autoimmune: antibodies mimic TSH on thyroid receptors → excessive T3/T4 → weight loss, tremors, nervousness, exophthalmos.' },
+        { front: 'How does endemic goiter differ from toxic goiter (Graves)?', back: 'Endemic goiter: iodine deficiency → no T3/T4 → no negative feedback → elevated TSH → thyroid enlargement. Graves: autoimmune TSH-mimicking antibodies → excess T3/T4.' },
+        { front: 'What is acromegaly vs gigantism?', back: 'Both from GH hypersecretion. Childhood → gigantism (longitudinal growth). Adults → acromegaly (thickening of bones and soft tissues — growth plates are closed).' },
+        { front: 'What is diabetes insipidus?', back: 'ADH deficiency (e.g., from pituitary damage) → chronic polyuria. Distinct from diabetes mellitus — has nothing to do with insulin or glucose.' },
+        { front: 'What is hyperinsulinism and insulin shock?', back: 'Excess insulin (injection or tumor) → hypoglycemia → weakness, hunger, anxiety, sweating. Uncorrected → disorientation, convulsions, unconsciousness (insulin shock).' },
+        { front: 'What is myxedema?', back: 'Adult hypothyroidism: low metabolic rate, sluggishness, weight gain, constipation, dry skin/hair, cold sensitivity, high BP, tissue swelling.' }
       ]
     }
   ],

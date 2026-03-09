@@ -27,6 +27,7 @@ const ALL_MODULES = [endocrine, heart, blood, vessels, lymphatic];
 function AppShell() {
   const { progress } = useStudy();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [reviewMode, setReviewMode] = useState('learn');
 
   const currentModule = progress.currentModuleId
     ? ALL_MODULES.find(m => m.id === progress.currentModuleId)
@@ -67,7 +68,7 @@ function AppShell() {
       case 'finalQuiz':
         return <FinalQuiz modules={ALL_MODULES} />;
       case 'review':
-        return <LectureReview />;
+        return <LectureReview mode={reviewMode} setMode={setReviewMode} />;
       case 'home':
       default:
         return <HomeView modules={ALL_MODULES} />;
@@ -86,6 +87,8 @@ function AppShell() {
           module={currentModule}
           section={currentSection}
           onMenuClick={() => setSidebarOpen(prev => !prev)}
+          reviewMode={reviewMode}
+          setReviewMode={setReviewMode}
         />
         {renderView()}
       </main>
